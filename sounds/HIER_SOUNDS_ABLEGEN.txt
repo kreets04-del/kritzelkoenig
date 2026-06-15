@@ -1,0 +1,11 @@
+Lege hier die Sounddateien ab – mit GENAU diesen Dateinamen (MP3):
+
+  round_start.mp3 – Rundenstart
+  correct.mp3     – richtig geraten
+  tick.mp3        – Countdown-Ticken (letzte 5 Sek.)
+  win.mp3         – Sieg
+  music.mp3       – Hintergrundmusik (Loop)
+  click.mp3       – (optional) UI-Klick
+
+Fehlt eine Datei, erzeugt das Spiel einen einfachen Pieps-Ton als Ersatz.
+Die Dateien findest du im Generator-Fenster im Chat zum Herunterladen.

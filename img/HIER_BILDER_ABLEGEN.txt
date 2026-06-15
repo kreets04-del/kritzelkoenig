@@ -1,0 +1,12 @@
+Lege hier die generierten Bilder ab – mit GENAU diesen Dateinamen:
+
+  logo.png    – der KRITZELKÖNIG-Schriftzug
+  bg.png      – der Hintergrund
+  win.png     – Krone/Konfetti (Siegerbildschirm)
+  brush.png   – Icon Pinsel
+  eraser.png  – Icon Radierer
+  undo.png    – Icon Undo
+  trash.png   – Icon Leeren
+
+Fehlt eine Datei, nutzt das Spiel automatisch den Emoji-/CSS-Fallback.
+Die Bilder findest du im Higgsfield-/Generator-Fenster im Chat zum Herunterladen.
