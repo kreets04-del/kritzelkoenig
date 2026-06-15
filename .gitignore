@@ -1,0 +1,5 @@
+node_modules/
+_writetest.txt
+*.log
+.DS_Store
+Thumbs.db
