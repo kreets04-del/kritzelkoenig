@@ -93,10 +93,13 @@
   .timer{font-variant-numeric:tabular-nums;min-width:54px;text-align:center;font-weight:800}
   .timer.low{color:var(--danger);animation:pulse .6s infinite alternate}
   @keyframes pulse{to{transform:scale(1.12)}}
-  .scores{display:flex;gap:5px;overflow:auto;margin-left:auto;max-width:52vw}
-  .scores .s{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 9px;white-space:nowrap;font-size:12px}
-  .scores .s.draw{border-color:var(--accent2);color:var(--accent2)}
-  .scores .s b{color:var(--accent)}
+  .topbar #btnMute{margin-left:auto}
+  /* Punkteleiste: eigene, horizontal scrollbare Zeile – nie von den Werkzeugen verdeckt */
+  .scorebar{display:flex;gap:6px;overflow-x:auto;overflow-y:hidden;padding:1px 0;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .scorebar:empty{display:none}
+  .scorebar .s{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px;white-space:nowrap;font-size:12px;flex:0 0 auto}
+  .scorebar .s.draw{border-color:var(--accent2);color:var(--accent2)}
+  .scorebar .s b{color:var(--accent)}
 
   /* Werkzeugleiste ÜBER der Zeichenfläche */
   .toolbar{display:flex;gap:5px;align-items:center;background:var(--panel);
@@ -221,12 +224,12 @@
     <span class="pill word" id="wordPill" style="display:none">—</span>
     <span class="pill" id="statusPill">—</span>
     <span class="pill timer" id="timer">1:00</span>
-    <div class="scores" id="scores"></div>
     <button class="pill iconbtn" id="btnMute" title="Ton">🔊</button>
     <button class="pill iconbtn" id="btnFs" title="Vollbild">⛶</button>
     <button class="pill iconbtn" id="btnSettings" title="Einstellungen">⚙️</button>
     <button class="pill iconbtn" id="btnExit" title="Spiel beenden">🚪</button>
   </div>
+  <div class="scorebar" id="scores"></div>
 
   <div class="toolbar hidden" id="toolbar">
     <button id="tBrush" class="on" title="Pinsel"><img class="ic-img" src="img/brush.png" onerror="ico(this,'✏️')"></button>
@@ -390,8 +393,8 @@ $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem
 
 // Hintergrundmusik (nutzt sounds/music.mp3, falls vorhanden)
 function startBgm(){ updateBgm(); }
-// Musik NUR im Menü/in der Lobby – sobald gespielt wird, ist Ruhe (nur Soundeffekte)
-function updateBgm(){ if(!bgm)return; if(S.muted || (S.state!=='lobby' && S.state!=='menu')) bgm.pause(); else bgm.play().catch(()=>{}); }
+// Musik NUR in der Lobby (Wartebereich) – im Menü und im Spiel ist Ruhe
+function updateBgm(){ if(!bgm)return; if(S.muted || S.state!=='lobby') bgm.pause(); else bgm.play().catch(()=>{}); }
 
 // Werkzeug-Icon-Fallback (ersetzt fehlendes Bild durch Emoji)
 function ico(img,emoji){ const s=document.createElement('span'); s.className='ic'; s.textContent=emoji; img.replaceWith(s); }
@@ -429,8 +432,9 @@ $('btnSettings').onclick=openSettings;
 $('setClose').onclick=()=>$('settings').classList.remove('show');
 $('setMute').onclick=()=>{S.muted=!S.muted;updateMute();$('setMute').textContent=S.muted?'🔇':'🔊';try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 $('setFs').onclick=toggleFs;
-$('setExit').onclick=()=>{ if(confirm(t('confirmExit'))) location.reload(); };
-$('btnExit').onclick=()=>{ if(confirm(t('confirmExit'))) location.reload(); };
+function quitGame(){ if(confirm(t('confirmExit'))){ if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
+$('setExit').onclick=quitGame;
+$('btnExit').onclick=quitGame;
 applyI18n();
 // PWA: installierbar machen
 if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
