@@ -23,6 +23,8 @@ const ROUND_OPTIONS = [10, 15, 20, 25, 30, 40, 50];
 const DEFAULT_ROUNDS = 10;
 const RECENT_WORD_LIMIT = 180;
 const MIN_POOL_AFTER_RECENT_FILTER = 8;
+const WORD_OPTION_COUNT = 3;
+const DIFFICULTY_MULTIPLIERS = { easy: 1, medium: 1.25, hard: 1.5 };
 const ROUND_END_PAUSE_MS = 4500;   // (nur Sicherheits-Fallback)
 const LOAD_ONLINE   = process.argv.includes('--online'); // optional: node server.js --online
 
@@ -115,9 +117,10 @@ function createRoom(hostId) {
     hostId,
     players: [],            // {id,name,score,connected}
     clients: new Map(),     // playerId -> SSE response
-    state: 'lobby',         // lobby | playing | roundend | gameover
+    state: 'lobby',         // lobby | choosing | playing | roundend | gameover
     currentDrawerId: null,
     currentWord: null,
+    wordOptions: [],
     revealed: new Set(),
     usedWordIds: [],
     recentWordIds: [],
@@ -126,6 +129,7 @@ function createRoom(hostId) {
     remaining: 0,
     timer: null,
     difficulty: 'mixed',    // easy | medium | hard | mixed
+    teamMode: false,
     lang: 'de',             // de | en  (Begriffe + UI raumweit)
   };
   rooms.set(code, room);
@@ -134,6 +138,25 @@ function createRoom(hostId) {
 
 function getPlayer(room, id) { return room.players.find(p => p.id === id); }
 function connectedPlayers(room) { return room.players.filter(p => p.connected); }
+function teamName(team) { return team === 0 ? 'Team Rot' : 'Team Blau'; }
+function teamScores(room) {
+  return [0, 1].map(team => ({
+    team,
+    name: teamName(team),
+    score: room.players.filter(p => p.team === team).reduce((sum, p) => sum + p.score, 0),
+  }));
+}
+function nextTeam(room) {
+  const red = room.players.filter(p => p.team === 0).length;
+  const blue = room.players.filter(p => p.team === 1).length;
+  return red <= blue ? 0 : 1;
+}
+function assignTeams(room) {
+  room.players.forEach((p, i) => { p.team = i % 2; });
+}
+function clearTeams(room) {
+  room.players.forEach(p => { p.team = null; });
+}
 
 function publicState(room) {
   return {
@@ -144,9 +167,12 @@ function publicState(room) {
     roundNumber: room.roundNumber,
     maxRounds: room.maxRounds,
     difficulty: room.difficulty,
+    teamMode: room.teamMode,
+    teamScores: room.teamMode ? teamScores(room) : [],
     lang: room.lang,
     players: room.players.map(p => ({
       id: p.id, name: p.name, score: p.score,
+      team: room.teamMode ? p.team : null,
       isHost: p.id === room.hostId,
       isDrawer: p.id === room.currentDrawerId,
       connected: p.connected,
@@ -178,7 +204,27 @@ function rememberRecentWord(room, wordId, baseSize) {
   while (room.recentWordIds.length > limit) room.recentWordIds.shift();
 }
 
-function pickWord(room) {
+function wordDifficulty(word) {
+  return String(word?.difficulty || 'medium').toLowerCase();
+}
+
+function difficultyMultiplier(word) {
+  return DIFFICULTY_MULTIPLIERS[wordDifficulty(word)] || 1;
+}
+
+function speedMultiplier(remaining) {
+  const elapsed = ROUND_SECONDS - remaining;
+  if (elapsed <= 15) return 2;
+  if (elapsed <= 30) return 1.5;
+  return 1;
+}
+
+function markWordUsed(room, word, baseSize) {
+  if (!room.usedWordIds.includes(word.wordId)) room.usedWordIds.push(word.wordId);
+  rememberRecentWord(room, word.wordId, baseSize);
+}
+
+function pickWord(room, excludeIds = [], markUsed = true) {
   const diff = room.difficulty || 'mixed';
   const all = wordsFor(room);
   // Leicht: nur leichte | Mittel: nur mittlere | Schwer: schwere + mittlere | Gemischt: alle
@@ -190,20 +236,43 @@ function pickWord(room) {
   };
   const inDiff = all.filter(pools[diff] || pools.mixed);
   const base = inDiff.length ? inDiff : all;
-  let pool = base.filter(w => !room.usedWordIds.includes(w.wordId));
+  const exclude = new Set(excludeIds);
+  let pool = base.filter(w => !room.usedWordIds.includes(w.wordId) && !exclude.has(w.wordId));
   if (pool.length === 0) {
     // verbrauchte Begriffe DIESER Stufe zurücksetzen
     const baseIds = new Set(base.map(w => w.wordId));
     room.usedWordIds = room.usedWordIds.filter(id => !baseIds.has(id));
-    pool = base;
+    pool = base.filter(w => !exclude.has(w.wordId));
+    if (pool.length === 0) pool = base;
   }
   const recent = new Set(room.recentWordIds || []);
   const freshPool = pool.filter(w => !recent.has(w.wordId));
   if (freshPool.length >= Math.min(MIN_POOL_AFTER_RECENT_FILTER, pool.length)) pool = freshPool;
   const w = pool[Math.floor(Math.random() * pool.length)];
-  if (!room.usedWordIds.includes(w.wordId)) room.usedWordIds.push(w.wordId);
-  rememberRecentWord(room, w.wordId, base.length);
+  if (markUsed) markWordUsed(room, w, base.length);
   return w;
+}
+
+function buildWordOptions(room) {
+  const options = [];
+  const exclude = [];
+  for (let i = 0; i < WORD_OPTION_COUNT; i++) {
+    const word = pickWord(room, exclude, false);
+    if (!word || exclude.includes(word.wordId)) break;
+    options.push(word);
+    exclude.push(word.wordId);
+  }
+  return options;
+}
+
+function publicWordOptions(words) {
+  return words.map(w => ({
+    wordId: w.wordId,
+    text: w.text,
+    category: w.category,
+    difficulty: w.difficulty,
+    multiplier: difficultyMultiplier(w),
+  }));
 }
 
 function chooseNextDrawer(room, solverId) {
@@ -228,10 +297,36 @@ function startRound(room, drawerId) {
     return;
   }
 
-  room.state = 'playing';
+  room.state = 'choosing';
   room.roundNumber += 1;
   room.currentDrawerId = drawerId || conn[Math.floor(Math.random() * conn.length)].id;
-  room.currentWord = pickWord(room);
+  room.currentWord = null;
+  room.wordOptions = buildWordOptions(room);
+  room.revealed = new Set();
+  room.remaining = ROUND_SECONDS;
+
+  pushRoomUpdate(room);
+  broadcast(room, 'clear', {});
+
+  const drawer = getPlayer(room, room.currentDrawerId);
+  broadcast(room, 'word_choosing', {
+    drawerId: room.currentDrawerId,
+    drawerName: drawer ? drawer.name : '?',
+    roundNumber: room.roundNumber,
+    maxRounds: room.maxRounds,
+  });
+  sendTo(room, room.currentDrawerId, 'word_options', {
+    options: publicWordOptions(room.wordOptions),
+    roundNumber: room.roundNumber,
+    maxRounds: room.maxRounds,
+  });
+}
+
+function beginDrawingRound(room, word) {
+  if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  room.state = 'playing';
+  room.currentWord = word;
+  room.wordOptions = [];
   room.revealed = new Set();
   room.remaining = ROUND_SECONDS;
 
@@ -243,6 +338,8 @@ function startRound(room, drawerId) {
   sendTo(room, room.currentDrawerId, 'word_assignment', {
     text: room.currentWord.text,
     category: room.currentWord.category,
+    difficulty: room.currentWord.difficulty,
+    multiplier: difficultyMultiplier(room.currentWord),
   });
   // alle anderen: nur Maske + Länge
   broadcast(room, 'round_started', {
@@ -255,6 +352,16 @@ function startRound(room, drawerId) {
   });
 
   room.timer = setInterval(() => tick(room), 1000);
+}
+
+function chooseWord(room, playerId, wordId) {
+  if (room.state !== 'choosing') return { ok: false };
+  if (playerId !== room.currentDrawerId) return { ok: false, error: 'Nur der Zeichner' };
+  const word = (room.wordOptions || []).find(w => w.wordId === wordId);
+  if (!word) return { ok: false, error: 'Begriff nicht gefunden' };
+  markWordUsed(room, word, wordsFor(room).length);
+  beginDrawingRound(room, word);
+  return { ok: true };
 }
 
 function tick(room) {
@@ -288,7 +395,10 @@ function endRoundTimeout(room) {
 
 function endRoundSolved(room, solver) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
-  const pts = Math.max(1, room.remaining);          // Restsekunden = Punkte (schnell = mehr)
+  const basePts = Math.max(1, room.remaining);
+  const speedMult = speedMultiplier(room.remaining);
+  const difficultyMult = difficultyMultiplier(room.currentWord);
+  const pts = Math.max(1, Math.round(basePts * speedMult * difficultyMult));
   const drawer = getPlayer(room, room.currentDrawerId);
   const drawerPts = Math.ceil(pts / 2);             // Maler bekommt die Hälfte
   solver.score += pts;
@@ -297,6 +407,8 @@ function endRoundSolved(room, solver) {
 
   broadcast(room, 'round_solved', {
     winnerId: solver.id, winnerName: solver.name, points: pts,
+    basePoints: basePts, speedMultiplier: speedMult, difficultyMultiplier: difficultyMult,
+    wordDifficulty: room.currentWord.difficulty,
     drawerId: room.currentDrawerId, drawerName: drawer ? drawer.name : '?',
     drawerPoints: (drawer && drawer.id !== solver.id) ? drawerPts : 0,
     word: room.currentWord.text,
@@ -334,10 +446,12 @@ function gameOver(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
   room.state = 'gameover';
+  const rankedTeams = room.teamMode ? teamScores(room).sort((a, b) => b.score - a.score) : [];
   const ranked = room.players.slice().sort((a, b) => b.score - a.score);
-  const winner = ranked[0] || { id: null, name: '?' };
+  const winner = room.teamMode ? (rankedTeams[0] || { team: null, name: '?' }) : (ranked[0] || { id: null, name: '?' });
   broadcast(room, 'game_over', {
-    winnerId: winner.id, winnerName: winner.name,
+    winnerId: winner.id, winnerTeam: winner.team, winnerName: winner.name,
+    teamMode: room.teamMode, teamScores: room.teamMode ? rankedTeams : [],
     players: publicState(room).players,
   });
   pushRoomUpdate(room);
@@ -360,6 +474,7 @@ function newGame(room) {
   room.state = 'lobby';
   room.currentDrawerId = null;
   room.currentWord = null;
+  room.wordOptions = [];
   pushRoomUpdate(room);
   broadcast(room, 'back_to_lobby', {});
 }
@@ -423,6 +538,21 @@ const server = http.createServer((req, res) => {
         remaining: room.remaining,
       });
     }
+    if (room.state === 'choosing') {
+      sendTo(room, playerId, 'word_choosing', {
+        drawerId: room.currentDrawerId,
+        drawerName: getPlayer(room, room.currentDrawerId)?.name || '?',
+        roundNumber: room.roundNumber,
+        maxRounds: room.maxRounds,
+      });
+      if (playerId === room.currentDrawerId) {
+        sendTo(room, playerId, 'word_options', {
+          options: publicWordOptions(room.wordOptions || []),
+          roundNumber: room.roundNumber,
+          maxRounds: room.maxRounds,
+        });
+      }
+    }
     pushRoomUpdate(room);
 
     const ka = setInterval(() => { try { res.write(': ping\n\n'); } catch (_) {} }, 15000);
@@ -441,6 +571,11 @@ const server = http.createServer((req, res) => {
       // Zeichner weg während Runde -> Runde beenden (Timeout)
       if (room.state === 'playing' && room.currentDrawerId === playerId) {
         endRoundTimeout(room);
+      }
+      if (room.state === 'choosing' && room.currentDrawerId === playerId) {
+        room.roundNumber = Math.max(0, room.roundNumber - 1);
+        room.wordOptions = [];
+        startRound(room, chooseNextDrawer(room, null));
       }
       // Raum leer -> aufräumen
       if (connectedPlayers(room).length === 0) {
@@ -476,7 +611,7 @@ function handleAction(msg) {
   if (type === 'create') {
     const playerId = uid();
     const room = createRoom(playerId);
-    room.players.push({ id: playerId, name: (msg.name || 'Spieler').slice(0, 16), score: 0, connected: false });
+    room.players.push({ id: playerId, name: (msg.name || 'Spieler').slice(0, 16), score: 0, team: null, connected: false });
     return { ok: true, playerId, roomCode: room.code };
   }
 
@@ -487,7 +622,13 @@ function handleAction(msg) {
       // Beitritt auch während des Spiels erlauben (als Mitspieler)
     }
     const playerId = uid();
-    room.players.push({ id: playerId, name: (msg.name || 'Spieler').slice(0, 16), score: 0, connected: false });
+    room.players.push({
+      id: playerId,
+      name: (msg.name || 'Spieler').slice(0, 16),
+      score: 0,
+      team: room.teamMode ? nextTeam(room) : null,
+      connected: false,
+    });
     return { ok: true, playerId, roomCode: room.code };
   }
 
@@ -520,6 +661,13 @@ function handleAction(msg) {
       return { ok: true };
     }
 
+    case 'team_mode':
+      if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host' };
+      room.teamMode = !!msg.value;
+      if (room.teamMode) assignTeams(room); else clearTeams(room);
+      pushRoomUpdate(room);
+      return { ok: true };
+
     case 'start':
       if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host kann starten' };
       if (connectedPlayers(room).length < 2) return { ok: false, error: 'Mindestens 2 Spieler nötig' };
@@ -527,6 +675,9 @@ function handleAction(msg) {
       if (ROUND_OPTIONS.includes(Number(msg.rounds))) room.maxRounds = Number(msg.rounds);
       startRound(room, null);
       return { ok: true };
+
+    case 'choose_word':
+      return chooseWord(room, msg.playerId, String(msg.wordId || ''));
 
     case 'stroke':
       if (msg.playerId !== room.currentDrawerId) return { ok: false };

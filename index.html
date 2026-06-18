@@ -75,12 +75,12 @@
   .dot{width:9px;height:9px;border-radius:50%;background:var(--accent2)}
   .dot.off{background:#67708f}
   .you{color:var(--accent2);font-weight:800}
-  .diffsel,.roundsel{display:flex;gap:8px}
+  .diffsel,.roundsel,.modesel{display:flex;gap:8px}
   .roundsel{flex-wrap:wrap}
-  .diffsel button,.roundsel button{flex:1;padding:11px 6px;font-size:14px;background:var(--panel2);color:var(--ink);
+  .diffsel button,.roundsel button,.modesel button{flex:1;padding:11px 6px;font-size:14px;background:var(--panel2);color:var(--ink);
     border:1px solid var(--line);box-shadow:none}
   .roundsel button{flex:1 0 calc(25% - 8px);min-width:54px}
-  .diffsel button.on,.roundsel button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
+  .diffsel button.on,.roundsel button.on,.modesel button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
   .langrow{display:flex;gap:8px;margin:4px 0 6px}
   .langrow button{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none;padding:11px;font-size:15px}
   .langrow button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
@@ -88,6 +88,8 @@
   .diffsel.disabled{opacity:.5;pointer-events:none}
   .roundsel.disabled{opacity:.5;pointer-events:none}
   .difftext{font-weight:800;color:var(--accent)}
+  .teamtag{font-size:11px;border-radius:20px;padding:2px 8px;font-weight:800;background:#ff6b6b;color:#2a0d0d}
+  .teamtag.blue{background:#72a8ff;color:#08172d}
 
   /* Game */
   #game{padding:6px;gap:5px}
@@ -102,6 +104,8 @@
   .scorebar{display:flex;gap:6px;overflow-x:auto;overflow-y:hidden;padding:1px 0;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
   .scorebar:empty{display:none}
   .scorebar .s{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px;white-space:nowrap;font-size:12px;flex:0 0 auto}
+  .scorebar .s.team{font-weight:900;border-color:var(--accent);color:var(--accent)}
+  .scorebar .s.team.blue{border-color:#72a8ff;color:#9cc2ff}
   .scorebar .s.draw{border-color:var(--accent2);color:var(--accent2)}
   .scorebar .s b{color:var(--accent)}
 
@@ -158,6 +162,10 @@
     padding:30px 36px;text-align:center;max-width:92vw;animation:popin .2s ease}
   .overlay .big2{font-size:clamp(24px,5vw,42px);font-weight:900;margin-bottom:8px}
   .overlay .reveal{color:var(--accent);font-size:clamp(20px,4vw,34px);font-weight:900;letter-spacing:2px}
+  .word-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
+  .word-options button{display:flex;flex-direction:column;gap:5px;align-items:flex-start;text-align:left;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  .word-options button b{font-size:18px;color:var(--accent)}
+  .word-options button span{font-size:12px;color:var(--muted)}
 
   /* Hochformat & Querformat werden beide unterstützt */
 </style>
@@ -181,7 +189,8 @@
       <button data-l="en">🇬🇧 English</button>
     </div>
     <label data-i18n="yourName">Dein Spielername</label>
-    <input id="name" type="text" maxlength="16" placeholder="z. B. Anna" data-i18n-ph="namePh" autocomplete="off">
+    <input id="name" type="text" maxlength="16" placeholder="z. B. Anna" data-i18n-ph="namePh"
+      autocomplete="nickname" autocorrect="off" spellcheck="false">
     <div class="row" style="margin-top:16px">
       <button class="big" id="btnCreate" data-i18n="createGame">Spiel erstellen</button>
       <button class="big green" id="btnJoinShow" data-i18n="joinGame">Spiel beitreten</button>
@@ -189,7 +198,9 @@
     <div id="joinArea" style="display:none">
       <label style="margin-top:16px" data-i18n="roomCode4">Raum-Code (4 Ziffern)</label>
       <div class="row">
-        <input id="code" type="text" inputmode="numeric" maxlength="4" placeholder="0000" style="flex:2;letter-spacing:8px;font-size:22px;text-align:center">
+        <input id="code" type="text" inputmode="numeric" maxlength="4" placeholder="0000"
+          autocomplete="one-time-code" autocorrect="off" spellcheck="false"
+          style="flex:2;letter-spacing:8px;font-size:22px;text-align:center">
         <button id="btnJoin" style="flex:1" data-i18n="join">Beitreten</button>
       </div>
     </div>
@@ -223,6 +234,12 @@
       <button data-r="50">50</button>
     </div>
     <div class="hint" id="roundHint"></div>
+
+    <label style="margin-top:14px" data-i18n="teamMode">Teammodus</label>
+    <div class="modesel" id="teamSel">
+      <button id="teamToggle" data-i18n="teamOff">Aus</button>
+    </div>
+    <div class="hint" id="teamHint"></div>
 
     <label style="margin-top:14px" data-i18n="players">Spieler</label>
     <ul class="players" id="lobbyPlayers"></ul>
@@ -272,7 +289,8 @@
   <div class="bottombar" id="bottombar">
     <div class="mask" id="mask">_ _ _ _ _</div>
     <div class="guessrow" id="guessRow">
-      <input id="guess" type="text" maxlength="30" placeholder="Dein Tipp …" data-i18n-ph="guessPh" autocomplete="off">
+      <input id="guess" type="search" maxlength="30" placeholder="Dein Tipp …" data-i18n-ph="guessPh"
+        autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="send">
       <button id="btnGuess" style="flex:0 0 auto" data-i18n="send">Senden</button>
     </div>
   </div>
@@ -290,6 +308,7 @@
       <div class="big2" id="ovTitle">—</div>
       <div class="reveal" id="ovReveal"></div>
       <div id="ovExtra" style="margin-top:10px;color:var(--muted)"></div>
+      <div class="word-options" id="wordOptions" style="display:none"></div>
       <div id="ovButtons" style="margin-top:20px;display:none">
         <div class="row"><button class="green" id="btnNewGame" data-i18n="newGame">Neues Spiel</button>
         <button class="secondary" id="btnToMenu" data-i18n="toMenu">Zum Menü</button></div>
@@ -330,7 +349,7 @@
 "use strict";
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
-  es:null,difficulty:'mixed',maxRounds:10,muted:false,lang:'de' };
+  es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de' };
 const ERASER_W=0.05;
 const $=id=>document.getElementById(id);
 const screens={menu:$('menu'),lobby:$('lobby'),game:$('game')};
@@ -347,25 +366,29 @@ $('name').value=S.name; updateMute();
 const T={
  de:{tagline:'Zeichnen & Raten im WLAN',yourName:'Dein Spielername',namePh:'z. B. Anna',
    createGame:'Spiel erstellen',joinGame:'Spiel beitreten',roomCode4:'Raum-Code (4 Ziffern)',join:'Beitreten',
-   roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
+   roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',teamMode:'Teammodus',teamOn:'An',teamOff:'Aus',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
    easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
    guessPh:'Dein Tipp …',send:'Senden',newGame:'Neues Spiel',toMenu:'Zum Menü',
    settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',
    youDraw:'Du zeichnest ✏',draws:'zeichnet …',round:'Runde',
    timeUp:'⏱ Zeit abgelaufen –',waitFor:'Warte auf',continueDraw:'▶ Weiter – ich zeichne!',showResult:'🏁 Endstand anzeigen',endstand:'(Endstand)',
-   wins:'gewinnt!',enterName:'Bitte einen Namen eingeben',enterCode:'Bitte 4-stelligen Code eingeben',
+   wins:'gewinnt!',chooseWord:'Wähle einen Begriff',chooseWordHint:'Schwerere Begriffe geben mehr Punkte.',choosingWord:'wählt einen Begriff …',
+   teamRed:'Team Rot',teamBlue:'Team Blau',teamHintOn:'Teams sind aktiv.',teamHintOff:'Alle spielen einzeln.',
+   enterName:'Bitte einen Namen eingeben',enterCode:'Bitte 4-stelligen Code eingeben',
    waitPlayers:'Warte auf weitere Spieler … (mind. 2)',readyHost:'Bereit! Du kannst starten.',waitHost:'Warte auf den Host …',
    hostChoosesLang:'Sprache & Begriffe legt der Host fest.',loading:'Wird geladen …',confirmExit:'Spiel wirklich beenden?',
    descEasy:'🧒 Für Kinder – nur leicht zeichenbare Begriffe',descMedium:'🙂 Für Jugendliche & Erwachsene',descHard:'🔥 Für Erwachsene – auch mittlere Begriffe dabei',descMixed:'🎲 Alle Schwierigkeiten gemischt'},
  en:{tagline:'Draw & Guess on Wi-Fi',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
-   roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',players:'Players',leave:'Leave',startGame:'Start game',
+   roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
    easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
    guessPh:'Your guess …',send:'Send',newGame:'New game',toMenu:'To menu',
    settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',
    youDraw:"You're drawing ✏",draws:'is drawing …',round:'Round',
    timeUp:"⏱ Time's up –",waitFor:'Waiting for',continueDraw:'▶ Continue – I draw!',showResult:'🏁 Show results',endstand:'(results)',
-   wins:'wins!',enterName:'Please enter a name',enterCode:'Please enter a 4-digit code',
+   wins:'wins!',chooseWord:'Choose a word',chooseWordHint:'Harder words give more points.',choosingWord:'is choosing a word …',
+   teamRed:'Team Red',teamBlue:'Team Blue',teamHintOn:'Teams are active.',teamHintOff:'Everyone plays solo.',
+   enterName:'Please enter a name',enterCode:'Please enter a 4-digit code',
    waitPlayers:'Waiting for more players … (min. 2)',readyHost:'Ready! You can start.',waitHost:'Waiting for the host …',
    hostChoosesLang:'Language & words are set by the host.',loading:'Loading …',confirmExit:'Really quit the game?',
    descEasy:'🧒 For kids – only easy-to-draw words',descMedium:'🙂 For teens & adults',descHard:'🔥 For adults – includes medium words too',descMixed:'🎲 All difficulties mixed'}
@@ -482,12 +505,13 @@ $('diffSel').addEventListener('click',e=>{const b=e.target.closest('button');if(
   S.difficulty=b.dataset.d;post({type:'difficulty',value:S.difficulty});});
 $('roundSel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!S.isHost)return;
   S.maxRounds=parseInt(b.dataset.r,10);post({type:'rounds',value:S.maxRounds});});
+$('teamToggle').onclick=()=>{if(!S.isHost)return;S.teamMode=!S.teamMode;post({type:'team_mode',value:S.teamMode});};
 $('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty,rounds:S.maxRounds});if(!r.ok)$('lobbyHint').textContent=r.error;};
 $('btnLeave').onclick=()=>location.reload();
 
 function renderLobby(st){
   S.lastRoom=st;
-  $('lobbyCode').textContent=st.roomCode;S.isHost=st.hostId===S.playerId;S.difficulty=st.difficulty||'mixed';S.maxRounds=st.maxRounds||10;
+  $('lobbyCode').textContent=st.roomCode;S.isHost=st.hostId===S.playerId;S.difficulty=st.difficulty||'mixed';S.maxRounds=st.maxRounds||10;S.teamMode=!!st.teamMode;
   // Schwierigkeit
   [...$('diffSel').children].forEach(b=>b.classList.toggle('on',b.dataset.d===S.difficulty));
   $('diffSel').style.opacity=S.isHost?'1':'.6';
@@ -498,11 +522,19 @@ function renderLobby(st){
   $('roundSel').style.opacity=S.isHost?'1':'.6';
   $('roundSel').style.pointerEvents=S.isHost?'auto':'none';
   $('roundHint').innerHTML=`${t('rounds')}: <span class="difftext">${S.maxRounds}</span>`+(S.isHost?'':' Â· ðŸ”’');
+  // Teammodus
+  $('teamToggle').textContent=S.teamMode?t('teamOn'):t('teamOff');
+  $('teamToggle').classList.toggle('on',S.teamMode);
+  $('teamSel').style.opacity=S.isHost?'1':'.6';
+  $('teamSel').style.pointerEvents=S.isHost?'auto':'none';
+  $('teamHint').textContent=S.teamMode?t('teamHintOn'):t('teamHintOff');
   // Spieler
   const ul=$('lobbyPlayers');ul.innerHTML='';
   st.players.forEach(p=>{const li=document.createElement('li');
+    const team=p.team===0?` <span class="teamtag">${t('teamRed')}</span>`:p.team===1?` <span class="teamtag blue">${t('teamBlue')}</span>`:'';
     li.innerHTML=`<span class="dot ${p.connected?'':'off'}"></span>
       <span>${esc(p.name)}${p.id===S.playerId?' <span class="you">('+(S.lang==='en'?'you':'du')+')</span>':''}</span>
+      ${team}
       ${p.isHost?'<span class="badge">Host ♔</span>':''}`;ul.appendChild(li);});
   const enough=st.players.filter(p=>p.connected).length>=2;
   $('btnStart').style.display=S.isHost?'':'none';$('btnStart').disabled=!enough;
@@ -511,8 +543,14 @@ function renderLobby(st){
 
 // ---------- Scores ----------
 function renderScores(players){const el=$('scores');el.innerHTML='';
+  if(S.teamMode){
+    [0,1].forEach(team=>{const score=players.filter(p=>p.team===team).reduce((sum,p)=>sum+p.score,0);
+      const d=document.createElement('div');d.className='s team'+(team===1?' blue':'');
+      d.innerHTML=`${team===0?t('teamRed'):t('teamBlue')} <b>${score}</b>`;el.appendChild(d);});
+  }
   players.forEach(p=>{const d=document.createElement('div');d.className='s'+(p.isDrawer?' draw':'');
-    d.innerHTML=`${esc(p.name)} <b>${p.score}</b>`;el.appendChild(d);});}
+    const team=S.teamMode&&p.team!==null?(p.team===0?' R':' B'):'';
+    d.innerHTML=`${esc(p.name)}${team} <b>${p.score}</b>`;el.appendChild(d);});}
 
 // ---------- Canvas ----------
 const canvas=$('canvas'),ctx=canvas.getContext('2d');
@@ -575,9 +613,21 @@ function applyRole(){$('toolbar').classList.toggle('hidden',!S.amDrawer);$('pale
 
 function overlay(t,r,e,btn,win){$('ovTitle').textContent=t;$('ovReveal').textContent=r||'';$('ovExtra').textContent=e||'';
   $('ovButtons').style.display=btn?'block':'none';
+  $('wordOptions').style.display='none';$('wordOptions').innerHTML='';
   const wi=$('winImg'); if(wi)wi.style.display=(win&&!wi.dataset.missing)?'block':'none';
   $('overlay').classList.add('show');}
-function hideOverlay(){$('overlay').classList.remove('show');}
+function hideOverlay(){$('overlay').classList.remove('show');$('wordOptions').style.display='none';$('wordOptions').innerHTML='';}
+
+function showWordOptions(options){
+  $('ovTitle').textContent=t('chooseWord');$('ovReveal').textContent='';$('ovExtra').textContent=t('chooseWordHint');
+  $('ovButtons').style.display='none';
+  const box=$('wordOptions');box.innerHTML='';box.style.display='grid';
+  options.forEach(w=>{const b=document.createElement('button');
+    b.innerHTML=`<b>${esc(w.text)}</b><span>${esc(w.difficulty)} · x${w.multiplier}</span>`;
+    b.onclick=()=>{[...box.children].forEach(x=>x.disabled=true);$('ovExtra').textContent=t('loading');post({type:'choose_word',wordId:w.wordId});};
+    box.appendChild(b);});
+  $('overlay').classList.add('show');
+}
 
 // Auflösung UNTEN anzeigen – die Zeichnung bleibt für alle sichtbar (zum Lachen/Diskutieren)
 function showResult(titleHtml,reveal,nextId,nextName,last){
@@ -601,6 +651,7 @@ function handle(event,d){switch(event){
     S.isHost=d.hostId===S.playerId;
     if(d.difficulty)S.difficulty=d.difficulty;
     if(d.maxRounds)S.maxRounds=d.maxRounds;
+    S.teamMode=!!d.teamMode;
     if(d.lang && d.lang!==S.lang){S.lang=d.lang;try{localStorage.setItem('kk_lang',d.lang)}catch(e){}applyI18n();}
     if($('settings').classList.contains('show'))updateSetDiff();
     if(S.state==='lobby')renderLobby(d);
@@ -608,6 +659,16 @@ function handle(event,d){switch(event){
     if(d.state==='gameover')renderScores(d.players);
     break;
   case 'need_players': if(S.state==='game')show('lobby');break;
+  case 'word_choosing':
+    enterGame();hideResult();S.amDrawer=false;S.strokes=[];redraw();applyRole();
+    $('mask').textContent='';$('timer').textContent='--';
+    $('statusPill').textContent=`${d.drawerName} ${t('choosingWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
+    if(d.drawerId!==S.playerId)overlay(`${esc(d.drawerName)} ${t('choosingWord')}`,'','',false,false);
+    break;
+  case 'word_options':
+    enterGame();hideResult();S.amDrawer=false;applyRole();
+    $('timer').textContent='--';$('statusPill').textContent=`${t('chooseWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
+    showWordOptions(d.options||[]);break;
   case 'round_started':
     enterGame();hideResult();S.amDrawer=d.drawerId===S.playerId;S.strokes=[];redraw();applyRole();
     $('mask').textContent=d.mask;$('statusPill').textContent=(S.amDrawer?t('youDraw'):(d.drawerName+' '+t('draws')))+(d.roundNumber?`  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`:'');
@@ -623,10 +684,14 @@ function handle(event,d){switch(event){
   case 'clear': S.strokes=[];redraw();break;
   case 'guess_feed': addFeed(d.playerName,d.text,d.correct);if(d.correct)sound('correct');break;
   case 'round_solved': {renderScores(d.players);
+    const bonus=(d.speedMultiplier>1||d.difficultyMultiplier>1)?` <small style="color:var(--muted)">x${d.speedMultiplier} Tempo · x${d.difficultyMultiplier} Wort</small>`:'';
     let title=`✅ ${esc(d.winnerName)} <b style="color:var(--accent2)">+${d.points}</b>`+(d.drawerPoints?` &nbsp;·&nbsp; ✏ ${esc(d.drawerName)} +${d.drawerPoints}`:'');
+    title=title.replace('</b>','</b>'+bonus);
     showResult(title,d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;}
   case 'round_timeout': renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
   case 'game_over': renderScores(d.players);sound('win');
+    const standings=d.teamMode&&d.teamScores&&d.teamScores.length?d.teamScores:d.players.slice().sort((a,b)=>b.score-a.score);
+    if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
     overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
   case 'back_to_lobby': hideOverlay();show('lobby');break;
 }}
