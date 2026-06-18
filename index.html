@@ -44,6 +44,7 @@
   .card{background:var(--panel);backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.08);border-radius:22px;
     padding:24px;width:min(540px,93vw);box-shadow:0 24px 70px rgba(0,0,0,.45)}
+  #lobby .card{max-height:94dvh;overflow:auto}
   label{display:block;font-size:12.5px;color:var(--muted);margin:12px 0 6px;
     text-transform:uppercase;letter-spacing:1px;font-weight:700}
   input[type=text]{width:100%;padding:14px 15px;border-radius:12px;border:1px solid var(--line);
@@ -74,15 +75,18 @@
   .dot{width:9px;height:9px;border-radius:50%;background:var(--accent2)}
   .dot.off{background:#67708f}
   .you{color:var(--accent2);font-weight:800}
-  .diffsel{display:flex;gap:8px}
-  .diffsel button{flex:1;padding:11px 6px;font-size:14px;background:var(--panel2);color:var(--ink);
+  .diffsel,.roundsel{display:flex;gap:8px}
+  .roundsel{flex-wrap:wrap}
+  .diffsel button,.roundsel button{flex:1;padding:11px 6px;font-size:14px;background:var(--panel2);color:var(--ink);
     border:1px solid var(--line);box-shadow:none}
-  .diffsel button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
+  .roundsel button{flex:1 0 calc(25% - 8px);min-width:54px}
+  .diffsel button.on,.roundsel button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
   .langrow{display:flex;gap:8px;margin:4px 0 6px}
   .langrow button{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none;padding:11px;font-size:15px}
   .langrow button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
   .langrow.disabled{opacity:.5;pointer-events:none}
   .diffsel.disabled{opacity:.5;pointer-events:none}
+  .roundsel.disabled{opacity:.5;pointer-events:none}
   .difftext{font-weight:800;color:var(--accent)}
 
   /* Game */
@@ -208,6 +212,18 @@
     </div>
     <div class="hint" id="diffHint"></div>
 
+    <label style="margin-top:14px" data-i18n="rounds">Runden</label>
+    <div class="roundsel" id="roundSel">
+      <button data-r="10">10</button>
+      <button data-r="15">15</button>
+      <button data-r="20">20</button>
+      <button data-r="25">25</button>
+      <button data-r="30">30</button>
+      <button data-r="40">40</button>
+      <button data-r="50">50</button>
+    </div>
+    <div class="hint" id="roundHint"></div>
+
     <label style="margin-top:14px" data-i18n="players">Spieler</label>
     <ul class="players" id="lobbyPlayers"></ul>
     <div class="row" style="margin-top:16px">
@@ -314,7 +330,7 @@
 "use strict";
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
-  es:null,difficulty:'mixed',muted:false,lang:'de' };
+  es:null,difficulty:'mixed',maxRounds:10,muted:false,lang:'de' };
 const ERASER_W=0.05;
 const $=id=>document.getElementById(id);
 const screens={menu:$('menu'),lobby:$('lobby'),game:$('game')};
@@ -331,7 +347,7 @@ $('name').value=S.name; updateMute();
 const T={
  de:{tagline:'Zeichnen & Raten im WLAN',yourName:'Dein Spielername',namePh:'z. B. Anna',
    createGame:'Spiel erstellen',joinGame:'Spiel beitreten',roomCode4:'Raum-Code (4 Ziffern)',join:'Beitreten',
-   roomCode:'Raum-Code',difficulty:'Schwierigkeit',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
+   roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
    easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
    guessPh:'Dein Tipp …',send:'Senden',newGame:'Neues Spiel',toMenu:'Zum Menü',
    settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',
@@ -343,7 +359,7 @@ const T={
    descEasy:'🧒 Für Kinder – nur leicht zeichenbare Begriffe',descMedium:'🙂 Für Jugendliche & Erwachsene',descHard:'🔥 Für Erwachsene – auch mittlere Begriffe dabei',descMixed:'🎲 Alle Schwierigkeiten gemischt'},
  en:{tagline:'Draw & Guess on Wi-Fi',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
-   roomCode:'Room code',difficulty:'Difficulty',players:'Players',leave:'Leave',startGame:'Start game',
+   roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',players:'Players',leave:'Leave',startGame:'Start game',
    easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
    guessPh:'Your guess …',send:'Send',newGame:'New game',toMenu:'To menu',
    settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',
@@ -464,17 +480,24 @@ function enter(r,name,isHost){S.playerId=r.playerId;S.roomCode=r.roomCode;S.name
 // ---------- Lobby ----------
 $('diffSel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!S.isHost)return;
   S.difficulty=b.dataset.d;post({type:'difficulty',value:S.difficulty});});
-$('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty});if(!r.ok)$('lobbyHint').textContent=r.error;};
+$('roundSel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!S.isHost)return;
+  S.maxRounds=parseInt(b.dataset.r,10);post({type:'rounds',value:S.maxRounds});});
+$('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty,rounds:S.maxRounds});if(!r.ok)$('lobbyHint').textContent=r.error;};
 $('btnLeave').onclick=()=>location.reload();
 
 function renderLobby(st){
   S.lastRoom=st;
-  $('lobbyCode').textContent=st.roomCode;S.isHost=st.hostId===S.playerId;S.difficulty=st.difficulty||'mixed';
+  $('lobbyCode').textContent=st.roomCode;S.isHost=st.hostId===S.playerId;S.difficulty=st.difficulty||'mixed';S.maxRounds=st.maxRounds||10;
   // Schwierigkeit
   [...$('diffSel').children].forEach(b=>b.classList.toggle('on',b.dataset.d===S.difficulty));
   $('diffSel').style.opacity=S.isHost?'1':'.6';
   $('diffSel').style.pointerEvents=S.isHost?'auto':'none';
   $('diffHint').innerHTML=`${t('difficulty')}: <span class="difftext">${t(S.difficulty)}</span>`+(S.isHost?'':' · 🔒');
+  // Runden
+  [...$('roundSel').children].forEach(b=>b.classList.toggle('on',parseInt(b.dataset.r,10)===S.maxRounds));
+  $('roundSel').style.opacity=S.isHost?'1':'.6';
+  $('roundSel').style.pointerEvents=S.isHost?'auto':'none';
+  $('roundHint').innerHTML=`${t('rounds')}: <span class="difftext">${S.maxRounds}</span>`+(S.isHost?'':' Â· ðŸ”’');
   // Spieler
   const ul=$('lobbyPlayers');ul.innerHTML='';
   st.players.forEach(p=>{const li=document.createElement('li');
@@ -577,6 +600,7 @@ function handle(event,d){switch(event){
   case 'room_update':
     S.isHost=d.hostId===S.playerId;
     if(d.difficulty)S.difficulty=d.difficulty;
+    if(d.maxRounds)S.maxRounds=d.maxRounds;
     if(d.lang && d.lang!==S.lang){S.lang=d.lang;try{localStorage.setItem('kk_lang',d.lang)}catch(e){}applyI18n();}
     if($('settings').classList.contains('show'))updateSetDiff();
     if(S.state==='lobby')renderLobby(d);

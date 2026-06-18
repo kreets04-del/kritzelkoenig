@@ -19,7 +19,10 @@ const os    = require('os');
 
 const PORT          = process.env.PORT || 3000;  // lokal 3000, online vom Hoster vorgegeben
 const ROUND_SECONDS = 90;          // 1:30 pro Runde
-const MAX_ROUNDS    = 10;          // nach 10 Runden gewinnt, wer die meisten Punkte hat
+const ROUND_OPTIONS = [10, 15, 20, 25, 30, 40, 50];
+const DEFAULT_ROUNDS = 10;
+const RECENT_WORD_LIMIT = 180;
+const MIN_POOL_AFTER_RECENT_FILTER = 8;
 const ROUND_END_PAUSE_MS = 4500;   // (nur Sicherheits-Fallback)
 const LOAD_ONLINE   = process.argv.includes('--online'); // optional: node server.js --online
 
@@ -117,7 +120,9 @@ function createRoom(hostId) {
     currentWord: null,
     revealed: new Set(),
     usedWordIds: [],
+    recentWordIds: [],
     roundNumber: 0,
+    maxRounds: DEFAULT_ROUNDS,
     remaining: 0,
     timer: null,
     difficulty: 'mixed',    // easy | medium | hard | mixed
@@ -137,7 +142,7 @@ function publicState(room) {
     state: room.state,
     currentDrawerId: room.currentDrawerId,
     roundNumber: room.roundNumber,
-    maxRounds: MAX_ROUNDS,
+    maxRounds: room.maxRounds,
     difficulty: room.difficulty,
     lang: room.lang,
     players: room.players.map(p => ({
@@ -166,6 +171,13 @@ function broadcast(room, event, data, exceptId = null) {
 function pushRoomUpdate(room) { broadcast(room, 'room_update', publicState(room)); }
 
 // ---------- Spiel-Logik ----------
+function rememberRecentWord(room, wordId, baseSize) {
+  room.recentWordIds = (room.recentWordIds || []).filter(id => id !== wordId);
+  room.recentWordIds.push(wordId);
+  const limit = Math.min(RECENT_WORD_LIMIT, Math.max(DEFAULT_ROUNDS, Math.floor(baseSize * 0.45)));
+  while (room.recentWordIds.length > limit) room.recentWordIds.shift();
+}
+
 function pickWord(room) {
   const diff = room.difficulty || 'mixed';
   const all = wordsFor(room);
@@ -185,8 +197,12 @@ function pickWord(room) {
     room.usedWordIds = room.usedWordIds.filter(id => !baseIds.has(id));
     pool = base;
   }
+  const recent = new Set(room.recentWordIds || []);
+  const freshPool = pool.filter(w => !recent.has(w.wordId));
+  if (freshPool.length >= Math.min(MIN_POOL_AFTER_RECENT_FILTER, pool.length)) pool = freshPool;
   const w = pool[Math.floor(Math.random() * pool.length)];
-  room.usedWordIds.push(w.wordId);
+  if (!room.usedWordIds.includes(w.wordId)) room.usedWordIds.push(w.wordId);
+  rememberRecentWord(room, w.wordId, base.length);
   return w;
 }
 
@@ -233,7 +249,7 @@ function startRound(room, drawerId) {
     drawerId: room.currentDrawerId,
     drawerName: drawer ? drawer.name : '?',
     roundNumber: room.roundNumber,
-    maxRounds: MAX_ROUNDS,
+    maxRounds: room.maxRounds,
     mask: buildMask(room.currentWord.text, room.revealed),
     remaining: room.remaining,
   });
@@ -263,8 +279,8 @@ function endRoundTimeout(room) {
     word: room.currentWord.text,
     nextDrawerId: next,
     nextDrawerName: getPlayer(room, next)?.name || '?',
-    roundNumber: room.roundNumber, maxRounds: MAX_ROUNDS,
-    lastRound: room.roundNumber >= MAX_ROUNDS,
+    roundNumber: room.roundNumber, maxRounds: room.maxRounds,
+    lastRound: room.roundNumber >= room.maxRounds,
     players: publicState(room).players,
   });
   scheduleNext(room, next);
@@ -285,8 +301,8 @@ function endRoundSolved(room, solver) {
     drawerPoints: (drawer && drawer.id !== solver.id) ? drawerPts : 0,
     word: room.currentWord.text,
     nextDrawerId: solver.id, nextDrawerName: solver.name,
-    roundNumber: room.roundNumber, maxRounds: MAX_ROUNDS,
-    lastRound: room.roundNumber >= MAX_ROUNDS,
+    roundNumber: room.roundNumber, maxRounds: room.maxRounds,
+    lastRound: room.roundNumber >= room.maxRounds,
     players: publicState(room).players,
   });
   scheduleNext(room, solver.id);
@@ -296,7 +312,7 @@ function scheduleNext(room, nextDrawerId) {
   // Es geht NICHT automatisch weiter: der nächste Zeichner (oder der Host)
   // muss auf "Weiter" klicken. Auflösung bleibt so lange sichtbar.
   room.pendingNextDrawer = nextDrawerId;
-  room.isLastRound = room.roundNumber >= MAX_ROUNDS;
+  room.isLastRound = room.roundNumber >= room.maxRounds;
   pushRoomUpdate(room);
   if (room.safetyTimer) clearTimeout(room.safetyTimer);
   // Sicherheits-Auto-Weiter, falls die Person weg ist (2 Minuten)
@@ -340,7 +356,6 @@ function handleGuess(room, player, text) {
 function newGame(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   room.players.forEach(p => p.score = 0);
-  room.usedWordIds = [];
   room.roundNumber = 0;
   room.state = 'lobby';
   room.currentDrawerId = null;
@@ -403,6 +418,7 @@ const server = http.createServer((req, res) => {
         drawerId: room.currentDrawerId,
         drawerName: getPlayer(room, room.currentDrawerId)?.name || '?',
         roundNumber: room.roundNumber,
+        maxRounds: room.maxRounds,
         mask: buildMask(room.currentWord.text, room.revealed),
         remaining: room.remaining,
       });
@@ -494,10 +510,21 @@ function handleAction(msg) {
       if (['de','en'].includes(msg.value)) { room.lang = msg.value; pushRoomUpdate(room); }
       return { ok: true };
 
+    case 'rounds': {
+      if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host' };
+      const rounds = Number(msg.value);
+      if (ROUND_OPTIONS.includes(rounds)) {
+        room.maxRounds = rounds;
+        pushRoomUpdate(room);
+      }
+      return { ok: true };
+    }
+
     case 'start':
       if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host kann starten' };
       if (connectedPlayers(room).length < 2) return { ok: false, error: 'Mindestens 2 Spieler nötig' };
       if (['easy','medium','hard','mixed'].includes(msg.value)) room.difficulty = msg.value;
+      if (ROUND_OPTIONS.includes(Number(msg.rounds))) room.maxRounds = Number(msg.rounds);
       startRound(room, null);
       return { ok: true };
 
