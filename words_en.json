@@ -1,258 +1,3002 @@
 [
-  {"wordId":"en_e001","text":"Dog","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e002","text":"Cat","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e003","text":"Mouse","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e004","text":"Fish","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e005","text":"Duck","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e006","text":"Cow","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e007","text":"Pig","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e008","text":"Horse","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e009","text":"Sheep","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e010","text":"Goat","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e011","text":"Hen","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e012","text":"Bird","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e013","text":"Bear","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e014","text":"Wolf","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e015","text":"Fox","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e016","text":"Bee","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e017","text":"Spider","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e018","text":"Snail","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e019","text":"Snake","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e020","text":"Frog","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e021","text":"Apple","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e022","text":"Pear","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e023","text":"Banana","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e024","text":"Cherry","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e025","text":"Lemon","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e026","text":"Tomato","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e027","text":"Carrot","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e028","text":"Onion","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e029","text":"Pizza","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e030","text":"Bread","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e031","text":"Egg","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e032","text":"Cheese","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e033","text":"Cake","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e034","text":"Ice","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e035","text":"Sun","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e036","text":"Moon","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e037","text":"Star","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e038","text":"Tree","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e039","text":"Flower","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e040","text":"Cloud","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e041","text":"Rain","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e042","text":"Snow","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e043","text":"Mountain","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e044","text":"Leaf","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e045","text":"Stone","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e046","text":"Hill","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e047","text":"House","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e048","text":"Tent","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e049","text":"Door","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e050","text":"Window","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e051","text":"Fence","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e052","text":"Tower","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e053","text":"Car","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e054","text":"Bus","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e055","text":"Train","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e056","text":"Boat","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e057","text":"Ship","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e058","text":"Bike","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e059","text":"Rocket","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e060","text":"Ball","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e061","text":"Hat","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e062","text":"Shoe","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e063","text":"Sock","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e064","text":"Shirt","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e065","text":"Dress","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e066","text":"Ring","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e067","text":"Crown","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e068","text":"Key","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e069","text":"Glasses","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e070","text":"Table","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e071","text":"Chair","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e072","text":"Bed","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e073","text":"Lamp","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e074","text":"Cup","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e075","text":"Plate","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e076","text":"Fork","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e077","text":"Spoon","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e078","text":"Knife","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e079","text":"Pot","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e080","text":"Clock","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e081","text":"Book","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e082","text":"Candle","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e083","text":"Vase","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e084","text":"Mirror","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e085","text":"Heart","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e086","text":"Circle","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e087","text":"Square","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e088","text":"Arrow","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e089","text":"Cross","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e090","text":"Eye","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e091","text":"Nose","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e092","text":"Hand","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e093","text":"Foot","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e094","text":"Tooth","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e095","text":"Ear","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e096","text":"Gift","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e097","text":"Balloon","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e098","text":"Ghost","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e099","text":"King","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e100","text":"Queen","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e101","text":"Robot","category":"General","difficulty":"Easy"},
-  {"wordId":"en_e102","text":"Pirate","category":"General","difficulty":"Easy"},
-  {"wordId":"en_m001","text":"Lion","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m002","text":"Tiger","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m003","text":"Elephant","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m004","text":"Giraffe","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m005","text":"Zebra","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m006","text":"Monkey","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m007","text":"Panda","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m008","text":"Camel","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m009","text":"Penguin","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m010","text":"Dolphin","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m011","text":"Crab","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m012","text":"Owl","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m013","text":"Turtle","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m014","text":"Rabbit","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m015","text":"Hamster","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m016","text":"Parrot","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m017","text":"Whale","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m018","text":"Bat","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m019","text":"Deer","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m020","text":"Strawberry","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m021","text":"Pineapple","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m022","text":"Mushroom","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m023","text":"Pumpkin","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m024","text":"Broccoli","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m025","text":"Hamburger","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m026","text":"Hotdog","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m027","text":"Donut","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m028","text":"Cookie","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m029","text":"Cupcake","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m030","text":"Popcorn","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m031","text":"Sandwich","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m032","text":"Guitar","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m033","text":"Piano","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m034","text":"Violin","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m035","text":"Trumpet","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m036","text":"Drum","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m037","text":"Flute","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m038","text":"Harp","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m039","text":"Microphone","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m040","text":"Bicycle","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m041","text":"Motorcycle","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m042","text":"Airplane","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m043","text":"Sailboat","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m044","text":"Tractor","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m045","text":"Truck","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m046","text":"Taxi","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m047","text":"Scooter","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m048","text":"Castle","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m049","text":"Church","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m050","text":"School","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m051","text":"Bridge","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m052","text":"Factory","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m053","text":"Igloo","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m054","text":"Barn","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m055","text":"Television","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m056","text":"Telephone","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m057","text":"Fridge","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m058","text":"Toaster","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m059","text":"Camera","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m060","text":"Laptop","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m061","text":"Computer","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m062","text":"Umbrella","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m063","text":"Backpack","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m064","text":"Suitcase","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m065","text":"Compass","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m066","text":"Football","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m067","text":"Basketball","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m068","text":"Skateboard","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m069","text":"Trophy","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m070","text":"Medal","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m071","text":"Dice","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m072","text":"Teddy","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m073","text":"Kite","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m074","text":"Snowman","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m075","text":"Rainbow","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m076","text":"Volcano","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m077","text":"Cactus","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m078","text":"Anchor","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m079","text":"Ladder","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m080","text":"Hammer","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m081","text":"Scissors","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m082","text":"Bucket","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m083","text":"Broom","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m084","text":"Doctor","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m085","text":"Police","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m086","text":"Chef","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m087","text":"Clown","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m088","text":"Wizard","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m089","text":"Witch","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m090","text":"Mermaid","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m091","text":"Unicorn","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m092","text":"Dragon","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m093","text":"Knight","category":"General","difficulty":"Medium"},
-  {"wordId":"en_m094","text":"Princess","category":"General","difficulty":"Medium"},
-  {"wordId":"en_h001","text":"Rhinoceros","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h002","text":"Crocodile","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h003","text":"Butterfly","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h004","text":"Ladybug","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h005","text":"Seahorse","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h006","text":"Jellyfish","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h007","text":"Starfish","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h008","text":"Kangaroo","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h009","text":"Dinosaur","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h010","text":"Octopus","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h011","text":"Squirrel","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h012","text":"Hedgehog","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h013","text":"Flamingo","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h014","text":"Gorilla","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h015","text":"Peacock","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h016","text":"Caterpillar","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h017","text":"Grasshopper","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h018","text":"Dragonfly","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h019","text":"Scorpion","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h020","text":"Helicopter","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h021","text":"Submarine","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h022","text":"Ambulance","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h023","text":"Wheelbarrow","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h024","text":"Lawnmower","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h025","text":"Washing machine","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h026","text":"Microwave","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h027","text":"Dishwasher","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h028","text":"Calculator","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h029","text":"Keyboard","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h030","text":"Headphones","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h031","text":"Controller","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h032","text":"Telescope","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h033","text":"Microscope","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h034","text":"Saxophone","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h035","text":"Accordion","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h036","text":"Trombone","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h037","text":"Xylophone","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h038","text":"Wheelchair","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h039","text":"Stethoscope","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h040","text":"Lighthouse","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h041","text":"Skyscraper","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h042","text":"Windmill","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h043","text":"Hospital","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h044","text":"Treasure chest","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h045","text":"Fireworks","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h046","text":"Hourglass","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h047","text":"Mailbox","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h048","text":"Lightbulb","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h049","text":"Toothbrush","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h050","text":"Watermelon","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h051","text":"Astronaut","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h052","text":"Skeleton","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h053","text":"Vampire","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h054","text":"Snow globe","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h055","text":"Roller coaster","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h056","text":"Carousel","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h057","text":"Ferris wheel","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h058","text":"Hot air balloon","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h059","text":"Sandcastle","category":"General","difficulty":"Hard"},
-  {"wordId":"en_h060","text":"Snowflake","category":"General","difficulty":"Hard"}
+  {
+    "wordId": "en_e001",
+    "text": "Dog",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e002",
+    "text": "Cat",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e003",
+    "text": "Mouse",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e004",
+    "text": "Fish",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e005",
+    "text": "Duck",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e006",
+    "text": "Cow",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e007",
+    "text": "Pig",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e008",
+    "text": "Horse",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e009",
+    "text": "Sheep",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e010",
+    "text": "Goat",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e011",
+    "text": "Hen",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e012",
+    "text": "Bird",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e013",
+    "text": "Bear",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e014",
+    "text": "Wolf",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e015",
+    "text": "Fox",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e016",
+    "text": "Bee",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e017",
+    "text": "Spider",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e018",
+    "text": "Snail",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e019",
+    "text": "Snake",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e020",
+    "text": "Frog",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e021",
+    "text": "Apple",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e022",
+    "text": "Pear",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e023",
+    "text": "Banana",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e024",
+    "text": "Cherry",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e025",
+    "text": "Lemon",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e026",
+    "text": "Tomato",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e027",
+    "text": "Carrot",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e028",
+    "text": "Onion",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e029",
+    "text": "Pizza",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e030",
+    "text": "Bread",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e031",
+    "text": "Egg",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e032",
+    "text": "Cheese",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e033",
+    "text": "Cake",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e034",
+    "text": "Ice",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e035",
+    "text": "Sun",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e036",
+    "text": "Moon",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e037",
+    "text": "Star",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e038",
+    "text": "Tree",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e039",
+    "text": "Flower",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e040",
+    "text": "Cloud",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e041",
+    "text": "Rain",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e042",
+    "text": "Snow",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e043",
+    "text": "Mountain",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e044",
+    "text": "Leaf",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e045",
+    "text": "Stone",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e046",
+    "text": "Hill",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e047",
+    "text": "House",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e048",
+    "text": "Tent",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e049",
+    "text": "Door",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e050",
+    "text": "Window",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e051",
+    "text": "Fence",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e052",
+    "text": "Tower",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e053",
+    "text": "Car",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e054",
+    "text": "Bus",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e055",
+    "text": "Train",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e056",
+    "text": "Boat",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e057",
+    "text": "Ship",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e058",
+    "text": "Bike",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e059",
+    "text": "Rocket",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e060",
+    "text": "Ball",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e061",
+    "text": "Hat",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e062",
+    "text": "Shoe",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e063",
+    "text": "Sock",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e064",
+    "text": "Shirt",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e065",
+    "text": "Dress",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e066",
+    "text": "Ring",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e067",
+    "text": "Crown",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e068",
+    "text": "Key",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e069",
+    "text": "Glasses",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e070",
+    "text": "Table",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e071",
+    "text": "Chair",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e072",
+    "text": "Bed",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e073",
+    "text": "Lamp",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e074",
+    "text": "Cup",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e075",
+    "text": "Plate",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e076",
+    "text": "Fork",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e077",
+    "text": "Spoon",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e078",
+    "text": "Knife",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e079",
+    "text": "Pot",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e080",
+    "text": "Clock",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e081",
+    "text": "Book",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e082",
+    "text": "Candle",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e083",
+    "text": "Vase",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e084",
+    "text": "Mirror",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e085",
+    "text": "Heart",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e086",
+    "text": "Circle",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e087",
+    "text": "Square",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e088",
+    "text": "Arrow",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e089",
+    "text": "Cross",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e090",
+    "text": "Eye",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e091",
+    "text": "Nose",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e092",
+    "text": "Hand",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e093",
+    "text": "Foot",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e094",
+    "text": "Tooth",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e095",
+    "text": "Ear",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e096",
+    "text": "Gift",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e097",
+    "text": "Balloon",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e098",
+    "text": "Ghost",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e099",
+    "text": "King",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e100",
+    "text": "Queen",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e101",
+    "text": "Robot",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e102",
+    "text": "Pirate",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_m001",
+    "text": "Lion",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m002",
+    "text": "Tiger",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m003",
+    "text": "Elephant",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m004",
+    "text": "Giraffe",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m005",
+    "text": "Zebra",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m006",
+    "text": "Monkey",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m007",
+    "text": "Panda",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m008",
+    "text": "Camel",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m009",
+    "text": "Penguin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m010",
+    "text": "Dolphin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m011",
+    "text": "Crab",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m012",
+    "text": "Owl",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m013",
+    "text": "Turtle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m014",
+    "text": "Rabbit",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m015",
+    "text": "Hamster",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m016",
+    "text": "Parrot",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m017",
+    "text": "Whale",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m018",
+    "text": "Bat",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m019",
+    "text": "Deer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m020",
+    "text": "Strawberry",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m021",
+    "text": "Pineapple",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m022",
+    "text": "Mushroom",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m023",
+    "text": "Pumpkin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m024",
+    "text": "Broccoli",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m025",
+    "text": "Hamburger",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m026",
+    "text": "Hotdog",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m027",
+    "text": "Donut",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m028",
+    "text": "Cookie",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m029",
+    "text": "Cupcake",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m030",
+    "text": "Popcorn",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m031",
+    "text": "Sandwich",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m032",
+    "text": "Guitar",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m033",
+    "text": "Piano",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m034",
+    "text": "Violin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m035",
+    "text": "Trumpet",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m036",
+    "text": "Drum",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m037",
+    "text": "Flute",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m038",
+    "text": "Harp",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m039",
+    "text": "Microphone",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m040",
+    "text": "Bicycle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m041",
+    "text": "Motorcycle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m042",
+    "text": "Airplane",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m043",
+    "text": "Sailboat",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m044",
+    "text": "Tractor",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m045",
+    "text": "Truck",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m046",
+    "text": "Taxi",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m047",
+    "text": "Scooter",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m048",
+    "text": "Castle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m049",
+    "text": "Church",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m050",
+    "text": "School",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m051",
+    "text": "Bridge",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m052",
+    "text": "Factory",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m053",
+    "text": "Igloo",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m054",
+    "text": "Barn",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m055",
+    "text": "Television",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m056",
+    "text": "Telephone",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m057",
+    "text": "Fridge",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m058",
+    "text": "Toaster",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m059",
+    "text": "Camera",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m060",
+    "text": "Laptop",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m061",
+    "text": "Computer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m062",
+    "text": "Umbrella",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m063",
+    "text": "Backpack",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m064",
+    "text": "Suitcase",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m065",
+    "text": "Compass",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m066",
+    "text": "Football",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m067",
+    "text": "Basketball",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m068",
+    "text": "Skateboard",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m069",
+    "text": "Trophy",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m070",
+    "text": "Medal",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m071",
+    "text": "Dice",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m072",
+    "text": "Teddy",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m073",
+    "text": "Kite",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m074",
+    "text": "Snowman",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m075",
+    "text": "Rainbow",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m076",
+    "text": "Volcano",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m077",
+    "text": "Cactus",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m078",
+    "text": "Anchor",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m079",
+    "text": "Ladder",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m080",
+    "text": "Hammer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m081",
+    "text": "Scissors",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m082",
+    "text": "Bucket",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m083",
+    "text": "Broom",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m084",
+    "text": "Doctor",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m085",
+    "text": "Police",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m086",
+    "text": "Chef",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m087",
+    "text": "Clown",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m088",
+    "text": "Wizard",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m089",
+    "text": "Witch",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m090",
+    "text": "Mermaid",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m091",
+    "text": "Unicorn",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m092",
+    "text": "Dragon",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m093",
+    "text": "Knight",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m094",
+    "text": "Princess",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_h001",
+    "text": "Rhinoceros",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h002",
+    "text": "Crocodile",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h003",
+    "text": "Butterfly",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h004",
+    "text": "Ladybug",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h005",
+    "text": "Seahorse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h006",
+    "text": "Jellyfish",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h007",
+    "text": "Starfish",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h008",
+    "text": "Kangaroo",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h009",
+    "text": "Dinosaur",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h010",
+    "text": "Octopus",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h011",
+    "text": "Squirrel",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h012",
+    "text": "Hedgehog",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h013",
+    "text": "Flamingo",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h014",
+    "text": "Gorilla",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h015",
+    "text": "Peacock",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h016",
+    "text": "Caterpillar",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h017",
+    "text": "Grasshopper",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h018",
+    "text": "Dragonfly",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h019",
+    "text": "Scorpion",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h020",
+    "text": "Helicopter",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h021",
+    "text": "Submarine",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h022",
+    "text": "Ambulance",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h023",
+    "text": "Wheelbarrow",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h024",
+    "text": "Lawnmower",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h025",
+    "text": "Washing machine",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h026",
+    "text": "Microwave",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h027",
+    "text": "Dishwasher",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h028",
+    "text": "Calculator",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h029",
+    "text": "Keyboard",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h030",
+    "text": "Headphones",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h031",
+    "text": "Controller",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h032",
+    "text": "Telescope",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h033",
+    "text": "Microscope",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h034",
+    "text": "Saxophone",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h035",
+    "text": "Accordion",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h036",
+    "text": "Trombone",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h037",
+    "text": "Xylophone",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h038",
+    "text": "Wheelchair",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h039",
+    "text": "Stethoscope",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h040",
+    "text": "Lighthouse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h041",
+    "text": "Skyscraper",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h042",
+    "text": "Windmill",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h043",
+    "text": "Hospital",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h044",
+    "text": "Treasure chest",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h045",
+    "text": "Fireworks",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h046",
+    "text": "Hourglass",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h047",
+    "text": "Mailbox",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h048",
+    "text": "Lightbulb",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h049",
+    "text": "Toothbrush",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h050",
+    "text": "Watermelon",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h051",
+    "text": "Astronaut",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h052",
+    "text": "Skeleton",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h053",
+    "text": "Vampire",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h054",
+    "text": "Snow globe",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h055",
+    "text": "Roller coaster",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h056",
+    "text": "Carousel",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h057",
+    "text": "Ferris wheel",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h058",
+    "text": "Hot air balloon",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h059",
+    "text": "Sandcastle",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h060",
+    "text": "Snowflake",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_e103",
+    "text": "Goldfish",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e104",
+    "text": "Donkey",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e105",
+    "text": "Goose",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e106",
+    "text": "Chick",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e107",
+    "text": "Calf",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e108",
+    "text": "Lamb",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e109",
+    "text": "Swan",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e110",
+    "text": "Fly",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e111",
+    "text": "Beetle",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e112",
+    "text": "Ant",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e113",
+    "text": "Worm",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e114",
+    "text": "Shark",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e115",
+    "text": "Seal",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e116",
+    "text": "Shell",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e117",
+    "text": "Grape",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e118",
+    "text": "Orange",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e119",
+    "text": "Peach",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e120",
+    "text": "Plum",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e121",
+    "text": "Kiwi",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e122",
+    "text": "Mango",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e123",
+    "text": "Potato",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e124",
+    "text": "Cucumber",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e125",
+    "text": "Pepper",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e126",
+    "text": "Pea",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e127",
+    "text": "Rice",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e128",
+    "text": "Pasta",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e129",
+    "text": "Milk",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e130",
+    "text": "Juice",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e131",
+    "text": "Water",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e132",
+    "text": "Tea",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e133",
+    "text": "Coffee",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e134",
+    "text": "Candy",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e135",
+    "text": "Lollipop",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e136",
+    "text": "Grass",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e137",
+    "text": "River",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e138",
+    "text": "Lake",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e139",
+    "text": "Beach",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e140",
+    "text": "Island",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e141",
+    "text": "Wind",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e142",
+    "text": "Fire",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e143",
+    "text": "Sand",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e144",
+    "text": "Bush",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e145",
+    "text": "Branch",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e146",
+    "text": "Root",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e147",
+    "text": "Hut",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e148",
+    "text": "Gate",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e149",
+    "text": "Doll",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e150",
+    "text": "Marble",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e151",
+    "text": "Yo-yo",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e152",
+    "text": "Boot",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e153",
+    "text": "Scarf",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e154",
+    "text": "Coat",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e155",
+    "text": "Belt",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e156",
+    "text": "Bag",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e157",
+    "text": "Sofa",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e158",
+    "text": "Bowl",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e159",
+    "text": "Bottle",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e160",
+    "text": "Bell",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e161",
+    "text": "Box",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e162",
+    "text": "Basket",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e163",
+    "text": "Paper",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e164",
+    "text": "Coin",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_e165",
+    "text": "Rope",
+    "category": "General",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "en_m095",
+    "text": "Raccoon",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m096",
+    "text": "Otter",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m097",
+    "text": "Beaver",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m098",
+    "text": "Badger",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m099",
+    "text": "Moose",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m100",
+    "text": "Alpaca",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m101",
+    "text": "Llama",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m102",
+    "text": "Cheetah",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m103",
+    "text": "Leopard",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m104",
+    "text": "Buffalo",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m105",
+    "text": "Stork",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m106",
+    "text": "Seagull",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m107",
+    "text": "Mole",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m108",
+    "text": "Rat",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m109",
+    "text": "Wasp",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m110",
+    "text": "Mosquito",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m111",
+    "text": "Crow",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m112",
+    "text": "Woodpecker",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m113",
+    "text": "Trout",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m114",
+    "text": "Carp",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m115",
+    "text": "Avocado",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m116",
+    "text": "Raspberry",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m117",
+    "text": "Blueberry",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m118",
+    "text": "Apricot",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m119",
+    "text": "Fig",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m120",
+    "text": "Zucchini",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m121",
+    "text": "Eggplant",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m122",
+    "text": "Asparagus",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m123",
+    "text": "Radish",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m124",
+    "text": "Garlic",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m125",
+    "text": "Soup",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m126",
+    "text": "Waffle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m127",
+    "text": "Pretzel",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m128",
+    "text": "Chocolate",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m129",
+    "text": "Muffin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m130",
+    "text": "Cocoa",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m131",
+    "text": "Cola",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m132",
+    "text": "Cello",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m133",
+    "text": "Tambourine",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m134",
+    "text": "Clarinet",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m135",
+    "text": "Triangle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m136",
+    "text": "Van",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m137",
+    "text": "Cabriolet",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m138",
+    "text": "Canoe",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m139",
+    "text": "Tram",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m140",
+    "text": "Subway",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m141",
+    "text": "Ferry",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m142",
+    "text": "Armchair",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m143",
+    "text": "Shelf",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m144",
+    "text": "Curtain",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m145",
+    "text": "Bin",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m146",
+    "text": "Flowerpot",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m147",
+    "text": "Oven",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m148",
+    "text": "Blender",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m149",
+    "text": "Hairdryer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m150",
+    "text": "Razor",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m151",
+    "text": "Sponge",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m152",
+    "text": "Printer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m153",
+    "text": "Calendar",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m154",
+    "text": "Stapler",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m155",
+    "text": "Globe",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m156",
+    "text": "Volleyball",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m157",
+    "text": "Handball",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m158",
+    "text": "Dumbbell",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m159",
+    "text": "Trampoline",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m160",
+    "text": "Skis",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m161",
+    "text": "Dart",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m162",
+    "text": "Puzzle",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m163",
+    "text": "Playing card",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m164",
+    "text": "Jump rope",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m165",
+    "text": "Teacher",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m166",
+    "text": "Baker",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m167",
+    "text": "Farmer",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_m168",
+    "text": "Pilot",
+    "category": "General",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "en_h061",
+    "text": "Guinea pig",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h062",
+    "text": "Budgerigar",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h063",
+    "text": "Ferret",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h064",
+    "text": "Aquarium",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h065",
+    "text": "Doghouse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h066",
+    "text": "Birdcage",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h067",
+    "text": "Scratching post",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h068",
+    "text": "Food bowl",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h069",
+    "text": "Meerkat",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h070",
+    "text": "Hippopotamus",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h071",
+    "text": "Polar bear",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h072",
+    "text": "Pelican",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h073",
+    "text": "Turkey",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h074",
+    "text": "Hay bale",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h075",
+    "text": "Sea urchin",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h076",
+    "text": "Pomegranate",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h077",
+    "text": "Cauliflower",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h078",
+    "text": "Corn cob",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h079",
+    "text": "Pancake",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h080",
+    "text": "Gummy bears",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h081",
+    "text": "Chocolate bar",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h082",
+    "text": "Jelly pudding",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h083",
+    "text": "Water bottle",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h084",
+    "text": "Coffee mug",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h085",
+    "text": "Thermos flask",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h086",
+    "text": "Cocktail glass",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h087",
+    "text": "Screwdriver",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h088",
+    "text": "Wrench",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h089",
+    "text": "Tape measure",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h090",
+    "text": "Spirit level",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h091",
+    "text": "Paint roller",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h092",
+    "text": "Toolbox",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h093",
+    "text": "Power drill",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h094",
+    "text": "Trowel",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h095",
+    "text": "Music stand",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h096",
+    "text": "Conductor baton",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h097",
+    "text": "Grand piano",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h098",
+    "text": "Fire engine",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h099",
+    "text": "Police car",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h100",
+    "text": "Garbage truck",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h101",
+    "text": "Camper van",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h102",
+    "text": "Snowplow",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h103",
+    "text": "Tow truck",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h104",
+    "text": "Dump truck",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h105",
+    "text": "Wardrobe",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h106",
+    "text": "Rocking chair",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h107",
+    "text": "Bookshelf",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h108",
+    "text": "Desk",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h109",
+    "text": "Coat hanger",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h110",
+    "text": "Picture frame",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h111",
+    "text": "Bedside table",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h112",
+    "text": "Vacuum cleaner",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h113",
+    "text": "Ironing board",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h114",
+    "text": "Laundry basket",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h115",
+    "text": "Remote control",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h116",
+    "text": "Kettle",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h117",
+    "text": "Cutting board",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h118",
+    "text": "Wooden spoon",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h119",
+    "text": "Shower head",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h120",
+    "text": "Bathtub",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h121",
+    "text": "Washbasin",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h122",
+    "text": "Bathrobe",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h123",
+    "text": "School bag",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h124",
+    "text": "Eraser",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h125",
+    "text": "Pencil case",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h126",
+    "text": "School cone",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h127",
+    "text": "Classroom",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h128",
+    "text": "Flashlight",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h129",
+    "text": "Charging cable",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h130",
+    "text": "Walkie-talkie",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h131",
+    "text": "Game console",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h132",
+    "text": "Satellite dish",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h133",
+    "text": "Envelope",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h134",
+    "text": "Paper clip",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h135",
+    "text": "Wastebasket",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h136",
+    "text": "Notepad",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h137",
+    "text": "Office chair",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h138",
+    "text": "Tennis racket",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h139",
+    "text": "Golf club",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h140",
+    "text": "Boxing glove",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h141",
+    "text": "Bicycle helmet",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h142",
+    "text": "Swimming goggles",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h143",
+    "text": "Toy car",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h144",
+    "text": "Rocking horse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h145",
+    "text": "Soap bubbles",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h146",
+    "text": "Stuffed animal",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h147",
+    "text": "Dollhouse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h148",
+    "text": "Passport",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h149",
+    "text": "Camping chair",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h150",
+    "text": "Sun lounger",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h151",
+    "text": "Plane ticket",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h152",
+    "text": "Firefighter",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h153",
+    "text": "Mechanic",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h154",
+    "text": "Photographer",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h155",
+    "text": "Waiter",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h156",
+    "text": "Spacesuit",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h157",
+    "text": "Meteorite",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h158",
+    "text": "Shooting star",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h159",
+    "text": "Galaxy",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h160",
+    "text": "Space station",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h161",
+    "text": "Hospital bed",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h162",
+    "text": "Doctor bag",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h163",
+    "text": "Garden shears",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h164",
+    "text": "Garden hose",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h165",
+    "text": "Greenhouse",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h166",
+    "text": "Scaffolding",
+    "category": "General",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "en_h167",
+    "text": "Blueprint",
+    "category": "General",
+    "difficulty": "Hard"
+  }
 ]

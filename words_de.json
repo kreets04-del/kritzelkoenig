@@ -1,745 +1,6002 @@
 [
-  {"wordId":"e001","text":"Hund","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e002","text":"Katze","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e003","text":"Maus","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e004","text":"Fisch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e005","text":"Goldfisch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e006","text":"Ente","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e007","text":"Kuh","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e008","text":"Schwein","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e009","text":"Pferd","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e010","text":"Schaf","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e011","text":"Ziege","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e012","text":"Huhn","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e013","text":"Hahn","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e014","text":"Igel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e015","text":"Bär","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e016","text":"Wolf","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e017","text":"Fuchs","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e018","text":"Reh","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e019","text":"Biene","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e020","text":"Spinne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e021","text":"Schnecke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e022","text":"Käfer","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e023","text":"Fliege","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e024","text":"Hai","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e025","text":"Wal","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e026","text":"Krabbe","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e027","text":"Muschel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e028","text":"Pinguin","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e029","text":"Apfel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e030","text":"Birne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e031","text":"Banane","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e032","text":"Kirsche","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e033","text":"Traube","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e034","text":"Zitrone","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e035","text":"Tomate","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e036","text":"Karotte","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e037","text":"Gurke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e038","text":"Zwiebel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e039","text":"Paprika","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e040","text":"Erbse","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e041","text":"Pilz","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e042","text":"Ei","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e043","text":"Brot","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e044","text":"Brötchen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e045","text":"Käse","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e046","text":"Eis","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e047","text":"Pizza","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e048","text":"Pommes","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e049","text":"Keks","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e050","text":"Lutscher","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e051","text":"Bonbon","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e052","text":"Sonne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e053","text":"Mond","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e054","text":"Stern","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e055","text":"Baum","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e056","text":"Blume","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e057","text":"Rose","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e058","text":"Blatt","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e059","text":"Gras","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e060","text":"Berg","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e061","text":"Hügel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e062","text":"See","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e063","text":"Fluss","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e064","text":"Stein","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e065","text":"Wolke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e066","text":"Regen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e067","text":"Schnee","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e068","text":"Blitz","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e069","text":"Kaktus","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e070","text":"Palme","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e071","text":"Insel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e072","text":"Strand","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e073","text":"Wind","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e074","text":"Pfütze","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e075","text":"Haus","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e076","text":"Hütte","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e077","text":"Zelt","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e078","text":"Turm","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e079","text":"Tür","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e080","text":"Fenster","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e081","text":"Zaun","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e082","text":"Tor","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e083","text":"Auto","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e084","text":"Bus","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e085","text":"Zug","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e086","text":"Boot","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e087","text":"Schiff","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e088","text":"Rakete","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e089","text":"Fahrrad","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e090","text":"Taxi","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e091","text":"Ball","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e092","text":"Teddy","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e093","text":"Puppe","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e094","text":"Würfel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e095","text":"Murmel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e096","text":"Jojo","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e097","text":"Kreisel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e098","text":"Pokal","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e099","text":"Medaille","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e100","text":"Drachen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e101","text":"Hut","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e102","text":"Mütze","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e103","text":"Schuh","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e104","text":"Socke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e105","text":"Schal","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e106","text":"Hemd","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e107","text":"Hose","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e108","text":"Rock","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e109","text":"Kleid","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e110","text":"Jacke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e111","text":"Mantel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e112","text":"Gürtel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e113","text":"Krawatte","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e114","text":"Schleife","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e115","text":"Brille","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e116","text":"Stiefel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e117","text":"Tasche","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e118","text":"Ring","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e119","text":"Krone","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e120","text":"Schlüssel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e121","text":"Tisch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e122","text":"Stuhl","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e123","text":"Bett","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e124","text":"Sofa","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e125","text":"Sessel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e126","text":"Bank","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e127","text":"Hocker","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e128","text":"Regal","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e129","text":"Lampe","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e130","text":"Spiegel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e131","text":"Teppich","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e132","text":"Kissen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e133","text":"Vase","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e134","text":"Kerze","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e135","text":"Uhr","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e136","text":"Buch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e137","text":"Glas","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e138","text":"Tasse","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e139","text":"Teller","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e140","text":"Topf","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e141","text":"Pfanne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e142","text":"Gabel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e143","text":"Löffel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e144","text":"Messer","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e145","text":"Kanne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e146","text":"Eimer","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e147","text":"Besen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e148","text":"Herz","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e149","text":"Kreis","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e150","text":"Dreieck","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e151","text":"Quadrat","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e152","text":"Pfeil","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e153","text":"Kreuz","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e154","text":"Smiley","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e155","text":"Diamant","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e156","text":"Hufeisen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e157","text":"Spirale","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e158","text":"Anker","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e159","text":"Auge","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e160","text":"Nase","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e161","text":"Mund","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e162","text":"Ohr","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e163","text":"Hand","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e164","text":"Fuß","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e165","text":"Bein","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e166","text":"Arm","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e167","text":"Zahn","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e168","text":"Zunge","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e169","text":"Finger","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e170","text":"Daumen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e171","text":"Knie","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e172","text":"Bart","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e173","text":"Haare","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e174","text":"Geschenk","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e175","text":"Glocke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e176","text":"Luftballon","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e177","text":"Schlitten","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e178","text":"Osterei","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e179","text":"Pflaster","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e180","text":"Spritze","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e181","text":"Maske","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e182","text":"Lupe","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e183","text":"Seife","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e184","text":"Handtuch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e185","text":"Kamm","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e186","text":"Schere","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e187","text":"Stift","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e188","text":"Bleistift","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e189","text":"Lineal","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e190","text":"Heft","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e191","text":"Tafel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e192","text":"Kreide","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e193","text":"Pinsel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e194","text":"Hammer","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e195","text":"Nagel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e196","text":"Schraube","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e197","text":"Säge","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e198","text":"Axt","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e199","text":"Leiter","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e200","text":"Schaufel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e201","text":"Rechen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e202","text":"Sonnenblume","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e203","text":"Grill","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e204","text":"Angel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e205","text":"Laterne","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e206","text":"Flamme","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e207","text":"Vogelhaus","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e208","text":"Apfelbaum","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e209","text":"Drache","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e210","text":"Ritter","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e211","text":"König","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e212","text":"Königin","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e213","text":"Hexe","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e214","text":"Fee","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e215","text":"Geist","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e216","text":"Zwerg","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e217","text":"Pirat","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e218","text":"Planet","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e219","text":"UFO","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e220","text":"Alien","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e221","text":"Komet","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e222","text":"Mars","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"m001","text":"Hamster","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m002","text":"Kaninchen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m003","text":"Papagei","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m004","text":"Schildkröte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m005","text":"Ratte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m006","text":"Löwe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m007","text":"Tiger","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m008","text":"Elefant","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m009","text":"Giraffe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m010","text":"Zebra","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m011","text":"Affe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m012","text":"Hirsch","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m013","text":"Panda","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m014","text":"Kamel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m015","text":"Flamingo","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m016","text":"Gorilla","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m017","text":"Esel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m018","text":"Gans","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m019","text":"Küken","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m020","text":"Kalb","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m021","text":"Ferkel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m022","text":"Lamm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m023","text":"Stall","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m024","text":"Traktor","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m025","text":"Scheune","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m026","text":"Delfin","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m027","text":"Krebs","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m028","text":"Qualle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m029","text":"Seestern","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m030","text":"Hummer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m031","text":"Koralle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m032","text":"Robbe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m033","text":"Wespe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m034","text":"Ameise","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m035","text":"Mücke","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m036","text":"Raupe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m037","text":"Regenwurm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m038","text":"Motte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m039","text":"Orange","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m040","text":"Erdbeere","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m041","text":"Himbeere","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m042","text":"Pflaume","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m043","text":"Ananas","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m044","text":"Melone","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m045","text":"Kiwi","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m046","text":"Mango","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m047","text":"Pfirsich","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m048","text":"Feige","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m049","text":"Kartoffel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m050","text":"Knoblauch","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m051","text":"Salat","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m052","text":"Kohl","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m053","text":"Brokkoli","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m054","text":"Kürbis","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m055","text":"Spargel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m056","text":"Radieschen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m057","text":"Aubergine","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m058","text":"Zucchini","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m059","text":"Aprikose","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m060","text":"Burger","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m061","text":"Hotdog","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m062","text":"Suppe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m063","text":"Waffel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m064","text":"Kuchen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m065","text":"Torte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m066","text":"Donut","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m067","text":"Brezel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m068","text":"Döner","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m069","text":"Schokolade","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m070","text":"Muffin","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m071","text":"Cupcake","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m072","text":"Popcorn","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m073","text":"Praline","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m074","text":"Eisbecher","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m075","text":"Saft","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m076","text":"Milch","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m077","text":"Kakao","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m078","text":"Cola","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m079","text":"Teekanne","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m080","text":"Zange","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m081","text":"Bohrer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m082","text":"Helm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m083","text":"Ziegelstein","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m084","text":"Gitarre","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m085","text":"Klavier","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m086","text":"Geige","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m087","text":"Cello","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m088","text":"Trompete","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m089","text":"Posaune","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m090","text":"Flöte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m091","text":"Trommel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m092","text":"Tamburin","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m093","text":"Harfe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m094","text":"Mikrofon","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m095","text":"Triangel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m096","text":"Motorrad","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m097","text":"Roller","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m098","text":"Flugzeug","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m099","text":"Kanu","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m100","text":"Cabrio","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m101","text":"Sportwagen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m102","text":"Schrank","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m103","text":"Kommode","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m104","text":"Vorhang","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m105","text":"Mülleimer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m106","text":"Blumentopf","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m107","text":"Hochhaus","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m108","text":"Schloss","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m109","text":"Burg","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m110","text":"Kirche","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m111","text":"Schule","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m112","text":"Fabrik","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m113","text":"Garage","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m114","text":"Brücke","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m115","text":"Windmühle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m116","text":"Leuchtturm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m117","text":"Fernseher","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m118","text":"Wecker","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m119","text":"Telefon","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m120","text":"Herd","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m121","text":"Backofen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m122","text":"Mixer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m123","text":"Toaster","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m124","text":"Sieb","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m125","text":"Föhn","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m126","text":"Bürste","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m127","text":"Rasierer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m128","text":"Schwamm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m129","text":"Computer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m130","text":"Laptop","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m131","text":"Drucker","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m132","text":"Stempel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m133","text":"Kalender","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m134","text":"Locher","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m135","text":"Tacker","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m136","text":"Globus","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m137","text":"Fußball","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m138","text":"Basketball","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m139","text":"Volleyball","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m140","text":"Handball","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m141","text":"Hantel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m142","text":"Skateboard","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m143","text":"Schlittschuh","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m144","text":"Trampolin","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m145","text":"Ski","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m146","text":"Dartpfeil","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m147","text":"Bauklotz","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m148","text":"Puzzle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m149","text":"Spielkarte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m150","text":"Sandburg","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m151","text":"Springseil","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m152","text":"Roboter","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m153","text":"Zauberstab","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m154","text":"Smartphone","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m155","text":"Tablet","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m156","text":"Kamera","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m157","text":"Drohne","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m158","text":"Batterie","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m159","text":"Steckdose","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m160","text":"Fernglas","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m161","text":"Wasserfall","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m162","text":"Höhle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m163","text":"Wald","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m164","text":"Vulkan","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m165","text":"Regenschirm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m166","text":"Gewitter","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m167","text":"Tornado","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m168","text":"Regenbogen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m169","text":"Schneemann","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m170","text":"Schneeflocke","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m171","text":"Eiszapfen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m172","text":"Thermometer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m173","text":"Koffer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m174","text":"Rucksack","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m175","text":"Sonnenhut","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m176","text":"Landkarte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m177","text":"Kompass","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m178","text":"Schlafsack","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m179","text":"Flipflops","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m180","text":"Hotel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m181","text":"Arzt","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m182","text":"Polizist","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m183","text":"Koch","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m184","text":"Bäcker","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m185","text":"Lehrer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m186","text":"Maler","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m187","text":"Gärtner","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m188","text":"Pilot","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m189","text":"Clown","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m190","text":"Zauberer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m191","text":"Friseur","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m192","text":"Bauer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m193","text":"Kapitän","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m194","text":"Richter","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m195","text":"Prinzessin","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m196","text":"Einhorn","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m197","text":"Monster","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m198","text":"Riese","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m199","text":"Vampir","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m200","text":"Schatztruhe","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m201","text":"Satellit","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m202","text":"Teleskop","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m203","text":"Saturn","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m204","text":"Tablette","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m205","text":"Verband","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m206","text":"Krücke","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m207","text":"Skelett","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m208","text":"Gehirn","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m209","text":"Gießkanne","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m210","text":"Spaten","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m211","text":"Hängematte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m212","text":"Bagger","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m213","text":"Kran","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m214","text":"Pylon","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m215","text":"Sirene","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m216","text":"Rentier","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m217","text":"Halskette","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m218","text":"Geldbörse","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m219","text":"Fächer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m220","text":"Schnurrbart","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m221","text":"Armband","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m222","text":"Riesenrad","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m223","text":"Karussell","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m224","text":"Zuckerwatte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"h001","text":"Meerschweinchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h002","text":"Wellensittich","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h003","text":"Frettchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h004","text":"Aquarium","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h005","text":"Hundehütte","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h006","text":"Vogelkäfig","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h007","text":"Kratzbaum","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h008","text":"Futternapf","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h009","text":"Eichhörnchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h010","text":"Waschbär","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h011","text":"Känguru","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h012","text":"Nashorn","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h013","text":"Nilpferd","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h014","text":"Krokodil","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h015","text":"Schlange","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h016","text":"Eisbär","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h017","text":"Pelikan","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h018","text":"Erdmännchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h019","text":"Truthahn","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h020","text":"Heuballen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h021","text":"Seepferdchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h022","text":"Oktopus","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h023","text":"Tintenfisch","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h024","text":"Rochen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h025","text":"Seeigel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h026","text":"Schmetterling","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h027","text":"Marienkäfer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h028","text":"Libelle","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h029","text":"Skorpion","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h030","text":"Wassermelone","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h031","text":"Kokosnuss","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h032","text":"Granatapfel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h033","text":"Blumenkohl","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h034","text":"Maiskolben","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h035","text":"Spaghetti","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h036","text":"Pfannkuchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h037","text":"Sandwich","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h038","text":"Lebkuchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h039","text":"Gummibärchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h040","text":"Schokoriegel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h041","text":"Wackelpudding","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h042","text":"Wasserflasche","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h043","text":"Kaffeebecher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h044","text":"Trinkflasche","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h045","text":"Thermoskanne","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h046","text":"Cocktailglas","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h047","text":"Smoothie","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h048","text":"Schraubenzieher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h049","text":"Schraubenschlüssel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h050","text":"Maßband","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h051","text":"Wasserwaage","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h052","text":"Farbrolle","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h053","text":"Werkzeugkasten","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h054","text":"Klebeband","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h055","text":"Bohrmaschine","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h056","text":"Maurerkelle","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h057","text":"Klarinette","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h058","text":"Schlagzeug","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h059","text":"Akkordeon","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h060","text":"Notenständer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h061","text":"Dirigentenstab","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h062","text":"Saxophon","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h063","text":"Flügel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h064","text":"Hubschrauber","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h065","text":"Segelboot","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h066","text":"Straßenbahn","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h067","text":"Lastwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h068","text":"Polizeiauto","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h069","text":"Feuerwehrauto","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h070","text":"Krankenwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h071","text":"Müllwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h072","text":"Lieferwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h073","text":"Wohnwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h074","text":"Wohnmobil","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h075","text":"Schneepflug","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h076","text":"Abschleppwagen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h077","text":"Kipplaster","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h078","text":"Kleiderschrank","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h079","text":"Schaukelstuhl","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h080","text":"Bücherregal","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h081","text":"Schreibtisch","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h082","text":"Garderobe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h083","text":"Kleiderbügel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h084","text":"Bilderrahmen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h085","text":"Nachttisch","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h086","text":"Staubsauger","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h087","text":"Bügeleisen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h088","text":"Wäschekorb","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h089","text":"Fernbedienung","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h090","text":"Kühlschrank","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h091","text":"Mikrowelle","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h092","text":"Wasserkocher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h093","text":"Salzstreuer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h094","text":"Schneidebrett","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h095","text":"Kochlöffel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h096","text":"Duschkopf","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h097","text":"Waschmaschine","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h098","text":"Schreibtischlampe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h099","text":"Kaffeemaschine","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h100","text":"Badewanne","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h101","text":"Dusche","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h102","text":"Waschbecken","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h103","text":"Toilette","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h104","text":"Zahnbürste","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h105","text":"Zahnpasta","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h106","text":"Bademantel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h107","text":"Schulranzen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h108","text":"Radiergummi","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h109","text":"Federmäppchen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h110","text":"Schultüte","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h111","text":"Taschenrechner","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h112","text":"Klassenraum","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h113","text":"Tastatur","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h114","text":"Kopfhörer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h115","text":"Lautsprecher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h116","text":"Controller","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h117","text":"Taschenlampe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h118","text":"Ladekabel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h119","text":"Funkgerät","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h120","text":"Spielkonsole","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h121","text":"Satellitenschüssel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h122","text":"Briefumschlag","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h123","text":"Büroklammer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h124","text":"Papierkorb","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h125","text":"Notizblock","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h126","text":"Drehstuhl","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h127","text":"Tennisschläger","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h128","text":"Golfschläger","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h129","text":"Boxhandschuh","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h130","text":"Fahrradhelm","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h131","text":"Schwimmbrille","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h132","text":"Spielzeugauto","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h133","text":"Schaukelpferd","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h134","text":"Seifenblasen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h135","text":"Plüschtier","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h136","text":"Puppenhaus","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h137","text":"Reisepass","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h138","text":"Campingstuhl","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h139","text":"Sonnenliege","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h140","text":"Flugticket","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h141","text":"Feuerwehrmann","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h142","text":"Astronaut","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h143","text":"Mechaniker","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h144","text":"Fotograf","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h145","text":"Kellner","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h146","text":"Meerjungfrau","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h147","text":"Raumanzug","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h148","text":"Meteorit","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h149","text":"Sternschnuppe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h150","text":"Galaxie","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h151","text":"Raumstation","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h152","text":"Stethoskop","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h153","text":"Rollstuhl","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h154","text":"Krankenbett","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h155","text":"Arztkoffer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h156","text":"Schubkarre","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h157","text":"Gartenschere","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h158","text":"Rasenmäher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h159","text":"Gartenzwerg","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h160","text":"Gemüsebeet","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h161","text":"Gartenschlauch","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h162","text":"Gewächshaus","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h163","text":"Kompost","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h164","text":"Gerüst","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h165","text":"Bauplan","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h166","text":"Sandhaufen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h167","text":"Warnschild","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h168","text":"Absperrung","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h169","text":"Presslufthammer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h170","text":"Betonmischer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h171","text":"Handschellen","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h172","text":"Polizeimütze","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h173","text":"Gefängnis","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h174","text":"Feuerwehrhelm","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h175","text":"Feuerlöscher","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h176","text":"Wasserschlauch","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h177","text":"Rauchmelder","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h178","text":"Rettungsring","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h179","text":"Lagerfeuer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h180","text":"Picknickkorb","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h181","text":"Weihnachtsbaum","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h182","text":"Weihnachtsmann","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h183","text":"Adventskranz","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h184","text":"Geburtstagstorte","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h185","text":"Lebkuchenmann","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h186","text":"Lichterkette","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h187","text":"Schneekugel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h188","text":"Schlüsselbund","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h189","text":"Geisterbahn","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h190","text":"Autoscooter","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h191","text":"Achterbahn","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h192","text":"Schießbude","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h193","text":"Glücksrad","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h194","text":"Eintrittskarte","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h195","text":"Strandkorb","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h196","text":"Tausendfüßler","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h197","text":"Spinnennetz","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"e223","text":"Zuckerstange","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e224","text":"Marmeladenglas","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e225","text":"Saftglas","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e226","text":"Trinkhalm","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e227","text":"Topflappen","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e228","text":"Eierbecher","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e229","text":"Brotdose","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e230","text":"Haarbürste","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e231","text":"Pantoffel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e232","text":"Regenhut","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e233","text":"Badehose","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e234","text":"Vorhängeschloss","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e235","text":"Türklinke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e236","text":"Fensterbrett","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e237","text":"Papierflieger","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e238","text":"Milchglas","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e239","text":"Teelicht","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e240","text":"Eierkarton","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e241","text":"Lauch","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e242","text":"Salatkopf","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e243","text":"Knäckebrot","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e244","text":"Reiswaffel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e245","text":"Pastinake","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e246","text":"Rhabarber","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e247","text":"Blaubeere","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e248","text":"Dattel","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e249","text":"Papaya","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e250","text":"Mangold","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e251","text":"Artischocke","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"e252","text":"Spargelstange","category":"Allgemein","difficulty":"Easy"},
-  {"wordId":"m225","text":"Hängebrücke","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m226","text":"Bahnhof","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m227","text":"Haltestelle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m228","text":"Ampelmännchen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m229","text":"Verkehrsinsel","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m230","text":"Zebrastreifen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m231","text":"Fahrkartenautomat","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m232","text":"Gepäckwagen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m233","text":"Doppeldeckerbus","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m234","text":"Motorradhelm","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m235","text":"Tankstelle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m236","text":"Waschanlage","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m237","text":"Werkzeugkiste","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m238","text":"Nähmaschine","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m239","text":"Wäscheständer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m240","text":"Einkaufswagen","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m241","text":"Kassenband","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m242","text":"Kaffeemühle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m243","text":"Backblech","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m244","text":"Nudelholz","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m245","text":"Suppentopf","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m246","text":"Blumenstrauß","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m247","text":"Regenschirmständer","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m248","text":"Briefkasten","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m249","text":"Klettergerüst","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m250","text":"Baumhaus","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m251","text":"Dachrinne","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m252","text":"Solaranlage","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m253","text":"Bushaltestelle","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"m254","text":"Konzertkarte","category":"Allgemein","difficulty":"Medium"},
-  {"wordId":"h198","text":"Planetarium","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h199","text":"Unterwasserwelt","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h200","text":"Korallenriff","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h201","text":"Schiffswrack","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h202","text":"U-Boot","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h203","text":"Rettungshubschrauber","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h204","text":"Fallschirmspringer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h205","text":"Drachenboot","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h206","text":"Seiltänzer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h207","text":"Zaubershow","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h208","text":"Marionette","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h209","text":"Puppentheater","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h210","text":"Schattenspiel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h211","text":"Maskenball","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h212","text":"Orchestergraben","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h213","text":"Mischpult","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h214","text":"Filmklappe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h215","text":"Scheinwerfer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h216","text":"Fotostudio","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h217","text":"Dunkelkammer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h218","text":"Laborbrille","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h219","text":"Mikroskopbild","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h220","text":"Wetterstation","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h221","text":"Strommast","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h222","text":"Wasserturm","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h223","text":"Tunnelbohrer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h224","text":"Krankenwagenrampe","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h225","text":"Operationssaal","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h226","text":"Röntgenbild","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h227","text":"Apothekerschrank","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h228","text":"Gerichtssaal","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h229","text":"Richterhammer","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h230","text":"Detektivbüro","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h231","text":"Tresorraum","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h232","text":"Flaschenpost","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h233","text":"Zeitkapsel","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h234","text":"Schatzkarte","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h235","text":"Flughafentower","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h236","text":"Weltraumbahnhof","category":"Allgemein","difficulty":"Hard"},
-  {"wordId":"h237","text":"Geheimlabor","category":"Allgemein","difficulty":"Hard"}
+  {
+    "wordId": "e001",
+    "text": "Hund",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e002",
+    "text": "Katze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e003",
+    "text": "Maus",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e004",
+    "text": "Fisch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e005",
+    "text": "Goldfisch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e006",
+    "text": "Ente",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e007",
+    "text": "Kuh",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e008",
+    "text": "Schwein",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e009",
+    "text": "Pferd",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e010",
+    "text": "Schaf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e011",
+    "text": "Ziege",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e012",
+    "text": "Huhn",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e013",
+    "text": "Hahn",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e014",
+    "text": "Igel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e015",
+    "text": "Bär",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e016",
+    "text": "Wolf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e017",
+    "text": "Fuchs",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e018",
+    "text": "Reh",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e019",
+    "text": "Biene",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e020",
+    "text": "Spinne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e021",
+    "text": "Schnecke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e022",
+    "text": "Käfer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e023",
+    "text": "Fliege",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e024",
+    "text": "Hai",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e025",
+    "text": "Wal",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e026",
+    "text": "Krabbe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e027",
+    "text": "Muschel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e028",
+    "text": "Pinguin",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e029",
+    "text": "Apfel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e030",
+    "text": "Birne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e031",
+    "text": "Banane",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e032",
+    "text": "Kirsche",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e033",
+    "text": "Traube",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e034",
+    "text": "Zitrone",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e035",
+    "text": "Tomate",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e036",
+    "text": "Karotte",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e037",
+    "text": "Gurke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e038",
+    "text": "Zwiebel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e039",
+    "text": "Paprika",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e040",
+    "text": "Erbse",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e041",
+    "text": "Pilz",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e042",
+    "text": "Ei",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e043",
+    "text": "Brot",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e044",
+    "text": "Brötchen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e045",
+    "text": "Käse",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e046",
+    "text": "Eis",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e047",
+    "text": "Pizza",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e048",
+    "text": "Pommes",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e049",
+    "text": "Keks",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e050",
+    "text": "Lutscher",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e051",
+    "text": "Bonbon",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e052",
+    "text": "Sonne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e053",
+    "text": "Mond",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e054",
+    "text": "Stern",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e055",
+    "text": "Baum",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e056",
+    "text": "Blume",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e057",
+    "text": "Rose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e058",
+    "text": "Blatt",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e059",
+    "text": "Gras",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e060",
+    "text": "Berg",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e061",
+    "text": "Hügel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e062",
+    "text": "See",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e063",
+    "text": "Fluss",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e064",
+    "text": "Stein",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e065",
+    "text": "Wolke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e066",
+    "text": "Regen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e067",
+    "text": "Schnee",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e068",
+    "text": "Blitz",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e069",
+    "text": "Kaktus",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e070",
+    "text": "Palme",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e071",
+    "text": "Insel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e072",
+    "text": "Strand",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e073",
+    "text": "Wind",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e074",
+    "text": "Pfütze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e075",
+    "text": "Haus",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e076",
+    "text": "Hütte",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e077",
+    "text": "Zelt",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e078",
+    "text": "Turm",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e079",
+    "text": "Tür",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e080",
+    "text": "Fenster",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e081",
+    "text": "Zaun",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e082",
+    "text": "Tor",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e083",
+    "text": "Auto",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e084",
+    "text": "Bus",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e085",
+    "text": "Zug",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e086",
+    "text": "Boot",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e087",
+    "text": "Schiff",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e088",
+    "text": "Rakete",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e089",
+    "text": "Fahrrad",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e090",
+    "text": "Taxi",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e091",
+    "text": "Ball",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e092",
+    "text": "Teddy",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e093",
+    "text": "Puppe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e094",
+    "text": "Würfel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e095",
+    "text": "Murmel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e096",
+    "text": "Jojo",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e097",
+    "text": "Kreisel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e098",
+    "text": "Pokal",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e099",
+    "text": "Medaille",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e100",
+    "text": "Drachen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e101",
+    "text": "Hut",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e102",
+    "text": "Mütze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e103",
+    "text": "Schuh",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e104",
+    "text": "Socke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e105",
+    "text": "Schal",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e106",
+    "text": "Hemd",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e107",
+    "text": "Hose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e108",
+    "text": "Rock",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e109",
+    "text": "Kleid",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e110",
+    "text": "Jacke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e111",
+    "text": "Mantel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e112",
+    "text": "Gürtel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e113",
+    "text": "Krawatte",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e114",
+    "text": "Schleife",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e115",
+    "text": "Brille",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e116",
+    "text": "Stiefel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e117",
+    "text": "Tasche",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e118",
+    "text": "Ring",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e119",
+    "text": "Krone",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e120",
+    "text": "Schlüssel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e121",
+    "text": "Tisch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e122",
+    "text": "Stuhl",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e123",
+    "text": "Bett",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e124",
+    "text": "Sofa",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e125",
+    "text": "Sessel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e126",
+    "text": "Bank",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e127",
+    "text": "Hocker",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e128",
+    "text": "Regal",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e129",
+    "text": "Lampe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e130",
+    "text": "Spiegel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e131",
+    "text": "Teppich",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e132",
+    "text": "Kissen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e133",
+    "text": "Vase",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e134",
+    "text": "Kerze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e135",
+    "text": "Uhr",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e136",
+    "text": "Buch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e137",
+    "text": "Glas",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e138",
+    "text": "Tasse",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e139",
+    "text": "Teller",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e140",
+    "text": "Topf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e141",
+    "text": "Pfanne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e142",
+    "text": "Gabel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e143",
+    "text": "Löffel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e144",
+    "text": "Messer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e145",
+    "text": "Kanne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e146",
+    "text": "Eimer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e147",
+    "text": "Besen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e148",
+    "text": "Herz",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e149",
+    "text": "Kreis",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e150",
+    "text": "Dreieck",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e151",
+    "text": "Quadrat",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e152",
+    "text": "Pfeil",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e153",
+    "text": "Kreuz",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e154",
+    "text": "Smiley",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e155",
+    "text": "Diamant",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e156",
+    "text": "Hufeisen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e157",
+    "text": "Spirale",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e158",
+    "text": "Anker",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e159",
+    "text": "Auge",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e160",
+    "text": "Nase",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e161",
+    "text": "Mund",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e162",
+    "text": "Ohr",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e163",
+    "text": "Hand",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e164",
+    "text": "Fuß",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e165",
+    "text": "Bein",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e166",
+    "text": "Arm",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e167",
+    "text": "Zahn",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e168",
+    "text": "Zunge",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e169",
+    "text": "Finger",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e170",
+    "text": "Daumen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e171",
+    "text": "Knie",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e172",
+    "text": "Bart",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e173",
+    "text": "Haare",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e174",
+    "text": "Geschenk",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e175",
+    "text": "Glocke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e176",
+    "text": "Luftballon",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e177",
+    "text": "Schlitten",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e178",
+    "text": "Osterei",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e179",
+    "text": "Pflaster",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e180",
+    "text": "Spritze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e181",
+    "text": "Maske",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e182",
+    "text": "Lupe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e183",
+    "text": "Seife",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e184",
+    "text": "Handtuch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e185",
+    "text": "Kamm",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e186",
+    "text": "Schere",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e187",
+    "text": "Stift",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e188",
+    "text": "Bleistift",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e189",
+    "text": "Lineal",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e190",
+    "text": "Heft",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e191",
+    "text": "Tafel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e192",
+    "text": "Kreide",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e193",
+    "text": "Pinsel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e194",
+    "text": "Hammer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e195",
+    "text": "Nagel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e196",
+    "text": "Schraube",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e197",
+    "text": "Säge",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e198",
+    "text": "Axt",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e199",
+    "text": "Leiter",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e200",
+    "text": "Schaufel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e201",
+    "text": "Rechen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e202",
+    "text": "Sonnenblume",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e203",
+    "text": "Grill",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e204",
+    "text": "Angel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e205",
+    "text": "Laterne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e206",
+    "text": "Flamme",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e207",
+    "text": "Vogelhaus",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e208",
+    "text": "Apfelbaum",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e209",
+    "text": "Drache",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e210",
+    "text": "Ritter",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e211",
+    "text": "König",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e212",
+    "text": "Königin",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e213",
+    "text": "Hexe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e214",
+    "text": "Fee",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e215",
+    "text": "Geist",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e216",
+    "text": "Zwerg",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e217",
+    "text": "Pirat",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e218",
+    "text": "Planet",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e219",
+    "text": "UFO",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e220",
+    "text": "Alien",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e221",
+    "text": "Komet",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e222",
+    "text": "Mars",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "m001",
+    "text": "Hamster",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m002",
+    "text": "Kaninchen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m003",
+    "text": "Papagei",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m004",
+    "text": "Schildkröte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m005",
+    "text": "Ratte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m006",
+    "text": "Löwe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m007",
+    "text": "Tiger",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m008",
+    "text": "Elefant",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m009",
+    "text": "Giraffe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m010",
+    "text": "Zebra",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m011",
+    "text": "Affe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m012",
+    "text": "Hirsch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m013",
+    "text": "Panda",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m014",
+    "text": "Kamel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m015",
+    "text": "Flamingo",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m016",
+    "text": "Gorilla",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m017",
+    "text": "Esel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m018",
+    "text": "Gans",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m019",
+    "text": "Küken",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m020",
+    "text": "Kalb",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m021",
+    "text": "Ferkel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m022",
+    "text": "Lamm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m023",
+    "text": "Stall",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m024",
+    "text": "Traktor",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m025",
+    "text": "Scheune",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m026",
+    "text": "Delfin",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m027",
+    "text": "Krebs",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m028",
+    "text": "Qualle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m029",
+    "text": "Seestern",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m030",
+    "text": "Hummer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m031",
+    "text": "Koralle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m032",
+    "text": "Robbe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m033",
+    "text": "Wespe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m034",
+    "text": "Ameise",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m035",
+    "text": "Mücke",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m036",
+    "text": "Raupe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m037",
+    "text": "Regenwurm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m038",
+    "text": "Motte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m039",
+    "text": "Orange",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m040",
+    "text": "Erdbeere",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m041",
+    "text": "Himbeere",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m042",
+    "text": "Pflaume",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m043",
+    "text": "Ananas",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m044",
+    "text": "Melone",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m045",
+    "text": "Kiwi",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m046",
+    "text": "Mango",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m047",
+    "text": "Pfirsich",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m048",
+    "text": "Feige",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m049",
+    "text": "Kartoffel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m050",
+    "text": "Knoblauch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m051",
+    "text": "Salat",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m052",
+    "text": "Kohl",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m053",
+    "text": "Brokkoli",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m054",
+    "text": "Kürbis",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m055",
+    "text": "Spargel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m056",
+    "text": "Radieschen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m057",
+    "text": "Aubergine",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m058",
+    "text": "Zucchini",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m059",
+    "text": "Aprikose",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m060",
+    "text": "Burger",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m061",
+    "text": "Hotdog",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m062",
+    "text": "Suppe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m063",
+    "text": "Waffel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m064",
+    "text": "Kuchen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m065",
+    "text": "Torte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m066",
+    "text": "Donut",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m067",
+    "text": "Brezel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m068",
+    "text": "Döner",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m069",
+    "text": "Schokolade",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m070",
+    "text": "Muffin",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m071",
+    "text": "Cupcake",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m072",
+    "text": "Popcorn",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m073",
+    "text": "Praline",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m074",
+    "text": "Eisbecher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m075",
+    "text": "Saft",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m076",
+    "text": "Milch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m077",
+    "text": "Kakao",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m078",
+    "text": "Cola",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m079",
+    "text": "Teekanne",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m080",
+    "text": "Zange",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m081",
+    "text": "Bohrer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m082",
+    "text": "Helm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m083",
+    "text": "Ziegelstein",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m084",
+    "text": "Gitarre",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m085",
+    "text": "Klavier",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m086",
+    "text": "Geige",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m087",
+    "text": "Cello",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m088",
+    "text": "Trompete",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m089",
+    "text": "Posaune",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m090",
+    "text": "Flöte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m091",
+    "text": "Trommel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m092",
+    "text": "Tamburin",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m093",
+    "text": "Harfe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m094",
+    "text": "Mikrofon",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m095",
+    "text": "Triangel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m096",
+    "text": "Motorrad",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m097",
+    "text": "Roller",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m098",
+    "text": "Flugzeug",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m099",
+    "text": "Kanu",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m100",
+    "text": "Cabrio",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m101",
+    "text": "Sportwagen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m102",
+    "text": "Schrank",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m103",
+    "text": "Kommode",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m104",
+    "text": "Vorhang",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m105",
+    "text": "Mülleimer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m106",
+    "text": "Blumentopf",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m107",
+    "text": "Hochhaus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m108",
+    "text": "Schloss",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m109",
+    "text": "Burg",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m110",
+    "text": "Kirche",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m111",
+    "text": "Schule",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m112",
+    "text": "Fabrik",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m113",
+    "text": "Garage",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m114",
+    "text": "Brücke",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m115",
+    "text": "Windmühle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m116",
+    "text": "Leuchtturm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m117",
+    "text": "Fernseher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m118",
+    "text": "Wecker",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m119",
+    "text": "Telefon",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m120",
+    "text": "Herd",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m121",
+    "text": "Backofen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m122",
+    "text": "Mixer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m123",
+    "text": "Toaster",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m124",
+    "text": "Sieb",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m125",
+    "text": "Föhn",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m126",
+    "text": "Bürste",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m127",
+    "text": "Rasierer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m128",
+    "text": "Schwamm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m129",
+    "text": "Computer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m130",
+    "text": "Laptop",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m131",
+    "text": "Drucker",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m132",
+    "text": "Stempel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m133",
+    "text": "Kalender",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m134",
+    "text": "Locher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m135",
+    "text": "Tacker",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m136",
+    "text": "Globus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m137",
+    "text": "Fußball",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m138",
+    "text": "Basketball",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m139",
+    "text": "Volleyball",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m140",
+    "text": "Handball",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m141",
+    "text": "Hantel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m142",
+    "text": "Skateboard",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m143",
+    "text": "Schlittschuh",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m144",
+    "text": "Trampolin",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m145",
+    "text": "Ski",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m146",
+    "text": "Dartpfeil",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m147",
+    "text": "Bauklotz",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m148",
+    "text": "Puzzle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m149",
+    "text": "Spielkarte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m150",
+    "text": "Sandburg",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m151",
+    "text": "Springseil",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m152",
+    "text": "Roboter",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m153",
+    "text": "Zauberstab",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m154",
+    "text": "Smartphone",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m155",
+    "text": "Tablet",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m156",
+    "text": "Kamera",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m157",
+    "text": "Drohne",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m158",
+    "text": "Batterie",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m159",
+    "text": "Steckdose",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m160",
+    "text": "Fernglas",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m161",
+    "text": "Wasserfall",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m162",
+    "text": "Höhle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m163",
+    "text": "Wald",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m164",
+    "text": "Vulkan",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m165",
+    "text": "Regenschirm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m166",
+    "text": "Gewitter",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m167",
+    "text": "Tornado",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m168",
+    "text": "Regenbogen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m169",
+    "text": "Schneemann",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m170",
+    "text": "Schneeflocke",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m171",
+    "text": "Eiszapfen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m172",
+    "text": "Thermometer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m173",
+    "text": "Koffer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m174",
+    "text": "Rucksack",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m175",
+    "text": "Sonnenhut",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m176",
+    "text": "Landkarte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m177",
+    "text": "Kompass",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m178",
+    "text": "Schlafsack",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m179",
+    "text": "Flipflops",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m180",
+    "text": "Hotel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m181",
+    "text": "Arzt",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m182",
+    "text": "Polizist",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m183",
+    "text": "Koch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m184",
+    "text": "Bäcker",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m185",
+    "text": "Lehrer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m186",
+    "text": "Maler",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m187",
+    "text": "Gärtner",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m188",
+    "text": "Pilot",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m189",
+    "text": "Clown",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m190",
+    "text": "Zauberer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m191",
+    "text": "Friseur",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m192",
+    "text": "Bauer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m193",
+    "text": "Kapitän",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m194",
+    "text": "Richter",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m195",
+    "text": "Prinzessin",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m196",
+    "text": "Einhorn",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m197",
+    "text": "Monster",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m198",
+    "text": "Riese",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m199",
+    "text": "Vampir",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m200",
+    "text": "Schatztruhe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m201",
+    "text": "Satellit",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m202",
+    "text": "Teleskop",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m203",
+    "text": "Saturn",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m204",
+    "text": "Tablette",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m205",
+    "text": "Verband",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m206",
+    "text": "Krücke",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m207",
+    "text": "Skelett",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m208",
+    "text": "Gehirn",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m209",
+    "text": "Gießkanne",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m210",
+    "text": "Spaten",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m211",
+    "text": "Hängematte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m212",
+    "text": "Bagger",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m213",
+    "text": "Kran",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m214",
+    "text": "Pylon",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m215",
+    "text": "Sirene",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m216",
+    "text": "Rentier",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m217",
+    "text": "Halskette",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m218",
+    "text": "Geldbörse",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m219",
+    "text": "Fächer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m220",
+    "text": "Schnurrbart",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m221",
+    "text": "Armband",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m222",
+    "text": "Riesenrad",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m223",
+    "text": "Karussell",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m224",
+    "text": "Zuckerwatte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "h001",
+    "text": "Meerschweinchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h002",
+    "text": "Wellensittich",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h003",
+    "text": "Frettchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h004",
+    "text": "Aquarium",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h005",
+    "text": "Hundehütte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h006",
+    "text": "Vogelkäfig",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h007",
+    "text": "Kratzbaum",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h008",
+    "text": "Futternapf",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h009",
+    "text": "Eichhörnchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h010",
+    "text": "Waschbär",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h011",
+    "text": "Känguru",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h012",
+    "text": "Nashorn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h013",
+    "text": "Nilpferd",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h014",
+    "text": "Krokodil",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h015",
+    "text": "Schlange",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h016",
+    "text": "Eisbär",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h017",
+    "text": "Pelikan",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h018",
+    "text": "Erdmännchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h019",
+    "text": "Truthahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h020",
+    "text": "Heuballen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h021",
+    "text": "Seepferdchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h022",
+    "text": "Oktopus",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h023",
+    "text": "Tintenfisch",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h024",
+    "text": "Rochen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h025",
+    "text": "Seeigel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h026",
+    "text": "Schmetterling",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h027",
+    "text": "Marienkäfer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h028",
+    "text": "Libelle",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h029",
+    "text": "Skorpion",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h030",
+    "text": "Wassermelone",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h031",
+    "text": "Kokosnuss",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h032",
+    "text": "Granatapfel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h033",
+    "text": "Blumenkohl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h034",
+    "text": "Maiskolben",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h035",
+    "text": "Spaghetti",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h036",
+    "text": "Pfannkuchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h037",
+    "text": "Sandwich",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h038",
+    "text": "Lebkuchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h039",
+    "text": "Gummibärchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h040",
+    "text": "Schokoriegel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h041",
+    "text": "Wackelpudding",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h042",
+    "text": "Wasserflasche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h043",
+    "text": "Kaffeebecher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h044",
+    "text": "Trinkflasche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h045",
+    "text": "Thermoskanne",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h046",
+    "text": "Cocktailglas",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h047",
+    "text": "Smoothie",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h048",
+    "text": "Schraubenzieher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h049",
+    "text": "Schraubenschlüssel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h050",
+    "text": "Maßband",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h051",
+    "text": "Wasserwaage",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h052",
+    "text": "Farbrolle",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h053",
+    "text": "Werkzeugkasten",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h054",
+    "text": "Klebeband",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h055",
+    "text": "Bohrmaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h056",
+    "text": "Maurerkelle",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h057",
+    "text": "Klarinette",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h058",
+    "text": "Schlagzeug",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h059",
+    "text": "Akkordeon",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h060",
+    "text": "Notenständer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h061",
+    "text": "Dirigentenstab",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h062",
+    "text": "Saxophon",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h063",
+    "text": "Flügel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h064",
+    "text": "Hubschrauber",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h065",
+    "text": "Segelboot",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h066",
+    "text": "Straßenbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h067",
+    "text": "Lastwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h068",
+    "text": "Polizeiauto",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h069",
+    "text": "Feuerwehrauto",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h070",
+    "text": "Krankenwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h071",
+    "text": "Müllwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h072",
+    "text": "Lieferwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h073",
+    "text": "Wohnwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h074",
+    "text": "Wohnmobil",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h075",
+    "text": "Schneepflug",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h076",
+    "text": "Abschleppwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h077",
+    "text": "Kipplaster",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h078",
+    "text": "Kleiderschrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h079",
+    "text": "Schaukelstuhl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h080",
+    "text": "Bücherregal",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h081",
+    "text": "Schreibtisch",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h082",
+    "text": "Garderobe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h083",
+    "text": "Kleiderbügel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h084",
+    "text": "Bilderrahmen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h085",
+    "text": "Nachttisch",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h086",
+    "text": "Staubsauger",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h087",
+    "text": "Bügeleisen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h088",
+    "text": "Wäschekorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h089",
+    "text": "Fernbedienung",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h090",
+    "text": "Kühlschrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h091",
+    "text": "Mikrowelle",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h092",
+    "text": "Wasserkocher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h093",
+    "text": "Salzstreuer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h094",
+    "text": "Schneidebrett",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h095",
+    "text": "Kochlöffel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h096",
+    "text": "Duschkopf",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h097",
+    "text": "Waschmaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h098",
+    "text": "Schreibtischlampe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h099",
+    "text": "Kaffeemaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h100",
+    "text": "Badewanne",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h101",
+    "text": "Dusche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h102",
+    "text": "Waschbecken",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h103",
+    "text": "Toilette",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h104",
+    "text": "Zahnbürste",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h105",
+    "text": "Zahnpasta",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h106",
+    "text": "Bademantel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h107",
+    "text": "Schulranzen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h108",
+    "text": "Radiergummi",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h109",
+    "text": "Federmäppchen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h110",
+    "text": "Schultüte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h111",
+    "text": "Taschenrechner",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h112",
+    "text": "Klassenraum",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h113",
+    "text": "Tastatur",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h114",
+    "text": "Kopfhörer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h115",
+    "text": "Lautsprecher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h116",
+    "text": "Controller",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h117",
+    "text": "Taschenlampe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h118",
+    "text": "Ladekabel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h119",
+    "text": "Funkgerät",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h120",
+    "text": "Spielkonsole",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h121",
+    "text": "Satellitenschüssel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h122",
+    "text": "Briefumschlag",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h123",
+    "text": "Büroklammer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h124",
+    "text": "Papierkorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h125",
+    "text": "Notizblock",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h126",
+    "text": "Drehstuhl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h127",
+    "text": "Tennisschläger",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h128",
+    "text": "Golfschläger",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h129",
+    "text": "Boxhandschuh",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h130",
+    "text": "Fahrradhelm",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h131",
+    "text": "Schwimmbrille",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h132",
+    "text": "Spielzeugauto",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h133",
+    "text": "Schaukelpferd",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h134",
+    "text": "Seifenblasen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h135",
+    "text": "Plüschtier",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h136",
+    "text": "Puppenhaus",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h137",
+    "text": "Reisepass",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h138",
+    "text": "Campingstuhl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h139",
+    "text": "Sonnenliege",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h140",
+    "text": "Flugticket",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h141",
+    "text": "Feuerwehrmann",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h142",
+    "text": "Astronaut",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h143",
+    "text": "Mechaniker",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h144",
+    "text": "Fotograf",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h145",
+    "text": "Kellner",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h146",
+    "text": "Meerjungfrau",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h147",
+    "text": "Raumanzug",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h148",
+    "text": "Meteorit",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h149",
+    "text": "Sternschnuppe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h150",
+    "text": "Galaxie",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h151",
+    "text": "Raumstation",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h152",
+    "text": "Stethoskop",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h153",
+    "text": "Rollstuhl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h154",
+    "text": "Krankenbett",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h155",
+    "text": "Arztkoffer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h156",
+    "text": "Schubkarre",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h157",
+    "text": "Gartenschere",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h158",
+    "text": "Rasenmäher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h159",
+    "text": "Gartenzwerg",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h160",
+    "text": "Gemüsebeet",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h161",
+    "text": "Gartenschlauch",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h162",
+    "text": "Gewächshaus",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h163",
+    "text": "Kompost",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h164",
+    "text": "Gerüst",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h165",
+    "text": "Bauplan",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h166",
+    "text": "Sandhaufen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h167",
+    "text": "Warnschild",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h168",
+    "text": "Absperrung",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h169",
+    "text": "Presslufthammer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h170",
+    "text": "Betonmischer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h171",
+    "text": "Handschellen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h172",
+    "text": "Polizeimütze",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h173",
+    "text": "Gefängnis",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h174",
+    "text": "Feuerwehrhelm",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h175",
+    "text": "Feuerlöscher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h176",
+    "text": "Wasserschlauch",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h177",
+    "text": "Rauchmelder",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h178",
+    "text": "Rettungsring",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h179",
+    "text": "Lagerfeuer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h180",
+    "text": "Picknickkorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h181",
+    "text": "Weihnachtsbaum",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h182",
+    "text": "Weihnachtsmann",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h183",
+    "text": "Adventskranz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h184",
+    "text": "Geburtstagstorte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h185",
+    "text": "Lebkuchenmann",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h186",
+    "text": "Lichterkette",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h187",
+    "text": "Schneekugel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h188",
+    "text": "Schlüsselbund",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h189",
+    "text": "Geisterbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h190",
+    "text": "Autoscooter",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h191",
+    "text": "Achterbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h192",
+    "text": "Schießbude",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h193",
+    "text": "Glücksrad",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h194",
+    "text": "Eintrittskarte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h195",
+    "text": "Strandkorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h196",
+    "text": "Tausendfüßler",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h197",
+    "text": "Spinnennetz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "e223",
+    "text": "Zuckerstange",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e224",
+    "text": "Marmeladenglas",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e225",
+    "text": "Saftglas",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e226",
+    "text": "Trinkhalm",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e227",
+    "text": "Topflappen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e228",
+    "text": "Eierbecher",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e229",
+    "text": "Brotdose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e230",
+    "text": "Haarbürste",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e231",
+    "text": "Pantoffel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e232",
+    "text": "Regenhut",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e233",
+    "text": "Badehose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e234",
+    "text": "Vorhängeschloss",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e235",
+    "text": "Türklinke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e236",
+    "text": "Fensterbrett",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e237",
+    "text": "Papierflieger",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e238",
+    "text": "Milchglas",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e239",
+    "text": "Teelicht",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e240",
+    "text": "Eierkarton",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e241",
+    "text": "Lauch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e242",
+    "text": "Salatkopf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e243",
+    "text": "Knäckebrot",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e244",
+    "text": "Reiswaffel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e245",
+    "text": "Pastinake",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e246",
+    "text": "Rhabarber",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e247",
+    "text": "Blaubeere",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e248",
+    "text": "Dattel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e249",
+    "text": "Papaya",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e250",
+    "text": "Mangold",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e251",
+    "text": "Artischocke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e252",
+    "text": "Spargelstange",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "m225",
+    "text": "Hängebrücke",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m226",
+    "text": "Bahnhof",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m227",
+    "text": "Haltestelle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m228",
+    "text": "Ampelmännchen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m229",
+    "text": "Verkehrsinsel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m230",
+    "text": "Zebrastreifen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m231",
+    "text": "Fahrkartenautomat",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m232",
+    "text": "Gepäckwagen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m233",
+    "text": "Doppeldeckerbus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m234",
+    "text": "Motorradhelm",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m235",
+    "text": "Tankstelle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m236",
+    "text": "Waschanlage",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m237",
+    "text": "Werkzeugkiste",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m238",
+    "text": "Nähmaschine",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m239",
+    "text": "Wäscheständer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m240",
+    "text": "Einkaufswagen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m241",
+    "text": "Kassenband",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m242",
+    "text": "Kaffeemühle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m243",
+    "text": "Backblech",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m244",
+    "text": "Nudelholz",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m245",
+    "text": "Suppentopf",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m246",
+    "text": "Blumenstrauß",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m247",
+    "text": "Regenschirmständer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m248",
+    "text": "Briefkasten",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m249",
+    "text": "Klettergerüst",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m250",
+    "text": "Baumhaus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m251",
+    "text": "Dachrinne",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m252",
+    "text": "Solaranlage",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m253",
+    "text": "Bushaltestelle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m254",
+    "text": "Konzertkarte",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "h198",
+    "text": "Planetarium",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h199",
+    "text": "Unterwasserwelt",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h200",
+    "text": "Korallenriff",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h201",
+    "text": "Schiffswrack",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h202",
+    "text": "U-Boot",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h203",
+    "text": "Rettungshubschrauber",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h204",
+    "text": "Fallschirmspringer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h205",
+    "text": "Drachenboot",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h206",
+    "text": "Seiltänzer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h207",
+    "text": "Zaubershow",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h208",
+    "text": "Marionette",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h209",
+    "text": "Puppentheater",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h210",
+    "text": "Schattenspiel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h211",
+    "text": "Maskenball",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h212",
+    "text": "Orchestergraben",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h213",
+    "text": "Mischpult",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h214",
+    "text": "Filmklappe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h215",
+    "text": "Scheinwerfer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h216",
+    "text": "Fotostudio",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h217",
+    "text": "Dunkelkammer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h218",
+    "text": "Laborbrille",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h219",
+    "text": "Mikroskopbild",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h220",
+    "text": "Wetterstation",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h221",
+    "text": "Strommast",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h222",
+    "text": "Wasserturm",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h223",
+    "text": "Tunnelbohrer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h224",
+    "text": "Krankenwagenrampe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h225",
+    "text": "Operationssaal",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h226",
+    "text": "Röntgenbild",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h227",
+    "text": "Apothekerschrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h228",
+    "text": "Gerichtssaal",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h229",
+    "text": "Richterhammer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h230",
+    "text": "Detektivbüro",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h231",
+    "text": "Tresorraum",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h232",
+    "text": "Flaschenpost",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h233",
+    "text": "Zeitkapsel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h234",
+    "text": "Schatzkarte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h235",
+    "text": "Flughafentower",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h236",
+    "text": "Weltraumbahnhof",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h237",
+    "text": "Geheimlabor",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "e253",
+    "text": "Vogel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e254",
+    "text": "Frosch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e255",
+    "text": "Eule",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e256",
+    "text": "Taube",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e257",
+    "text": "Adler",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e258",
+    "text": "Wurm",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e259",
+    "text": "Schwan",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e260",
+    "text": "Möwe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e261",
+    "text": "Storch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e262",
+    "text": "Hase",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e263",
+    "text": "Butter",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e264",
+    "text": "Honig",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e265",
+    "text": "Wurst",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e266",
+    "text": "Reis",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e267",
+    "text": "Nudeln",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e268",
+    "text": "Salz",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e269",
+    "text": "Zucker",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e270",
+    "text": "Wasser",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e271",
+    "text": "Kaffee",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e272",
+    "text": "Tee",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e273",
+    "text": "Ketchup",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e274",
+    "text": "Senf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e275",
+    "text": "Toast",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e276",
+    "text": "Brei",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e277",
+    "text": "Joghurt",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e278",
+    "text": "Meer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e279",
+    "text": "Bach",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e280",
+    "text": "Wiese",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e281",
+    "text": "Sand",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e282",
+    "text": "Feuer",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e283",
+    "text": "Nebel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e284",
+    "text": "Busch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e285",
+    "text": "Ast",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e286",
+    "text": "Wurzel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e287",
+    "text": "Tanne",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e288",
+    "text": "Eiche",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e289",
+    "text": "Moos",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e290",
+    "text": "Kiste",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e291",
+    "text": "Korb",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e292",
+    "text": "Flasche",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e293",
+    "text": "Dose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e294",
+    "text": "Schüssel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e295",
+    "text": "Decke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e296",
+    "text": "Matratze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e297",
+    "text": "Korken",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e298",
+    "text": "Knopf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e299",
+    "text": "Nadel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e300",
+    "text": "Faden",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e301",
+    "text": "Papier",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e302",
+    "text": "Brief",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e303",
+    "text": "Münze",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e304",
+    "text": "Geldschein",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e305",
+    "text": "Seil",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e306",
+    "text": "Kette",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e307",
+    "text": "Stock",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e308",
+    "text": "Kopf",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e309",
+    "text": "Bauch",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e310",
+    "text": "Rücken",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e311",
+    "text": "Schulter",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e312",
+    "text": "Ellbogen",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e313",
+    "text": "Hals",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e314",
+    "text": "Rutsche",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e315",
+    "text": "Schaukel",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e316",
+    "text": "Wippe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e317",
+    "text": "Note",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e318",
+    "text": "Radio",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e319",
+    "text": "U-Bahn",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e320",
+    "text": "Fähre",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e321",
+    "text": "Handschuh",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e322",
+    "text": "Pullover",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e323",
+    "text": "Unterhose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e324",
+    "text": "Pinselbecher",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e325",
+    "text": "Keksdose",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e326",
+    "text": "Milchtüte",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e327",
+    "text": "Brotscheibe",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e328",
+    "text": "Zahnlücke",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e329",
+    "text": "Papierschiff",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "e330",
+    "text": "Wasserhahn",
+    "category": "Allgemein",
+    "difficulty": "Easy"
+  },
+  {
+    "wordId": "m255",
+    "text": "Koala",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m256",
+    "text": "Gepard",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m257",
+    "text": "Leopard",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m258",
+    "text": "Büffel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m259",
+    "text": "Dachs",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m260",
+    "text": "Otter",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m261",
+    "text": "Elch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m262",
+    "text": "Lama",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m263",
+    "text": "Alpaka",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m264",
+    "text": "Pfau",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m265",
+    "text": "Strauß",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m266",
+    "text": "Maulwurf",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m267",
+    "text": "Biber",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m268",
+    "text": "Fledermaus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m269",
+    "text": "Krähe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m270",
+    "text": "Specht",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m271",
+    "text": "Forelle",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m272",
+    "text": "Karpfen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m273",
+    "text": "Schwertfisch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m274",
+    "text": "Kranich",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m275",
+    "text": "Croissant",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m276",
+    "text": "Krapfen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m277",
+    "text": "Omelett",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m278",
+    "text": "Müsli",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m279",
+    "text": "Pudding",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m280",
+    "text": "Käsekuchen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m281",
+    "text": "Lasagne",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m282",
+    "text": "Ravioli",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m283",
+    "text": "Sushi",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m284",
+    "text": "Salami",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m285",
+    "text": "Avocado",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m286",
+    "text": "Brombeere",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m287",
+    "text": "Johannisbeere",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m288",
+    "text": "Dosenöffner",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m289",
+    "text": "Korkenzieher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m290",
+    "text": "Schneebesen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m291",
+    "text": "Messbecher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m292",
+    "text": "Küchenwaage",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m293",
+    "text": "Pfannenwender",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m294",
+    "text": "Geschirrtuch",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m295",
+    "text": "Kleiderständer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m296",
+    "text": "Schuhregal",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m297",
+    "text": "Wanduhr",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m298",
+    "text": "Stehlampe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m299",
+    "text": "Bücherstapel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m300",
+    "text": "Baseballschläger",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m301",
+    "text": "Bowlingkugel",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m302",
+    "text": "Badmintonschläger",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m303",
+    "text": "Surfbrett",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m304",
+    "text": "Taucherbrille",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m305",
+    "text": "Schwimmring",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m306",
+    "text": "Torwart",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m307",
+    "text": "Schiedsrichter",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m308",
+    "text": "Rennrad",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m309",
+    "text": "Zahnarzt",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m310",
+    "text": "Tierarzt",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m311",
+    "text": "Postbote",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m312",
+    "text": "Verkäufer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m313",
+    "text": "Musiker",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m314",
+    "text": "Tänzer",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m315",
+    "text": "Schauspieler",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m316",
+    "text": "Detektiv",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m317",
+    "text": "Forscher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m318",
+    "text": "Museum",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m319",
+    "text": "Bibliothek",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m320",
+    "text": "Kino",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m321",
+    "text": "Restaurant",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m322",
+    "text": "Krankenhaus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m323",
+    "text": "Flughafen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m324",
+    "text": "Hafen",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m325",
+    "text": "Bauernhof",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m326",
+    "text": "Spielplatz",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m327",
+    "text": "Schwimmbad",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m328",
+    "text": "Stadion",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m329",
+    "text": "Zirkus",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m330",
+    "text": "Zoo",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m331",
+    "text": "Gletscher",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m332",
+    "text": "Wüste",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m333",
+    "text": "Klippe",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m334",
+    "text": "Oase",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "m335",
+    "text": "Lawine",
+    "category": "Allgemein",
+    "difficulty": "Medium"
+  },
+  {
+    "wordId": "h238",
+    "text": "Bienenstock",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h239",
+    "text": "Ameisenhaufen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h240",
+    "text": "Fuchsbau",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h241",
+    "text": "Vogelscheuche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h242",
+    "text": "Pferdekutsche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h243",
+    "text": "Milchkanne",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h244",
+    "text": "Bauernmarkt",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h245",
+    "text": "Hühnerstall",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h246",
+    "text": "Traktoranhänger",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h247",
+    "text": "Mähdrescher",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h248",
+    "text": "Tierarztpraxis",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h249",
+    "text": "Hundeleine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h250",
+    "text": "Katzenkorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h251",
+    "text": "Aquariumfilter",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h252",
+    "text": "Vogeltränke",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h253",
+    "text": "Hundeknochen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h254",
+    "text": "Katzenklappe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h255",
+    "text": "Pferdesattel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h256",
+    "text": "Melkschemel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h257",
+    "text": "Fischernetz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h258",
+    "text": "Geschirrspüler",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h259",
+    "text": "Dunstabzugshaube",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h260",
+    "text": "Küchenmaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h261",
+    "text": "Espressomaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h262",
+    "text": "Brotschneidemaschine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h263",
+    "text": "Gewürzregal",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h264",
+    "text": "Picknickdecke",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h265",
+    "text": "Einkaufskorb",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h266",
+    "text": "Kühltruhe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h267",
+    "text": "Vorratsschrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h268",
+    "text": "U-Bahn-Station",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h269",
+    "text": "Bahnübergang",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h270",
+    "text": "Kreisverkehr",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h271",
+    "text": "Parkhaus",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h272",
+    "text": "Autowerkstatt",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h273",
+    "text": "Fahrradständer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h274",
+    "text": "Seilbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h275",
+    "text": "Sessellift",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h276",
+    "text": "Skilift",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h277",
+    "text": "Fährhafen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h278",
+    "text": "Containerschiff",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h279",
+    "text": "Rettungsboot",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h280",
+    "text": "Segelflugzeug",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h281",
+    "text": "Heißluftballon",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h282",
+    "text": "Motorschlitten",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h283",
+    "text": "Rathaus",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h284",
+    "text": "Postamt",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h285",
+    "text": "Museumsvitrine",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h286",
+    "text": "Theaterbühne",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h287",
+    "text": "Konzertsaal",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h288",
+    "text": "Fußballstadion",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h289",
+    "text": "Schwimmhalle",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h290",
+    "text": "Kletterwand",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h291",
+    "text": "Bowlingbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h292",
+    "text": "Eislaufbahn",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h293",
+    "text": "Campingplatz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h294",
+    "text": "Zeltlager",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h295",
+    "text": "Berghütte",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h296",
+    "text": "Aussichtsturm",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h297",
+    "text": "Marktplatz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h298",
+    "text": "Drachenschloss",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h299",
+    "text": "Hexenkessel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h300",
+    "text": "Zauberspiegel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h301",
+    "text": "Geisterschloss",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h302",
+    "text": "Piratenschiff",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h303",
+    "text": "Ritterturnier",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h304",
+    "text": "Königsthron",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h305",
+    "text": "Schatzinsel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h306",
+    "text": "Zaubertrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h307",
+    "text": "Kristallkugel",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h308",
+    "text": "Reagenzglas",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h309",
+    "text": "Chemiebaukasten",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h310",
+    "text": "Sonnensystemmodell",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h311",
+    "text": "Mondlandefähre",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h312",
+    "text": "Raketenstart",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h313",
+    "text": "Weltraumteleskop",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h314",
+    "text": "Roboterarm",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h315",
+    "text": "Solarroboter",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h316",
+    "text": "Drohnenlandeplatz",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h317",
+    "text": "Forschungsschiff",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h318",
+    "text": "Zahnarztstuhl",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h319",
+    "text": "Rettungsdecke",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h320",
+    "text": "Blutdruckmessgerät",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h321",
+    "text": "Erste-Hilfe-Koffer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h322",
+    "text": "Operationslampe",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h323",
+    "text": "Krankenhausflur",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h324",
+    "text": "Augenarztpraxis",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h325",
+    "text": "Medikamentenschrank",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h326",
+    "text": "Hörgerät",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h327",
+    "text": "Gipsverband",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h328",
+    "text": "Sicherungskasten",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h329",
+    "text": "Briefmarkenalbum",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h330",
+    "text": "Schallplattenspieler",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h331",
+    "text": "Schlüsselbrett",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h332",
+    "text": "Garderobenständer",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h333",
+    "text": "Kinderwagen",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h334",
+    "text": "Aquapark",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  },
+  {
+    "wordId": "h335",
+    "text": "Wasserrutsche",
+    "category": "Allgemein",
+    "difficulty": "Hard"
+  }
 ]
