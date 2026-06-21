@@ -154,7 +154,8 @@
   .mask{font-size:clamp(22px,4.6vw,40px);font-weight:900;letter-spacing:4px;white-space:pre;
     color:var(--ink);text-shadow:0 2px 10px rgba(0,0,0,.3)}
   .guessrow{display:flex;gap:8px;flex:1;min-width:220px}.guessrow input{flex:1}
-  #btnMic{background:var(--panel2);border:1px solid var(--line);color:var(--ink);box-shadow:none;font-size:18px}
+  #btnMic{background:linear-gradient(180deg,#5cf0b8,#2cc78d);border:none;color:#0e2a20;font-size:22px;
+    box-shadow:0 4px 14px rgba(46,224,168,.4);min-width:54px}
   #btnMic.rec{background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d;animation:pulse .6s infinite alternate}
   #btnMic.hidden{display:none}
 
@@ -208,6 +209,16 @@
       </div>
     </div>
     <div class="err" id="menuErr"></div>
+    <button class="secondary" id="btnHelp" style="margin-top:12px;width:100%" data-i18n="howToPlay">📖 Anleitung</button>
+  </div>
+</div>
+
+<!-- ANLEITUNG -->
+<div class="overlay" id="help">
+  <div class="box" style="text-align:left;max-width:min(580px,93vw);max-height:86vh;overflow:auto">
+    <div class="big2" data-i18n="howToPlay" style="text-align:center;margin-bottom:12px">📖 Anleitung</div>
+    <div id="helpBody" style="line-height:1.5;font-size:15px"></div>
+    <div class="row" style="margin-top:16px"><button class="secondary" id="helpClose" data-i18n="close">Schließen</button></div>
   </div>
 </div>
 
@@ -342,6 +353,7 @@
     <label data-i18n="sound" style="margin-top:14px">Ton</label>
     <div class="row"><button class="secondary" id="setMute">🔊</button>
       <button class="secondary" id="setFs" data-i18n="fullscreen">Vollbild</button></div>
+    <button class="secondary" id="setHelp" style="margin-top:14px;width:100%" data-i18n="howToPlay">📖 Anleitung</button>
     <div class="row" style="margin-top:18px">
       <button class="secondary" id="setClose" style="flex:1" data-i18n="close">Schließen</button>
       <button id="setExit" style="flex:1;background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d" data-i18n="endGame">Spiel beenden</button>
@@ -373,7 +385,7 @@ const T={
    roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',teamMode:'Teammodus',teamOn:'An',teamOff:'Aus',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
    easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
    guessPh:'Dein Tipp …',send:'Senden',newGame:'Neues Spiel',toMenu:'Zum Menü',
-   settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',
+   settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',howToPlay:'📖 Anleitung',
    youDraw:'Du zeichnest ✏',draws:'zeichnet …',round:'Runde',teamLocked:'Dein Team zeichnet – warten',
    timeUp:'⏱ Zeit abgelaufen –',waitFor:'Warte auf',continueDraw:'▶ Weiter – ich zeichne!',showResult:'🏁 Endstand anzeigen',endstand:'(Endstand)',
    wins:'gewinnt!',chooseWord:'Wähle einen Begriff',chooseWordHint:'Schwerere Begriffe geben mehr Punkte.',choosingWord:'wählt einen Begriff …',
@@ -387,7 +399,7 @@ const T={
    roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
    easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
    guessPh:'Your guess …',send:'Send',newGame:'New game',toMenu:'To menu',
-   settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',
+   settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',howToPlay:'📖 How to play',
    youDraw:"You're drawing ✏",draws:'is drawing …',round:'Round',teamLocked:'Your team is drawing – wait',
    timeUp:"⏱ Time's up –",waitFor:'Waiting for',continueDraw:'▶ Continue – I draw!',showResult:'🏁 Show results',endstand:'(results)',
    wins:'wins!',chooseWord:'Choose a word',chooseWordHint:'Harder words give more points.',choosingWord:'is choosing a word …',
@@ -478,6 +490,33 @@ $('setFs').onclick=toggleFs;
 function quitGame(){ if(confirm(t('confirmExit'))){ if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
 $('setExit').onclick=quitGame;
 $('btnExit').onclick=quitGame;
+
+// ---------- Anleitung ----------
+const HELP={
+ de:`<p><b>🎯 Ziel:</b> Einer zeichnet einen Begriff, die anderen erraten ihn. Nach den eingestellten Runden gewinnt, wer die meisten Punkte hat.</p>
+<p><b>▶️ Start:</b> Namen eingeben → „Spiel erstellen" (du bist Host) oder „Spiel beitreten" mit dem 4-stelligen Raum-Code. Der Host stellt Sprache, Schwierigkeit, Rundenzahl und Team-Modus ein und startet.</p>
+<p><b>✏️ Zeichnen:</b> Der Zeichner bekommt einen Begriff und malt ihn in der vorgegebenen Zeit. Werkzeuge: Pinsel, Radierer, Strichstärken, Farben, Undo und Leeren.</p>
+<p><b>💬 Raten:</b> Tipp eintippen und „Senden" – oder den grünen 🎤-Knopf antippen und die Lösung einfach <b>sprechen</b>. Groß/klein, Umlaute (ä=ae) und Leerzeichen sind egal.</p>
+<p><b>🔡 Hinweise:</b> Mit der Zeit werden einzelne Buchstaben aufgedeckt – der erste Buchstabe aber nicht zuerst.</p>
+<p><b>⭐ Punkte:</b> Wer errät, bekommt die <b>Restsekunden</b> als Punkte – je schneller, desto mehr. Schwere Wörter geben extra Bonus. Im Einzelmodus bekommt der Maler die Hälfte.</p>
+<p><b>🧒🔥 Schwierigkeit:</b> Leicht (für Kinder), Mittel, Schwer – einstellbar über ⚙️.</p>
+<p><b>👥 Team-Modus:</b> Nur das <b>gegnerische</b> Team darf raten (das Team des Zeichners wartet), reihum ist jeder mit Zeichnen dran. Punkte zählen fürs Team – das beste Team gewinnt.</p>
+<p><b>💡 Tipps:</b> „Bitte nicht stören" einschalten, damit keine Nachrichten stören. Über ⚙️ Einstellungen kannst du Sprache, Ton und Schwierigkeit jederzeit ändern.</p>`,
+ en:`<p><b>🎯 Goal:</b> One player draws a word, the others guess it. After the chosen number of rounds, whoever has the most points wins.</p>
+<p><b>▶️ Start:</b> Enter a name → “Create game” (you're the host) or “Join game” with the 4-digit room code. The host sets language, difficulty, rounds and team mode, then starts.</p>
+<p><b>✏️ Drawing:</b> The drawer gets a word and draws it within the time limit. Tools: brush, eraser, line sizes, colors, undo and clear.</p>
+<p><b>💬 Guessing:</b> Type your guess and “Send” – or tap the green 🎤 button and simply <b>say</b> the answer. Upper/lowercase, umlauts and spaces don't matter.</p>
+<p><b>🔡 Hints:</b> Over time single letters are revealed – but never the first letter first.</p>
+<p><b>⭐ Points:</b> The guesser gets the <b>remaining seconds</b> as points – the faster, the more. Hard words give a bonus. In solo mode the drawer gets half.</p>
+<p><b>🧒🔥 Difficulty:</b> Easy (for kids), Medium, Hard – set via ⚙️.</p>
+<p><b>👥 Team mode:</b> Only the <b>opposing</b> team may guess (the drawer's team waits), everyone draws in turn. Points count for the team – the best team wins.</p>
+<p><b>💡 Tips:</b> Turn on “Do not disturb” so notifications don't interrupt. Use ⚙️ Settings to change language, sound and difficulty anytime.</p>`
+};
+function openHelp(){ $('helpBody').innerHTML=HELP[S.lang]||HELP.de; $('help').classList.add('show'); }
+$('btnHelp').onclick=openHelp;
+$('setHelp').onclick=()=>{ $('settings').classList.remove('show'); openHelp(); };
+$('helpClose').onclick=()=>$('help').classList.remove('show');
+
 applyI18n();
 // PWA: installierbar machen
 if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
