@@ -154,6 +154,9 @@
   .mask{font-size:clamp(22px,4.6vw,40px);font-weight:900;letter-spacing:4px;white-space:pre;
     color:var(--ink);text-shadow:0 2px 10px rgba(0,0,0,.3)}
   .guessrow{display:flex;gap:8px;flex:1;min-width:220px}.guessrow input{flex:1}
+  #btnMic{background:var(--panel2);border:1px solid var(--line);color:var(--ink);box-shadow:none;font-size:18px}
+  #btnMic.rec{background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d;animation:pulse .6s infinite alternate}
+  #btnMic.hidden{display:none}
 
   .overlay{position:absolute;inset:0;background:rgba(13,15,23,.8);display:none;align-items:center;justify-content:center;
     z-index:30;backdrop-filter:blur(3px)}
@@ -291,6 +294,7 @@
     <div class="guessrow" id="guessRow">
       <input id="guess" type="search" maxlength="30" placeholder="Dein Tipp …" data-i18n-ph="guessPh"
         autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="send">
+      <button id="btnMic" title="Per Sprache raten" style="flex:0 0 auto">🎤</button>
       <button id="btnGuess" style="flex:0 0 auto" data-i18n="send">Senden</button>
     </div>
   </div>
@@ -370,7 +374,7 @@ const T={
    easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
    guessPh:'Dein Tipp …',send:'Senden',newGame:'Neues Spiel',toMenu:'Zum Menü',
    settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',
-   youDraw:'Du zeichnest ✏',draws:'zeichnet …',round:'Runde',
+   youDraw:'Du zeichnest ✏',draws:'zeichnet …',round:'Runde',teamLocked:'Dein Team zeichnet – warten',
    timeUp:'⏱ Zeit abgelaufen –',waitFor:'Warte auf',continueDraw:'▶ Weiter – ich zeichne!',showResult:'🏁 Endstand anzeigen',endstand:'(Endstand)',
    wins:'gewinnt!',chooseWord:'Wähle einen Begriff',chooseWordHint:'Schwerere Begriffe geben mehr Punkte.',choosingWord:'wählt einen Begriff …',
    teamRed:'Team Rot',teamBlue:'Team Blau',teamHintOn:'Teams sind aktiv.',teamHintOff:'Alle spielen einzeln.',
@@ -384,7 +388,7 @@ const T={
    easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
    guessPh:'Your guess …',send:'Send',newGame:'New game',toMenu:'To menu',
    settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',
-   youDraw:"You're drawing ✏",draws:'is drawing …',round:'Round',
+   youDraw:"You're drawing ✏",draws:'is drawing …',round:'Round',teamLocked:'Your team is drawing – wait',
    timeUp:"⏱ Time's up –",waitFor:'Waiting for',continueDraw:'▶ Continue – I draw!',showResult:'🏁 Show results',endstand:'(results)',
    wins:'wins!',chooseWord:'Choose a word',chooseWordHint:'Harder words give more points.',choosingWord:'is choosing a word …',
    teamRed:'Team Red',teamBlue:'Team Blue',teamHintOn:'Teams are active.',teamHintOff:'Everyone plays solo.',
@@ -604,12 +608,34 @@ const COLORS=[['Schwarz','#111111'],['Rot','#e23b3b'],['Orange','#f08a24'],['Gel
 // Raten
 $('btnGuess').onclick=sendGuess;$('guess').addEventListener('keydown',e=>{if(e.key==='Enter')sendGuess();});
 function sendGuess(){const t=$('guess').value.trim();if(!t)return;$('guess').value='';post({type:'guess',text:t});}
+
+// Spracheingabe (Browser-Spracherkennung, kostenlos – am besten in Chrome)
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recog=null;
+if(SR){
+  recog=new SR(); recog.continuous=false; recog.interimResults=false; recog.maxAlternatives=1;
+  recog.onresult=e=>{ const txt=(e.results[0][0].transcript||'').trim(); if(txt){ $('guess').value=txt; sendGuess(); } };
+  recog.onend=()=>$('btnMic').classList.remove('rec');
+  recog.onerror=()=>$('btnMic').classList.remove('rec');
+} else {
+  $('btnMic').classList.add('hidden'); // Browser kann keine Spracherkennung
+}
+$('btnMic').onclick=()=>{ if(!recog)return;
+  if($('btnMic').classList.contains('rec')){ try{recog.stop()}catch(e){}; return; }
+  try{ recog.lang = S.lang==='en'?'en-US':'de-DE'; recog.start(); $('btnMic').classList.add('rec'); }catch(e){}
+};
 function addFeed(name,text,ok){const f=$('feed'),d=document.createElement('div');d.className='g'+(ok?' ok':'');
   d.textContent=ok?`✅ ${name}: ${text}`:`${name}: ${text}`;f.appendChild(d);
   while(f.children.length>5)f.removeChild(f.firstChild);setTimeout(()=>{d.parentNode&&d.parentNode.removeChild(d);},6000);}
 
 function applyRole(){$('toolbar').classList.toggle('hidden',!S.amDrawer);$('palette').classList.toggle('hidden',!S.amDrawer);
   $('wordPill').style.display=S.amDrawer?'':'none';$('guessRow').style.display=S.amDrawer?'none':'flex';}
+// Team-Modus: eigenes Team (Zeichner-Team) darf nicht raten
+function setGuessLock(locked){
+  $('guess').disabled=!!locked; $('btnGuess').disabled=!!locked;
+  if($('btnMic'))$('btnMic').disabled=!!locked;
+  $('guess').placeholder = locked ? t('teamLocked') : t('guessPh');
+}
 
 function overlay(t,r,e,btn,win){$('ovTitle').textContent=t;$('ovReveal').textContent=r||'';$('ovExtra').textContent=e||'';
   $('ovButtons').style.display=btn?'block':'none';
@@ -652,6 +678,7 @@ function handle(event,d){switch(event){
     if(d.difficulty)S.difficulty=d.difficulty;
     if(d.maxRounds)S.maxRounds=d.maxRounds;
     S.teamMode=!!d.teamMode;
+    {const me=d.players&&d.players.find(p=>p.id===S.playerId);S.myTeam=me?me.team:null;}
     if(d.lang && d.lang!==S.lang){S.lang=d.lang;try{localStorage.setItem('kk_lang',d.lang)}catch(e){}applyI18n();}
     if($('settings').classList.contains('show'))updateSetDiff();
     if(S.state==='lobby')renderLobby(d);
@@ -673,7 +700,9 @@ function handle(event,d){switch(event){
     enterGame();hideResult();S.amDrawer=d.drawerId===S.playerId;S.strokes=[];redraw();applyRole();
     $('mask').textContent=d.mask;$('statusPill').textContent=(S.amDrawer?t('youDraw'):(d.drawerName+' '+t('draws')))+(d.roundNumber?`  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`:'');
     $('timer').textContent=fmt(d.remaining);$('timer').classList.remove('low');lastTick=d.remaining;
-    if(!S.amDrawer)$('wordPill').style.display='none';hideOverlay();sound('round_start');setTimeout(fitCanvas,30);break;
+    if(!S.amDrawer)$('wordPill').style.display='none';
+    setGuessLock(S.teamMode && d.drawerTeam!=null && d.drawerTeam===S.myTeam && !S.amDrawer);
+    hideOverlay();sound('round_start');setTimeout(fitCanvas,30);break;
   case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent='➜ '+d.text.toUpperCase();break;
   case 'timer':
     $('timer').textContent=fmt(d.remaining);$('timer').classList.toggle('low',d.remaining<=10);

@@ -345,6 +345,8 @@ function beginDrawingRound(room, word) {
   broadcast(room, 'round_started', {
     drawerId: room.currentDrawerId,
     drawerName: drawer ? drawer.name : '?',
+    drawerTeam: drawer ? drawer.team : null,
+    teamMode: room.teamMode,
     roundNumber: room.roundNumber,
     maxRounds: room.maxRounds,
     mask: buildMask(room.currentWord.text, room.revealed),
@@ -400,24 +402,31 @@ function endRoundSolved(room, solver) {
   const difficultyMult = difficultyMultiplier(room.currentWord);
   const pts = Math.max(1, Math.round(basePts * speedMult * difficultyMult));
   const drawer = getPlayer(room, room.currentDrawerId);
-  const drawerPts = Math.ceil(pts / 2);             // Maler bekommt die Hälfte
+  let drawerPts = 0;
   solver.score += pts;
-  if (drawer && drawer.id !== solver.id) drawer.score += drawerPts;
+  // Solo: Maler bekommt die Hälfte. Team: kein Maler-Bonus (das Gegner-Team rät ja).
+  if (!room.teamMode && drawer && drawer.id !== solver.id) {
+    drawerPts = Math.ceil(pts / 2);
+    drawer.score += drawerPts;
+  }
   room.state = 'roundend';
+
+  // Solo: Löser zeichnet als Nächster. Team: reihum (jeder ist mal dran).
+  const next = room.teamMode ? chooseNextDrawer(room, null) : solver.id;
 
   broadcast(room, 'round_solved', {
     winnerId: solver.id, winnerName: solver.name, points: pts,
     basePoints: basePts, speedMultiplier: speedMult, difficultyMultiplier: difficultyMult,
     wordDifficulty: room.currentWord.difficulty,
     drawerId: room.currentDrawerId, drawerName: drawer ? drawer.name : '?',
-    drawerPoints: (drawer && drawer.id !== solver.id) ? drawerPts : 0,
+    drawerPoints: drawerPts,
     word: room.currentWord.text,
-    nextDrawerId: solver.id, nextDrawerName: solver.name,
+    nextDrawerId: next, nextDrawerName: getPlayer(room, next)?.name || '?',
     roundNumber: room.roundNumber, maxRounds: room.maxRounds,
     lastRound: room.roundNumber >= room.maxRounds,
     players: publicState(room).players,
   });
-  scheduleNext(room, solver.id);
+  scheduleNext(room, next);
 }
 
 function scheduleNext(room, nextDrawerId) {
@@ -460,6 +469,11 @@ function gameOver(room) {
 function handleGuess(room, player, text) {
   if (room.state !== 'playing') return;
   if (player.id === room.currentDrawerId) return; // Zeichner darf nicht raten
+  // Team-Modus: nur das gegnerische Team darf raten (Team des Zeichners ist gesperrt)
+  if (room.teamMode) {
+    const drawer = getPlayer(room, room.currentDrawerId);
+    if (drawer && player.team != null && player.team === drawer.team) return;
+  }
   const correct = normalize(text) === room.currentWord.normalizedText;
   broadcast(room, 'guess_feed', {
     playerName: player.name, text, correct,
