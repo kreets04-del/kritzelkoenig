@@ -39,6 +39,11 @@ try {
 const WORDS = WORDS_DE; // Alias (Online-Begriffe werden hier ergänzt)
 function wordsFor(room) { return (room.lang === 'en' && WORDS_EN.length) ? WORDS_EN : WORDS_DE; }
 
+// Emoji-Mini-Bild pro Begriff (für die Jüngsten) – separate Datei, stört die Wortliste nicht
+let EMOJI = {};
+try { EMOJI = JSON.parse(fs.readFileSync(path.join(__dirname, 'emojis_de.json'), 'utf8')); } catch (_) {}
+function emojiFor(word) { return (word && EMOJI[normalize(word.text)]) || ''; }
+
 // ---------- Hilfsfunktionen ----------
 function normalize(input) {
   if (!input) return '';
@@ -272,6 +277,7 @@ function publicWordOptions(words) {
     category: w.category,
     difficulty: w.difficulty,
     multiplier: difficultyMultiplier(w),
+    emoji: emojiFor(w),
   }));
 }
 
@@ -340,6 +346,7 @@ function beginDrawingRound(room, word) {
     category: room.currentWord.category,
     difficulty: room.currentWord.difficulty,
     multiplier: difficultyMultiplier(room.currentWord),
+    emoji: emojiFor(room.currentWord),
   });
   // alle anderen: nur Maske + Länge
   broadcast(room, 'round_started', {
@@ -404,8 +411,11 @@ function endRoundSolved(room, solver) {
   const drawer = getPlayer(room, room.currentDrawerId);
   let drawerPts = 0;
   solver.score += pts;
-  // Solo: Maler bekommt die Hälfte. Team: kein Maler-Bonus (das Gegner-Team rät ja).
-  if (!room.teamMode && drawer && drawer.id !== solver.id) {
+  // Solo: Maler bekommt immer die Hälfte.
+  // Team: alle raten – der Maler (und damit sein Team) bekommt die Hälfte NUR, wenn
+  // sein EIGENES Team errät. So lohnt sich gutes Zeichnen; absichtlich Kritzeln bringt nichts.
+  const sameTeam = room.teamMode && drawer && solver.team != null && solver.team === drawer.team;
+  if (drawer && drawer.id !== solver.id && (!room.teamMode || sameTeam)) {
     drawerPts = Math.ceil(pts / 2);
     drawer.score += drawerPts;
   }
@@ -469,11 +479,6 @@ function gameOver(room) {
 function handleGuess(room, player, text) {
   if (room.state !== 'playing') return;
   if (player.id === room.currentDrawerId) return; // Zeichner darf nicht raten
-  // Team-Modus: nur das gegnerische Team darf raten (Team des Zeichners ist gesperrt)
-  if (room.teamMode) {
-    const drawer = getPlayer(room, room.currentDrawerId);
-    if (drawer && player.team != null && player.team === drawer.team) return;
-  }
   const correct = normalize(text) === room.currentWord.normalizedText;
   broadcast(room, 'guess_feed', {
     playerName: player.name, text, correct,
@@ -540,7 +545,7 @@ const server = http.createServer((req, res) => {
     sendTo(room, playerId, 'room_update', publicState(room));
     if (room.state === 'playing' && playerId === room.currentDrawerId) {
       sendTo(room, playerId, 'word_assignment', {
-        text: room.currentWord.text, category: room.currentWord.category });
+        text: room.currentWord.text, category: room.currentWord.category, emoji: emojiFor(room.currentWord) });
     }
     if (room.state === 'playing') {
       sendTo(room, playerId, 'round_started', {

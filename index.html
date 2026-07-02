@@ -21,7 +21,7 @@
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{height:100%;margin:0}
   body{
-    color:var(--ink);overflow:hidden;touch-action:manipulation;
+    color:var(--ink);overflow:hidden;overflow-x:hidden;touch-action:manipulation;
     font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
     background:
       url('img/bg.png') center/cover no-repeat,
@@ -142,8 +142,8 @@
   .feed .g.ok{background:linear-gradient(180deg,#46e0a8,#2cc78d);color:#0e2a20;font-weight:800}
   @keyframes popin{from{transform:translateY(6px);opacity:0}to{transform:none;opacity:1}}
 
-  .bottombar{display:flex;align-items:center;gap:11px;flex-wrap:wrap;
-    background:var(--panel);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:10px 13px}
+  .bottombar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    background:var(--panel);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:10px 12px}
   .resultbar{display:none;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
     background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 14px}
   .resultbar.show{display:flex}
@@ -151,9 +151,12 @@
   .result-info .rev{color:var(--accent);font-weight:900;letter-spacing:2px;margin-left:8px}
   .resultbar .wait{color:var(--muted);font-weight:600}
   .resultbar #btnContinue{font-size:18px}
-  .mask{font-size:clamp(22px,4.6vw,40px);font-weight:900;letter-spacing:4px;white-space:pre;
-    color:var(--ink);text-shadow:0 2px 10px rgba(0,0,0,.3)}
-  .guessrow{display:flex;gap:8px;flex:1;min-width:220px}.guessrow input{flex:1}
+  .mask{font-size:clamp(20px,4.6vw,38px);font-weight:900;letter-spacing:4px;white-space:pre-wrap;word-break:break-word;
+    color:var(--ink);text-shadow:0 2px 10px rgba(0,0,0,.3);flex:1 1 100%;text-align:center}
+  /* Rateleiste: eigene volle Zeile, Eingabe schrumpfbar -> Senden-Knopf wird nie abgeschnitten */
+  .guessrow{display:flex;gap:8px;flex:1 1 100%;min-width:0}
+  .guessrow input{flex:1 1 auto;min-width:0}
+  #btnGuess{flex:0 0 auto}
   #btnMic{background:linear-gradient(180deg,#5cf0b8,#2cc78d);border:none;color:#0e2a20;font-size:22px;
     box-shadow:0 4px 14px rgba(46,224,168,.4);min-width:54px}
   #btnMic.rec{background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d;animation:pulse .6s infinite alternate}
@@ -448,8 +451,11 @@ $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem
 
 // Hintergrundmusik (nutzt sounds/music.mp3, falls vorhanden)
 function startBgm(){ updateBgm(); }
-// Musik NUR in der Lobby (Wartebereich) – im Menü und im Spiel ist Ruhe
-function updateBgm(){ if(!bgm)return; if(S.muted || S.state!=='lobby') bgm.pause(); else bgm.play().catch(()=>{}); }
+// Musik am Start (Menü/Lobby) und in den Einstellungen – sobald das Spiel läuft: Ruhe
+function updateBgm(){ if(!bgm)return;
+  const setOpen = $('settings') && $('settings').classList.contains('show');
+  const play = !S.muted && (S.state==='menu' || S.state==='lobby' || setOpen);
+  if(play) bgm.play().catch(()=>{}); else bgm.pause(); }
 
 // Werkzeug-Icon-Fallback (ersetzt fehlendes Bild durch Emoji)
 function ico(img,emoji){ const s=document.createElement('span'); s.className='ic'; s.textContent=emoji; img.replaceWith(s); }
@@ -482,9 +488,10 @@ function openSettings(){
   $('setMute').textContent=S.muted?'🔇':'🔊';
   applyI18n(); updateSetDiff();
   $('settings').classList.add('show');
+  updateBgm();
 }
 $('btnSettings').onclick=openSettings;
-$('setClose').onclick=()=>$('settings').classList.remove('show');
+$('setClose').onclick=()=>{$('settings').classList.remove('show');updateBgm();};
 $('setMute').onclick=()=>{S.muted=!S.muted;updateMute();$('setMute').textContent=S.muted?'🔇':'🔊';try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 $('setFs').onclick=toggleFs;
 function quitGame(){ if(confirm(t('confirmExit'))){ if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
@@ -688,7 +695,7 @@ function showWordOptions(options){
   $('ovButtons').style.display='none';
   const box=$('wordOptions');box.innerHTML='';box.style.display='grid';
   options.forEach(w=>{const b=document.createElement('button');
-    b.innerHTML=`<b>${esc(w.text)}</b><span>${esc(w.difficulty)} · x${w.multiplier}</span>`;
+    b.innerHTML=`<b>${w.emoji?w.emoji+' ':''}${esc(w.text)}</b><span>${esc(w.difficulty)} · x${w.multiplier}</span>`;
     b.onclick=()=>{[...box.children].forEach(x=>x.disabled=true);$('ovExtra').textContent=t('loading');post({type:'choose_word',wordId:w.wordId});};
     box.appendChild(b);});
   $('overlay').classList.add('show');
@@ -740,9 +747,9 @@ function handle(event,d){switch(event){
     $('mask').textContent=d.mask;$('statusPill').textContent=(S.amDrawer?t('youDraw'):(d.drawerName+' '+t('draws')))+(d.roundNumber?`  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`:'');
     $('timer').textContent=fmt(d.remaining);$('timer').classList.remove('low');lastTick=d.remaining;
     if(!S.amDrawer)$('wordPill').style.display='none';
-    setGuessLock(S.teamMode && d.drawerTeam!=null && d.drawerTeam===S.myTeam && !S.amDrawer);
+    setGuessLock(false);
     hideOverlay();sound('round_start');setTimeout(fitCanvas,30);break;
-  case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent='➜ '+d.text.toUpperCase();break;
+  case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent=(d.emoji?d.emoji+' ':'')+'➜ '+d.text.toUpperCase();break;
   case 'timer':
     $('timer').textContent=fmt(d.remaining);$('timer').classList.toggle('low',d.remaining<=10);
     if(d.remaining<=5&&d.remaining>0&&d.remaining<lastTick)sound('tick');lastTick=d.remaining;break;
