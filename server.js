@@ -794,4 +794,27 @@ function lanIPs() {
   const ifs = os.networkInterfaces();
   for (const name of Object.keys(ifs)) {
     for (const ni of ifs[name]) {
-      if (ni.family === 'IPv4' && !ni.internal) out.push(ni
+      if (ni.family === 'IPv4' && !ni.internal) out.push(ni.address);
+    }
+  }
+  return out;
+}
+
+server.listen(PORT, '0.0.0.0', () => {
+  const ips = lanIPs();
+  console.log('\n=============================================');
+  console.log('  KRITZELKÖNIG läuft!');
+  console.log('=============================================');
+  console.log('  Auf DIESEM Gerät:   http://localhost:' + PORT);
+  if (ips.length) {
+    console.log('  Andere Geräte im WLAN öffnen:');
+    ips.forEach(ip => console.log('      http://' + ip + ':' + PORT));
+  } else {
+    console.log('  (Keine WLAN-IP gefunden – sind alle im selben Netz?)');
+  }
+  console.log('=============================================');
+  console.log('  Beenden mit  Strg + C');
+  console.log('  Begriffe geladen:', WORDS.length);
+  if (LOAD_ONLINE) { console.log('  Lade zusätzliche Online-Begriffe …'); fetchOnlineWords(); }
+  console.log('');
+});

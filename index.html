@@ -779,4 +779,9 @@ function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);
   drawSegment(s,prev,d.points);for(const p of d.points)s.points.push(p);}
 function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);}}
 
-functi
+function rid(){return Math.random().toString(36).slice(2,9);}
+function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+</script>
+</body>
+</html>
