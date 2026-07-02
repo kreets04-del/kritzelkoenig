@@ -695,7 +695,10 @@ function showWordOptions(options){
   $('ovButtons').style.display='none';
   const box=$('wordOptions');box.innerHTML='';box.style.display='grid';
   options.forEach(w=>{const b=document.createElement('button');
-    b.innerHTML=`<b>${w.emoji?w.emoji+' ':''}${esc(w.text)}</b><span>${esc(w.difficulty)} · x${w.multiplier}</span>`;
+    const hint = w.pic
+      ? `<img src="${w.pic}" alt="" style="width:100%;height:100px;object-fit:contain;background:#fff;border-radius:8px" onerror="this.style.display='none'">`
+      : (w.emoji ? `<div style="font-size:40px;align-self:center;line-height:1.1">${w.emoji}</div>` : '');
+    b.innerHTML=`${hint}<b>${esc(w.text)}</b><span>${esc(w.difficulty)} · x${w.multiplier}</span>`;
     b.onclick=()=>{[...box.children].forEach(x=>x.disabled=true);$('ovExtra').textContent=t('loading');post({type:'choose_word',wordId:w.wordId});};
     box.appendChild(b);});
   $('overlay').classList.add('show');
@@ -749,7 +752,7 @@ function handle(event,d){switch(event){
     if(!S.amDrawer)$('wordPill').style.display='none';
     setGuessLock(false);
     hideOverlay();sound('round_start');setTimeout(fitCanvas,30);break;
-  case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent=(d.emoji?d.emoji+' ':'')+'➜ '+d.text.toUpperCase();break;
+  case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent='➜ '+d.text.toUpperCase();break;
   case 'timer':
     $('timer').textContent=fmt(d.remaining);$('timer').classList.toggle('low',d.remaining<=10);
     if(d.remaining<=5&&d.remaining>0&&d.remaining<lastTick)sound('tick');lastTick=d.remaining;break;
@@ -776,9 +779,4 @@ function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);
   drawSegment(s,prev,d.points);for(const p of d.points)s.points.push(p);}
 function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);}}
 
-function rid(){return Math.random().toString(36).slice(2,9);}
-function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-</script>
-</body>
-</html>
+functi

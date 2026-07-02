@@ -43,6 +43,17 @@ function wordsFor(room) { return (room.lang === 'en' && WORDS_EN.length) ? WORDS
 let EMOJI = {};
 try { EMOJI = JSON.parse(fs.readFileSync(path.join(__dirname, 'emojis_de.json'), 'utf8')); } catch (_) {}
 function emojiFor(word) { return (word && EMOJI[normalize(word.text)]) || ''; }
+// Gezeichnete S/W-Bilder (img/pics/<wort>.png) – kleine Hilfe bei der Wortauswahl
+let PICS = new Set();
+try {
+  PICS = new Set(fs.readdirSync(path.join(__dirname, 'img', 'pics'))
+    .filter(f => f.toLowerCase().endsWith('.png')).map(f => f.slice(0, -4)));
+} catch (_) {}
+function picFor(word) {
+  if (!word) return '';
+  const k = normalize(word.text);
+  return PICS.has(k) ? ('/img/pics/' + encodeURIComponent(k) + '.png') : '';
+}
 
 // ---------- Hilfsfunktionen ----------
 function normalize(input) {
@@ -278,6 +289,7 @@ function publicWordOptions(words) {
     difficulty: w.difficulty,
     multiplier: difficultyMultiplier(w),
     emoji: emojiFor(w),
+    pic: picFor(w),
   }));
 }
 
@@ -782,27 +794,4 @@ function lanIPs() {
   const ifs = os.networkInterfaces();
   for (const name of Object.keys(ifs)) {
     for (const ni of ifs[name]) {
-      if (ni.family === 'IPv4' && !ni.internal) out.push(ni.address);
-    }
-  }
-  return out;
-}
-
-server.listen(PORT, '0.0.0.0', () => {
-  const ips = lanIPs();
-  console.log('\n=============================================');
-  console.log('  KRITZELKÖNIG läuft!');
-  console.log('=============================================');
-  console.log('  Auf DIESEM Gerät:   http://localhost:' + PORT);
-  if (ips.length) {
-    console.log('  Andere Geräte im WLAN öffnen:');
-    ips.forEach(ip => console.log('      http://' + ip + ':' + PORT));
-  } else {
-    console.log('  (Keine WLAN-IP gefunden – sind alle im selben Netz?)');
-  }
-  console.log('=============================================');
-  console.log('  Beenden mit  Strg + C');
-  console.log('  Begriffe geladen:', WORDS.length);
-  if (LOAD_ONLINE) { console.log('  Lade zusätzliche Online-Begriffe …'); fetchOnlineWords(); }
-  console.log('');
-});
+      if (ni.family === 'IPv4' && !ni.internal) out.push(ni
