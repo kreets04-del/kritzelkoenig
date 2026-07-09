@@ -381,7 +381,7 @@
   <div class="topbar">
     <span class="pill word" id="wordPill" style="display:none">—</span>
     <span class="pill" id="statusPill">—</span>
-    <span class="pill" id="drawHint" style="display:none;background:rgba(255,255,255,.06);color:var(--muted);font-weight:600;font-size:12px" data-i18n="drawHint">✏️ nur zeichnen – keine Buchstaben/Zahlen</span>
+    <span class="pill" id="drawHint" style="display:none;background:rgba(245,197,24,.16);border:1px solid rgba(245,197,24,.55);color:#ffe08a;font-weight:700;font-size:12px" data-i18n="drawHint">✏️ nur zeichnen – keine Buchstaben/Zahlen</span>
     <span class="pill timer" id="timer">1:00</span>
     <button class="pill iconbtn" id="btnMute" title="Ton">🔊</button>
     <button class="pill iconbtn" id="btnFs" title="Vollbild">⛶</button>
@@ -1175,7 +1175,4 @@ function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);
 
 function rid(){return Math.random().toString(36).slice(2,9);}
 function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-</script>
-</body>
-</html>
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c
