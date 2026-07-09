@@ -1,6 +1,6 @@
 /* Kritzelkönig Service Worker – macht die App installierbar.
    Spiel-Verbindungen (/events, /action) gehen IMMER direkt ins Netzwerk. */
-const CACHE = 'kk-v1';
+const CACHE = 'kk-v2';
 const ASSETS = ['/', '/index.html', '/manifest.json'];
 
 self.addEventListener('install', e => {

@@ -552,12 +552,15 @@ const StandaloneAdapter = {
 };
 // CrazyGames-Adapter: nur aktiv, wenn das SDK vorhanden ist (im Basic Launch NICHT geladen).
 // Reines Gerüst – echte Werbung/Invite/Settings folgen erst im Full Launch.
+// Kompatibel ohne "?." (ältere In-App-Browser scheitern sonst am ganzen Skript)
+function cgGame(){ try{ return (window.CrazyGames && CrazyGames.SDK && CrazyGames.SDK.game) || null; }catch(e){ return null; } }
+function cgCall(fn){ try{ var g=cgGame(); if(g && typeof g[fn]==='function') g[fn](); }catch(e){} }
 const CrazyGamesAdapter = Object.assign({}, StandaloneAdapter, {
   name:'crazygames', isCrazyGames(){ return true; },
-  gameplayStart(){ try{ window.CrazyGames?.SDK?.game?.gameplayStart?.(); }catch(e){} },
-  gameplayStop(){  try{ window.CrazyGames?.SDK?.game?.gameplayStop?.();  }catch(e){} },
-  loadingStart(){  try{ window.CrazyGames?.SDK?.game?.sdkGameLoadingStart?.(); }catch(e){} },
-  loadingStop(){   try{ window.CrazyGames?.SDK?.game?.sdkGameLoadingStop?.();  }catch(e){} },
+  gameplayStart(){ cgCall('gameplayStart'); },
+  gameplayStop(){  cgCall('gameplayStop'); },
+  loadingStart(){  cgCall('sdkGameLoadingStart'); },
+  loadingStop(){   cgCall('sdkGameLoadingStop'); },
 });
 const Platform = (window.CrazyGames && window.CrazyGames.SDK) ? CrazyGamesAdapter : StandaloneAdapter;
 try{ Platform.loadingStart(); Platform.init(); }catch(e){}
@@ -852,7 +855,7 @@ try{ Platform.loadingStop(); }catch(e){} // Laden abgeschlossen (CrazyGames: sdk
 if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
 
 // ---------- Netzwerk ----------
-async function post(o){ o.roomCode=o.roomCode??S.roomCode; o.playerId=o.playerId??S.playerId;
+async function post(o){ o.roomCode=(o.roomCode!=null?o.roomCode:S.roomCode); o.playerId=(o.playerId!=null?o.playerId:S.playerId);
   const r=await fetch('/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)});
   return r.json(); }
 function openStream(){ if(S.es)S.es.close();
