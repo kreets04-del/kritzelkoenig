@@ -606,6 +606,13 @@ function closeTutorial(){
 }
 function maybeShowTutorial(){ if(!Store.getBool(KEY_TUT,false)) openTutorial(); }
 $('tutSkip').onclick=closeTutorial;
+// Während das Anleitungsvideo läuft: Hintergrundmusik aus (kein Ton-Überlappen); danach wieder an.
+let tutVideoActive=false;
+(function(){ const v=$('tutVideo'); if(!v)return;
+  v.addEventListener('play',()=>{ tutVideoActive=true; try{ if(typeof bgm!=='undefined'&&bgm)bgm.pause(); }catch(e){} });
+  const resume=()=>{ tutVideoActive=false; try{ updateBgm(); }catch(e){} };
+  v.addEventListener('pause',resume); v.addEventListener('ended',resume);
+})();
 
 // ---------- Einladen / Teilen / QR ----------
 function inviteUrl(){
@@ -773,7 +780,7 @@ function startBgm(){ updateBgm(); }
 // Musik am Start (Menü/Lobby) und in den Einstellungen – sobald das Spiel läuft: Ruhe
 function updateBgm(){ if(!bgm)return;
   const setOpen = $('settings') && $('settings').classList.contains('show');
-  const play = !S.muted && (S.state==='menu' || S.state==='lobby' || setOpen);
+  const play = !S.muted && !tutVideoActive && (S.state==='menu' || S.state==='lobby' || setOpen);
   // Robust gegen In-App-Browser: play() liefert dort evtl. kein Promise -> darf show() nie brechen.
   try{ if(play){ const p=bgm.play(); if(p&&p.catch)p.catch(()=>{}); } else bgm.pause(); }catch(e){} }
 
