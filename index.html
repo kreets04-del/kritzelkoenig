@@ -760,7 +760,7 @@ function sound(name){
   if(S.muted) return;
   // versucht eine echte Audiodatei (sounds/<name>.mp3); fällt sonst auf einen Ton zurück
   try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=0.55;
-    a.play().then(()=>{}).catch(()=>beep(name)); }catch(e){ beep(name); }
+    const p=a.play(); if(p&&p.then)p.then(()=>{}).catch(()=>beep(name)); }catch(e){ beep(name); }
 }
 function updateMute(){ if($('btnMute'))$('btnMute').textContent=S.muted?'🔇':'🔊'; updateBgm(); }
 $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
@@ -771,7 +771,8 @@ function startBgm(){ updateBgm(); }
 function updateBgm(){ if(!bgm)return;
   const setOpen = $('settings') && $('settings').classList.contains('show');
   const play = !S.muted && (S.state==='menu' || S.state==='lobby' || setOpen);
-  if(play) bgm.play().catch(()=>{}); else bgm.pause(); }
+  // Robust gegen In-App-Browser: play() liefert dort evtl. kein Promise -> darf show() nie brechen.
+  try{ if(play){ const p=bgm.play(); if(p&&p.catch)p.catch(()=>{}); } else bgm.pause(); }catch(e){} }
 
 // Werkzeug-Icon-Fallback (ersetzt fehlendes Bild durch Emoji)
 function ico(img,emoji){ const s=document.createElement('span'); s.className='ic'; s.textContent=emoji; img.replaceWith(s); }
