@@ -21,12 +21,17 @@ const PORT          = process.env.PORT || 3000;  // lokal 3000, online vom Hoste
 const ROUND_SECONDS = 90;          // 1:30 pro Runde
 const ROUND_OPTIONS = [10, 15, 20, 25, 30, 40, 50];
 const DEFAULT_ROUNDS = 10;
+const MAX_PLAYERS = parseInt(process.env.MAX_PLAYERS, 10) || 8;
 const RECENT_WORD_LIMIT = 180;
 const MIN_POOL_AFTER_RECENT_FILTER = 8;
 const WORD_OPTION_COUNT = 3;
 const DIFFICULTY_MULTIPLIERS = { easy: 1, medium: 1.25, hard: 1.5 };
 const ROUND_END_PAUSE_MS = 4500;   // (nur Sicherheits-Fallback)
 const LOAD_ONLINE   = process.argv.includes('--online'); // optional: node server.js --online
+
+// ---------- Zentrale Feature-Schalter ----------
+const ENABLE_SYMBOL_HELP   = false; // Symbol-/Bild-/Emoji-Hilfe bei der Wortauswahl (deaktiviert; Spieler zeichnen selbst)
+const ENABLE_REPORT_CHEATING = false; // "Mogeln melden" – nur vorbereitet, NICHT aktiviert (keine Auto-Prüfung, keine Pflicht-Abstimmung)
 
 // ---------- Begriffe laden (Deutsch + Englisch) ----------
 const WORDS_DE = JSON.parse(fs.readFileSync(path.join(__dirname, 'words_de.json'), 'utf8'))
@@ -66,6 +71,55 @@ function normalize(input) {
   return s;
 }
 
+// ---------- Moderation (Schimpfwort-/Beleidigungsfilter) ----------
+// Listen liegen getrennt von der Logik unter moderation/ und werden hier geladen.
+// Serverautoritativ: die entscheidende Prüfung passiert hier.
+function loadModList(file) {
+  try {
+    const raw = JSON.parse(fs.readFileSync(path.join(__dirname, 'moderation', file), 'utf8'));
+    const arr = Array.isArray(raw) ? raw : (raw.words || []);
+    return new Set(arr.map(w => normalize(w).replace(/\s+/g, '')));
+  } catch (_) { return new Set(); }
+}
+const BLOCKED = { de: loadModList('blocked_words_de.json'), en: loadModList('blocked_words_en.json') };
+const WHITELIST = { de: loadModList('whitelist_de.json'), en: loadModList('whitelist_en.json') };
+
+// Umgehungen entschärfen: Leetspeak -> Buchstaben, danach normalisieren.
+function normLeet(input) {
+  let s = normalize(input);
+  s = s.replace(/[@]/g, 'a').replace(/[$]/g, 's').replace(/[€]/g, 'e')
+       .replace(/0/g, 'o').replace(/1/g, 'i').replace(/3/g, 'e').replace(/4/g, 'a')
+       .replace(/5/g, 's').replace(/7/g, 't').replace(/8/g, 'b').replace(/9/g, 'g');
+  return s;
+}
+// True, wenn der Text ein gesperrtes Wort enthält (mit Token-/Wortgrenzen + Whitelist).
+function containsBlocked(text, lang) {
+  const blocked = BLOCKED[lang] || BLOCKED.de;
+  const white = WHITELIST[lang] || WHITELIST.de;
+  if (!blocked.size) return false;
+  const norm = normLeet(text);
+  const tokens = norm.split(/[^a-z0-9]+/).filter(Boolean);
+  // Anzeichen für "gespreizte" Umgehung: viele Einzelbuchstaben (w o r t) ODER
+  // ein in kurze Häppchen zerteiltes Wort (sch.eiss.e / w-o-r-t).
+  const obfuscated = tokens.filter(t => t.length === 1).length >= 3
+                  || (tokens.length >= 3 && tokens.every(t => t.length <= 4));
+  const collapsed = norm.replace(/[^a-z0-9]+/g, '');
+  for (const tok of tokens) {
+    if (white.has(tok)) continue;
+    if (blocked.has(tok)) return true;                         // exaktes Token
+    for (const b of blocked) {
+      if (b.length >= 4 && tok.includes(b)) return true;       // Teilwort nur ab Länge 4 (z. B. shithead)
+    }
+  }
+  if (obfuscated && !white.has(collapsed)) {
+    for (const b of blocked) {
+      if (b.length >= 4 && collapsed.includes(b)) return true; // zusammengezogen, z. B. "s c h e i s s e"
+    }
+  }
+  return false;
+}
+function isBlockedName(name) { return containsBlocked(name, 'de') || containsBlocked(name, 'en'); }
+
 function uid(n = 6) {
   return Math.random().toString(36).slice(2, 2 + n);
 }
@@ -81,6 +135,7 @@ const MIME = {
   '.gif':'image/gif', '.svg':'image/svg+xml', '.ico':'image/x-icon',
   '.mp3':'audio/mpeg', '.m4a':'audio/mp4', '.wav':'audio/wav', '.ogg':'audio/ogg',
   '.json':'application/json', '.js':'text/javascript', '.webmanifest':'application/manifest+json',
+  '.mp4':'video/mp4', '.webm':'video/webm', '.vtt':'text/vtt',
 };
 function mimeOf(p) { return MIME[path.extname(p).toLowerCase()] || 'application/octet-stream'; }
 
@@ -130,6 +185,7 @@ function createRoom(hostId) {
   do { code = roomCode(); } while (rooms.has(code));
   const room = {
     code,
+    invite: uid(10),        // Einladungs-Token (Auto-Beitritt per Link)
     hostId,
     players: [],            // {id,name,score,connected}
     clients: new Map(),     // playerId -> SSE response
@@ -147,6 +203,9 @@ function createRoom(hostId) {
     difficulty: 'mixed',    // easy | medium | hard | mixed
     teamMode: false,
     lang: 'de',             // de | en  (Begriffe + UI raumweit)
+    solo: false,            // Einzelspieler-Testmodus (mit Computer-Rater)
+    botTimers: [],          // laufende Timer des simulierten Raters
+    strokeCount: 0,         // gezeichnete Striche in der aktuellen Runde
   };
   rooms.set(code, room);
   return room;
@@ -191,6 +250,7 @@ function publicState(room) {
       team: room.teamMode ? p.team : null,
       isHost: p.id === room.hostId,
       isDrawer: p.id === room.currentDrawerId,
+      isBot: !!p.isBot,
       connected: p.connected,
     })),
   };
@@ -288,14 +348,15 @@ function publicWordOptions(words) {
     category: w.category,
     difficulty: w.difficulty,
     multiplier: difficultyMultiplier(w),
-    emoji: emojiFor(w),
-    pic: picFor(w),
+    emoji: ENABLE_SYMBOL_HELP ? emojiFor(w) : '',
+    pic:   ENABLE_SYMBOL_HELP ? picFor(w) : '',
   }));
 }
 
 function chooseNextDrawer(room, solverId) {
   const conn = connectedPlayers(room);
   if (conn.length === 0) return null;
+  if (room.solo) return firstHuman(room)?.id || null; // Solo: der Mensch zeichnet immer
   if (solverId && getPlayer(room, solverId)?.connected) return solverId; // Löser zeichnet als Nächstes
   // reihum: nächster nach dem aktuellen Zeichner
   const order = conn.map(p => p.id);
@@ -306,6 +367,8 @@ function chooseNextDrawer(room, solverId) {
 function startRound(room, drawerId) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
+  clearBotTimers(room);
+  clearIntermissionTimers(room);
   const conn = connectedPlayers(room);
   if (conn.length < 2) { // nicht genug Spieler -> zurück in Lobby
     room.state = 'lobby';
@@ -318,6 +381,7 @@ function startRound(room, drawerId) {
   room.state = 'choosing';
   room.roundNumber += 1;
   room.currentDrawerId = drawerId || conn[Math.floor(Math.random() * conn.length)].id;
+  if (room.solo) room.currentDrawerId = firstHuman(room)?.id || room.currentDrawerId; // nie der Bot
   room.currentWord = null;
   room.wordOptions = buildWordOptions(room);
   room.revealed = new Set();
@@ -342,11 +406,13 @@ function startRound(room, drawerId) {
 
 function beginDrawingRound(room, word) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  clearBotTimers(room);
   room.state = 'playing';
   room.currentWord = word;
   room.wordOptions = [];
   room.revealed = new Set();
   room.remaining = ROUND_SECONDS;
+  room.strokeCount = 0;
 
   pushRoomUpdate(room);
   broadcast(room, 'clear', {});
@@ -358,7 +424,7 @@ function beginDrawingRound(room, word) {
     category: room.currentWord.category,
     difficulty: room.currentWord.difficulty,
     multiplier: difficultyMultiplier(room.currentWord),
-    emoji: emojiFor(room.currentWord),
+    emoji: ENABLE_SYMBOL_HELP ? emojiFor(room.currentWord) : '',
   });
   // alle anderen: nur Maske + Länge
   broadcast(room, 'round_started', {
@@ -373,6 +439,7 @@ function beginDrawingRound(room, word) {
   });
 
   room.timer = setInterval(() => tick(room), 1000);
+  DrawingGuessProvider.start(room); // Solo-Testmodus: Computer beginnt zu raten
 }
 
 function chooseWord(room, playerId, wordId) {
@@ -401,6 +468,7 @@ function tick(room) {
 
 function endRoundTimeout(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  clearBotTimers(room);
   room.state = 'roundend';
   const next = chooseNextDrawer(room, null); // reihum
   broadcast(room, 'round_timeout', {
@@ -416,6 +484,7 @@ function endRoundTimeout(room) {
 
 function endRoundSolved(room, solver) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  clearBotTimers(room);
   const basePts = Math.max(1, room.remaining);
   const speedMult = speedMultiplier(room.remaining);
   const difficultyMult = difficultyMultiplier(room.currentWord);
@@ -433,8 +502,9 @@ function endRoundSolved(room, solver) {
   }
   room.state = 'roundend';
 
-  // Solo: Löser zeichnet als Nächster. Team: reihum (jeder ist mal dran).
-  const next = room.teamMode ? chooseNextDrawer(room, null) : solver.id;
+  // Solo-Test: der Mensch zeichnet weiter. Team: reihum. Sonst: Löser zeichnet als Nächster.
+  const next = room.solo ? (firstHuman(room)?.id || solver.id)
+             : (room.teamMode ? chooseNextDrawer(room, null) : solver.id);
 
   broadcast(room, 'round_solved', {
     winnerId: solver.id, winnerName: solver.name, points: pts,
@@ -470,12 +540,133 @@ function continueRound(room, playerId) {
   // nur der vorgesehene nächste Zeichner oder der Host darf weiterschalten
   if (playerId !== room.pendingNextDrawer && playerId !== room.hostId) return;
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
-  if (room.isLastRound) gameOver(room); else startRound(room, room.pendingNextDrawer);
+  if (room.isLastRound) { gameOver(room); return; }
+  // Werbepause NUR am vollständigen Rundenende (alle aktiven Spieler waren einmal dran).
+  if (!room.solo && lapSizeOf(room) > 0 && room.roundNumber % lapSizeOf(room) === 0) {
+    startIntermission(room);
+  } else {
+    startRound(room, room.pendingNextDrawer);
+  }
 }
+
+// ---------- Zwischenstand / Werbepause (servergesteuert) ----------
+// Ablauf: playing -> roundend (Ergebnis sichtbar) -> [Weiter] ->
+//         round_intermission (Client: Audio pausieren, NoOp-/echte Werbung) ->
+//         countdown -> playing. Bleibt NIE hängen (Timeout-Fallback).
+const INTERMISSION_MAX_MS = 12000;   // Sicherheits-Timeout, falls Werbung/Client klemmt
+const COUNTDOWN_SECONDS = 3;
+function lapSizeOf(room) {
+  return Math.max(1, connectedPlayers(room).filter(p => !p.isBot).length);
+}
+function clearIntermissionTimers(room) {
+  if (room.intermissionTimer) { clearTimeout(room.intermissionTimer); room.intermissionTimer = null; }
+  if (room.countdownTimer) { clearTimeout(room.countdownTimer); room.countdownTimer = null; }
+}
+function startIntermission(room) {
+  if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
+  clearBotTimers(room);
+  clearIntermissionTimers(room);
+  room.state = 'round_intermission';
+  room.readyAfter = new Set();
+  pushRoomUpdate(room);
+  broadcast(room, 'round_intermission', {});
+  // Sicherheits-Timeout: falls nicht alle "bereit" melden (z. B. Werbung hängt), trotzdem weiter.
+  room.intermissionTimer = setTimeout(() => finishIntermission(room), INTERMISSION_MAX_MS);
+}
+function markReadyAfterIntermission(room, playerId) {
+  if (room.state !== 'round_intermission') return;
+  room.readyAfter = room.readyAfter || new Set();
+  room.readyAfter.add(playerId);
+  const humans = connectedPlayers(room).filter(p => !p.isBot);
+  if (humans.length && humans.every(p => room.readyAfter.has(p.id))) finishIntermission(room);
+}
+function finishIntermission(room) {
+  if (room.state !== 'round_intermission') return;
+  clearIntermissionTimers(room);
+  room.state = 'countdown';
+  pushRoomUpdate(room);
+  broadcast(room, 'round_countdown', { seconds: COUNTDOWN_SECONDS });
+  room.countdownTimer = setTimeout(() => {
+    room.countdownTimer = null;
+    startRound(room, room.pendingNextDrawer);
+  }, COUNTDOWN_SECONDS * 1000);
+}
+
+// ---------- Einzelspieler-Testmodus: simulierter Computer-Rater ----------
+// Schnittstelle DrawingGuessProvider: start(room) / stop(room).
+// Der SimulatedGuessProvider "erkennt" die Zeichnung NICHT wirklich, sondern rät
+// zeitgesteuert glaubwürdig (ein paar Fehltipps, dann die Lösung), sobald genug
+// gezeichnet wurde. So kann man das Spiel allein testen. Ein späterer echter
+// Bilderkennungs-Provider könnte dieselbe Schnittstelle implementieren.
+function isBot(p) { return !!(p && p.isBot); }
+function firstHuman(room) { return connectedPlayers(room).find(p => !p.isBot) || null; }
+
+let botSeq = 0;
+function addBot(room, name) {
+  const id = 'bot_' + (botSeq++);
+  room.players.push({ id, name: name || '🤖 Kritzel-Bot', score: 0, team: null, connected: true, isBot: true });
+  return id;
+}
+
+function clearBotTimers(room) {
+  if (room.botTimers) room.botTimers.forEach(t => clearTimeout(t));
+  room.botTimers = [];
+}
+
+function pickDecoy(room) {
+  const all = wordsFor(room);
+  const ansNorm = room.currentWord ? room.currentWord.normalizedText : '';
+  for (let i = 0; i < 8; i++) {
+    const w = all[Math.floor(Math.random() * all.length)];
+    if (w && w.normalizedText !== ansNorm) return w.text;
+  }
+  return null;
+}
+
+function botTrySolve(room, botId, answer) {
+  if (room.state !== 'playing') return;
+  const p = getPlayer(room, botId);
+  if (!p || !p.connected) return;
+  if ((room.strokeCount || 0) >= 8) {
+    handleGuess(room, p, answer);
+  } else {
+    room.botTimers.push(setTimeout(() => botTrySolve(room, botId, answer), 4000));
+  }
+}
+
+const SimulatedGuessProvider = {
+  name: 'simulated',
+  start(room) {
+    clearBotTimers(room);
+    if (!room.solo || !room.currentWord) return;
+    const bots = connectedPlayers(room).filter(isBot);
+    if (!bots.length) return;
+    const answer = room.currentWord.text;
+    bots.forEach(bot => {
+      // ein paar Fehltipps (später und weiter gestreut, damit man länger malen kann)
+      const nWrong = 1 + Math.floor(Math.random() * 3);
+      let t = 10000 + Math.random() * 8000;
+      for (let i = 0; i < nWrong; i++) {
+        room.botTimers.push(setTimeout(() => {
+          if (room.state === 'playing') { const g = pickDecoy(room); if (g) handleGuess(room, bot, g); }
+        }, t));
+        t += 7000 + Math.random() * 8000;
+      }
+      // Lösung erst spät – und nur, wenn genug gezeichnet wurde (wirkt echter, lässt Zeit)
+      const solveDelay = Math.min(32000 + Math.random() * 36000, (ROUND_SECONDS - 6) * 1000);
+      room.botTimers.push(setTimeout(() => botTrySolve(room, bot.id, answer), solveDelay));
+    });
+  },
+  stop(room) { clearBotTimers(room); },
+};
+const DrawingGuessProvider = SimulatedGuessProvider; // aktiver Provider (später ersetzbar)
 
 function gameOver(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
+  clearBotTimers(room);
+  clearIntermissionTimers(room);
   room.state = 'gameover';
   const rankedTeams = room.teamMode ? teamScores(room).sort((a, b) => b.score - a.score) : [];
   const ranked = room.players.slice().sort((a, b) => b.score - a.score);
@@ -500,6 +691,8 @@ function handleGuess(room, player, text) {
 
 function newGame(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
+  clearBotTimers(room);
+  clearIntermissionTimers(room);
   room.players.forEach(p => p.score = 0);
   room.roundNumber = 0;
   room.state = 'lobby';
@@ -524,6 +717,7 @@ const server = http.createServer((req, res) => {
 
   // ----- statische Dateien (Grafiken, Sounds, PWA: manifest/sw) -----
   if (req.method === 'GET' && (u.pathname.startsWith('/img/') || u.pathname.startsWith('/sounds/')
+      || u.pathname.startsWith('/video/') || u.pathname.startsWith('/locales/') || u.pathname.startsWith('/js/')
       || u.pathname === '/manifest.json' || u.pathname === '/sw.js')) {
     const rel = path.normalize(decodeURIComponent(u.pathname)).replace(/^[\\/]+/, '');
     const filePath = path.join(__dirname, rel);
@@ -557,7 +751,8 @@ const server = http.createServer((req, res) => {
     sendTo(room, playerId, 'room_update', publicState(room));
     if (room.state === 'playing' && playerId === room.currentDrawerId) {
       sendTo(room, playerId, 'word_assignment', {
-        text: room.currentWord.text, category: room.currentWord.category, emoji: emojiFor(room.currentWord) });
+        text: room.currentWord.text, category: room.currentWord.category,
+        emoji: ENABLE_SYMBOL_HELP ? emojiFor(room.currentWord) : '' });
     }
     if (room.state === 'playing') {
       sendTo(room, playerId, 'round_started', {
@@ -584,6 +779,12 @@ const server = http.createServer((req, res) => {
         });
       }
     }
+    if (room.state === 'round_intermission') {
+      sendTo(room, playerId, 'round_intermission', {});
+    }
+    if (room.state === 'countdown') {
+      sendTo(room, playerId, 'round_countdown', { seconds: COUNTDOWN_SECONDS });
+    }
     pushRoomUpdate(room);
 
     const ka = setInterval(() => { try { res.write(': ping\n\n'); } catch (_) {} }, 15000);
@@ -594,9 +795,9 @@ const server = http.createServer((req, res) => {
       const p = getPlayer(room, playerId);
       if (p) p.connected = false;
 
-      // Host weg -> neuen Host bestimmen
+      // Host weg -> neuen (menschlichen) Host bestimmen
       if (room.hostId === playerId) {
-        const next = connectedPlayers(room)[0];
+        const next = connectedPlayers(room).find(pp => !pp.isBot) || connectedPlayers(room)[0];
         if (next) room.hostId = next.id;
       }
       // Zeichner weg während Runde -> Runde beenden (Timeout)
@@ -608,9 +809,11 @@ const server = http.createServer((req, res) => {
         room.wordOptions = [];
         startRound(room, chooseNextDrawer(room, null));
       }
-      // Raum leer -> aufräumen
-      if (connectedPlayers(room).length === 0) {
+      // Raum leer (keine MENSCHEN mehr) -> aufräumen (Bots halten Raum nicht am Leben)
+      if (connectedPlayers(room).filter(pp => !pp.isBot).length === 0) {
         if (room.timer) clearInterval(room.timer);
+        clearBotTimers(room);
+        clearIntermissionTimers(room);
         rooms.delete(room.code);
       } else {
         pushRoomUpdate(room);
@@ -640,18 +843,29 @@ function handleAction(msg) {
   const { type } = msg;
 
   if (type === 'create') {
+    if (isBlockedName(msg.name || '')) return { ok: false, error: 'name_blocked' };
     const playerId = uid();
     const room = createRoom(playerId);
     room.players.push({ id: playerId, name: (msg.name || 'Spieler').slice(0, 16), score: 0, team: null, connected: false });
-    return { ok: true, playerId, roomCode: room.code };
+    if (msg.solo) { room.solo = true; addBot(room); }  // Einzelspieler-Testmodus: Computer-Rater
+    return { ok: true, playerId, roomCode: room.code, invite: room.invite, lanBase: shareBase(), solo: !!room.solo };
+  }
+
+  // Raum prüfen (für Auto-Beitritt: existiert / voll / schon gestartet)
+  if (type === 'room_info') {
+    const room = rooms.get(String(msg.roomCode || '').trim());
+    if (!room) return { ok: false, error: 'Raum nicht gefunden oder abgelaufen' };
+    return { ok: true, roomCode: room.code, state: room.state,
+      players: room.players.length, maxPlayers: MAX_PLAYERS,
+      full: room.players.length >= MAX_PLAYERS, started: room.state !== 'lobby' };
   }
 
   if (type === 'join') {
     const room = rooms.get(String(msg.roomCode || '').trim());
-    if (!room) return { ok: false, error: 'Raum nicht gefunden' };
-    if (room.state !== 'lobby') {
-      // Beitritt auch während des Spiels erlauben (als Mitspieler)
-    }
+    if (!room) return { ok: false, error: 'Raum nicht gefunden oder abgelaufen' };
+    if (isBlockedName(msg.name || '')) return { ok: false, error: 'name_blocked' };
+    if (room.players.length >= MAX_PLAYERS) return { ok: false, error: 'Raum ist voll' };
+    // Beitritt auch während des Spiels erlaubt (als Mitspieler)
     const playerId = uid();
     room.players.push({
       id: playerId,
@@ -660,7 +874,7 @@ function handleAction(msg) {
       team: room.teamMode ? nextTeam(room) : null,
       connected: false,
     });
-    return { ok: true, playerId, roomCode: room.code };
+    return { ok: true, playerId, roomCode: room.code, invite: room.invite, lanBase: shareBase() };
   }
 
   const room = rooms.get(String(msg.roomCode || ''));
@@ -712,6 +926,7 @@ function handleAction(msg) {
 
     case 'stroke':
       if (msg.playerId !== room.currentDrawerId) return { ok: false };
+      room.strokeCount = (room.strokeCount || 0) + 1;
       broadcast(room, 'stroke', {
         strokeId: msg.strokeId, tool: msg.tool, color: msg.color, lineWidth: msg.lineWidth,
         points: msg.points, first: msg.first,
@@ -728,12 +943,20 @@ function handleAction(msg) {
       broadcast(room, 'clear', {}, msg.playerId);
       return { ok: true };
 
-    case 'guess':
-      handleGuess(room, player, String(msg.text || ''));
+    case 'guess': {
+      const gtext = String(msg.text || '');
+      // Gesperrte Eingaben werden NICHT übertragen, NICHT im Verlauf gezeigt, lösen KEINE Punkte aus.
+      if (containsBlocked(gtext, room.lang)) return { ok: false, error: 'blocked_input' };
+      handleGuess(room, player, gtext);
       return { ok: true };
+    }
 
     case 'continue':
       continueRound(room, msg.playerId);
+      return { ok: true };
+
+    case 'ready_after_intermission':
+      markReadyAfterIntermission(room, msg.playerId);
       return { ok: true };
 
     case 'newgame':
@@ -789,6 +1012,12 @@ function fetchOnlineWords() {
 }
 
 // ---------- Start ----------
+// Basis-URL für Einladungslinks im lokalen Netz (LAN-IP statt localhost),
+// damit ein per WhatsApp geteilter Link auf anderen Geräten im selben WLAN öffnet.
+function shareBase() {
+  const ips = lanIPs();
+  return ips.length ? ('http://' + ips[0] + ':' + PORT) : null;
+}
 function lanIPs() {
   const out = [];
   const ifs = os.networkInterfaces();

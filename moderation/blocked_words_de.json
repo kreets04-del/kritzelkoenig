@@ -1,0 +1,21 @@
+{
+  "_comment": "Gesperrte Wörter (Deutsch), normalisiert: kleingeschrieben, ae/oe/ue/ss, ohne Diakritika. Serverautoritativ. Bewusst ohne mehrdeutige, zeichenbare Begriffe (z. B. schwanz=Tierschwanz, muschi=Katze).",
+  "words": [
+    "arsch", "arschloch", "arschgesicht", "arschkriecher",
+    "fick", "ficken", "ficker", "fickt", "gefickt", "fickfehler",
+    "fotze", "votze",
+    "hure", "huren", "hurensohn", "hurentochter", "hurenkind",
+    "nutte", "nutten",
+    "scheisse", "scheiss", "scheisser", "scheisskerl",
+    "wichser", "wichsen", "wichs", "wixer", "wixen",
+    "schlampe", "schlampen",
+    "missgeburt",
+    "bastard",
+    "schwuchtel", "schwuppe",
+    "neger", "bimbo",
+    "spast", "spasti", "spacko",
+    "kanake",
+    "trottel", "vollidiot",
+    "mistkerl", "drecksau", "dreckschwein"
+  ]
+}

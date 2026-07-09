@@ -1,5 +1,9 @@
-node_modules/
-_writetest.txt
 *.log
 .DS_Store
 Thumbs.db
+_backup_*/
+_croptest.png
+_vidcheck.png
+_writetest.txt
+node_modules/
+raster/

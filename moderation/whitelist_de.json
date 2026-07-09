@@ -1,0 +1,8 @@
+{
+  "_comment": "Harmlose Wörter, die niemals gesperrt werden dürfen (Schutz vor Fehltreffern). Normalisiert wie die Sperrliste.",
+  "words": [
+    "analyse", "analytisch", "grafik", "grafiker", "pazifik",
+    "truhe", "fuhre", "spargel", "muschel", "schwanz", "kanister",
+    "massage", "passung", "klasse", "tasse", "kasse", "gasse"
+  ]
+}

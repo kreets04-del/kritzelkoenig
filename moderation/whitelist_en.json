@@ -1,0 +1,10 @@
+{
+  "_comment": "Harmless words that must never be blocked (guards against false positives, e.g. the Scunthorpe problem). Normalized like the block list.",
+  "words": [
+    "scunthorpe", "assassin", "assess", "assessment", "assign", "assignment",
+    "assist", "assistant", "associate", "assume", "assumption",
+    "class", "glass", "pass", "passage", "passion", "bass", "grass", "brass",
+    "mass", "massachusetts", "embarrass", "cassette", "compass",
+    "shiitake", "dickens", "cocktail", "analysis", "passenger"
+  ]
+}

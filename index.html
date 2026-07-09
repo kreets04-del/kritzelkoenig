@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Kritzelkönig</title>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#171a26">
@@ -31,7 +31,11 @@
   }
   .screen{position:absolute;inset:0;display:none;flex-direction:column}
   .screen.active{display:flex}
-  .center{align-items:center;justify-content:center}
+  /* Zentriert, aber scrollbar wenn der Inhalt höher als der Bildschirm ist
+     (Auto-Margins zentrieren bei Platz, kollabieren bei Überlauf -> scrollen). */
+  .center{align-items:center;overflow-y:auto;overflow-x:hidden;padding-top:18px;padding-bottom:22px}
+  .center>:first-child{margin-top:auto}
+  .center>:last-child{margin-bottom:auto}
 
   h1{font-size:clamp(30px,6.4vw,62px);margin:0;letter-spacing:3px;font-weight:800;
      text-shadow:0 4px 24px rgba(0,0,0,.4)}
@@ -86,8 +90,26 @@
   .langrow button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
   .langrow.disabled{opacity:.5;pointer-events:none}
   .diffsel.disabled{opacity:.5;pointer-events:none}
+  /* Startbildschirm: Format-Karten */
+  .fmtcards{display:flex;gap:12px;margin:6px 0}
+  .fmtcard{flex:1;position:relative;background:var(--panel2);border:2px solid var(--line);border-radius:16px;
+    padding:20px 12px 16px;color:var(--ink);cursor:pointer;text-align:center;box-shadow:none}
+  .fmtcard.on{border-color:var(--accent);background:linear-gradient(180deg,#2c3350,#242b46)}
+  .fmticon{font-size:46px;line-height:1}
+  .fmttitle{font-weight:800;margin-top:8px;font-size:17px}
+  .fmtdesc{color:var(--muted);font-size:12.5px;margin-top:6px;line-height:1.35}
+  .fmtbadge{display:none;position:absolute;top:-11px;left:50%;transform:translateX(-50%);
+    background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;font-size:11px;font-weight:800;border-radius:20px;padding:3px 12px;white-space:nowrap}
+  .fmtcard.recommend .fmtbadge{display:block}
+  /* Tutorial-Video */
+  #tutVideo{outline:none}
+  /* Format-Grundhaltung */
+  body.fmt-landscape .card{max-width:min(560px,92vw)}
+  body.fmt-landscape .logo{width:min(380px,44vw)}
+  body.fmt-landscape .sub{margin:4px 0 14px}
   .roundsel.disabled{opacity:.5;pointer-events:none}
   .difftext{font-weight:800;color:var(--accent)}
+  #name.bad{border-color:var(--danger);box-shadow:0 0 0 2px rgba(255,90,90,.35)}
   .teamtag{font-size:11px;border-radius:20px;padding:2px 8px;font-weight:800;background:#ff6b6b;color:#2a0d0d}
   .teamtag.blue{background:#72a8ff;color:#08172d}
 
@@ -133,8 +155,9 @@
   /* Wrap zentriert die Bühne; die Bühne hat ein FESTES Seitenverhältnis,
      damit die Zeichnung auf allen Geräten gleich (unverzerrt) aussieht. */
   .canvas-wrap{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}
+  /* FESTES 1:1 – auf 9:16 und 16:9 geometrisch identisch (normalisierte Koordinaten). */
   .canvas-stage{position:relative;background:#fff;border-radius:14px;overflow:hidden;
-    aspect-ratio:4/5;width:100%;max-height:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    aspect-ratio:1/1;width:100%;max-height:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
   canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block}
   .feed{position:absolute;left:10px;bottom:10px;display:flex;flex-direction:column;gap:6px;pointer-events:none;max-width:62%}
   .feed .g{background:rgba(22,26,38,.86);color:#fff;border-radius:14px;padding:7px 13px;font-size:14px;align-self:flex-start;max-width:100%;
@@ -174,7 +197,38 @@
   .word-options button b{font-size:18px;color:var(--accent)}
   .word-options button span{font-size:12px;color:var(--muted)}
 
-  /* Hochformat & Querformat werden beide unterstützt */
+  /* ---------- Safe-Areas (Notch / Dynamic Island) ---------- */
+  #game{padding:max(6px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))}
+  .screen.center{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+
+  /* ---------- Eigenständiges 16:9-Layout (Querformat, breite Bildschirme) ----------
+     Gleiche DOM-Elemente, andere Anordnung: links Punkte, Mitte 1:1-Zeichenfläche,
+     rechts Werkzeuge/Palette/Rateeingabe. Die Zeichenfläche bleibt geometrisch identisch. */
+  @media (min-aspect-ratio:1/1){
+    body.fmt-landscape #game.active{
+      display:grid;width:100%;max-width:1500px;margin:0 auto;gap:8px 12px;
+      grid-template-columns:minmax(140px,0.9fr) minmax(320px,2.4fr) minmax(190px,0.9fr);
+      grid-template-rows:auto auto 1fr auto;
+      grid-template-areas:
+        "top    top    top"
+        "left   stage  tools"
+        "left   stage  palette"
+        "bot    bot    bot";
+    }
+    body.fmt-landscape #game .topbar{grid-area:top}
+    body.fmt-landscape #game .scorebar{grid-area:left;flex-direction:column;flex-wrap:nowrap;
+      overflow-y:auto;overflow-x:hidden;align-items:stretch;
+      background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px}
+    body.fmt-landscape #game .scorebar .s{width:100%;text-align:center}
+    body.fmt-landscape #game .canvas-wrap{grid-area:stage;min-height:0;min-width:0;container-type:size}
+    body.fmt-landscape #game .toolbar{grid-area:tools;align-self:start;flex-wrap:wrap;justify-content:center;overflow:visible}
+    body.fmt-landscape #game .palette{grid-area:palette;align-self:start;justify-content:center}
+    body.fmt-landscape #game .bottombar{grid-area:bot}
+    body.fmt-landscape #game .resultbar{grid-area:bot}
+    /* Größtes Quadrat, das in die Mittelspalte passt (kleinere von Breite/Höhe der Wrap) */
+    body.fmt-landscape #game .canvas-stage{width:min(100cqw,100cqh);height:min(100cqw,100cqh);
+      max-width:none;max-height:none;aspect-ratio:1/1;margin:auto}
+  }
 </style>
 </head>
 <body>
@@ -184,17 +238,48 @@
   <source src="sounds/music.m4a" type="audio/mp4">
 </audio>
 
+<!-- STARTBILDSCHIRM: Format & Sprache -->
+<div class="screen active center" id="startup">
+  <img class="logo" src="img/logo.png" alt="Kritzelkönig" onerror="this.style.display='none'">
+  <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten</div>
+  <div class="card" style="max-width:min(700px,94vw)">
+    <label data-i18n="chooseFormat">Ansicht wählen</label>
+    <div class="fmtcards" id="fmtCards">
+      <button class="fmtcard" data-fmt="portrait">
+        <div class="fmticon">📱</div>
+        <div class="fmttitle">Handy · 9:16</div>
+        <div class="fmtdesc" data-i18n="fmtPortraitDesc">Für Smartphones · Touch · Hochformat</div>
+        <div class="fmtbadge" data-i18n="recommended">Empfohlen</div>
+      </button>
+      <button class="fmtcard" data-fmt="landscape">
+        <div class="fmticon">💻</div>
+        <div class="fmttitle">PC · Tablet · 16:9</div>
+        <div class="fmtdesc" data-i18n="fmtLandscapeDesc">Für Maus · große Bildschirme · Querformat</div>
+        <div class="fmtbadge" data-i18n="recommended">Empfohlen</div>
+      </button>
+    </div>
+    <label style="margin-top:16px" data-i18n="language">Sprache</label>
+    <div class="langrow" id="startLang">
+      <button data-l="de">🇩🇪 Deutsch</button>
+      <button data-l="en">🇬🇧 English</button>
+    </div>
+    <button class="big" id="btnStartGo" style="width:100%;margin-top:18px" data-i18n="letsGo">Los geht's</button>
+  </div>
+</div>
+
 <!-- MENÜ -->
-<div class="screen active center" id="menu">
+<div class="screen center" id="menu">
   <img id="logoImg" class="logo" src="img/logo.png" alt="Kritzelkönig"
        onerror="this.style.display='none';document.getElementById('logoText').style.display='block'">
   <h1 id="logoText" style="display:none">KRITZEL<span class="crown">♔</span>KÖNIG</h1>
-  <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten im WLAN</div>
+  <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten – überall</div>
   <div class="card">
     <div class="langrow" id="menuLang">
       <button data-l="de">🇩🇪 Deutsch</button>
       <button data-l="en">🇬🇧 English</button>
     </div>
+    <div id="inviteBanner" style="display:none;margin:6px 0 4px;padding:10px 12px;border-radius:12px;
+      background:linear-gradient(180deg,#243a2c,#1e3325);border:1px solid #3a6b4a;text-align:center;font-weight:600"></div>
     <label data-i18n="yourName">Dein Spielername</label>
     <input id="name" type="text" maxlength="16" placeholder="z. B. Anna" data-i18n-ph="namePh"
       autocomplete="nickname" autocorrect="off" spellcheck="false">
@@ -211,6 +296,7 @@
         <button id="btnJoin" style="flex:1" data-i18n="join">Beitreten</button>
       </div>
     </div>
+    <button class="secondary" id="btnSolo" style="margin-top:10px;width:100%" data-i18n="soloTest">🤖 Solo-Test (gegen Computer)</button>
     <div class="err" id="menuErr"></div>
     <button class="secondary" id="btnHelp" style="margin-top:12px;width:100%" data-i18n="howToPlay">📖 Anleitung</button>
   </div>
@@ -225,11 +311,33 @@
   </div>
 </div>
 
+<!-- TUTORIAL / SO FUNKTIONIERT ES -->
+<div class="overlay" id="tutorial">
+  <div class="box" style="max-width:min(560px,94vw);max-height:92vh;overflow:auto;text-align:center">
+    <div class="big2" data-i18n="howToTitle" style="margin-bottom:10px">So funktioniert es</div>
+    <video id="tutVideo" playsinline controls preload="none" poster="video/tutorial_poster.jpg"
+      style="width:100%;border-radius:14px;background:#000;max-height:58vh"></video>
+    <label style="display:flex;align-items:center;gap:10px;justify-content:center;margin-top:14px;cursor:pointer;color:var(--muted)">
+      <input type="checkbox" id="tutHide" style="width:20px;height:20px">
+      <span data-i18n="dontShowAgain">Beim nächsten Start nicht mehr anzeigen</span>
+    </label>
+    <div class="row" style="margin-top:14px">
+      <button class="green" id="tutSkip" data-i18n="skipToGame" style="width:100%">Weiter zum Spiel</button>
+    </div>
+  </div>
+</div>
+
 <!-- LOBBY -->
 <div class="screen center" id="lobby">
   <div class="card">
     <label style="text-align:center" data-i18n="roomCode">RAUM-CODE</label>
     <div class="code-box" id="lobbyCode">----</div>
+    <div class="row" style="margin-top:8px;gap:8px">
+      <button class="secondary" id="btnShare" style="flex:1" data-i18n="invite">🔗 Einladen</button>
+      <button class="secondary" id="btnQR" style="flex:1" data-i18n="showQR">📷 QR-Code</button>
+    </div>
+    <div id="qrBox" style="display:none;text-align:center;margin-top:10px"></div>
+    <div id="shareMsg" class="hint" style="text-align:center;min-height:0"></div>
 
     <label data-i18n="difficulty">Schwierigkeit</label>
     <div class="diffsel" id="diffSel">
@@ -273,6 +381,7 @@
   <div class="topbar">
     <span class="pill word" id="wordPill" style="display:none">—</span>
     <span class="pill" id="statusPill">—</span>
+    <span class="pill" id="drawHint" style="display:none;background:rgba(255,255,255,.06);color:var(--muted);font-weight:600;font-size:12px" data-i18n="drawHint">✏️ nur zeichnen – keine Buchstaben/Zahlen</span>
     <span class="pill timer" id="timer">1:00</span>
     <button class="pill iconbtn" id="btnMute" title="Ton">🔊</button>
     <button class="pill iconbtn" id="btnFs" title="Vollbild">⛶</button>
@@ -313,6 +422,10 @@
     </div>
   </div>
 
+  <div id="toast" style="position:absolute;left:50%;bottom:96px;transform:translateX(-50%);background:rgba(20,24,36,.96);
+    color:#fff;padding:10px 16px;border-radius:12px;display:none;z-index:35;max-width:90vw;text-align:center;
+    border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.4);font-weight:600"></div>
+
   <!-- Auflösungsleiste (verdeckt die Zeichnung NICHT) -->
   <div class="resultbar" id="resultBar">
     <div class="result-info" id="resultInfo"></div>
@@ -332,6 +445,40 @@
         <button class="secondary" id="btnToMenu" data-i18n="toMenu">Zum Menü</button></div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- FAIRPLAY-HINWEIS (einmal pro Mehrspieler-Partie, vor der ersten Zeichenrunde) -->
+<div class="overlay" id="fairplay" style="z-index:40">
+  <div class="box" style="text-align:left;max-width:min(460px,92vw)">
+    <div class="big2" data-i18n="fairTitle" style="text-align:center;margin-bottom:6px">🎨 Fair zeichnen!</div>
+    <p data-i18n="fairIntro" style="margin:8px 0;text-align:center">Zeichne den Begriff nur als Bild.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div style="flex:1;min-width:150px;background:rgba(255,90,90,.12);border:1px solid #7a3a3a;border-radius:12px;padding:10px">
+        <b data-i18n="fairNotAllowed">🚫 Nicht erlaubt</b>
+        <ul style="margin:6px 0 0;padding-left:18px;line-height:1.55">
+          <li data-i18n="fairLetters">Buchstaben</li><li data-i18n="fairWords">Wörter</li><li data-i18n="fairNumbers">Zahlen</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:150px;background:rgba(70,224,168,.12);border:1px solid #2f6b52;border-radius:12px;padding:10px">
+        <b data-i18n="fairAllowed">✅ Erlaubt</b>
+        <ul style="margin:6px 0 0;padding-left:18px;line-height:1.55">
+          <li data-i18n="fairDrawings">normale Zeichnungen</li><li data-i18n="fairShapes">Formen</li>
+          <li data-i18n="fairArrows">Pfeile</li><li data-i18n="fairColors">Farben</li><li data-i18n="fairIdeas">kreative Bildideen</li>
+        </ul>
+      </div>
+    </div>
+    <p data-i18n="fairOutro" style="text-align:center;margin:12px 0 4px;color:var(--muted)">Viel Spaß und bleibt fair!</p>
+    <button class="big green" id="fairOk" data-i18n="fairUnderstood" style="width:100%;margin-top:8px">Verstanden</button>
+  </div>
+</div>
+
+<!-- ZWISCHENSTAND / WERBEPAUSE (nur am vollständigen Rundenende) -->
+<div class="overlay" id="intermission">
+  <div class="box" style="text-align:center;max-width:min(420px,90vw)">
+    <div class="big2" id="interTitle">🎬 Kurze Pause</div>
+    <div id="interMsg" style="color:var(--muted);margin-top:8px"></div>
+    <div id="interCount" style="font-size:64px;font-weight:900;color:var(--accent);margin-top:12px;display:none"></div>
   </div>
 </div>
 
@@ -357,6 +504,7 @@
     <div class="row"><button class="secondary" id="setMute">🔊</button>
       <button class="secondary" id="setFs" data-i18n="fullscreen">Vollbild</button></div>
     <button class="secondary" id="setHelp" style="margin-top:14px;width:100%" data-i18n="howToPlay">📖 Anleitung</button>
+    <button class="secondary" id="setFormat" style="margin-top:8px;width:100%" data-i18n="changeFormat">🖥️ Format ändern</button>
     <div class="row" style="margin-top:18px">
       <button class="secondary" id="setClose" style="flex:1" data-i18n="close">Schließen</button>
       <button id="setExit" style="flex:1;background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d" data-i18n="endGame">Spiel beenden</button>
@@ -368,11 +516,151 @@
 "use strict";
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
-  es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de' };
+  es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de',
+  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false };
 const ERASER_W=0.05;
 const $=id=>document.getElementById(id);
-const screens={menu:$('menu'),lobby:$('lobby'),game:$('game')};
+const screens={startup:$('startup'),menu:$('menu'),lobby:$('lobby'),game:$('game')};
 function show(n){for(const k in screens)screens[k].classList.toggle('active',k===n);S.state=n;updateBgm();}
+
+// ---------- Storage-Adapter (LocalStorage; CrazyGames-Data-Module später) ----------
+const Store={
+  get(k,d){ try{const v=localStorage.getItem(k); return v===null?d:v;}catch(e){return d;} },
+  set(k,v){ try{localStorage.setItem(k,v);}catch(e){} },
+  getBool(k,d){ const v=this.get(k,null); return v===null?d:v==='1'; },
+  setBool(k,v){ this.set(k, v?'1':'0'); }
+};
+const KEY_FMT='kritzelkoenig_format_v1', KEY_TUT='kritzelkoenig_tutorial_hidden_v1';
+
+// ---------- Plattform-/Werbe-Adapter (CrazyGames-Gerüst) ----------
+// Grundsatz: Der Spielcode ruft NIE direkt ein SDK auf, sondern nur diese Adapter.
+// Ohne SDK (eigene Webseite / Basic Launch) läuft alles unverändert weiter.
+// Werbe-Adapter: requestMidgameAd() -> 'finished' | 'unavailable' | 'error'.
+const NoOpAdAdapter = { name:'noop', async requestMidgameAd(){ return 'unavailable'; } }; // Basic Launch: keine echte Werbung
+const StandaloneAdapter = {
+  name:'standalone', ad:NoOpAdAdapter,
+  init(){}, isCrazyGames(){ return false; },
+  gameplayStart(){}, gameplayStop(){}, loadingStart(){}, loadingStop(){},
+  audioPause(){ try{ if(typeof bgm!=='undefined'&&bgm) bgm.pause(); }catch(e){} },
+  audioResume(){ try{ if(typeof updateBgm==='function') updateBgm(); }catch(e){} },
+  saveSetting(k,v){ Store.set(k,v); }, loadSetting(k,d){ return Store.get(k,d); },
+  createInviteLink(){ try{ return inviteUrl(); }catch(e){ return location.href; } },
+  readInviteParams(){ try{ const p=new URLSearchParams(location.search);
+    return { room:(p.get('room')||'').trim(), invite:(p.get('invite')||'').trim()||null }; }
+    catch(e){ return {room:'',invite:null}; } },
+  async requestMidgameAd(){ return this.ad.requestMidgameAd(); },
+};
+// CrazyGames-Adapter: nur aktiv, wenn das SDK vorhanden ist (im Basic Launch NICHT geladen).
+// Reines Gerüst – echte Werbung/Invite/Settings folgen erst im Full Launch.
+const CrazyGamesAdapter = Object.assign({}, StandaloneAdapter, {
+  name:'crazygames', isCrazyGames(){ return true; },
+  gameplayStart(){ try{ window.CrazyGames?.SDK?.game?.gameplayStart?.(); }catch(e){} },
+  gameplayStop(){  try{ window.CrazyGames?.SDK?.game?.gameplayStop?.();  }catch(e){} },
+  loadingStart(){  try{ window.CrazyGames?.SDK?.game?.sdkGameLoadingStart?.(); }catch(e){} },
+  loadingStop(){   try{ window.CrazyGames?.SDK?.game?.sdkGameLoadingStop?.();  }catch(e){} },
+});
+const Platform = (window.CrazyGames && window.CrazyGames.SDK) ? CrazyGamesAdapter : StandaloneAdapter;
+try{ Platform.loadingStart(); Platform.init(); }catch(e){}
+
+// ---------- Format (9:16 / 16:9) ----------
+// Standard-Empfehlung: Handy (9:16). 16:9 bleibt jederzeit frei wählbar.
+function recommendFormat(){ return 'portrait'; }
+let currentFmt = Store.get(KEY_FMT,null) || recommendFormat();
+function applyFormat(fmt){
+  currentFmt=fmt; Store.set(KEY_FMT,fmt);
+  document.body.classList.toggle('fmt-portrait', fmt==='portrait');
+  document.body.classList.toggle('fmt-landscape', fmt==='landscape');
+  if(S.state==='game') setTimeout(fitCanvas,30);
+}
+
+// ---------- Startbildschirm ----------
+function renderStartup(){
+  const rec=recommendFormat();
+  [...$('fmtCards').children].forEach(c=>{ c.classList.toggle('on',c.dataset.fmt===currentFmt); c.classList.toggle('recommend',c.dataset.fmt===rec); });
+  [...$('startLang').children].forEach(b=>b.classList.toggle('on',b.dataset.l===S.lang));
+}
+$('fmtCards').addEventListener('click',e=>{const c=e.target.closest('.fmtcard'); if(!c)return; currentFmt=c.dataset.fmt; renderStartup();});
+$('startLang').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b)return; setLang(b.dataset.l); renderStartup();});
+$('btnStartGo').onclick=()=>{ applyFormat(currentFmt); show('menu'); maybeShowTutorial(); };
+
+// ---------- Tutorial ("So funktioniert es") ----------
+function loadTutVideo(){
+  const v=$('tutVideo'); const lang=S.lang==='en'?'en':'de';
+  if(v.dataset.lang===lang) return;              // schon in dieser Sprache geladen
+  v.dataset.lang=lang; v.removeAttribute('src');
+  v.src='video/tutorial_'+lang+'.mp4';           // Lazy-Load: erst hier setzen (Text ist im Video)
+  try{ v.load(); }catch(e){}
+}
+function openTutorial(){
+  loadTutVideo();
+  $('tutHide').checked = Store.getBool(KEY_TUT,false);
+  $('tutorial').classList.add('show');
+}
+function closeTutorial(){
+  try{ $('tutVideo').pause(); }catch(e){}
+  Store.setBool(KEY_TUT, $('tutHide').checked);
+  $('tutorial').classList.remove('show');
+}
+function maybeShowTutorial(){ if(!Store.getBool(KEY_TUT,false)) openTutorial(); }
+$('tutSkip').onclick=closeTutorial;
+
+// ---------- Einladen / Teilen / QR ----------
+function inviteUrl(){
+  // Auf localhost die LAN-IP des Servers verwenden, damit der Link auf anderen
+  // Geräten im selben WLAN öffnet (localhost zeigt sonst auf das jeweilige Gerät).
+  const local=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname);
+  const base=(local && S.lanBase) ? S.lanBase+'/' : location.origin+location.pathname;
+  return base+'?room='+encodeURIComponent(S.roomCode)+(S.invite?'&invite='+encodeURIComponent(S.invite):'');
+}
+async function shareInvite(){
+  const url=inviteUrl();
+  if(navigator.share){ try{ await navigator.share({title:'Kritzelkönig',text:t('inviteText')+' '+S.roomCode,url}); return; }
+    catch(e){ if(e&&e.name==='AbortError')return; } }
+  try{ await navigator.clipboard.writeText(url); $('shareMsg').textContent=t('linkCopied'); }
+  catch(e){ $('shareMsg').textContent=url; }
+  setTimeout(()=>{ if($('shareMsg').textContent===t('linkCopied'))$('shareMsg').textContent=''; },4000);
+}
+let qrLibLoading=null;
+function loadQrLib(){
+  if(window.qrcode) return Promise.resolve();
+  if(qrLibLoading) return qrLibLoading;
+  qrLibLoading=new Promise((res,rej)=>{ const s=document.createElement('script'); s.src='js/qrcode.min.js'; s.onload=res; s.onerror=rej; document.head.appendChild(s); });
+  return qrLibLoading;
+}
+async function toggleQR(){
+  const box=$('qrBox');
+  if(box.style.display!=='none'){ box.style.display='none'; box.innerHTML=''; return; }
+  try{
+    await loadQrLib();
+    const q=qrcode(0,'M'); q.addData(inviteUrl()); q.make();
+    box.innerHTML='<div style="background:#fff;display:inline-block;padding:12px;border-radius:14px;line-height:0">'
+      +'<div style="width:min(220px,64vw)">'+q.createSvgTag({cellSize:4,margin:2,scalable:true})+'</div></div>';
+    box.style.display='block';
+  }catch(e){ $('shareMsg').textContent=t('qrError'); }
+}
+$('btnShare').onclick=shareInvite;
+$('btnQR').onclick=toggleQR;
+
+// ---------- Auto-Beitritt per Einladungslink (?room=&invite=) ----------
+function enterJoinMode(code){
+  $('joinArea').style.display='block';
+  $('code').value=code; $('code').readOnly=true; $('code').style.opacity='.7';
+  $('btnCreate').style.display='none';
+  const b=$('inviteBanner'); b.style.display='block'; b.textContent=t('joiningRoom')+' '+code;
+  setTimeout(()=>$('name').focus(),50);
+}
+async function checkInviteParams(){
+  let params; try{ params=new URLSearchParams(location.search); }catch(e){ return; }
+  const code=(params.get('room')||'').trim();
+  if(!/^\d{4}$/.test(code)) return;
+  S.pendingRoom=code; S.pendingInvite=(params.get('invite')||'').trim()||null;
+  enterJoinMode(code);
+  try{ const info=await post({type:'room_info',roomCode:code});
+    if(!info.ok){ $('menuErr').textContent=info.error; }
+    else if(info.full){ $('menuErr').textContent=t('roomFull'); }
+    else if(info.started){ $('menuErr').textContent=t('roomStarted'); }
+  }catch(e){}
+}
 
 // Hintergrundmusik-Element früh referenzieren (wird in updateMute genutzt)
 const bgm=$('bgm'); if(bgm)bgm.volume=0.22;
@@ -383,7 +671,7 @@ $('name').value=S.name; updateMute();
 
 // ---------- Sprachen (i18n) ----------
 const T={
- de:{tagline:'Zeichnen & Raten im WLAN',yourName:'Dein Spielername',namePh:'z. B. Anna',
+ de:{tagline:'Zeichnen & Raten – überall',yourName:'Dein Spielername',namePh:'z. B. Anna',
    createGame:'Spiel erstellen',joinGame:'Spiel beitreten',roomCode4:'Raum-Code (4 Ziffern)',join:'Beitreten',
    roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',teamMode:'Teammodus',teamOn:'An',teamOff:'Aus',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
    easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
@@ -396,8 +684,22 @@ const T={
    enterName:'Bitte einen Namen eingeben',enterCode:'Bitte 4-stelligen Code eingeben',
    waitPlayers:'Warte auf weitere Spieler … (mind. 2)',readyHost:'Bereit! Du kannst starten.',waitHost:'Warte auf den Host …',
    hostChoosesLang:'Sprache & Begriffe legt der Host fest.',loading:'Wird geladen …',confirmExit:'Spiel wirklich beenden?',
-   descEasy:'🧒 Für Kinder – nur leicht zeichenbare Begriffe',descMedium:'🙂 Für Jugendliche & Erwachsene',descHard:'🔥 Für Erwachsene – auch mittlere Begriffe dabei',descMixed:'🎲 Alle Schwierigkeiten gemischt'},
- en:{tagline:'Draw & Guess on Wi-Fi',yourName:'Your name',namePh:'e.g. Anna',
+   descEasy:'🧒 Für Kinder – nur leicht zeichenbare Begriffe',descMedium:'🙂 Für Jugendliche & Erwachsene',descHard:'🔥 Für Erwachsene – auch mittlere Begriffe dabei',descMixed:'🎲 Alle Schwierigkeiten gemischt',
+   chooseFormat:'Format wählen',recommended:'Empfohlen',fmtPortraitTitle:'📱 Hochkant',fmtLandscapeTitle:'🖥️ Querformat',
+   fmtPortraitDesc:'Für Smartphones (9:16)',fmtLandscapeDesc:'Für PC & Tablet (16:9)',letsGo:'Los geht’s',
+   howToTitle:'So funktioniert’s',dontShowAgain:'Nicht mehr zeigen',readAsText:'Als Text lesen',skipToGame:'Überspringen',changeFormat:'🖥️ Format ändern',
+   invite:'🔗 Einladen',showQR:'📷 QR-Code',inviteText:'Spiel mit mir Kritzelkönig! Raum-Code',linkCopied:'✅ Link kopiert',qrError:'QR-Code konnte nicht geladen werden',
+   joiningRoom:'Du trittst bei · Raum',roomFull:'Dieser Raum ist voll.',roomStarted:'Das Spiel läuft schon – du steigst als Mitspieler ein.',
+   soloTest:'🤖 Solo-Test (gegen Computer)',
+   interPause:'🎬 Kurze Pause',interMsg:'Nächste Runde wird vorbereitet …',interReady:'Gleich geht’s weiter!',
+   fairTitle:'🎨 Fair zeichnen!',fairIntro:'Zeichne den Begriff nur als Bild.',
+   fairNotAllowed:'🚫 Nicht erlaubt',fairLetters:'Buchstaben',fairWords:'Wörter',fairNumbers:'Zahlen',
+   fairAllowed:'✅ Erlaubt',fairDrawings:'normale Zeichnungen',fairShapes:'Formen',fairArrows:'Pfeile',fairColors:'Farben',fairIdeas:'kreative Bildideen',
+   fairOutro:'Viel Spaß und bleibt fair!',fairUnderstood:'Verstanden',
+   drawHint:'✏️ nur zeichnen – keine Buchstaben/Zahlen',
+   nameBlocked:'Dieser Name ist nicht erlaubt. Bitte wähle einen anderen.',
+   inputBlocked:'Dieser Ausdruck kann im Spiel nicht verwendet werden. Bitte wähle eine andere Eingabe.'},
+ en:{tagline:'Draw & Guess – anywhere',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
    roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
    easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
@@ -410,7 +712,21 @@ const T={
    enterName:'Please enter a name',enterCode:'Please enter a 4-digit code',
    waitPlayers:'Waiting for more players … (min. 2)',readyHost:'Ready! You can start.',waitHost:'Waiting for the host …',
    hostChoosesLang:'Language & words are set by the host.',loading:'Loading …',confirmExit:'Really quit the game?',
-   descEasy:'🧒 For kids – only easy-to-draw words',descMedium:'🙂 For teens & adults',descHard:'🔥 For adults – includes medium words too',descMixed:'🎲 All difficulties mixed'}
+   descEasy:'🧒 For kids – only easy-to-draw words',descMedium:'🙂 For teens & adults',descHard:'🔥 For adults – includes medium words too',descMixed:'🎲 All difficulties mixed',
+   chooseFormat:'Choose format',recommended:'Recommended',fmtPortraitTitle:'📱 Portrait',fmtLandscapeTitle:'🖥️ Landscape',
+   fmtPortraitDesc:'For smartphones (9:16)',fmtLandscapeDesc:'For PC & tablet (16:9)',letsGo:'Let’s go',
+   howToTitle:'How it works',dontShowAgain:'Don’t show again',readAsText:'Read as text',skipToGame:'Skip',changeFormat:'🖥️ Change format',
+   invite:'🔗 Invite',showQR:'📷 QR code',inviteText:'Play Kritzelkönig with me! Room code',linkCopied:'✅ Link copied',qrError:'Could not load QR code',
+   joiningRoom:'You are joining · Room',roomFull:'This room is full.',roomStarted:'The game is already running – you’ll join as a player.',
+   soloTest:'🤖 Solo test (vs. computer)',
+   interPause:'🎬 Short break',interMsg:'Preparing the next round …',interReady:'Here we go!',
+   fairTitle:'🎨 Draw fair!',fairIntro:'Draw the word as a picture only.',
+   fairNotAllowed:'🚫 Not allowed',fairLetters:'Letters',fairWords:'Words',fairNumbers:'Numbers',
+   fairAllowed:'✅ Allowed',fairDrawings:'normal drawings',fairShapes:'shapes',fairArrows:'arrows',fairColors:'colors',fairIdeas:'creative picture ideas',
+   fairOutro:'Have fun and stay fair!',fairUnderstood:'Got it',
+   drawHint:'✏️ draw only – no letters/numbers',
+   nameBlocked:'This name is not allowed. Please choose another.',
+   inputBlocked:'This expression cannot be used in the game. Please choose another input.'}
 };
 function t(k){return (T[S.lang]&&T[S.lang][k])||T.de[k]||k;}
 function applyI18n(){
@@ -520,11 +836,17 @@ const HELP={
 <p><b>💡 Tips:</b> Turn on “Do not disturb” so notifications don't interrupt. Use ⚙️ Settings to change language, sound and difficulty anytime.</p>`
 };
 function openHelp(){ $('helpBody').innerHTML=HELP[S.lang]||HELP.de; $('help').classList.add('show'); }
-$('btnHelp').onclick=openHelp;
-$('setHelp').onclick=()=>{ $('settings').classList.remove('show'); openHelp(); };
+$('btnHelp').onclick=openTutorial;
+$('setHelp').onclick=()=>{ $('settings').classList.remove('show'); openTutorial(); };
 $('helpClose').onclick=()=>$('help').classList.remove('show');
+const _setFmt=$('setFormat'); if(_setFmt) _setFmt.onclick=()=>{ $('settings').classList.remove('show'); renderStartup(); show('startup'); };
 
+applyFormat(currentFmt);
+renderStartup();
+show('startup');
 applyI18n();
+checkInviteParams();
+try{ Platform.loadingStop(); }catch(e){} // Laden abgeschlossen (CrazyGames: sdkGameLoadingStop)
 // PWA: installierbar machen
 if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
 
@@ -538,16 +860,27 @@ function openStream(){ if(S.es)S.es.close();
 
 // ---------- Menü ----------
 $('btnCreate').onclick=async()=>{const name=getName();if(!name)return;
-  const r=await post({type:'create',name});if(!r.ok){$('menuErr').textContent=r.error;return;}enter(r,name,true);};
+  const r=await post({type:'create',name});if(!r.ok){handleNameError(r);return;}enter(r,name,true);};
+$('btnSolo').onclick=async()=>{
+  let name=$('name').value.trim(); if(!name){ name=(S.lang==='en'?'You':'Du'); $('name').value=name; }
+  try{localStorage.setItem('kk_name',name)}catch(e){} $('menuErr').textContent='';
+  const r=await post({type:'create',name,solo:true});if(!r.ok){handleNameError(r);return;}enter(r,name,true);};
+$('name').addEventListener('input',()=>$('name').classList.remove('bad'));
 $('btnJoinShow').onclick=()=>{$('joinArea').style.display='block';$('code').focus();};
 $('btnJoin').onclick=doJoin; $('code').addEventListener('keydown',e=>{if(e.key==='Enter')doJoin();});
 async function doJoin(){const name=getName();if(!name)return;const code=$('code').value.trim();
   if(!/^\d{4}$/.test(code)){$('menuErr').textContent=t('enterCode');return;}
-  const r=await post({type:'join',name,roomCode:code});if(!r.ok){$('menuErr').textContent=r.error;return;}enter(r,name,false);}
+  const inv = (S.pendingRoom===code) ? S.pendingInvite : undefined;
+  const r=await post({type:'join',name,roomCode:code,invite:inv});if(!r.ok){handleNameError(r);return;}
+  S.pendingRoom=null;S.pendingInvite=null;enter(r,name,false);}
 function getName(){const n=$('name').value.trim();if(!n){$('menuErr').textContent=t('enterName');return null;}
   $('menuErr').textContent='';try{localStorage.setItem('kk_name',n)}catch(e){}return n;}
 function enter(r,name,isHost){S.playerId=r.playerId;S.roomCode=r.roomCode;S.name=name;S.isHost=isHost;
-  $('lobbyCode').textContent=r.roomCode;openStream();show('lobby');startBgm();
+  if(r.invite)S.invite=r.invite;
+  if(r.lanBase)S.lanBase=r.lanBase;
+  S.solo=!!r.solo;S.fairShown=false;
+  $('lobbyCode').textContent=r.roomCode;$('shareMsg').textContent='';$('qrBox').style.display='none';$('qrBox').innerHTML='';
+  openStream();show('lobby');startBgm();
   if(isHost) post({type:'language',value:S.lang}); }
 
 // ---------- Lobby ----------
@@ -561,6 +894,7 @@ $('btnLeave').onclick=()=>location.reload();
 
 function renderLobby(st){
   S.lastRoom=st;
+  S.fairShown=false; // Fairplay-Hinweis pro Partie neu (erscheint vor der ersten Zeichenrunde)
   $('lobbyCode').textContent=st.roomCode;S.isHost=st.hostId===S.playerId;S.difficulty=st.difficulty||'mixed';S.maxRounds=st.maxRounds||10;S.teamMode=!!st.teamMode;
   // Schwierigkeit
   [...$('diffSel').children].forEach(b=>b.classList.toggle('on',b.dataset.d===S.difficulty));
@@ -653,7 +987,9 @@ const COLORS=[['Schwarz','#111111'],['Rot','#e23b3b'],['Orange','#f08a24'],['Gel
 
 // Raten
 $('btnGuess').onclick=sendGuess;$('guess').addEventListener('keydown',e=>{if(e.key==='Enter')sendGuess();});
-function sendGuess(){const t=$('guess').value.trim();if(!t)return;$('guess').value='';post({type:'guess',text:t});}
+async function sendGuess(){const g=$('guess').value.trim();if(!g)return;$('guess').value='';
+  const r=await post({type:'guess',text:g});
+  if(r&&r.ok===false&&r.error==='blocked_input'){ showToast(t('inputBlocked')); }}
 
 // Spracheingabe (Browser-Spracherkennung, kostenlos – am besten in Chrome)
 // Robuste Variante: bei jedem Tippen eine FRISCHE Instanz -> vermeidet den
@@ -692,7 +1028,8 @@ function addFeed(name,text,ok){const f=$('feed'),d=document.createElement('div')
   while(f.children.length>5)f.removeChild(f.firstChild);setTimeout(()=>{d.parentNode&&d.parentNode.removeChild(d);},6000);}
 
 function applyRole(){$('toolbar').classList.toggle('hidden',!S.amDrawer);$('palette').classList.toggle('hidden',!S.amDrawer);
-  $('wordPill').style.display=S.amDrawer?'':'none';$('guessRow').style.display=S.amDrawer?'none':'flex';}
+  $('wordPill').style.display=S.amDrawer?'':'none';$('guessRow').style.display=S.amDrawer?'none':'flex';
+  $('drawHint').style.display=S.amDrawer?'':'none';}
 // Team-Modus: eigenes Team (Zeichner-Team) darf nicht raten
 function setGuessLock(locked){
   $('guess').disabled=!!locked; $('btnGuess').disabled=!!locked;
@@ -706,6 +1043,34 @@ function overlay(t,r,e,btn,win){$('ovTitle').textContent=t;$('ovReveal').textCon
   const wi=$('winImg'); if(wi)wi.style.display=(win&&!wi.dataset.missing)?'block':'none';
   $('overlay').classList.add('show');}
 function hideOverlay(){$('overlay').classList.remove('show');$('wordOptions').style.display='none';$('wordOptions').innerHTML='';}
+
+// Zwischenstand / Werbepause
+let interTimer=null;
+function showIntermission(){ if(interTimer){clearInterval(interTimer);interTimer=null;}
+  $('interTitle').textContent=t('interPause'); $('interMsg').textContent=t('interMsg');
+  $('interCount').style.display='none'; $('intermission').classList.add('show'); }
+function hideIntermission(){ if(interTimer){clearInterval(interTimer);interTimer=null;} $('intermission').classList.remove('show'); }
+
+// Fairplay-Hinweis: einmal pro Mehrspieler-Partie, vor der ersten Zeichenrunde
+function maybeFairplay(roundNumber){
+  if(S.solo || S.fairShown) return;
+  if(roundNumber && roundNumber>1) return;
+  S.fairShown=true; $('fairplay').classList.add('show');
+}
+$('fairOk').onclick=()=>$('fairplay').classList.remove('show');
+
+// kleiner, kurzlebiger Hinweis (z. B. bei gesperrter Eingabe)
+let toastTimer=null;
+function showToast(msg){ const el=$('toast'); el.textContent=msg; el.style.display='block';
+  if(toastTimer)clearTimeout(toastTimer); toastTimer=setTimeout(()=>{el.style.display='none';},3200); }
+function handleNameError(r){
+  if(r.error==='name_blocked'){ $('menuErr').textContent=t('nameBlocked'); $('name').focus(); $('name').classList.add('bad'); return true; }
+  $('menuErr').textContent=r.error; return false;
+}
+function runCountdown(n){ if(interTimer){clearInterval(interTimer);interTimer=null;}
+  const c=$('interCount'); $('interTitle').textContent=t('interReady'); $('interMsg').textContent='';
+  c.style.display='block'; c.textContent=n; $('intermission').classList.add('show');
+  interTimer=setInterval(()=>{ n--; if(n>0){ c.textContent=n; } else { hideIntermission(); } },1000); }
 
 function showWordOptions(options){
   $('ovTitle').textContent=t('chooseWord');$('ovReveal').textContent='';$('ovExtra').textContent=t('chooseWordHint');
@@ -753,22 +1118,23 @@ function handle(event,d){switch(event){
     break;
   case 'need_players': if(S.state==='game')show('lobby');break;
   case 'word_choosing':
-    enterGame();hideResult();S.amDrawer=false;S.strokes=[];redraw();applyRole();
+    enterGame();maybeFairplay(d.roundNumber);hideResult();S.amDrawer=false;S.strokes=[];redraw();applyRole();
     $('mask').textContent='';$('timer').textContent='--';
     $('statusPill').textContent=`${d.drawerName} ${t('choosingWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
     if(d.drawerId!==S.playerId)overlay(`${esc(d.drawerName)} ${t('choosingWord')}`,'','',false,false);
     break;
   case 'word_options':
-    enterGame();hideResult();S.amDrawer=false;applyRole();
+    enterGame();maybeFairplay(d.roundNumber);hideResult();S.amDrawer=false;applyRole();
     $('timer').textContent='--';$('statusPill').textContent=`${t('chooseWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
     showWordOptions(d.options||[]);break;
   case 'round_started':
-    enterGame();hideResult();S.amDrawer=d.drawerId===S.playerId;S.strokes=[];redraw();applyRole();
+    enterGame();maybeFairplay(d.roundNumber);hideResult();S.amDrawer=d.drawerId===S.playerId;S.strokes=[];redraw();applyRole();
     $('mask').textContent=d.mask;$('statusPill').textContent=(S.amDrawer?t('youDraw'):(d.drawerName+' '+t('draws')))+(d.roundNumber?`  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`:'');
     $('timer').textContent=fmt(d.remaining);$('timer').classList.remove('low');lastTick=d.remaining;
     if(!S.amDrawer)$('wordPill').style.display='none';
     setGuessLock(false);
-    hideOverlay();sound('round_start');setTimeout(fitCanvas,30);break;
+    try{Platform.gameplayStart();}catch(e){} // aktives Gameplay (CrazyGames-Hook)
+    hideOverlay();hideIntermission();sound('round_start');setTimeout(fitCanvas,30);break;
   case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent='➜ '+d.text.toUpperCase();break;
   case 'timer':
     $('timer').textContent=fmt(d.remaining);$('timer').classList.toggle('low',d.remaining<=10);
@@ -778,16 +1144,27 @@ function handle(event,d){switch(event){
   case 'undo': S.strokes.pop();redraw();break;
   case 'clear': S.strokes=[];redraw();break;
   case 'guess_feed': addFeed(d.playerName,d.text,d.correct);if(d.correct)sound('correct');break;
-  case 'round_solved': {renderScores(d.players);
+  case 'round_solved': {try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
     const bonus=(d.speedMultiplier>1||d.difficultyMultiplier>1)?` <small style="color:var(--muted)">x${d.speedMultiplier} Tempo · x${d.difficultyMultiplier} Wort</small>`:'';
     let title=`✅ ${esc(d.winnerName)} <b style="color:var(--accent2)">+${d.points}</b>`+(d.drawerPoints?` &nbsp;·&nbsp; ✏ ${esc(d.drawerName)} +${d.drawerPoints}`:'');
     title=title.replace('</b>','</b>'+bonus);
     showResult(title,d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;}
-  case 'round_timeout': renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
-  case 'game_over': renderScores(d.players);sound('win');
+  case 'round_timeout': try{Platform.gameplayStop();}catch(e){}renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
+  case 'game_over': try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
     const standings=d.teamMode&&d.teamScores&&d.teamScores.length?d.teamScores:d.players.slice().sort((a,b)=>b.score-a.score);
     if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
     overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
+  case 'round_intermission':
+    try{Platform.gameplayStop();}catch(e){}
+    try{Platform.audioPause();}catch(e){}
+    showIntermission();
+    // Werbung anfragen (Basic Launch: NoOp -> sofort), danach "bereit" melden – blockiert nie
+    (async()=>{ try{ await Platform.requestMidgameAd(); }catch(e){} post({type:'ready_after_intermission'}); })();
+    break;
+  case 'round_countdown':
+    try{Platform.audioResume();}catch(e){}
+    runCountdown(d.seconds||3);
+    break;
   case 'back_to_lobby': hideOverlay();show('lobby');break;
 }}
 function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);

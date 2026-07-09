@@ -1,0 +1,22 @@
+{
+  "_comment": "Blocked words (English), normalized: lowercase, no diacritics. Server-authoritative. Ambiguous drawable nouns (e.g. cock=rooster) are intentionally excluded.",
+  "words": [
+    "fuck", "fucker", "fucking", "fuckface", "motherfucker", "clusterfuck",
+    "shit", "bullshit", "shithead", "dipshit",
+    "asshole", "asshat", "ass", "arse", "arsehole",
+    "bitch", "bitches",
+    "bastard",
+    "cunt",
+    "pussy",
+    "slut", "sluts",
+    "whore", "whores",
+    "nigger", "nigga", "niggers",
+    "faggot", "fag", "faggots",
+    "retard", "retarded",
+    "wanker", "wank",
+    "prick",
+    "douche", "douchebag",
+    "twat",
+    "jackass", "dumbass"
+  ]
+}
