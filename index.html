@@ -235,7 +235,6 @@
 
 <audio id="bgm" loop preload="auto">
   <source src="sounds/music.mp3" type="audio/mpeg">
-  <source src="sounds/music.m4a" type="audio/mp4">
 </audio>
 
 <!-- STARTBILDSCHIRM: Format & Sprache -->
@@ -260,8 +259,8 @@
     </div>
     <label style="margin-top:16px" data-i18n="language">Sprache</label>
     <div class="langrow" id="startLang">
-      <button data-l="de">🇩🇪 Deutsch</button>
       <button data-l="en">🇬🇧 English</button>
+      <button data-l="de">🇩🇪 Deutsch</button>
     </div>
     <button class="big" id="btnStartGo" style="width:100%;margin-top:18px" data-i18n="letsGo">Los geht's</button>
   </div>
@@ -275,8 +274,8 @@
   <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten – überall</div>
   <div class="card">
     <div class="langrow" id="menuLang">
-      <button data-l="de">🇩🇪 Deutsch</button>
       <button data-l="en">🇬🇧 English</button>
+      <button data-l="de">🇩🇪 Deutsch</button>
     </div>
     <div id="inviteBanner" style="display:none;margin:6px 0 4px;padding:10px 12px;border-radius:12px;
       background:linear-gradient(180deg,#243a2c,#1e3325);border:1px solid #3a6b4a;text-align:center;font-weight:600"></div>
@@ -311,6 +310,15 @@
   </div>
 </div>
 
+<!-- REGELN & DATENSCHUTZ -->
+<div class="overlay" id="rules">
+  <div class="box" style="text-align:left;max-width:min(600px,93vw);max-height:88vh;overflow:auto">
+    <div class="big2" data-i18n="rulesTitle" style="text-align:center;margin-bottom:12px">ℹ️ Regeln & Datenschutz</div>
+    <div id="rulesBody" style="line-height:1.5;font-size:14.5px"></div>
+    <div class="row" style="margin-top:16px"><button class="secondary" id="rulesClose" data-i18n="close">Schließen</button></div>
+  </div>
+</div>
+
 <!-- TUTORIAL / SO FUNKTIONIERT ES -->
 <div class="overlay" id="tutorial">
   <div class="box" style="max-width:min(560px,94vw);max-height:92vh;overflow:auto;text-align:center">
@@ -341,7 +349,7 @@
 
     <label data-i18n="difficulty">Schwierigkeit</label>
     <div class="diffsel" id="diffSel">
-      <button data-d="easy">🧒 Leicht</button>
+      <button data-d="easy">🟢 Leicht</button>
       <button data-d="medium">🙂 Mittel</button>
       <button data-d="hard">🔥 Schwer</button>
       <button data-d="mixed">🎲 Gemischt</button>
@@ -383,6 +391,7 @@
     <span class="pill" id="statusPill">—</span>
     <span class="pill" id="drawHint" style="display:none;background:rgba(245,197,24,.16);border:1px solid rgba(245,197,24,.55);color:#ffe08a;font-weight:700;font-size:12px" data-i18n="drawHint">✏️ nur zeichnen – keine Buchstaben/Zahlen</span>
     <span class="pill timer" id="timer">1:00</span>
+    <button class="pill iconbtn" id="btnReport" title="Zeichnung melden" style="display:none;border-color:rgba(255,120,120,.5)">⚠</button>
     <button class="pill iconbtn" id="btnMute" title="Ton">🔊</button>
     <button class="pill iconbtn" id="btnFs" title="Vollbild">⛶</button>
     <button class="pill iconbtn" id="btnSettings" title="Einstellungen">⚙️</button>
@@ -468,7 +477,8 @@
         </ul>
       </div>
     </div>
-    <p data-i18n="fairOutro" style="text-align:center;margin:12px 0 4px;color:var(--muted)">Viel Spaß und bleibt fair!</p>
+    <p data-i18n="fairMod" style="text-align:center;margin:10px 0 2px;font-size:13px;color:#ffb3b3">Keine beleidigenden, sexuellen, hasserfüllten oder anderweitig unangemessenen Zeichnungen.</p>
+    <p data-i18n="fairOutro" style="text-align:center;margin:8px 0 4px;color:var(--muted)">Viel Spaß und bleibt fair!</p>
     <button class="big green" id="fairOk" data-i18n="fairUnderstood" style="width:100%;margin-top:8px">Verstanden</button>
   </div>
 </div>
@@ -488,13 +498,13 @@
     <div class="big2" data-i18n="settings" style="text-align:center">Einstellungen</div>
     <label data-i18n="language">Sprache</label>
     <div class="langrow" id="setLang">
-      <button data-l="de">🇩🇪 Deutsch</button>
       <button data-l="en">🇬🇧 English</button>
+      <button data-l="de">🇩🇪 Deutsch</button>
     </div>
     <div class="hint" id="setLangHint" style="display:none"></div>
     <label data-i18n="difficulty" style="margin-top:14px">Schwierigkeit</label>
     <div class="diffsel" id="setDiff">
-      <button data-d="easy">🧒 Leicht</button>
+      <button data-d="easy">🟢 Leicht</button>
       <button data-d="medium">🙂 Mittel</button>
       <button data-d="hard">🔥 Schwer</button>
       <button data-d="mixed">🎲 Gemischt</button>
@@ -505,6 +515,7 @@
       <button class="secondary" id="setFs" data-i18n="fullscreen">Vollbild</button></div>
     <button class="secondary" id="setHelp" style="margin-top:14px;width:100%" data-i18n="howToPlay">📖 Anleitung</button>
     <button class="secondary" id="setFormat" style="margin-top:8px;width:100%" data-i18n="changeFormat">🖥️ Format ändern</button>
+    <button class="secondary" id="setRules" style="margin-top:8px;width:100%" data-i18n="rulesTitle">ℹ️ Regeln & Datenschutz</button>
     <div class="row" style="margin-top:18px">
       <button class="secondary" id="setClose" style="flex:1" data-i18n="close">Schließen</button>
       <button id="setExit" style="flex:1;background:linear-gradient(180deg,#ff8a8a,#ff5b5b);color:#2a0d0d" data-i18n="endGame">Spiel beenden</button>
@@ -517,7 +528,7 @@
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
   es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de',
-  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false };
+  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0 };
 const ERASER_W=0.05;
 const $=id=>document.getElementById(id);
 const screens={startup:$('startup'),menu:$('menu'),lobby:$('lobby'),game:$('game')};
@@ -532,38 +543,71 @@ const Store={
 };
 const KEY_FMT='kritzelkoenig_format_v1', KEY_TUT='kritzelkoenig_tutorial_hidden_v1';
 
-// ---------- Plattform-/Werbe-Adapter (CrazyGames-Gerüst) ----------
-// Grundsatz: Der Spielcode ruft NIE direkt ein SDK auf, sondern nur diese Adapter.
-// Ohne SDK (eigene Webseite / Basic Launch) läuft alles unverändert weiter.
-// Werbe-Adapter: requestMidgameAd() -> 'finished' | 'unavailable' | 'error'.
-const NoOpAdAdapter = { name:'noop', async requestMidgameAd(){ return 'unavailable'; } }; // Basic Launch: keine echte Werbung
-const StandaloneAdapter = {
-  name:'standalone', ad:NoOpAdAdapter,
-  init(){}, isCrazyGames(){ return false; },
-  gameplayStart(){}, gameplayStop(){}, loadingStart(){}, loadingStop(){},
+// ---------- CrazyGames HTML5 SDK v3 – Integration ----------
+// Der Spielcode ruft das SDK NIE direkt auf, sondern nur die gekapselten Helfer unten.
+// Ohne SDK (eigene Webseite / Render) läuft alles unverändert weiter (mode='local').
+// Kompatibel ohne "?." (ältere In-App-Browser scheitern sonst am ganzen Skript).
+const ENABLE_CRAZYGAMES_ADS = false; // Werbung erst im Full Launch aktivieren
+var CG = { ready:false, mode:'local', muteAudio:false, disableChat:false, username:'', _gp:false, _load:false };
+function _sdk(){ try{ return (window.CrazyGames && CrazyGames.SDK) || null; }catch(e){ return null; } }
+function _sdkGame(){ var s=_sdk(); return (s && s.game) ? s.game : null; }
+function cgLoadingStart(){ if(CG.mode!=='crazygames'||CG._load)return; try{ var g=_sdkGame(); if(g&&g.loadingStart){ g.loadingStart(); CG._load=true; } }catch(e){} }
+function cgLoadingStop(){ if(CG.mode!=='crazygames'||!CG._load)return; try{ var g=_sdkGame(); if(g&&g.loadingStop){ g.loadingStop(); CG._load=false; } }catch(e){} }
+function cgGameplayStart(){ if(CG.mode!=='crazygames'||CG._gp)return; try{ var g=_sdkGame(); if(g&&g.gameplayStart){ g.gameplayStart(); CG._gp=true; } }catch(e){} }
+function cgGameplayStop(){ if(CG.mode!=='crazygames'||!CG._gp)return; try{ var g=_sdkGame(); if(g&&g.gameplayStop){ g.gameplayStop(); CG._gp=false; } }catch(e){} }
+function audioBlocked(){ return CG.mode==='crazygames' && CG.muteAudio; } // muteAudio hat Vorrang
+// Fassade für bestehende Aufrufe im Code
+var Platform = {
+  isCrazyGames(){ return CG.mode==='crazygames'; },
+  loadingStart(){ cgLoadingStart(); }, loadingStop(){ cgLoadingStop(); },
+  gameplayStart(){ cgGameplayStart(); }, gameplayStop(){ cgGameplayStop(); },
   audioPause(){ try{ if(typeof bgm!=='undefined'&&bgm) bgm.pause(); }catch(e){} },
-  audioResume(){ try{ if(typeof updateBgm==='function') updateBgm(); }catch(e){} },
-  saveSetting(k,v){ Store.set(k,v); }, loadSetting(k,d){ return Store.get(k,d); },
-  createInviteLink(){ try{ return inviteUrl(); }catch(e){ return location.href; } },
-  readInviteParams(){ try{ const p=new URLSearchParams(location.search);
-    return { room:(p.get('room')||'').trim(), invite:(p.get('invite')||'').trim()||null }; }
-    catch(e){ return {room:'',invite:null}; } },
-  async requestMidgameAd(){ return this.ad.requestMidgameAd(); },
+  audioResume(){ try{ if(typeof updateBgm==='function') updateBgm(); }catch(e){} }
 };
-// CrazyGames-Adapter: nur aktiv, wenn das SDK vorhanden ist (im Basic Launch NICHT geladen).
-// Reines Gerüst – echte Werbung/Invite/Settings folgen erst im Full Launch.
-// Kompatibel ohne "?." (ältere In-App-Browser scheitern sonst am ganzen Skript)
-function cgGame(){ try{ return (window.CrazyGames && CrazyGames.SDK && CrazyGames.SDK.game) || null; }catch(e){ return null; } }
-function cgCall(fn){ try{ var g=cgGame(); if(g && typeof g[fn]==='function') g[fn](); }catch(e){} }
-const CrazyGamesAdapter = Object.assign({}, StandaloneAdapter, {
-  name:'crazygames', isCrazyGames(){ return true; },
-  gameplayStart(){ cgCall('gameplayStart'); },
-  gameplayStop(){  cgCall('gameplayStop'); },
-  loadingStart(){  cgCall('sdkGameLoadingStart'); },
-  loadingStop(){   cgCall('sdkGameLoadingStop'); },
-});
-const Platform = (window.CrazyGames && window.CrazyGames.SDK) ? CrazyGamesAdapter : StandaloneAdapter;
-try{ Platform.loadingStart(); Platform.init(); }catch(e){}
+function applyChatMode(){ /* disableChat: falsche Rateversuche werden serverseitig ohne Text verteilt; hier kein Chat-UI zu verbergen */ }
+function cgReadSettings(){
+  var g=_sdkGame(); if(!g||!g.settings)return;
+  try{ CG.muteAudio=!!g.settings.muteAudio; }catch(e){}
+  try{ CG.disableChat=!!g.settings.disableChat; }catch(e){}
+  try{ if(typeof updateMute==='function') updateMute(); }catch(e){}
+  applyChatMode();
+}
+async function cgApplyUser(){
+  var s=_sdk(); if(!s||!s.user)return;
+  try{ if(s.user.isUserAccountAvailable){ var u=await s.user.getUser(); if(u&&u.username){ CG.username=u.username; S.name=u.username; var n=$('name'); if(n)n.value=u.username; try{localStorage.setItem('kk_name',u.username)}catch(e){} } } }catch(e){}
+  try{ var loc=(s.user.systemInfo && s.user.systemInfo.countryCode!==undefined) ? (s.user.systemInfo.locale||'') : ''; if(loc && typeof setLang==='function'){ setLang(/^de/i.test(loc)?'de':'en'); } }catch(e){}
+}
+function cgInviteParams(){ var g=_sdkGame(); if(!g)return null; try{ return g.inviteParams||null; }catch(e){ return null; } }
+function cgJoinable(){ return CG.mode==='crazygames' && !!S.roomCode && S.state==='lobby'; }
+function cgUpdateRoom(){
+  if(CG.mode!=='crazygames')return; var g=_sdkGame(); if(!g||!g.updateRoom||!S.roomCode)return;
+  try{ g.updateRoom({ roomId:'kk-'+S.roomCode+'-'+(S.invite||'x'), isJoinable:cgJoinable(), inviteParams:{ roomCode:String(S.roomCode), inviteToken:String(S.invite||'') } }); }catch(e){}
+}
+function cgLeftRoom(){ if(CG.mode!=='crazygames')return; var g=_sdkGame(); if(g&&g.leftRoom){ try{ g.leftRoom(); }catch(e){} } }
+async function cgAutoJoin(code, token){
+  if(!/^\d{4}$/.test(code))return;
+  var name=(S.name||'').trim()||CG.username||(S.lang==='en'?'Player':'Gast');
+  try{ var r=await post({type:'join',name:name,roomCode:code,invite:token||undefined});
+    if(r&&r.ok){ S.pendingRoom=null;S.pendingInvite=null; enter(r,name,false); }
+    else { if($('menuErr'))$('menuErr').textContent=(r&&r.error)||''; show('menu'); }
+  }catch(e){ show('menu'); }
+}
+async function cgOnJoinRoom(inviteParams){ // neue Einladung angenommen, während im Spiel
+  try{ cgLeftRoom(); if(S.es){ S.es.close(); S.es=null; } }catch(e){}
+  var code=inviteParams&&(inviteParams.roomCode||''); var tok=inviteParams&&(inviteParams.inviteToken||'');
+  await cgAutoJoin(String(code||''), tok);
+}
+async function cgInit(){
+  var s=_sdk();
+  if(!s||!s.init){ CG.mode='local'; return; }
+  try{
+    await s.init(); CG.ready=true; CG.mode='crazygames';
+    cgLoadingStart(); cgReadSettings();
+    try{ if(s.game&&s.game.addSettingsChangeListener) s.game.addSettingsChangeListener(cgReadSettings); }catch(e){}
+    try{ await cgApplyUser(); }catch(e){}
+    try{ if(s.game&&s.game.addJoinRoomListener) s.game.addJoinRoomListener(cgOnJoinRoom); }catch(e){}
+  }catch(e){ CG.mode='disabled'; }
+}
 
 // ---------- Format (9:16 / 16:9) ----------
 // Standard-Empfehlung: Handy (9:16). 16:9 bleibt jederzeit frei wählbar.
@@ -676,7 +720,7 @@ async function checkInviteParams(){
 const bgm=$('bgm'); if(bgm)bgm.volume=0.22;
 
 // gespeicherte Einstellungen
-try{ S.name=localStorage.getItem('kk_name')||''; S.muted=localStorage.getItem('kk_mute')==='1'; S.lang=localStorage.getItem('kk_lang')||'de'; }catch(e){}
+try{ S.name=localStorage.getItem('kk_name')||''; S.muted=localStorage.getItem('kk_mute')==='1'; S.lang=localStorage.getItem('kk_lang')||'en'; }catch(e){} if(S.lang!=='de'&&S.lang!=='en')S.lang='en';
 $('name').value=S.name; updateMute();
 
 // ---------- Sprachen (i18n) ----------
@@ -684,7 +728,7 @@ const T={
  de:{tagline:'Zeichnen & Raten – überall',yourName:'Dein Spielername',namePh:'z. B. Anna',
    createGame:'Spiel erstellen',joinGame:'Spiel beitreten',roomCode4:'Raum-Code (4 Ziffern)',join:'Beitreten',
    roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',teamMode:'Teammodus',teamOn:'An',teamOff:'Aus',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
-   easy:'🧒 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
+   easy:'🟢 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
    guessPh:'Dein Tipp …',send:'Senden',newGame:'Neues Spiel',toMenu:'Zum Menü',
    settings:'Einstellungen',language:'Sprache',sound:'Ton',fullscreen:'Vollbild',endGame:'Spiel beenden',close:'Schließen',howToPlay:'📖 Anleitung',
    youDraw:'Du zeichnest ✏',draws:'zeichnet …',round:'Runde',teamLocked:'Dein Team zeichnet – warten',
@@ -694,7 +738,7 @@ const T={
    enterName:'Bitte einen Namen eingeben',enterCode:'Bitte 4-stelligen Code eingeben',
    waitPlayers:'Warte auf weitere Spieler … (mind. 2)',readyHost:'Bereit! Du kannst starten.',waitHost:'Warte auf den Host …',
    hostChoosesLang:'Sprache & Begriffe legt der Host fest.',loading:'Wird geladen …',confirmExit:'Spiel wirklich beenden?',
-   descEasy:'🧒 Für Kinder – nur leicht zeichenbare Begriffe',descMedium:'🙂 Für Jugendliche & Erwachsene',descHard:'🔥 Für Erwachsene – auch mittlere Begriffe dabei',descMixed:'🎲 Alle Schwierigkeiten gemischt',
+   descEasy:'🟢 Einfach – leicht zeichenbare Begriffe für Einsteiger',descMedium:'🙂 Mittel – gemischte Begriffe',descHard:'🔥 Schwer – auch kniffligere Begriffe',descMixed:'🎲 Alle Schwierigkeiten gemischt',
    chooseFormat:'Format wählen',recommended:'Empfohlen',fmtPortraitTitle:'📱 Hochkant',fmtLandscapeTitle:'🖥️ Querformat',
    fmtPortraitDesc:'Für Smartphones (9:16)',fmtLandscapeDesc:'Für PC & Tablet (16:9)',letsGo:'Los geht’s',
    howToTitle:'So funktioniert’s',dontShowAgain:'Nicht mehr zeigen',readAsText:'Als Text lesen',skipToGame:'Überspringen',changeFormat:'🖥️ Format ändern',
@@ -705,14 +749,14 @@ const T={
    fairTitle:'🎨 Fair zeichnen!',fairIntro:'Zeichne den Begriff nur als Bild.',
    fairNotAllowed:'🚫 Nicht erlaubt',fairLetters:'Buchstaben',fairWords:'Wörter',fairNumbers:'Zahlen',
    fairAllowed:'✅ Erlaubt',fairDrawings:'normale Zeichnungen',fairShapes:'Formen',fairArrows:'Pfeile',fairColors:'Farben',fairIdeas:'kreative Bildideen',
-   fairOutro:'Viel Spaß und bleibt fair!',fairUnderstood:'Verstanden',
+   fairOutro:'Viel Spaß und bleibt fair!',fairUnderstood:'Verstanden',fairMod:'Keine beleidigenden, sexuellen, hasserfüllten oder anderweitig unangemessenen Zeichnungen.',reportDrawing:'⚠ Zeichnung melden',reported:'Danke – Meldung gesendet.',drawingRemoved:'Zeichnung wurde gemeldet und entfernt.',rulesTitle:'ℹ️ Regeln & Datenschutz',
    drawHint:'✏️ nur zeichnen – keine Buchstaben/Zahlen',
    nameBlocked:'Dieser Name ist nicht erlaubt. Bitte wähle einen anderen.',
    inputBlocked:'Dieser Ausdruck kann im Spiel nicht verwendet werden. Bitte wähle eine andere Eingabe.'},
  en:{tagline:'Draw & Guess – anywhere',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
    roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
-   easy:'🧒 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
+   easy:'🟢 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
    guessPh:'Your guess …',send:'Send',newGame:'New game',toMenu:'To menu',
    settings:'Settings',language:'Language',sound:'Sound',fullscreen:'Fullscreen',endGame:'Quit game',close:'Close',howToPlay:'📖 How to play',
    youDraw:"You're drawing ✏",draws:'is drawing …',round:'Round',teamLocked:'Your team is drawing – wait',
@@ -722,7 +766,7 @@ const T={
    enterName:'Please enter a name',enterCode:'Please enter a 4-digit code',
    waitPlayers:'Waiting for more players … (min. 2)',readyHost:'Ready! You can start.',waitHost:'Waiting for the host …',
    hostChoosesLang:'Language & words are set by the host.',loading:'Loading …',confirmExit:'Really quit the game?',
-   descEasy:'🧒 For kids – only easy-to-draw words',descMedium:'🙂 For teens & adults',descHard:'🔥 For adults – includes medium words too',descMixed:'🎲 All difficulties mixed',
+   descEasy:'🟢 Easy – simple, beginner-friendly words',descMedium:'🙂 Medium – mixed words',descHard:'🔥 Hard – trickier words too',descMixed:'🎲 All difficulties mixed',
    chooseFormat:'Choose format',recommended:'Recommended',fmtPortraitTitle:'📱 Portrait',fmtLandscapeTitle:'🖥️ Landscape',
    fmtPortraitDesc:'For smartphones (9:16)',fmtLandscapeDesc:'For PC & tablet (16:9)',letsGo:'Let’s go',
    howToTitle:'How it works',dontShowAgain:'Don’t show again',readAsText:'Read as text',skipToGame:'Skip',changeFormat:'🖥️ Change format',
@@ -733,7 +777,7 @@ const T={
    fairTitle:'🎨 Draw fair!',fairIntro:'Draw the word as a picture only.',
    fairNotAllowed:'🚫 Not allowed',fairLetters:'Letters',fairWords:'Words',fairNumbers:'Numbers',
    fairAllowed:'✅ Allowed',fairDrawings:'normal drawings',fairShapes:'shapes',fairArrows:'arrows',fairColors:'colors',fairIdeas:'creative picture ideas',
-   fairOutro:'Have fun and stay fair!',fairUnderstood:'Got it',
+   fairOutro:'Have fun and stay fair!',fairUnderstood:'Got it',fairMod:'No offensive, sexual, hateful or otherwise inappropriate drawings.',reportDrawing:'⚠ Report drawing',reported:'Thanks – report sent.',drawingRemoved:'Drawing was reported and removed.',rulesTitle:'ℹ️ Rules & Privacy',
    drawHint:'✏️ draw only – no letters/numbers',
    nameBlocked:'This name is not allowed. Please choose another.',
    inputBlocked:'This expression cannot be used in the game. Please choose another input.'}
@@ -748,6 +792,7 @@ function applyI18n(){
   if($('btnFs'))$('btnFs').title=t('fullscreen');
   if($('btnSettings'))$('btnSettings').title=t('settings');
   if($('btnExit'))$('btnExit').title=t('endGame');
+  if($('btnReport'))$('btnReport').title=t('reportDrawing');
   if($('setMute'))$('setMute').textContent=S.muted?'🔇':'🔊';
 }
 function setLang(lang){ S.lang=lang; try{localStorage.setItem('kk_lang',lang)}catch(e){} applyI18n(); if(S.state==='lobby'&&S.lastRoom)renderLobby(S.lastRoom); }
@@ -767,12 +812,12 @@ function beep(name){
   }catch(e){}
 }
 function sound(name){
-  if(S.muted) return;
+  if(S.muted || audioBlocked()) return;
   // versucht eine echte Audiodatei (sounds/<name>.mp3); fällt sonst auf einen Ton zurück
   try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=0.55;
     const p=a.play(); if(p&&p.then)p.then(()=>{}).catch(()=>beep(name)); }catch(e){ beep(name); }
 }
-function updateMute(){ if($('btnMute'))$('btnMute').textContent=S.muted?'🔇':'🔊'; updateBgm(); }
+function updateMute(){ const blocked=audioBlocked(); if($('btnMute')){ $('btnMute').textContent=(S.muted||blocked)?'🔇':'🔊'; $('btnMute').style.opacity=blocked?'.5':''; } updateBgm(); }
 $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 
 // Hintergrundmusik (nutzt sounds/music.mp3, falls vorhanden)
@@ -780,7 +825,7 @@ function startBgm(){ updateBgm(); }
 // Musik am Start (Menü/Lobby) und in den Einstellungen – sobald das Spiel läuft: Ruhe
 function updateBgm(){ if(!bgm)return;
   const setOpen = $('settings') && $('settings').classList.contains('show');
-  const play = !S.muted && !tutVideoActive && (S.state==='menu' || S.state==='lobby' || setOpen);
+  const play = !S.muted && !audioBlocked() && !tutVideoActive && (S.state==='menu' || S.state==='lobby' || setOpen);
   // Robust gegen In-App-Browser: play() liefert dort evtl. kein Promise -> darf show() nie brechen.
   try{ if(play){ const p=bgm.play(); if(p&&p.catch)p.catch(()=>{}); } else bgm.pause(); }catch(e){} }
 
@@ -821,7 +866,7 @@ $('btnSettings').onclick=openSettings;
 $('setClose').onclick=()=>{$('settings').classList.remove('show');updateBgm();};
 $('setMute').onclick=()=>{S.muted=!S.muted;updateMute();$('setMute').textContent=S.muted?'🔇':'🔊';try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 $('setFs').onclick=toggleFs;
-function quitGame(){ if(confirm(t('confirmExit'))){ if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
+function quitGame(){ if(confirm(t('confirmExit'))){ try{cgLeftRoom();}catch(e){} if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
 $('setExit').onclick=quitGame;
 $('btnExit').onclick=quitGame;
 
@@ -833,7 +878,7 @@ const HELP={
 <p><b>💬 Raten:</b> Tipp eintippen und „Senden" – oder den grünen 🎤-Knopf antippen und die Lösung einfach <b>sprechen</b>. Groß/klein, Umlaute (ä=ae) und Leerzeichen sind egal.</p>
 <p><b>🔡 Hinweise:</b> Mit der Zeit werden einzelne Buchstaben aufgedeckt – der erste Buchstabe aber nicht zuerst.</p>
 <p><b>⭐ Punkte:</b> Wer errät, bekommt die <b>Restsekunden</b> als Punkte – je schneller, desto mehr. Schwere Wörter geben extra Bonus. Im Einzelmodus bekommt der Maler die Hälfte.</p>
-<p><b>🧒🔥 Schwierigkeit:</b> Leicht (für Kinder), Mittel, Schwer – einstellbar über ⚙️.</p>
+<p><b>🟢🔥 Schwierigkeit:</b> Leicht (einsteigerfreundlich), Mittel, Schwer – einstellbar über ⚙️.</p>
 <p><b>👥 Team-Modus:</b> Nur das <b>gegnerische</b> Team darf raten (das Team des Zeichners wartet), reihum ist jeder mit Zeichnen dran. Punkte zählen fürs Team – das beste Team gewinnt.</p>
 <p><b>💡 Tipps:</b> „Bitte nicht stören" einschalten, damit keine Nachrichten stören. Über ⚙️ Einstellungen kannst du Sprache, Ton und Schwierigkeit jederzeit ändern.</p>`,
  en:`<p><b>🎯 Goal:</b> One player draws a word, the others guess it. After the chosen number of rounds, whoever has the most points wins.</p>
@@ -842,7 +887,7 @@ const HELP={
 <p><b>💬 Guessing:</b> Type your guess and “Send” – or tap the green 🎤 button and simply <b>say</b> the answer. Upper/lowercase, umlauts and spaces don't matter.</p>
 <p><b>🔡 Hints:</b> Over time single letters are revealed – but never the first letter first.</p>
 <p><b>⭐ Points:</b> The guesser gets the <b>remaining seconds</b> as points – the faster, the more. Hard words give a bonus. In solo mode the drawer gets half.</p>
-<p><b>🧒🔥 Difficulty:</b> Easy (for kids), Medium, Hard – set via ⚙️.</p>
+<p><b>🟢🔥 Difficulty:</b> Easy (beginner-friendly), Medium, Hard – set via ⚙️.</p>
 <p><b>👥 Team mode:</b> Only the <b>opposing</b> team may guess (the drawer's team waits), everyone draws in turn. Points count for the team – the best team wins.</p>
 <p><b>💡 Tips:</b> Turn on “Do not disturb” so notifications don't interrupt. Use ⚙️ Settings to change language, sound and difficulty anytime.</p>`
 };
@@ -852,22 +897,92 @@ $('setHelp').onclick=()=>{ $('settings').classList.remove('show'); openTutorial(
 $('helpClose').onclick=()=>$('help').classList.remove('show');
 const _setFmt=$('setFormat'); if(_setFmt) _setFmt.onclick=()=>{ $('settings').classList.remove('show'); renderStartup(); show('startup'); };
 
+// ---------- Regeln & Datenschutz ----------
+const RULES={
+ de:`<p><b>🎨 Community-Regeln</b></p>
+<ul style="margin:6px 0 12px;padding-left:18px;line-height:1.65">
+<li>Zeichne den Begriff nur als Bild – keine Buchstaben, Wörter oder Zahlen.</li>
+<li>Keine beleidigenden, sexuellen, hasserfüllten oder anderweitig unangemessenen Zeichnungen oder Namen.</li>
+<li>Sei fair und freundlich. Unangemessene Zeichnungen kannst du melden (⚠); sie werden entfernt.</li>
+</ul>
+<p><b>🔒 Datenschutz</b></p>
+<p>Wir verarbeiten nur, was zum Spielen nötig ist:</p>
+<ul style="margin:6px 0 12px;padding-left:18px;line-height:1.65">
+<li>deinen frei gewählten Spielernamen (oder den CrazyGames-Benutzernamen),</li>
+<li>Raumcode und Einladungstoken,</li>
+<li>temporäre Zeichen- und Rate-Daten während einer Runde,</li>
+<li>technische Verbindungsdaten inkl. vorübergehender IP-Adresse zum Schutz vor Missbrauch (Rate-Limits).</li>
+</ul>
+<p>Zeichnungen werden <b>nicht dauerhaft</b> gespeichert. Es gibt keine Registrierung/kein eigenes Nutzerkonto. Der Server wird bei <b>Render</b> gehostet; in der CrazyGames-Version stellt CrazyGames Konto und Einladungen bereit. Leere/inaktive Räume werden automatisch gelöscht.</p>
+<p><b>📧 Kontakt:</b> kreets04@gmail.com</p>`,
+ en:`<p><b>🎨 Community rules</b></p>
+<ul style="margin:6px 0 12px;padding-left:18px;line-height:1.65">
+<li>Draw the word as a picture only – no letters, words or numbers.</li>
+<li>No offensive, sexual, hateful or otherwise inappropriate drawings or names.</li>
+<li>Be fair and friendly. You can report inappropriate drawings (⚠); they will be removed.</li>
+</ul>
+<p><b>🔒 Privacy</b></p>
+<p>We only process what is needed to play:</p>
+<ul style="margin:6px 0 12px;padding-left:18px;line-height:1.65">
+<li>your chosen player name (or your CrazyGames username),</li>
+<li>room code and invite token,</li>
+<li>temporary drawing and guess data during a round,</li>
+<li>technical connection data incl. a temporary IP address for abuse protection (rate limits).</li>
+</ul>
+<p>Drawings are <b>not stored permanently</b>. There is no registration/own user account. The server is hosted on <b>Render</b>; in the CrazyGames version, CrazyGames provides account and invites. Empty/inactive rooms are deleted automatically.</p>
+<p><b>📧 Contact:</b> kreets04@gmail.com</p>`
+};
+function openRules(){ $('rulesBody').innerHTML=RULES[S.lang]||RULES.de; $('rules').classList.add('show'); }
+$('rulesClose').onclick=()=>$('rules').classList.remove('show');
+const _setRules=$('setRules'); if(_setRules) _setRules.onclick=()=>{ $('settings').classList.remove('show'); openRules(); };
+
 applyFormat(currentFmt);
 renderStartup();
 show('startup');
 applyI18n();
-checkInviteParams();
-try{ Platform.loadingStop(); }catch(e){} // Laden abgeschlossen (CrazyGames: sdkGameLoadingStop)
+// CrazyGames SDK v3 initialisieren (Standalone: No-Op), dann Einladungen behandeln, dann Laden beenden.
+(async function initCG(){
+  try{ await cgInit(); }catch(e){}
+  try{
+    var ip = cgInviteParams();
+    if(ip && ip.roomCode){ await cgAutoJoin(String(ip.roomCode), ip.inviteToken); }
+    else { checkInviteParams(); } // Standalone/Render: ?room=&invite=
+  }catch(e){ try{ checkInviteParams(); }catch(_){} }
+  cgLoadingStop(); // Laden abgeschlossen
+})();
 // PWA: installierbar machen
 if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
 
 // ---------- Netzwerk ----------
 async function post(o){ o.roomCode=(o.roomCode!=null?o.roomCode:S.roomCode); o.playerId=(o.playerId!=null?o.playerId:S.playerId);
-  const r=await fetch('/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)});
-  return r.json(); }
-function openStream(){ if(S.es)S.es.close();
-  S.es=new EventSource(`/events?room=${S.roomCode}&playerId=${S.playerId}`);
-  S.es.onmessage=e=>{const {event,data}=JSON.parse(e.data);handle(event,data);}; }
+  if(S.sessionToken && o.sessionToken==null) o.sessionToken=S.sessionToken;
+  let ctrl=null,timer=null;
+  try{ ctrl=new AbortController(); timer=setTimeout(()=>{try{ctrl.abort()}catch(e){}},12000); }catch(e){}
+  try{
+    const r=await fetch((window.API_BASE||'')+'/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o),signal:ctrl?ctrl.signal:undefined});
+    if(timer)clearTimeout(timer);
+    if(r.status===429) return {ok:false,error:(S.lang==='en'?'Too many requests – please slow down.':'Zu viele Anfragen – bitte kurz warten.')};
+    return await r.json();
+  }catch(e){ if(timer)clearTimeout(timer); return {ok:false,error:(S.lang==='en'?'Server not reachable.':'Server nicht erreichbar.')}; } }
+// Robuster SSE-Stream: eine Verbindung, Auto-Reconnect mit exponentiellem Backoff, Reconnect nach Tabwechsel.
+function openStream(){
+  if(S.es){ try{S.es.close()}catch(e){} S.es=null; }
+  const url=(window.API_BASE||'')+'/events?room='+encodeURIComponent(S.roomCode)+'&playerId='+encodeURIComponent(S.playerId)+(S.sessionToken?('&token='+encodeURIComponent(S.sessionToken)):'');
+  let es; try{ es=new EventSource(url); }catch(e){ return; }
+  S.es=es;
+  es.onopen=()=>{ S._sseTries=0; };
+  es.onmessage=e=>{ try{ const {event,data}=JSON.parse(e.data); handle(event,data); }catch(err){} };
+  es.onerror=()=>{
+    try{ es.close(); }catch(e){}
+    if(S.es!==es) return; S.es=null;
+    if(!S.roomCode || S.state==='menu' || S.state==='startup') return;
+    S._sseTries=(S._sseTries||0)+1;
+    if(S._sseTries>8){ try{showToast(S.lang==='en'?'Connection lost.':'Verbindung verloren.')}catch(e){} return; }
+    const delay=Math.min(1000*Math.pow(2,S._sseTries-1),15000);
+    setTimeout(()=>{ if(!S.es && S.roomCode) openStream(); }, delay);
+  };
+}
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden && S.roomCode && !S.es && S.state!=='menu' && S.state!=='startup') openStream(); });
 
 // ---------- Menü ----------
 $('btnCreate').onclick=async()=>{const name=getName();if(!name)return;
@@ -889,9 +1004,11 @@ function getName(){const n=$('name').value.trim();if(!n){$('menuErr').textConten
 function enter(r,name,isHost){S.playerId=r.playerId;S.roomCode=r.roomCode;S.name=name;S.isHost=isHost;
   if(r.invite)S.invite=r.invite;
   if(r.lanBase)S.lanBase=r.lanBase;
-  S.solo=!!r.solo;S.fairShown=false;
+  if(r.sessionToken)S.sessionToken=r.sessionToken;
+  S.solo=!!r.solo;S.fairShown=false;S._sseTries=0;
   $('lobbyCode').textContent=r.roomCode;$('shareMsg').textContent='';$('qrBox').style.display='none';$('qrBox').innerHTML='';
   openStream();show('lobby');startBgm();
+  try{ cgUpdateRoom(); }catch(e){}
   if(isHost) post({type:'language',value:S.lang}); }
 
 // ---------- Lobby ----------
@@ -901,7 +1018,7 @@ $('roundSel').addEventListener('click',e=>{const b=e.target.closest('button');if
   S.maxRounds=parseInt(b.dataset.r,10);post({type:'rounds',value:S.maxRounds});});
 $('teamToggle').onclick=()=>{if(!S.isHost)return;S.teamMode=!S.teamMode;post({type:'team_mode',value:S.teamMode});};
 $('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty,rounds:S.maxRounds});if(!r.ok)$('lobbyHint').textContent=r.error;};
-$('btnLeave').onclick=()=>location.reload();
+$('btnLeave').onclick=()=>{ try{cgLeftRoom();}catch(e){} location.reload(); };
 
 function renderLobby(st){
   S.lastRoom=st;
@@ -916,7 +1033,7 @@ function renderLobby(st){
   [...$('roundSel').children].forEach(b=>b.classList.toggle('on',parseInt(b.dataset.r,10)===S.maxRounds));
   $('roundSel').style.opacity=S.isHost?'1':'.6';
   $('roundSel').style.pointerEvents=S.isHost?'auto':'none';
-  $('roundHint').innerHTML=`${t('rounds')}: <span class="difftext">${S.maxRounds}</span>`+(S.isHost?'':' Â· ðŸ”’');
+  $('roundHint').innerHTML=`${t('rounds')}: <span class="difftext">${S.maxRounds}</span>`+(S.isHost?'':' · 🔒');
   // Teammodus
   $('teamToggle').textContent=S.teamMode?t('teamOn'):t('teamOff');
   $('teamToggle').classList.toggle('on',S.teamMode);
@@ -934,6 +1051,7 @@ function renderLobby(st){
   const enough=st.players.filter(p=>p.connected).length>=2;
   $('btnStart').style.display=S.isHost?'':'none';$('btnStart').disabled=!enough;
   $('lobbyHint').textContent=enough?(S.isHost?t('readyHost'):t('waitHost')):t('waitPlayers');
+  try{ cgUpdateRoom(); }catch(e){} // beitretbar in der Lobby
 }
 
 // ---------- Scores ----------
@@ -998,6 +1116,7 @@ const COLORS=[['Schwarz','#111111'],['Rot','#e23b3b'],['Orange','#f08a24'],['Gel
 
 // Raten
 $('btnGuess').onclick=sendGuess;$('guess').addEventListener('keydown',e=>{if(e.key==='Enter')sendGuess();});
+if($('btnReport'))$('btnReport').onclick=async()=>{ try{ await post({type:'report_drawing'}); showToast(t('reported')); }catch(e){} };
 async function sendGuess(){const g=$('guess').value.trim();if(!g)return;$('guess').value='';
   const r=await post({type:'guess',text:g});
   if(r&&r.ok===false&&r.error==='blocked_input'){ showToast(t('inputBlocked')); }}
@@ -1034,13 +1153,14 @@ function startVoice(){
 }
 if(!SR){ $('btnMic').classList.add('hidden'); } // Browser kann keine Spracherkennung
 $('btnMic').onclick=()=>{ if(!SR) return; if(listening){ stopVoice(); } else { startVoice(); } };
-function addFeed(name,text,ok){const f=$('feed'),d=document.createElement('div');d.className='g'+(ok?' ok':'');
-  d.textContent=ok?`✅ ${name}: ${text}`:`${name}: ${text}`;f.appendChild(d);
+function addFeed(name,text,ok,neutral){const f=$('feed'),d=document.createElement('div');d.className='g'+(ok?' ok':'');
+  d.textContent = neutral ? text : (ok?`✅ ${name}: ${text}`:`${name}: ${text}`);f.appendChild(d);
   while(f.children.length>5)f.removeChild(f.firstChild);setTimeout(()=>{d.parentNode&&d.parentNode.removeChild(d);},6000);}
 
 function applyRole(){$('toolbar').classList.toggle('hidden',!S.amDrawer);$('palette').classList.toggle('hidden',!S.amDrawer);
   $('wordPill').style.display=S.amDrawer?'':'none';$('guessRow').style.display=S.amDrawer?'none':'flex';
-  $('drawHint').style.display=S.amDrawer?'':'none';}
+  $('drawHint').style.display=S.amDrawer?'':'none';
+  if($('btnReport'))$('btnReport').style.display=(S.amDrawer||S.solo)?'none':'';}
 // Team-Modus: eigenes Team (Zeichner-Team) darf nicht raten
 function setGuessLock(locked){
   $('guess').disabled=!!locked; $('btnGuess').disabled=!!locked;
@@ -1154,7 +1274,12 @@ function handle(event,d){switch(event){
   case 'stroke': onRemoteStroke(d);break;
   case 'undo': S.strokes.pop();redraw();break;
   case 'clear': S.strokes=[];redraw();break;
-  case 'guess_feed': addFeed(d.playerName,d.text,d.correct);if(d.correct)sound('correct');break;
+  case 'drawing_removed': try{showToast(t('drawingRemoved'))}catch(e){} break;
+  case 'guess_feed':
+    if(d.correct){ addFeed(d.playerName,d.text,true); sound('correct'); }
+    else if(d.text!=null && d.text!==''){ addFeed(d.playerName,d.text,false); }        // eigener Fehlversuch (nur an sich selbst)
+    else { addFeed('', (d.playerName+' '+(S.lang==='en'?'is guessing …':'rät …')), false, true); } // andere: neutral, kein Text
+    break;
   case 'round_solved': {try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
     const bonus=(d.speedMultiplier>1||d.difficultyMultiplier>1)?` <small style="color:var(--muted)">x${d.speedMultiplier} Tempo · x${d.difficultyMultiplier} Wort</small>`:'';
     let title=`✅ ${esc(d.winnerName)} <b style="color:var(--accent2)">+${d.points}</b>`+(d.drawerPoints?` &nbsp;·&nbsp; ✏ ${esc(d.drawerName)} +${d.drawerPoints}`:'');
@@ -1182,7 +1307,7 @@ function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);
   const prev=s&&s.points.length?s.points[s.points.length-1]:null;
   if(!s){s={id:d.strokeId,tool:d.tool,color:d.color,lineWidth:d.lineWidth,points:[],playerId:'remote'};S.strokes.push(s);}
   drawSegment(s,prev,d.points);for(const p of d.points)s.points.push(p);}
-function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);}}
+function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);try{cgUpdateRoom();}catch(e){}}}
 
 function rid(){return Math.random().toString(36).slice(2,9);}
 function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}

@@ -16,6 +16,7 @@ const https = require('https');
 const fs    = require('fs');
 const path  = require('path');
 const os    = require('os');
+const crypto = require('crypto');
 
 const PORT          = process.env.PORT || 3000;  // lokal 3000, online vom Hoster vorgegeben
 const ROUND_SECONDS = 90;          // 1:30 pro Runde
@@ -32,6 +33,59 @@ const LOAD_ONLINE   = process.argv.includes('--online'); // optional: node serve
 // ---------- Zentrale Feature-Schalter ----------
 const ENABLE_SYMBOL_HELP   = false; // Symbol-/Bild-/Emoji-Hilfe bei der Wortauswahl (deaktiviert; Spieler zeichnen selbst)
 const ENABLE_REPORT_CHEATING = false; // "Mogeln melden" – nur vorbereitet, NICHT aktiviert (keine Auto-Prüfung, keine Pflicht-Abstimmung)
+
+// ---------- Cross-Origin / Sicherheit / Limits (für CrazyGames-Client auf anderer Domain) ----------
+// ALLOWED_ORIGINS: kommagetrennte Liste. Enthält '*' -> alle erlaubt (nur für Vorschau/Tests).
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || '*').split(',').map(s => s.trim()).filter(Boolean);
+const ALLOW_ALL_ORIGINS = ALLOWED_ORIGINS.includes('*');
+const ROOM_TTL_MS = (parseInt(process.env.ROOM_TTL_MINUTES, 10) || 120) * 60000;
+const MAX_ROOMS_PER_IP = parseInt(process.env.MAX_ROOMS_PER_IP, 10) || 20;
+const MAX_ACTIONS_PER_MINUTE = parseInt(process.env.MAX_ACTIONS_PER_MINUTE, 10) || 600;
+const MAX_BODY_BYTES = 64 * 1024;        // 64 KB je Anfrage (Zeichenpakete sind klein)
+const RECONNECT_GRACE_MS = 12000;         // kurze Trennung -> Spieler bleibt im Raum
+const SERVICE_VERSION = '1.0.0';
+
+function originAllowed(origin) {
+  if (!origin) return false;
+  if (ALLOW_ALL_ORIGINS) return true;
+  if (ALLOWED_ORIGINS.includes(origin)) return true;
+  // Offizielle CrazyGames-Vorschau-/Spiel-Ursprünge (exakte Host-Endungen, keine unsichere includes-Prüfung)
+  try {
+    const h = new URL(origin).hostname;
+    if (h === 'crazygames.com' || h.endsWith('.crazygames.com')) return true;
+    if (h === 'crazygames.io' || h.endsWith('.crazygames.io')) return true;
+  } catch (e) {}
+  return false;
+}
+function applyCors(req, res) {
+  const origin = req.headers.origin;
+  res.setHeader('Vary', 'Origin');
+  if (origin && originAllowed(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', ALLOW_ALL_ORIGINS ? '*' : origin);
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Max-Age', '600');
+    return true;
+  }
+  return false;
+}
+function clientIp(req) {
+  const xff = req.headers['x-forwarded-for'];
+  if (xff) return String(xff).split(',')[0].trim();   // Render-Proxy: erster Eintrag
+  return (req.socket && req.socket.remoteAddress) || 'unknown';
+}
+function token(n = 24) { return crypto.randomBytes(n).toString('base64url'); }
+
+// einfache Rate-Limits pro IP (rollierendes Zeitfenster)
+const ipActions = new Map();   // ip -> {count, resetAt}
+const ipRooms = new Map();     // ip -> Set(roomCodes)
+function rateOk(ip) {
+  const now = Date.now();
+  let e = ipActions.get(ip);
+  if (!e || now > e.resetAt) { e = { count: 0, resetAt: now + 60000 }; ipActions.set(ip, e); }
+  e.count++;
+  return e.count <= MAX_ACTIONS_PER_MINUTE;
+}
 
 // ---------- Begriffe laden (Deutsch + Englisch) ----------
 const WORDS_DE = JSON.parse(fs.readFileSync(path.join(__dirname, 'words_de.json'), 'utf8'))
@@ -185,8 +239,9 @@ function createRoom(hostId) {
   do { code = roomCode(); } while (rooms.has(code));
   const room = {
     code,
-    invite: uid(10),        // Einladungs-Token (Auto-Beitritt per Link)
+    invite: token(9),       // sicheres Einladungs-Token (Auto-Beitritt per Link)
     hostId,
+    lastActive: Date.now(),
     players: [],            // {id,name,score,connected}
     clients: new Map(),     // playerId -> SSE response
     state: 'lobby',         // lobby | choosing | playing | roundend | gameover
@@ -413,6 +468,7 @@ function beginDrawingRound(room, word) {
   room.revealed = new Set();
   room.remaining = ROUND_SECONDS;
   room.strokeCount = 0;
+  room.reports = new Set();   // Meldungen pro Runde zurücksetzen
 
   pushRoomUpdate(room);
   broadcast(room, 'clear', {});
@@ -683,10 +739,14 @@ function handleGuess(room, player, text) {
   if (room.state !== 'playing') return;
   if (player.id === room.currentDrawerId) return; // Zeichner darf nicht raten
   const correct = normalize(text) === room.currentWord.normalizedText;
-  broadcast(room, 'guess_feed', {
-    playerName: player.name, text, correct,
-  });
-  if (correct) endRoundSolved(room, player);
+  if (correct) {
+    broadcast(room, 'guess_feed', { playerName: player.name, text, correct: true });
+    endRoundSolved(room, player);
+  } else {
+    // Kein Chat-Missbrauch: falscher Text nur an den Ratenden selbst; andere sehen nur neutralen Status.
+    sendTo(room, player.id, 'guess_feed', { playerName: player.name, text, correct: false });
+    broadcast(room, 'guess_feed', { playerName: player.name, correct: false }, player.id);
+  }
 }
 
 function newGame(room) {
@@ -706,6 +766,17 @@ function newGame(room) {
 // ---------- HTTP-Server ----------
 const server = http.createServer((req, res) => {
   const u = new URL(req.url, `http://${req.headers.host}`);
+
+  // ----- CORS-Preflight (für CrazyGames-Client auf anderer Domain) -----
+  if (req.method === 'OPTIONS') { applyCors(req, res); res.writeHead(204); res.end(); return; }
+
+  // ----- Health-Check (keine internen Daten) -----
+  if (req.method === 'GET' && u.pathname === '/health') {
+    applyCors(req, res);
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, service: 'kritzelkoenig', version: SERVICE_VERSION }));
+    return;
+  }
 
   // ----- index.html -----
   if (req.method === 'GET' && (u.pathname === '/' || u.pathname === '/index.html')) {
@@ -732,20 +803,26 @@ const server = http.createServer((req, res) => {
 
   // ----- SSE-Stream -----
   if (req.method === 'GET' && u.pathname === '/events') {
+    applyCors(req, res);
     const code = u.searchParams.get('room');
     const playerId = u.searchParams.get('playerId');
+    const tok = u.searchParams.get('token') || '';
     const room = rooms.get(code);
     const player = room && getPlayer(room, playerId);
     if (!room || !player) { res.writeHead(404); res.end('room/player not found'); return; }
+    if (player.sessionToken && tok !== player.sessionToken) { res.writeHead(403); res.end('forbidden'); return; }
 
     res.writeHead(200, {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
       'Connection': 'keep-alive',
+      'X-Accel-Buffering': 'no',
     });
     res.write('retry: 2000\n\n');
+    if (player._dcTimer) { clearTimeout(player._dcTimer); player._dcTimer = null; } // Reconnect in Schonfrist
     room.clients.set(playerId, res);
     player.connected = true;
+    room.lastActive = Date.now();
 
     // aktuellen Zustand schicken
     sendTo(room, playerId, 'room_update', publicState(room));
@@ -791,45 +868,57 @@ const server = http.createServer((req, res) => {
 
     req.on('close', () => {
       clearInterval(ka);
-      room.clients.delete(playerId);
+      if (room.clients.get(playerId) === res) room.clients.delete(playerId);
       const p = getPlayer(room, playerId);
-      if (p) p.connected = false;
-
-      // Host weg -> neuen (menschlichen) Host bestimmen
-      if (room.hostId === playerId) {
-        const next = connectedPlayers(room).find(pp => !pp.isBot) || connectedPlayers(room)[0];
-        if (next) room.hostId = next.id;
-      }
-      // Zeichner weg während Runde -> Runde beenden (Timeout)
-      if (room.state === 'playing' && room.currentDrawerId === playerId) {
-        endRoundTimeout(room);
-      }
-      if (room.state === 'choosing' && room.currentDrawerId === playerId) {
-        room.roundNumber = Math.max(0, room.roundNumber - 1);
-        room.wordOptions = [];
-        startRound(room, chooseNextDrawer(room, null));
-      }
-      // Raum leer (keine MENSCHEN mehr) -> aufräumen (Bots halten Raum nicht am Leben)
-      if (connectedPlayers(room).filter(pp => !pp.isBot).length === 0) {
-        if (room.timer) clearInterval(room.timer);
-        clearBotTimers(room);
-        clearIntermissionTimers(room);
-        rooms.delete(room.code);
-      } else {
-        pushRoomUpdate(room);
-      }
+      if (!p) return;
+      // Schonfrist: kurze Trennung (Tabwechsel, Funkloch) wirft niemanden sofort raus.
+      if (p._dcTimer) clearTimeout(p._dcTimer);
+      p._dcTimer = setTimeout(() => {
+        p._dcTimer = null;
+        if (room.clients.has(playerId)) return; // inzwischen wieder verbunden
+        p.connected = false;
+        if (room.hostId === playerId) {
+          const next = connectedPlayers(room).find(pp => !pp.isBot) || connectedPlayers(room)[0];
+          if (next) room.hostId = next.id;
+        }
+        if (room.state === 'playing' && room.currentDrawerId === playerId) endRoundTimeout(room);
+        if (room.state === 'choosing' && room.currentDrawerId === playerId) {
+          room.roundNumber = Math.max(0, room.roundNumber - 1);
+          room.wordOptions = [];
+          startRound(room, chooseNextDrawer(room, null));
+        }
+        if (connectedPlayers(room).filter(pp => !pp.isBot).length === 0) {
+          if (room.timer) clearInterval(room.timer);
+          clearBotTimers(room);
+          clearIntermissionTimers(room);
+          rooms.delete(room.code);
+        } else {
+          pushRoomUpdate(room);
+        }
+      }, RECONNECT_GRACE_MS);
     });
     return;
   }
 
   // ----- Aktionen (POST) -----
   if (req.method === 'POST' && u.pathname === '/action') {
+    applyCors(req, res);
+    const ip = clientIp(req);
+    if (!rateOk(ip)) {
+      res.writeHead(429, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'rate_limited' }));
+      return;
+    }
     let body = '';
-    req.on('data', c => { body += c; if (body.length > 1e6) req.destroy(); });
+    let aborted = false;
+    req.on('data', c => { body += c; if (body.length > MAX_BODY_BYTES) { aborted = true; try { req.destroy(); } catch (e) {} } });
     req.on('end', () => {
+      if (aborted) return;
       let msg;
-      try { msg = JSON.parse(body || '{}'); } catch (_) { res.writeHead(400); res.end('bad json'); return; }
-      const out = handleAction(msg) || { ok: true };
+      try { msg = JSON.parse(body || '{}'); } catch (_) { res.writeHead(400, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ ok: false, error: 'bad_json' })); return; }
+      let out;
+      try { out = handleAction(msg, ip) || { ok: true }; }
+      catch (e) { out = { ok: false, error: 'server_error' }; }
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(out));
     });
@@ -839,16 +928,23 @@ const server = http.createServer((req, res) => {
   res.writeHead(404); res.end('not found');
 });
 
-function handleAction(msg) {
-  const { type } = msg;
+function handleAction(msg, ip) {
+  const type = (msg && typeof msg.type === 'string') ? msg.type : '';
+  const safeName = (n) => (String(n == null ? 'Spieler' : n).replace(/[<>\r\n\t]/g, '').trim().slice(0, 16) || 'Spieler');
 
   if (type === 'create') {
     if (isBlockedName(msg.name || '')) return { ok: false, error: 'name_blocked' };
-    const playerId = uid();
+    // Rate-Limit: nicht zu viele offene Räume pro IP
+    let set = ipRooms.get(ip); if (!set) { set = new Set(); ipRooms.set(ip, set); }
+    for (const rc of Array.from(set)) if (!rooms.has(rc)) set.delete(rc);
+    if (set.size >= MAX_ROOMS_PER_IP) return { ok: false, error: 'zu viele Räume' };
+    const playerId = crypto.randomUUID();
+    const sessionToken = token(24);
     const room = createRoom(playerId);
-    room.players.push({ id: playerId, name: (msg.name || 'Spieler').slice(0, 16), score: 0, team: null, connected: false });
-    if (msg.solo) { room.solo = true; addBot(room); }  // Einzelspieler-Testmodus: Computer-Rater
-    return { ok: true, playerId, roomCode: room.code, invite: room.invite, lanBase: shareBase(), solo: !!room.solo };
+    room.ownerIp = ip; set.add(room.code);
+    room.players.push({ id: playerId, name: safeName(msg.name), score: 0, team: null, connected: false, sessionToken });
+    if (msg.solo) { room.solo = true; addBot(room); }  // Einzelspieler-Testmodus
+    return { ok: true, playerId, sessionToken, roomCode: room.code, invite: room.invite, lanBase: shareBase(), solo: !!room.solo };
   }
 
   // Raum prüfen (für Auto-Beitritt: existiert / voll / schon gestartet)
@@ -865,22 +961,22 @@ function handleAction(msg) {
     if (!room) return { ok: false, error: 'Raum nicht gefunden oder abgelaufen' };
     if (isBlockedName(msg.name || '')) return { ok: false, error: 'name_blocked' };
     if (room.players.length >= MAX_PLAYERS) return { ok: false, error: 'Raum ist voll' };
-    // Beitritt auch während des Spiels erlaubt (als Mitspieler)
-    const playerId = uid();
-    room.players.push({
-      id: playerId,
-      name: (msg.name || 'Spieler').slice(0, 16),
-      score: 0,
-      team: room.teamMode ? nextTeam(room) : null,
-      connected: false,
-    });
-    return { ok: true, playerId, roomCode: room.code, invite: room.invite, lanBase: shareBase() };
+    // Optionales Einladungstoken: wenn übergeben, muss es passen (Link-Beitritt)
+    if (room.invite && msg.invite && String(msg.invite) !== String(room.invite)) return { ok: false, error: 'Einladung ungültig' };
+    const playerId = crypto.randomUUID();
+    const sessionToken = token(24);
+    room.players.push({ id: playerId, name: safeName(msg.name), score: 0,
+      team: room.teamMode ? nextTeam(room) : null, connected: false, sessionToken });
+    return { ok: true, playerId, sessionToken, roomCode: room.code, invite: room.invite, lanBase: shareBase() };
   }
 
   const room = rooms.get(String(msg.roomCode || ''));
   if (!room) return { ok: false, error: 'Raum nicht gefunden' };
   const player = getPlayer(room, msg.playerId);
   if (!player) return { ok: false, error: 'Spieler nicht gefunden' };
+  // Authentifizierung: Aktionen nur mit passendem Sitzungstoken
+  if (player.sessionToken && String(msg.sessionToken || '') !== player.sessionToken) return { ok: false, error: 'nicht autorisiert' };
+  room.lastActive = Date.now();
 
   switch (type) {
     case 'difficulty':
@@ -924,14 +1020,25 @@ function handleAction(msg) {
     case 'choose_word':
       return chooseWord(room, msg.playerId, String(msg.wordId || ''));
 
-    case 'stroke':
+    case 'stroke': {
       if (msg.playerId !== room.currentDrawerId) return { ok: false };
+      if (!Array.isArray(msg.points) || msg.points.length === 0 || msg.points.length > 400) return { ok: false };
+      const pts = [];
+      for (const p of msg.points) {
+        if (!Array.isArray(p) || p.length < 2) continue;
+        let x = Number(p[0]), y = Number(p[1]);
+        if (!isFinite(x) || !isFinite(y)) continue;             // NaN/Infinity verwerfen
+        x = Math.max(0, Math.min(1, x)); y = Math.max(0, Math.min(1, y)); // auf Fläche begrenzen
+        pts.push([x, y]);
+      }
+      if (!pts.length) return { ok: false };
+      const tool = (msg.tool === 'eraser') ? 'eraser' : 'brush';
+      const color = (typeof msg.color === 'string' && /^#[0-9a-fA-F]{3,8}$/.test(msg.color)) ? msg.color : '#111111';
+      let lw = Number(msg.lineWidth); if (!isFinite(lw) || lw <= 0 || lw > 0.2) lw = 0.01;
       room.strokeCount = (room.strokeCount || 0) + 1;
-      broadcast(room, 'stroke', {
-        strokeId: msg.strokeId, tool: msg.tool, color: msg.color, lineWidth: msg.lineWidth,
-        points: msg.points, first: msg.first,
-      }, msg.playerId);
+      broadcast(room, 'stroke', { strokeId: String(msg.strokeId || '').slice(0, 40), tool, color, lineWidth: lw, points: pts, first: !!msg.first }, msg.playerId);
       return { ok: true };
+    }
 
     case 'undo':
       if (msg.playerId !== room.currentDrawerId) return { ok: false };
@@ -943,10 +1050,27 @@ function handleAction(msg) {
       broadcast(room, 'clear', {}, msg.playerId);
       return { ok: true };
 
+    case 'report_drawing': {
+      // Community-Moderation: mehrere unabhängige Meldungen -> Zeichnung entfernen, Runde ohne Punkte beenden.
+      if (room.state !== 'playing') return { ok: false };
+      if (msg.playerId === room.currentDrawerId) return { ok: false }; // keine Selbstmeldung
+      room.reports = room.reports || new Set();
+      room.reports.add(msg.playerId);                                   // ein Report je Spieler/Runde
+      const guessers = connectedPlayers(room).filter(p => !p.isBot && p.id !== room.currentDrawerId).length;
+      const need = Math.max(2, Math.ceil(guessers / 2));                // keine Sperre durch EINE Meldung
+      if (room.reports.size >= need) {
+        broadcast(room, 'clear', {});
+        broadcast(room, 'drawing_removed', {});
+        endRoundTimeout(room);                                          // Zeichner erhält keine Punkte
+      }
+      return { ok: true };
+    }
+
     case 'guess': {
-      const gtext = String(msg.text || '');
-      // Gesperrte Eingaben werden NICHT übertragen, NICHT im Verlauf gezeigt, lösen KEINE Punkte aus.
-      if (containsBlocked(gtext, room.lang)) return { ok: false, error: 'blocked_input' };
+      let gtext = String(msg.text == null ? '' : msg.text);
+      if (gtext.length > 60) gtext = gtext.slice(0, 60);
+      // Gesperrte Eingaben (beide Sprachlisten) werden NICHT übertragen, nicht angezeigt, ohne Punkte.
+      if (containsBlocked(gtext, 'de') || containsBlocked(gtext, 'en')) return { ok: false, error: 'blocked_input' };
       handleGuess(room, player, gtext);
       return { ok: true };
     }
@@ -1028,6 +1152,22 @@ function lanIPs() {
   }
   return out;
 }
+
+// Abgelaufene/verlassene Räume regelmäßig aufräumen (Speicherleck-Schutz)
+setInterval(() => {
+  const now = Date.now();
+  for (const [code, room] of rooms) {
+    const humans = connectedPlayers(room).filter(p => !p.isBot).length;
+    const idle = now - (room.lastActive || 0);
+    if (humans === 0 && idle > ROOM_TTL_MS) {
+      if (room.timer) clearInterval(room.timer);
+      clearBotTimers(room); clearIntermissionTimers(room);
+      for (const [, r] of room.clients) { try { r.end(); } catch (e) {} }
+      if (room.ownerIp && ipRooms.get(room.ownerIp)) ipRooms.get(room.ownerIp).delete(code);
+      rooms.delete(code);
+    }
+  }
+}, 60000);
 
 server.listen(PORT, '0.0.0.0', () => {
   const ips = lanIPs();
