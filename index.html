@@ -375,7 +375,7 @@
     <div class="hint" id="teamHint"></div>
 
     <label style="margin-top:14px" id="modeLabel">Spielmodus</label>
-    <div class="diffsel" id="modeSel">
+    <div class="modesel" id="modeSel" style="display:flex;gap:8px">
       <button data-m="classic" class="on">🎨 <span id="mCl">Klassisch</span></button>
       <button data-m="traitor">🕵️ <span id="mTr">Verräter</span></button>
     </div>
@@ -1441,7 +1441,4 @@ function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);
 
 function rid(){return Math.random().toString(36).slice(2,9);}
 function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-</script>
-</body>
-</html>
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
