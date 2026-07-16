@@ -4,13 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Kritzelkönig</title>
-<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#171a26">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-icon" href="/img/icon-192.png">
-<link rel="icon" type="image/png" href="/img/icon-192.png">
 <style>
   :root{
     --bg1:#171a26; --bg2:#222842; --panel:#272e45cc; --panel2:#333c59; --ink:#f4f6fb;
@@ -374,13 +371,6 @@
     </div>
     <div class="hint" id="teamHint"></div>
 
-    <label style="margin-top:14px" id="modeLabel">Spielmodus</label>
-    <div class="diffsel" id="modeSel">
-      <button data-m="classic" class="on">🎨 <span id="mCl">Klassisch</span></button>
-      <button data-m="traitor">🕵️ <span id="mTr">Verräter</span></button>
-    </div>
-    <div class="hint" id="modeHint"></div>
-
     <label style="margin-top:14px" data-i18n="players">Spieler</label>
     <ul class="players" id="lobbyPlayers"></ul>
     <div class="row" style="margin-top:16px">
@@ -499,21 +489,6 @@
   </div>
 </div>
 
-<!-- VERRÄTER-MODUS: Rolle / Abstimmung / Auflösung -->
-<div class="overlay" id="tOverlay" style="z-index:42">
-  <div class="box" style="text-align:center;max-width:min(480px,93vw)">
-    <div class="big2" id="tTitle">—</div>
-    <div id="tBody" style="margin-top:10px;line-height:1.5"></div>
-    <div id="tVoteGrid" style="display:none;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px"></div>
-    <div id="tStealRow" class="row" style="display:none;margin-top:14px">
-      <input id="tStealInput" type="text" maxlength="30" placeholder="Dein Tipp …" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" style="flex:1">
-      <button class="green" id="tStealBtn" style="flex:0 0 auto">Raten</button>
-    </div>
-    <div id="tTimerBadge" style="margin-top:12px;font-weight:800;color:var(--accent);min-height:0"></div>
-    <button class="green big" id="tContinue" style="display:none;width:100%;margin-top:14px">Weiter</button>
-  </div>
-</div>
-
 <!-- EINSTELLUNGEN -->
 <div class="overlay" id="settings">
   <div class="box" style="text-align:left;min-width:min(420px,86vw)">
@@ -545,15 +520,15 @@
   </div>
 </div>
 
+<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+<script>window.API_BASE="https://kritzelkoenig.onrender.com";window.KK_CRAZYGAMES=true;</script>
 <script>
 "use strict";
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
   es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de',
-  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0,
-  mode:'classic',tMyTurn:false,tIsTraitor:false,tWord:'',tCategory:'' };
+  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0 };
 const ERASER_W=0.05;
-function L(de,en){return S.lang==='en'?en:de;} // kleiner Sprachhelfer für Verräter-Texte
 const $=id=>document.getElementById(id);
 const screens={startup:$('startup'),menu:$('menu'),lobby:$('lobby'),game:$('game')};
 function show(n){for(const k in screens)screens[k].classList.toggle('active',k===n);S.state=n;updateBgm();}
@@ -599,7 +574,7 @@ function cgReadSettings(){
 async function cgApplyUser(){
   var s=_sdk(); if(!s||!s.user)return;
   try{ if(s.user.isUserAccountAvailable){ var u=await s.user.getUser(); if(u&&u.username){ CG.username=u.username; S.name=u.username; var n=$('name'); if(n)n.value=u.username; try{localStorage.setItem('kk_name',u.username)}catch(e){} } } }catch(e){}
-  // Sprache NICHT automatisch aus der Locale setzen: Start immer Englisch (Standard), Deutsch per Button.
+  try{ var loc=(s.user.systemInfo && s.user.systemInfo.countryCode!==undefined) ? (s.user.systemInfo.locale||'') : ''; if(loc && typeof setLang==='function'){ setLang(/^de/i.test(loc)?'de':'en'); } }catch(e){}
 }
 function cgInviteParams(){ var g=_sdkGame(); if(!g)return null; try{ return g.inviteParams||null; }catch(e){ return null; } }
 function cgJoinable(){ return CG.mode==='crazygames' && !!S.roomCode && S.state==='lobby'; }
@@ -610,9 +585,7 @@ function cgUpdateRoom(){
 function cgLeftRoom(){ if(CG.mode!=='crazygames')return; var g=_sdkGame(); if(g&&g.leftRoom){ try{ g.leftRoom(); }catch(e){} } }
 async function cgAutoJoin(code, token){
   if(!/^\d{4}$/.test(code))return;
-  var name=(S.name||'').trim()||CG.username||'';
-  // Kein Name vorhanden (Gast ohne CrazyGames-Login): Namensabfrage zeigen statt still als "Gast" beizutreten
-  if(!name){ S.pendingRoom=code; S.pendingInvite=token||null; show('menu'); enterJoinMode(code); return; }
+  var name=(S.name||'').trim()||CG.username||(S.lang==='en'?'Player':'Gast');
   try{ var r=await post({type:'join',name:name,roomCode:code,invite:token||undefined});
     if(r&&r.ok){ S.pendingRoom=null;S.pendingInvite=null; enter(r,name,false); }
     else { if($('menuErr'))$('menuErr').textContent=(r&&r.error)||''; show('menu'); }
@@ -692,17 +665,8 @@ function inviteUrl(){
   const base=(local && S.lanBase) ? S.lanBase+'/' : location.origin+location.pathname;
   return base+'?room='+encodeURIComponent(S.roomCode)+(S.invite?'&invite='+encodeURIComponent(S.invite):'');
 }
-function cgInviteLink(){
-  if(CG.mode!=='crazygames')return null;
-  var g=_sdkGame(); if(!g||!g.inviteLink||!S.roomCode)return null;
-  try{ var l=g.inviteLink({ roomCode:String(S.roomCode), inviteToken:String(S.invite||'') }); return l||null; }catch(e){ return null; }
-}
-async function currentInviteUrl(){
-  if(CG.mode==='crazygames'){ var l=cgInviteLink(); if(l&&typeof l.then==='function'){ try{ l=await l; }catch(e){ l=null; } } if(l)return l; }
-  return inviteUrl();
-}
 async function shareInvite(){
-  const url=await currentInviteUrl();
+  const url=inviteUrl();
   if(navigator.share){ try{ await navigator.share({title:'Kritzelkönig',text:t('inviteText')+' '+S.roomCode,url}); return; }
     catch(e){ if(e&&e.name==='AbortError')return; } }
   try{ await navigator.clipboard.writeText(url); $('shareMsg').textContent=t('linkCopied'); }
@@ -721,7 +685,7 @@ async function toggleQR(){
   if(box.style.display!=='none'){ box.style.display='none'; box.innerHTML=''; return; }
   try{
     await loadQrLib();
-    const q=qrcode(0,'M'); q.addData(await currentInviteUrl()); q.make();
+    const q=qrcode(0,'M'); q.addData(inviteUrl()); q.make();
     box.innerHTML='<div style="background:#fff;display:inline-block;padding:12px;border-radius:14px;line-height:0">'
       +'<div style="width:min(220px,64vw)">'+q.createSvgTag({cellSize:4,margin:2,scalable:true})+'</div></div>';
     box.style.display='block';
@@ -986,7 +950,7 @@ applyI18n();
   cgLoadingStop(); // Laden abgeschlossen
 })();
 // PWA: installierbar machen
-if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{})); }
+/* Service Worker deaktiviert (CrazyGames) */
 
 // ---------- Netzwerk ----------
 async function post(o){ o.roomCode=(o.roomCode!=null?o.roomCode:S.roomCode); o.playerId=(o.playerId!=null?o.playerId:S.playerId);
@@ -1054,7 +1018,6 @@ $('roundSel').addEventListener('click',e=>{const b=e.target.closest('button');if
 $('teamToggle').onclick=()=>{if(!S.isHost)return;S.teamMode=!S.teamMode;post({type:'team_mode',value:S.teamMode});};
 $('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty,rounds:S.maxRounds});if(!r.ok)$('lobbyHint').textContent=r.error;};
 $('btnLeave').onclick=()=>{ try{cgLeftRoom();}catch(e){} location.reload(); };
-$('modeSel').addEventListener('click',e=>{const b=e.target.closest('button[data-m]');if(!b||!S.isHost)return;post({type:'mode',value:b.dataset.m});});
 
 function renderLobby(st){
   S.lastRoom=st;
@@ -1076,16 +1039,6 @@ function renderLobby(st){
   $('teamSel').style.opacity=S.isHost?'1':'.6';
   $('teamSel').style.pointerEvents=S.isHost?'auto':'none';
   $('teamHint').textContent=S.teamMode?t('teamHintOn'):t('teamHintOff');
-  // Spielmodus (Klassisch / Verräter)
-  S.mode=(st.mode==='traitor')?'traitor':'classic';
-  [...$('modeSel').children].forEach(b=>b.classList.toggle('on',b.dataset.m===S.mode));
-  $('modeSel').style.opacity=S.isHost?'1':'.6';
-  $('modeSel').style.pointerEvents=S.isHost?'auto':'none';
-  $('modeLabel').textContent=L('Spielmodus','Game mode');
-  $('mCl').textContent=L('Klassisch','Classic'); $('mTr').textContent=L('Verräter','Traitor');
-  $('modeHint').textContent = S.mode==='traitor'
-    ? L('Verräter: gemeinsam zeichnen, einer kennt das Wort nicht – enttarnt ihn! (mind. 4 Spieler)','Traitor: draw together, one player doesn’t know the word – unmask them! (min. 4 players)')
-    : L('Klassisch: einer zeichnet, die anderen raten.','Classic: one draws, the others guess.');
   // Spieler
   const ul=$('lobbyPlayers');ul.innerHTML='';
   st.players.forEach(p=>{const li=document.createElement('li');
@@ -1094,11 +1047,9 @@ function renderLobby(st){
       <span>${esc(p.name)}${p.id===S.playerId?' <span class="you">('+(S.lang==='en'?'you':'du')+')</span>':''}</span>
       ${team}
       ${p.isHost?'<span class="badge">Host ♔</span>':''}`;ul.appendChild(li);});
-  const conn=st.players.filter(p=>p.connected).length;
-  const need=S.mode==='traitor'?4:2;
-  const enough=conn>=need;
+  const enough=st.players.filter(p=>p.connected).length>=2;
   $('btnStart').style.display=S.isHost?'':'none';$('btnStart').disabled=!enough;
-  $('lobbyHint').textContent=enough?(S.isHost?t('readyHost'):t('waitHost')):(S.mode==='traitor'?L('Verräter-Modus braucht mind. 4 Spieler.','Traitor mode needs at least 4 players.'):t('waitPlayers'));
+  $('lobbyHint').textContent=enough?(S.isHost?t('readyHost'):t('waitHost')):t('waitPlayers');
   try{ cgUpdateRoom(); }catch(e){} // beitretbar in der Lobby
 }
 
@@ -1133,25 +1084,19 @@ function drawSegment(s,prev,np){ctx.lineJoin='round';ctx.lineCap='round';
 function relPoint(ev){const r=canvas.getBoundingClientRect();
   const x=(ev.clientX-r.left)/r.width,y=(ev.clientY-r.top)/r.height;
   return [Math.min(1,Math.max(0,x)),Math.min(1,Math.max(0,y))];}
-function canDraw(){return S.state==='game' && (S.mode==='traitor'?S.tMyTurn:S.amDrawer);}
-canvas.addEventListener('pointerdown',ev=>{if(!canDraw())return;ev.preventDefault();canvas.setPointerCapture(ev.pointerId);
+canvas.addEventListener('pointerdown',ev=>{if(!S.amDrawer)return;ev.preventDefault();canvas.setPointerCapture(ev.pointerId);
   S.drawing=true;S.firstSent=false;const p=relPoint(ev);
   S.cur={id:rid(),tool:S.tool,color:S.color,lineWidth:S.tool==='eraser'?ERASER_W:S.brushSize,points:[p],playerId:S.playerId};
   S.strokes.push(S.cur);S.pending=[p];drawSegment(S.cur,null,[p]);});
-canvas.addEventListener('pointermove',ev=>{if(!S.drawing||!canDraw())return;ev.preventDefault();
+canvas.addEventListener('pointermove',ev=>{if(!S.amDrawer||!S.drawing)return;ev.preventDefault();
   const p=relPoint(ev),prev=S.cur.points[S.cur.points.length-1];S.cur.points.push(p);S.pending.push(p);drawSegment(S.cur,prev,[p]);});
-function endStroke(){if(!S.drawing)return;S.drawing=false;if(S.mode==='traitor'){tSendStroke();return;}flush(true);}
+function endStroke(){if(!S.drawing)return;S.drawing=false;flush(true);}
 canvas.addEventListener('pointerup',endStroke);canvas.addEventListener('pointercancel',endStroke);
-canvas.addEventListener('pointerleave',()=>{if(!S.drawing)return;if(S.mode==='traitor'){endStroke();return;}flush(false);});
-setInterval(()=>{if(S.drawing&&S.mode!=='traitor')flush(false);},60);
+canvas.addEventListener('pointerleave',()=>{if(S.drawing)flush(false);});
+setInterval(()=>{if(S.drawing)flush(false);},60);
 function flush(isEnd){if(!S.cur||S.pending.length===0)return;const pts=S.pending.slice();
   post({type:'stroke',strokeId:S.cur.id,tool:S.cur.tool,color:S.cur.color,lineWidth:S.cur.lineWidth,points:pts,first:!S.firstSent});
   S.firstSent=true;S.pending=isEnd?[]:[pts[pts.length-1]];}
-// Verräter: EIN Strich pro Zug – ganze Linie einmal senden, danach sperren
-function tSendStroke(){if(!S.cur||!S.cur.points.length)return;S.tMyTurn=false;
-  post({type:'stroke',tool:S.cur.tool,color:S.cur.color,lineWidth:S.cur.lineWidth,points:S.cur.points.slice()});
-  tSetBanner(L('Warte auf die anderen …','Waiting for the others …'));}
-function tSetBanner(msg){var el=$('statusPill');if(el)el.textContent=msg;}
 
 // Werkzeuge
 $('tBrush').onclick=()=>setTool('brush');$('tEraser').onclick=()=>setTool('eraser');
@@ -1340,7 +1285,7 @@ function handle(event,d){switch(event){
     title=title.replace('</b>','</b>'+bonus);
     showResult(title,d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;}
   case 'round_timeout': try{Platform.gameplayStop();}catch(e){}renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
-  case 'game_over': $('tOverlay').classList.remove('show');try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
+  case 'game_over': try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
     const standings=d.teamMode&&d.teamScores&&d.teamScores.length?d.teamScores:d.players.slice().sort((a,b)=>b.score-a.score);
     if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
     overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
@@ -1355,84 +1300,8 @@ function handle(event,d){switch(event){
     try{Platform.audioResume();}catch(e){}
     runCountdown(d.seconds||3);
     break;
-  // ---- Verräter-Modus ----
-  case 't_need_players': $('tOverlay').classList.remove('show'); $('lobbyHint').textContent=L('Verräter-Modus braucht mind. '+d.min+' Spieler.','Traitor mode needs at least '+d.min+' players.'); if(S.state!=='lobby')show('lobby'); break;
-  case 't_draw_begin': tBegin(d); break;
-  case 't_role': tRole(d); break;
-  case 't_turn': tTurn(d); break;
-  case 't_stroke': onTraitorStroke(d); break;
-  case 't_vote_begin': tVoteBegin(d); break;
-  case 't_vote_update': tVoteUpdate(d); break;
-  case 't_caught': tCaught(d); break;
-  case 't_steal_prompt': tStealPrompt(d); break;
-  case 't_round_end': tRoundEnd(d); break;
-  case 't_timer': tTimer(d); break;
-  case 'back_to_lobby': $('tOverlay').classList.remove('show');hideOverlay();show('lobby');break;
+  case 'back_to_lobby': hideOverlay();show('lobby');break;
 }}
-// ---------- Verräter-Modus: UI ----------
-function onTraitorStroke(d){var s={id:rid(),tool:d.tool,color:d.color,lineWidth:d.lineWidth,points:d.points||[],playerId:d.playerId};S.strokes.push(s);drawStroke(s);}
-function tBegin(d){ S.mode='traitor'; enterGame(); hideResult(); hideOverlay(); hideIntermission();
-  S.strokes=[]; redraw(); S.tMyTurn=false; S.amDrawer=false; S.tVoted=false;
-  $('wordPill').style.display='none'; $('mask').textContent=''; $('guessRow').style.display='none';
-  $('drawHint').style.display='none'; if($('btnReport'))$('btnReport').style.display='none';
-  $('toolbar').classList.remove('hidden'); $('palette').classList.remove('hidden');
-  $('statusPill').textContent=L('Verräter-Modus','Traitor mode'); $('timer').textContent='--';
-  $('tOverlay').classList.remove('show'); setTimeout(fitCanvas,30);
-}
-function tRole(d){ S.tIsTraitor=!!d.traitor; S.tCategory=d.category||''; S.tWord=d.word||'';
-  $('tVoteGrid').style.display='none'; $('tStealRow').style.display='none'; $('tTimerBadge').textContent='';
-  $('tStealBtn').disabled=false; $('tContinue').style.display='block';
-  if(d.traitor){ $('tTitle').textContent=L('🕵️ Du bist der VERRÄTER','🕵️ You are the TRAITOR');
-    $('tBody').innerHTML=L('Du kennst das Wort <b>nicht</b>.<br>Kategorie: <b>'+esc(d.category)+'</b><br>Zeichne mit und tu so, als wüsstest du es – flieg nicht auf!','You do <b>not</b> know the word.<br>Category: <b>'+esc(d.category)+'</b><br>Draw along and pretend you know it – don’t get caught!'); }
-  else { $('tTitle').textContent=L('Dein Wort','Your word');
-    $('tBody').innerHTML=L('Wort: <b>'+esc(d.word)+'</b><br>Kategorie: '+esc(d.category)+'<br>Zeichne EINE Linie, wenn du dran bist. Einer kennt das Wort nicht!','Word: <b>'+esc(d.word)+'</b><br>Category: '+esc(d.category)+'<br>Draw ONE line on your turn. One player doesn’t know the word!'); }
-  $('tContinue').textContent=L('Verstanden','Got it'); $('tContinue').onclick=()=>{ $('tOverlay').classList.remove('show'); };
-  $('tOverlay').classList.add('show');
-}
-function tTurn(d){ S.tMyTurn=(d.currentId===S.playerId);
-  var pass=L('Durchgang','Pass')+' '+d.pass+'/'+d.passes;
-  $('statusPill').textContent=(S.tMyTurn?L('Du bist dran – zeichne EINE Linie','Your turn – draw ONE line'):(d.currentName+' '+L('ist dran','is drawing')))+' · '+pass;
-  $('timer').textContent=fmt(d.remaining); $('timer').classList.remove('low');
-}
-function tTimer(d){ if(d.phase==='t_draw'){ $('timer').textContent=fmt(d.remaining); $('timer').classList.toggle('low',d.remaining<=5); }
-  else { $('tTimerBadge').textContent=L('Zeit','Time')+': '+Math.max(0,d.remaining)+'s'; } }
-function tVoteBegin(d){ S.tMyTurn=false; S.tVoted=false;
-  $('tTitle').textContent=L('Wer ist der Verräter?','Who is the traitor?');
-  $('tBody').textContent=L('Stimmt ab – tippt auf einen Namen.','Vote – tap a name.');
-  $('tContinue').style.display='none'; $('tStealRow').style.display='none';
-  var grid=$('tVoteGrid'); grid.style.display='flex'; grid.innerHTML='';
-  (d.candidates||[]).forEach(c=>{ if(c.id===S.playerId)return;
-    var b=document.createElement('button'); b.className='secondary'; b.textContent=c.name; b.style.flex='0 0 auto';
-    b.onclick=()=>{ if(S.tVoted)return; S.tVoted=true; [...grid.children].forEach(x=>x.disabled=true); b.classList.add('on'); post({type:'vote',target:c.id}); };
-    grid.appendChild(b); });
-  $('tTimerBadge').textContent=''; $('tOverlay').classList.add('show');
-}
-function tVoteUpdate(d){ if(S.tVoted||true) $('tBody').textContent=L('Abgestimmt','Voted')+': '+d.voted+'/'+d.voters; }
-function tCaught(d){ var mine=(d.traitorId===S.playerId);
-  $('tVoteGrid').style.display='none'; $('tContinue').style.display='none';
-  $('tTitle').textContent=L('🕵️ Enttarnt!','🕵️ Unmasked!');
-  $('tBody').innerHTML=L('<b>'+esc(d.traitorName)+'</b> war der Verräter!<br>'+(mine?'Rate jetzt das Wort, um doch zu gewinnen.':'Der Verräter versucht das Wort zu erraten …'),'<b>'+esc(d.traitorName)+'</b> was the traitor!<br>'+(mine?'Guess the word now to still win.':'The traitor is trying to guess the word …'));
-  $('tOverlay').classList.add('show');
-}
-function tStealPrompt(d){ $('tStealRow').style.display='flex'; $('tStealBtn').disabled=false; $('tStealInput').value='';
-  setTimeout(()=>{try{$('tStealInput').focus();}catch(e){}},50);
-  $('tStealBtn').onclick=()=>{ var v=$('tStealInput').value.trim(); if(!v)return; $('tStealBtn').disabled=true; post({type:'guess',text:v}); };
-  $('tStealInput').onkeydown=(e)=>{ if(e.key==='Enter')$('tStealBtn').click(); };
-}
-function tRoundEnd(d){ try{Platform.gameplayStop();}catch(e){}
-  renderScores(d.players); $('tVoteGrid').style.display='none'; $('tStealRow').style.display='none'; $('tTimerBadge').textContent=''; $('tStealBtn').disabled=false;
-  var out=d.outcome, txt;
-  if(out==='innocents_win') txt=L('✅ Die Ehrlichen gewinnen!','✅ The honest players win!');
-  else if(out==='traitor_steal') txt=L('😈 Der Verräter errät das Wort und stiehlt den Sieg!','😈 The traitor guessed the word and steals the win!');
-  else txt=L('😈 Der Verräter blieb unerkannt!','😈 The traitor stayed hidden!');
-  $('tTitle').textContent=txt;
-  $('tBody').innerHTML=L('Verräter war: <b>'+esc(d.traitorName)+'</b><br>Wort: <b>'+esc(d.word)+'</b>','Traitor was: <b>'+esc(d.traitorName)+'</b><br>Word: <b>'+esc(d.word)+'</b>');
-  $('tContinue').style.display=S.isHost?'block':'none';
-  $('tContinue').textContent=d.lastRound?L('Endstand zeigen','Show final scores'):L('Nächste Runde','Next round');
-  $('tContinue').onclick=()=>{ $('tContinue').style.display='none'; post({type:'continue'}); };
-  if(!S.isHost){ $('tBody').innerHTML+='<br><span style="color:var(--muted)">'+L('Warte auf den Host …','Waiting for the host …')+'</span>'; }
-  $('tOverlay').classList.add('show');
-}
 function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);
   const prev=s&&s.points.length?s.points[s.points.length-1]:null;
   if(!s){s={id:d.strokeId,tool:d.tool,color:d.color,lineWidth:d.lineWidth,points:[],playerId:'remote'};S.strokes.push(s);}

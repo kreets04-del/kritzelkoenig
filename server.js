@@ -17,6 +17,7 @@ const fs    = require('fs');
 const path  = require('path');
 const os    = require('os');
 const crypto = require('crypto');
+const traitor = require('./traitor.js'); // Verräter-Modus (eigenständige Ablauf-Logik)
 
 const PORT          = process.env.PORT || 3000;  // lokal 3000, online vom Hoster vorgegeben
 const ROUND_SECONDS = 90;          // 1:30 pro Runde
@@ -261,6 +262,7 @@ function createRoom(hostId) {
     solo: false,            // Einzelspieler-Testmodus (mit Computer-Rater)
     botTimers: [],          // laufende Timer des simulierten Raters
     strokeCount: 0,         // gezeichnete Striche in der aktuellen Runde
+    mode: 'classic',        // 'classic' | 'traitor' (Verräter-Modus)
   };
   rooms.set(code, room);
   return room;
@@ -293,6 +295,8 @@ function publicState(room) {
     roomCode: room.code,
     hostId: room.hostId,
     state: room.state,
+    mode: room.mode || 'classic',
+    tCurrentId: room.tCurrent || null,
     currentDrawerId: room.currentDrawerId,
     roundNumber: room.roundNumber,
     maxRounds: room.maxRounds,
@@ -326,6 +330,12 @@ function broadcast(room, event, data, exceptId = null) {
 }
 
 function pushRoomUpdate(room) { broadcast(room, 'room_update', publicState(room)); }
+
+// Verräter-Modul mit Server-Abhängigkeiten verdrahten (Funktionsdeklarationen sind gehoisted)
+traitor.init({
+  broadcast, sendTo, getPlayer, connectedPlayers, publicState, pushRoomUpdate,
+  pickWord, normalize, gameOver,
+});
 
 // ---------- Spiel-Logik ----------
 function rememberRecentWord(room, wordId, baseSize) {
@@ -753,6 +763,7 @@ function newGame(room) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   clearBotTimers(room);
   clearIntermissionTimers(room);
+  traitor.cleanup(room); // Verräter-Timer stoppen
   room.players.forEach(p => p.score = 0);
   room.roundNumber = 0;
   room.state = 'lobby';
@@ -1009,19 +1020,34 @@ function handleAction(msg, ip) {
       pushRoomUpdate(room);
       return { ok: true };
 
-    case 'start':
+    case 'mode': // Spielmodus wählen (nur Host, nur in der Lobby)
+      if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host' };
+      if (room.state !== 'lobby') return { ok: false };
+      room.mode = (msg.value === 'traitor') ? 'traitor' : 'classic';
+      pushRoomUpdate(room);
+      return { ok: true };
+
+    case 'start': {
       if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host kann starten' };
-      if (connectedPlayers(room).length < 2) return { ok: false, error: 'Mindestens 2 Spieler nötig' };
       if (['easy','medium','hard','mixed'].includes(msg.value)) room.difficulty = msg.value;
       if (ROUND_OPTIONS.includes(Number(msg.rounds))) room.maxRounds = Number(msg.rounds);
+      if (room.mode === 'traitor') {
+        const humans = connectedPlayers(room).filter(p => !p.isBot).length;
+        if (humans < traitor.MIN_PLAYERS) return { ok: false, error: 'Verräter-Modus braucht mindestens ' + traitor.MIN_PLAYERS + ' Spieler' };
+        room.roundNumber = 0;
+        traitor.start(room);
+        return { ok: true };
+      }
+      if (connectedPlayers(room).length < 2) return { ok: false, error: 'Mindestens 2 Spieler nötig' };
       startRound(room, null);
       return { ok: true };
+    }
 
     case 'choose_word':
       return chooseWord(room, msg.playerId, String(msg.wordId || ''));
 
     case 'stroke': {
-      if (msg.playerId !== room.currentDrawerId) return { ok: false };
+      // Punkte immer zuerst prüfen/begrenzen (gilt für beide Modi)
       if (!Array.isArray(msg.points) || msg.points.length === 0 || msg.points.length > 400) return { ok: false };
       const pts = [];
       for (const p of msg.points) {
@@ -1035,6 +1061,11 @@ function handleAction(msg, ip) {
       const tool = (msg.tool === 'eraser') ? 'eraser' : 'brush';
       const color = (typeof msg.color === 'string' && /^#[0-9a-fA-F]{3,8}$/.test(msg.color)) ? msg.color : '#111111';
       let lw = Number(msg.lineWidth); if (!isFinite(lw) || lw <= 0 || lw > 0.2) lw = 0.01;
+      // Verräter-Modus: EIN Strich = ein Zug (auf gemeinsamer Leinwand)
+      if (room.mode === 'traitor') {
+        return traitor.onStroke(room, msg.playerId, { tool, color, lineWidth: lw, points: pts });
+      }
+      if (msg.playerId !== room.currentDrawerId) return { ok: false };
       room.strokeCount = (room.strokeCount || 0) + 1;
       broadcast(room, 'stroke', { strokeId: String(msg.strokeId || '').slice(0, 40), tool, color, lineWidth: lw, points: pts, first: !!msg.first }, msg.playerId);
       return { ok: true };
@@ -1066,16 +1097,23 @@ function handleAction(msg, ip) {
       return { ok: true };
     }
 
+    case 'vote': // Verräter-Modus: Abstimmung
+      if (room.mode !== 'traitor') return { ok: false };
+      return traitor.onVote(room, msg.playerId, String(msg.target || '')) || { ok: true };
+
     case 'guess': {
       let gtext = String(msg.text == null ? '' : msg.text);
       if (gtext.length > 60) gtext = gtext.slice(0, 60);
       // Gesperrte Eingaben (beide Sprachlisten) werden NICHT übertragen, nicht angezeigt, ohne Punkte.
       if (containsBlocked(gtext, 'de') || containsBlocked(gtext, 'en')) return { ok: false, error: 'blocked_input' };
+      // Verräter-Modus: der enttarnte Verräter rät das Wort (Steal)
+      if (room.mode === 'traitor') { return traitor.onGuess(room, player.id, gtext) || { ok: true }; }
       handleGuess(room, player, gtext);
       return { ok: true };
     }
 
     case 'continue':
+      if (room.mode === 'traitor') { traitor.onContinue(room, msg.playerId); return { ok: true }; }
       continueRound(room, msg.playerId);
       return { ok: true };
 
