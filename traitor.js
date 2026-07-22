@@ -69,7 +69,13 @@ function start(room) {
   D.broadcast(room, 'clear', {});
   D.pushRoomUpdate(room);
 
-  // Rollen geheim zuweisen: Ehrliche sehen das Wort, der Verräter nur die Kategorie
+  // Zuerst die Spielansicht aufbauen (tBegin blendet das Overlay aus) …
+  D.broadcast(room, 't_draw_begin', {
+    order: room.tOrder.map(id => ({ id, name: nameOf(room, id) })),
+    passes: PASSES, roundNumber: room.roundNumber, maxRounds: room.maxRounds,
+  });
+  // … DANACH die Rollen geheim zuweisen, damit das Rollen-Overlay stehen bleibt.
+  // Ehrliche sehen das Wort, der Verräter nur die Kategorie.
   for (const p of players) {
     if (p.id === room.tTraitorId) {
       D.sendTo(room, p.id, 't_role', { traitor: true, category: room.tWord.category });
@@ -77,10 +83,6 @@ function start(room) {
       D.sendTo(room, p.id, 't_role', { traitor: false, word: room.tWord.text, category: room.tWord.category });
     }
   }
-  D.broadcast(room, 't_draw_begin', {
-    order: room.tOrder.map(id => ({ id, name: nameOf(room, id) })),
-    passes: PASSES, roundNumber: room.roundNumber, maxRounds: room.maxRounds,
-  });
   nextTurn(room);
 }
 
