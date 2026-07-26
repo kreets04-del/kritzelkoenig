@@ -18,6 +18,7 @@ const path  = require('path');
 const os    = require('os');
 const crypto = require('crypto');
 const traitor = require('./traitor.js'); // Verräter-Modus (eigenständige Ablauf-Logik)
+const { attachDartDuellRooms } = require('./dart-duell-room.js');
 
 const PORT          = process.env.PORT || 3000;  // lokal 3000, online vom Hoster vorgegeben
 const ROUND_SECONDS = 90;          // 1:30 pro Runde
@@ -1206,6 +1207,8 @@ setInterval(() => {
     }
   }
 }, 60000);
+
+attachDartDuellRooms(server);
 
 server.listen(PORT, '0.0.0.0', () => {
   const ips = lanIPs();
