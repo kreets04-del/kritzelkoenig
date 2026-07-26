@@ -59,7 +59,8 @@ function startMatch(room) {
     playerIds: [...room.players.keys()],
     scores: [room.settings.x01Start, room.settings.x01Start],
     turnStarts: [room.settings.x01Start, room.settings.x01Start],
-    activePlayer: 0, dartsInTurn: 0, round: 1, winner: null, lastThrow: null,
+    activePlayer: 0, dartsInTurn: 0, round: 1, setNumber: 1,
+    setsWon: [0, 0], winner: null, lastThrow: null,
   };
 }
 
@@ -82,7 +83,22 @@ function applyThrow(room, player, message) {
   const bust = next < 0 || next === 1 || invalidCheckout;
   const finished = next === 0 && multiplier === 2;
   match.lastThrow = { player: match.activePlayer, score, multiplier, bust, finished };
-  if (finished) { match.scores[match.activePlayer] = 0; match.winner = match.activePlayer; return; }
+  if (finished) {
+    const winner = match.activePlayer;
+    match.setsWon[winner] += 1;
+    if (match.setsWon[winner] >= Math.floor(room.settings.x01Sets / 2) + 1) {
+      match.scores[winner] = 0;
+      match.winner = winner;
+      return;
+    }
+    // A leg is complete but the Best-of match continues with fresh scores.
+    match.setNumber += 1;
+    match.scores = [room.settings.x01Start, room.settings.x01Start];
+    match.turnStarts = [room.settings.x01Start, room.settings.x01Start];
+    match.activePlayer = match.setNumber % 2 === 0 ? 1 : 0;
+    match.dartsInTurn = 0;
+    return;
+  }
   if (!bust) match.scores[match.activePlayer] = next;
   match.dartsInTurn += 1;
   if (bust || match.dartsInTurn >= 3) {
@@ -108,6 +124,7 @@ function attachDartDuellRooms(server) {
             code: codeFor(rooms), started: false, hostId: player.id,
             settings: {
               x01Start: [301, 501, 701].includes(Number(settings.x01Start)) ? Number(settings.x01Start) : 501,
+              x01Sets: [1, 3, 5, 7].includes(Number(settings.x01Sets)) ? Number(settings.x01Sets) : 3,
               location: ['clubhouse', 'pub', 'stage'].includes(String(settings.location)) ? String(settings.location) : 'clubhouse',
             },
             players: new Map(), match: null,
