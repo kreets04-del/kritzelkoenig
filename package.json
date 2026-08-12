@@ -4,7 +4,9 @@
   "description": "Kritzelkönig – Zeichnen & Raten, lokales/Online-Multiplayer-Partyspiel",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build:y8": "node tools/build-y8.js",
+    "verify:y8": "node tools/verify-y8.js"
   },
   "engines": {
     "node": ">=18"

@@ -36,7 +36,7 @@ const LOAD_ONLINE   = process.argv.includes('--online'); // optional: node serve
 const ENABLE_SYMBOL_HELP   = false; // Symbol-/Bild-/Emoji-Hilfe bei der Wortauswahl (deaktiviert; Spieler zeichnen selbst)
 const ENABLE_REPORT_CHEATING = false; // "Mogeln melden" – nur vorbereitet, NICHT aktiviert (keine Auto-Prüfung, keine Pflicht-Abstimmung)
 
-// ---------- Cross-Origin / Sicherheit / Limits (für CrazyGames-Client auf anderer Domain) ----------
+// ---------- Cross-Origin / Sicherheit / Limits (für Plattform-Clients auf anderer Domain) ----------
 // ALLOWED_ORIGINS: kommagetrennte Liste. Enthält '*' -> alle erlaubt (nur für Vorschau/Tests).
 const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || '*').split(',').map(s => s.trim()).filter(Boolean);
 const ALLOW_ALL_ORIGINS = ALLOWED_ORIGINS.includes('*');
@@ -56,6 +56,7 @@ function originAllowed(origin) {
     const h = new URL(origin).hostname;
     if (h === 'crazygames.com' || h.endsWith('.crazygames.com')) return true;
     if (h === 'crazygames.io' || h.endsWith('.crazygames.io')) return true;
+    if (h === 'y8.com' || h.endsWith('.y8.com')) return true;
   } catch (e) {}
   return false;
 }
@@ -335,7 +336,7 @@ function pushRoomUpdate(room) { broadcast(room, 'room_update', publicState(room)
 // Verräter-Modul mit Server-Abhängigkeiten verdrahten (Funktionsdeklarationen sind gehoisted)
 traitor.init({
   broadcast, sendTo, getPlayer, connectedPlayers, publicState, pushRoomUpdate,
-  pickWord, normalize, gameOver,
+  pickWord, normalize, gameOver, startIntermission,
 });
 
 // ---------- Spiel-Logik ----------
@@ -598,7 +599,7 @@ function scheduleNext(room, nextDrawerId) {
   // Sicherheits-Auto-Weiter, falls die Person weg ist (2 Minuten)
   room.safetyTimer = setTimeout(() => {
     if (room.state !== 'roundend') return;
-    if (room.isLastRound) gameOver(room); else startRound(room, room.pendingNextDrawer);
+    continueRound(room, room.pendingNextDrawer);
   }, 120000);
 }
 
@@ -608,19 +609,16 @@ function continueRound(room, playerId) {
   if (playerId !== room.pendingNextDrawer && playerId !== room.hostId) return;
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
   if (room.isLastRound) { gameOver(room); return; }
-  // Werbepause NUR am vollständigen Rundenende (alle aktiven Spieler waren einmal dran).
-  if (!room.solo && lapSizeOf(room) > 0 && room.roundNumber % lapSizeOf(room) === 0) {
-    startIntermission(room);
-  } else {
-    startRound(room, room.pendingNextDrawer);
-  }
+  // Sicherer Anzeigenpunkt: Die Zeichen-/Raterunde ist vollständig beendet.
+  // Das Y8-SDK entscheidet anhand seines Frequency-Caps, ob tatsächlich eine Anzeige erscheint.
+  startIntermission(room, 'midgame', 'classic');
 }
 
 // ---------- Zwischenstand / Werbepause (servergesteuert) ----------
 // Ablauf: playing -> roundend (Ergebnis sichtbar) -> [Weiter] ->
 //         round_intermission (Client: Audio pausieren, NoOp-/echte Werbung) ->
 //         countdown -> playing. Bleibt NIE hängen (Timeout-Fallback).
-const INTERMISSION_MAX_MS = 12000;   // Sicherheits-Timeout, falls Werbung/Client klemmt
+const INTERMISSION_MAX_MS = 90000;   // Sicherheits-Timeout, falls Werbung/Client klemmt
 const COUNTDOWN_SECONDS = 3;
 function lapSizeOf(room) {
   return Math.max(1, connectedPlayers(room).filter(p => !p.isBot).length);
@@ -629,15 +627,18 @@ function clearIntermissionTimers(room) {
   if (room.intermissionTimer) { clearTimeout(room.intermissionTimer); room.intermissionTimer = null; }
   if (room.countdownTimer) { clearTimeout(room.countdownTimer); room.countdownTimer = null; }
 }
-function startIntermission(room) {
+function startIntermission(room, placement = 'midgame', nextAction = 'classic') {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   if (room.safetyTimer) { clearTimeout(room.safetyTimer); room.safetyTimer = null; }
   clearBotTimers(room);
   clearIntermissionTimers(room);
   room.state = 'round_intermission';
+  room.intermissionPlacement = placement;
+  room.intermissionNext = nextAction;
+  room.intermissionId = (room.intermissionId || 0) + 1;
   room.readyAfter = new Set();
   pushRoomUpdate(room);
-  broadcast(room, 'round_intermission', {});
+  broadcast(room, 'round_intermission', { placement, id: room.intermissionId });
   // Sicherheits-Timeout: falls nicht alle "bereit" melden (z. B. Werbung hängt), trotzdem weiter.
   room.intermissionTimer = setTimeout(() => finishIntermission(room), INTERMISSION_MAX_MS);
 }
@@ -652,11 +653,15 @@ function finishIntermission(room) {
   if (room.state !== 'round_intermission') return;
   clearIntermissionTimers(room);
   room.state = 'countdown';
+  const nextAction = room.intermissionNext || 'classic';
+  room.intermissionPlacement = null;
+  room.intermissionNext = null;
   pushRoomUpdate(room);
   broadcast(room, 'round_countdown', { seconds: COUNTDOWN_SECONDS });
   room.countdownTimer = setTimeout(() => {
     room.countdownTimer = null;
-    startRound(room, room.pendingNextDrawer);
+    if (nextAction === 'traitor') traitor.start(room);
+    else startRound(room, room.pendingNextDrawer);
   }, COUNTDOWN_SECONDS * 1000);
 }
 
@@ -869,7 +874,10 @@ const server = http.createServer((req, res) => {
       }
     }
     if (room.state === 'round_intermission') {
-      sendTo(room, playerId, 'round_intermission', {});
+      sendTo(room, playerId, 'round_intermission', {
+        placement: room.intermissionPlacement || 'midgame',
+        id: room.intermissionId,
+      });
     }
     if (room.state === 'countdown') {
       sendTo(room, playerId, 'round_countdown', { seconds: COUNTDOWN_SECONDS });
@@ -1036,11 +1044,12 @@ function handleAction(msg, ip) {
         const humans = connectedPlayers(room).filter(p => !p.isBot).length;
         if (humans < traitor.MIN_PLAYERS) return { ok: false, error: 'Verräter-Modus braucht mindestens ' + traitor.MIN_PLAYERS + ' Spieler' };
         room.roundNumber = 0;
-        traitor.start(room);
+        startIntermission(room, 'pregame', 'traitor');
         return { ok: true };
       }
       if (connectedPlayers(room).length < 2) return { ok: false, error: 'Mindestens 2 Spieler nötig' };
-      startRound(room, null);
+      room.pendingNextDrawer = null;
+      startIntermission(room, 'pregame', 'classic');
       return { ok: true };
     }
 
