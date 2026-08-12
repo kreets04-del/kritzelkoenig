@@ -220,7 +220,8 @@ function onContinue(room, playerId) {
 function advance(room) {
   clearSafety(room);
   if (room.isLastRound) { D.gameOver(room); return; }
-  start(room);
+  if (D.startIntermission) D.startIntermission(room, 'midgame', 'traitor');
+  else start(room);
 }
 
 module.exports = {
