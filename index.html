@@ -33,14 +33,19 @@
   .screen.active{display:flex}
   /* Zentriert, aber scrollbar wenn der Inhalt höher als der Bildschirm ist
      (Auto-Margins zentrieren bei Platz, kollabieren bei Überlauf -> scrollen). */
-  .center{align-items:center;overflow-y:auto;overflow-x:hidden;padding-top:18px;padding-bottom:22px}
+  .center{align-items:center;overflow-y:auto;overflow-x:hidden;padding-top:18px;padding-bottom:22px;
+    /* Portale (Y8) beanstanden sichtbare Scrollbalken bei aktivem Resize.
+       Scrollen bleibt per Rad/Touch moeglich, nur die Leiste wird ausgeblendet. */
+    scrollbar-width:none;-ms-overflow-style:none}
+  .center::-webkit-scrollbar{width:0;height:0}
   .center>:first-child{margin-top:auto}
   .center>:last-child{margin-bottom:auto}
 
   h1{font-size:clamp(30px,6.4vw,62px);margin:0;letter-spacing:3px;font-weight:800;
      text-shadow:0 4px 24px rgba(0,0,0,.4)}
   h1 .crown{color:var(--accent);filter:drop-shadow(0 2px 8px rgba(255,207,69,.5))}
-  .logo{width:min(560px,82vw);height:auto;margin-bottom:2px;filter:drop-shadow(0 8px 28px rgba(0,0,0,.45))}
+  .logo{width:min(560px,82vw);height:auto;max-height:min(30vh,312px);object-fit:contain;
+    margin-bottom:2px;filter:drop-shadow(0 8px 28px rgba(0,0,0,.45))}
   .ic-img{width:22px;height:22px;object-fit:contain;display:block}
   .winimg{width:min(240px,40vw);height:auto;margin:0 auto 10px;display:none}
   .sub{color:var(--muted);margin:6px 0 26px;letter-spacing:.5px}
@@ -48,7 +53,8 @@
   .card{background:var(--panel);backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.08);border-radius:22px;
     padding:24px;width:min(540px,93vw);box-shadow:0 24px 70px rgba(0,0,0,.45)}
-  #lobby .card{max-height:94dvh;overflow:auto}
+  #lobby .card{max-height:94dvh;overflow:auto;scrollbar-width:none;-ms-overflow-style:none}
+  #lobby .card::-webkit-scrollbar{width:0;height:0}
   label{display:block;font-size:12.5px;color:var(--muted);margin:12px 0 6px;
     text-transform:uppercase;letter-spacing:1px;font-weight:700}
   input[type=text]{width:100%;padding:14px 15px;border-radius:12px;border:1px solid var(--line);
@@ -73,7 +79,8 @@
   .code-box{font-size:clamp(42px,11vw,82px);font-weight:900;letter-spacing:12px;color:var(--accent);
     text-align:center;background:#1f2740;border-radius:16px;padding:12px 0;margin:6px 0 14px;
     text-shadow:0 4px 18px rgba(255,207,69,.35)}
-  .players{list-style:none;margin:0;padding:0;max-height:30vh;overflow:auto}
+  .players{list-style:none;margin:0;padding:0;max-height:30vh;overflow:auto;scrollbar-width:none;-ms-overflow-style:none}
+  .players::-webkit-scrollbar{width:0;height:0}
   .players li{display:flex;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line)}
   .badge{font-size:11px;background:var(--accent);color:#161a26;border-radius:20px;padding:2px 9px;font-weight:800}
   .dot{width:9px;height:9px;border-radius:50%;background:var(--accent2)}
@@ -196,6 +203,20 @@
   .word-options button{display:flex;flex-direction:column;gap:5px;align-items:flex-start;text-align:left;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none}
   .word-options button b{font-size:18px;color:var(--accent)}
   .word-options button span{font-size:12px;color:var(--muted)}
+
+  /* ---------- Niedrige Portal-Frames: alles ohne Scrollen unterbringen ---------- */
+  @media (max-height:820px){
+    .center{padding-top:10px;padding-bottom:12px}
+    .logo{max-height:26vh}
+    .sub{margin:4px 0 14px}
+    .card{padding:18px}
+  }
+  @media (max-height:640px){
+    .center{padding-top:6px;padding-bottom:8px}
+    .logo{max-height:20vh}
+    .sub{margin:2px 0 8px;font-size:13px}
+    .card{padding:14px;border-radius:16px}
+  }
 
   /* ---------- Safe-Areas (Notch / Dynamic Island) ---------- */
   #game{padding:max(6px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))}
@@ -551,7 +572,7 @@ const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
   es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de',
   invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0,
-  mode:'classic',tMyTurn:false,tIsTraitor:false,tWord:'',tCategory:'',_adBreakId:null };
+  mode:'classic',tMyTurn:false,tIsTraitor:false,tWord:'',tCategory:'' };
 const ERASER_W=0.05;
 function L(de,en){return S.lang==='en'?en:de;} // kleiner Sprachhelfer für Verräter-Texte
 const $=id=>document.getElementById(id);
@@ -567,93 +588,63 @@ const Store={
 };
 const KEY_FMT='kritzelkoenig_format_v1', KEY_TUT='kritzelkoenig_tutorial_hidden_v1';
 
-// ---------- Plattform-Integration (CrazyGames / Y8 / Standalone) ----------
+// ---------- CrazyGames HTML5 SDK v3 – Integration ----------
 // Der Spielcode ruft das SDK NIE direkt auf, sondern nur die gekapselten Helfer unten.
 // Ohne SDK (eigene Webseite / Render) läuft alles unverändert weiter (mode='local').
 // Kompatibel ohne "?." (ältere In-App-Browser scheitern sonst am ganzen Skript).
 const ENABLE_CRAZYGAMES_ADS = false; // Werbung erst im Full Launch aktivieren
 var CG = { ready:false, mode:'local', muteAudio:false, disableChat:false, username:'', _gp:false, _load:false };
-var Y8 = { mode:window.KK_Y8===true?'y8':'local', ready:false, adShowing:false, adVisible:false, request:null, sdk:null };
-var y8Sdk = null;
 function _sdk(){ try{ return (window.CrazyGames && CrazyGames.SDK) || null; }catch(e){ return null; } }
 function _sdkGame(){ var s=_sdk(); return (s && s.game) ? s.game : null; }
 function cgLoadingStart(){ if(CG.mode!=='crazygames'||CG._load)return; try{ var g=_sdkGame(); if(g&&g.loadingStart){ g.loadingStart(); CG._load=true; } }catch(e){} }
 function cgLoadingStop(){ if(CG.mode!=='crazygames'||!CG._load)return; try{ var g=_sdkGame(); if(g&&g.loadingStop){ g.loadingStop(); CG._load=false; } }catch(e){} }
 function cgGameplayStart(){ if(CG.mode!=='crazygames'||CG._gp)return; try{ var g=_sdkGame(); if(g&&g.gameplayStart){ g.gameplayStart(); CG._gp=true; } }catch(e){} }
 function cgGameplayStop(){ if(CG.mode!=='crazygames'||!CG._gp)return; try{ var g=_sdkGame(); if(g&&g.gameplayStop){ g.gameplayStop(); CG._gp=false; } }catch(e){} }
-function audioBlocked(){ return (CG.mode==='crazygames' && CG.muteAudio) || Y8.adShowing; } // Plattform-Mute/Werbung hat Vorrang
-function finishY8Ad(reason){
-  var req=Y8.request;
-  var keepMuted=reason==='timeout'&&Y8.adVisible;
-  Y8.adShowing=keepMuted;
-  if(req){ clearTimeout(req.timeout); clearTimeout(req.readyTimer); Y8.request=null; req.resolve({shown:reason==='completed',reason:reason}); }
-  if(!keepMuted)try{ resumeAllAudio(); }catch(e){}
-}
-function requestY8Ad(placement){
-  if(Y8.mode!=='y8')return Promise.resolve({shown:false,reason:'unavailable'});
-  if(Y8.request)return Y8.request.promise;
-  Y8.adShowing=true;
-  try{ pauseAllAudio(); }catch(e){}
-  try{ updateMute(); }catch(e){}
-  var resolveRequest;
-  var promise=new Promise(function(resolve){ resolveRequest=resolve; });
-  Y8.request={placement:placement||'midgame',promise:promise,resolve:resolveRequest,timeout:null,readyTimer:null};
-  var readyDeadline=Date.now()+8000;
-  (function waitForY8Ads(){
-    if(!Y8.request||Y8.request.promise!==promise)return;
-    if(Y8.ready&&Y8.sdk&&typeof Y8.sdk.showAd==='function'){
-      Y8.request.timeout=setTimeout(function(){ finishY8Ad('timeout'); },80000);
-      var isStart=Y8.request.placement==='pregame';
-      try{
-        Y8.sdk.showAd({
-          type:isStart?'start':'next',
-          name:isStart?'game-start':'round-complete',
-          beforeAd:function(){ Y8.adVisible=true; Y8.adShowing=true; try{ pauseAllAudio(); updateMute(); }catch(e){} },
-          afterAd:function(){ Y8.adVisible=false; finishY8Ad('completed'); },
-          adBreakDone:function(info){
-            var status=info&&info.breakStatus?String(info.breakStatus):'completed';
-            Y8.adVisible=false;
-            finishY8Ad(status==='viewed'||status==='completed'?'completed':status);
-          }
-        }).catch(function(){ finishY8Ad('error'); });
-      }catch(e){ finishY8Ad('error'); }
-      return;
-    }
-    if(Date.now()>=readyDeadline){ finishY8Ad('unavailable'); return; }
-    Y8.request.readyTimer=setTimeout(waitForY8Ads,100);
-  })();
-  return promise;
-}
-function initializeY8Sdk(){
-  if(Y8.mode!=='y8'||Y8.sdk)return;
-  try{
-    if(!window.y8||typeof window.y8.sdk!=='function')return;
-    y8Sdk=window.y8.sdk();
-    Y8.sdk=y8Sdk;
-    var initialized=y8Sdk.init({
-      appId:String(window.KK_Y8_APP_ID||''),
-      autoLogin:false
-    },{
-      gameId:String(window.KK_Y8_GAME_ID||''),
-      preloadAdBreaks:'on',
-      sound:'on',
-      onReady:function(){ Y8.ready=true; }
-    });
-    if(initialized&&typeof initialized.catch==='function')initialized.catch(function(e){ console.warn('Y8 SDK init failed',e); });
-  }catch(e){ console.warn('Y8 SDK unavailable',e); }
-}
-window.addEventListener('y8sdk.ready',initializeY8Sdk,{once:true});
-if(window.y8&&window.y8.emitReadyEvent)window.y8.emitReadyEvent();
+var AD = { muted:false, busy:false };   // Werbung laeuft -> Musik UND Soundeffekte aus
+function audioBlocked(){ return (CG.mode==='crazygames' && CG.muteAudio) || AD.muted; } // muteAudio/Werbung haben Vorrang
 // Fassade für bestehende Aufrufe im Code
 var Platform = {
   isCrazyGames(){ return CG.mode==='crazygames'; },
-  isY8(){ return Y8.mode==='y8'; },
   loadingStart(){ cgLoadingStart(); }, loadingStop(){ cgLoadingStop(); },
   gameplayStart(){ cgGameplayStart(); }, gameplayStop(){ cgGameplayStop(); },
-  audioPause(){ try{ pauseAllAudio(); }catch(e){} },
-  audioResume(){ try{ resumeAllAudio(); }catch(e){} },
-  requestAd(placement){ return requestY8Ad(placement); }
+  audioPause(){ try{ if(typeof bgm!=='undefined'&&bgm) bgm.pause(); }catch(e){} },
+  audioResume(){ try{ if(typeof updateBgm==='function') updateBgm(); }catch(e){} },
+  // Werbepause zwischen zwei kompletten Runden (servergesteuert). Loest immer auf,
+  // auch ohne Portal/SDK -> das Spiel bleibt nie haengen.
+  requestMidgameAd(){ return showPortalAd('next','round-break'); }
 };
+
+// ---------- Werbung (Y8 Minimal-SDK 2.0) ----------
+// Regel: Solange eine Werbung laeuft, ist der komplette Spielton aus
+// (Hintergrundmusik pausiert, Soundeffekte werden von audioBlocked() geschluckt).
+const ENABLE_Y8_ADS = true;          // Werbung im Y8-Build ein-/ausschalten
+const AD_MAX_MS = 30000;             // Notbremse, falls das SDK nicht zurueckmeldet
+function adAudioOff(){ AD.muted=true;
+  try{ if(typeof bgm!=='undefined'&&bgm) bgm.pause(); }catch(e){}
+  try{ if(typeof updateMute==='function') updateMute(); }catch(e){} }
+function adAudioOn(){ AD.muted=false;
+  try{ if(typeof updateMute==='function') updateMute(); }catch(e){} }
+function y8AdReady(){ try{ return !!(ENABLE_Y8_ADS && window.KK_Y8 && window.y8Sdk && window.y8Sdk.showAd); }catch(e){ return false; } }
+// type: 'start' | 'pause' | 'next' | 'browse'  -> loest mit true auf, wenn Werbung lief
+function showPortalAd(type,name){
+  return new Promise(function(resolve){
+    if(!y8AdReady() || AD.busy){ resolve(false); return; }
+    AD.busy=true;
+    var done=false, guard=null;
+    function finish(shown){ if(done)return; done=true; if(guard)clearTimeout(guard);
+      AD.busy=false; adAudioOn(); resolve(!!shown); }
+    guard=setTimeout(function(){ finish(true); },AD_MAX_MS);
+    try{
+      var pr=window.y8Sdk.showAd({
+        type:type, name:name,
+        beforeAd:function(){ adAudioOff(); },
+        afterAd:function(){ adAudioOn(); },
+        adBreakDone:function(){ finish(true); }
+      });
+      if(pr&&pr.catch)pr.catch(function(){ finish(false); });
+    }catch(e){ finish(false); }
+  });
+}
 function applyChatMode(){ /* disableChat: falsche Rateversuche werden serverseitig ohne Text verteilt; hier kein Chat-UI zu verbergen */ }
 function cgReadSettings(){
   var g=_sdkGame(); if(!g||!g.settings)return;
@@ -720,7 +711,10 @@ function renderStartup(){
 }
 $('fmtCards').addEventListener('click',e=>{const c=e.target.closest('.fmtcard'); if(!c)return; currentFmt=c.dataset.fmt; renderStartup();});
 $('startLang').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b)return; setLang(b.dataset.l); renderStartup();});
-$('btnStartGo').onclick=()=>{ applyFormat(currentFmt); show('menu'); maybeShowTutorial(); };
+$('btnStartGo').onclick=()=>{ applyFormat(currentFmt); show('menu');
+  // Startwerbung (nur im Portal-Build); die Anleitung startet erst danach,
+  // damit sich Werbeton und Videoton nie ueberlagern.
+  showPortalAd('start','game-start').then(()=>maybeShowTutorial()); };
 
 // ---------- Tutorial ("So funktioniert es") ----------
 function loadTutVideo(){
@@ -846,8 +840,7 @@ const T={
    invite:'🔗 Einladen',showQR:'📷 QR-Code',inviteText:'Spiel mit mir Kritzelkönig! Raum-Code',linkCopied:'✅ Link kopiert',qrError:'QR-Code konnte nicht geladen werden',
    joiningRoom:'Du trittst bei · Raum',roomFull:'Dieser Raum ist voll.',roomStarted:'Das Spiel läuft schon – du steigst als Mitspieler ein.',
    soloTest:'🤖 Solo-Test (gegen Computer)',
-    interPause:'🎬 Kurze Pause',interMsg:'Die Runde ist beendet. Nächste Runde wird vorbereitet …',interReady:'Gleich geht’s weiter!',
-    adBeforeStart:'🎬 Gleich geht’s los',adBeforeStartMsg:'Kurze Werbung vor dem Spielstart …',
+   interPause:'🎬 Kurze Pause',interMsg:'Nächste Runde wird vorbereitet …',interReady:'Gleich geht’s weiter!',
    fairTitle:'🎨 Fair zeichnen!',fairIntro:'Zeichne den Begriff nur als Bild.',
    fairNotAllowed:'🚫 Nicht erlaubt',fairLetters:'Buchstaben',fairWords:'Wörter',fairNumbers:'Zahlen',
    fairAllowed:'✅ Erlaubt',fairDrawings:'normale Zeichnungen',fairShapes:'Formen',fairArrows:'Pfeile',fairColors:'Farben',fairIdeas:'kreative Bildideen',
@@ -875,8 +868,7 @@ const T={
    invite:'🔗 Invite',showQR:'📷 QR code',inviteText:'Play Kritzelkönig with me! Room code',linkCopied:'✅ Link copied',qrError:'Could not load QR code',
    joiningRoom:'You are joining · Room',roomFull:'This room is full.',roomStarted:'The game is already running – you’ll join as a player.',
    soloTest:'🤖 Solo test (vs. computer)',
-    interPause:'🎬 Short break',interMsg:'The round is over. Preparing the next round …',interReady:'Here we go!',
-    adBeforeStart:'🎬 Starting shortly',adBeforeStartMsg:'A short ad before the game starts …',
+   interPause:'🎬 Short break',interMsg:'Preparing the next round …',interReady:'Here we go!',
    fairTitle:'🎨 Draw fair!',fairIntro:'Draw the word as a picture only.',
    fairNotAllowed:'🚫 Not allowed',fairLetters:'Letters',fairWords:'Words',fairNumbers:'Numbers',
    fairAllowed:'✅ Allowed',fairDrawings:'normal drawings',fairShapes:'shapes',fairArrows:'arrows',fairColors:'colors',fairIdeas:'creative picture ideas',
@@ -903,7 +895,6 @@ function onLangClick(l){ if(S.roomCode && !S.isHost) return; setLang(l); if(S.ro
 
 // ---------- Sound ----------
 let actx=null;
-const activeSfx=new Set();
 function beep(name){
   try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)();
     const o=actx.createOscillator(),g=actx.createGain();o.connect(g);g.connect(actx.destination);
@@ -918,19 +909,8 @@ function beep(name){
 function sound(name){
   if(S.muted || audioBlocked()) return;
   // versucht eine echte Audiodatei (sounds/<name>.mp3); fällt sonst auf einen Ton zurück
-  try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=0.55;activeSfx.add(a);
-    const done=()=>activeSfx.delete(a);a.addEventListener('ended',done,{once:true});a.addEventListener('error',done,{once:true});
-    const p=a.play(); if(p&&p.then)p.catch(()=>{done();if(!S.muted&&!audioBlocked())beep(name);}); }catch(e){ if(!audioBlocked())beep(name); }
-}
-function pauseAllAudio(){
-  try{if(bgm)bgm.pause();}catch(e){}
-  for(const a of Array.from(activeSfx)){try{a.pause();a.currentTime=0;}catch(e){}activeSfx.delete(a);}
-  try{if(actx&&actx.state==='running')actx.suspend();}catch(e){}
-  try{if(typeof tutVideo!=='undefined'&&tutVideo&&!tutVideo.paused)tutVideo.pause();}catch(e){}
-}
-function resumeAllAudio(){
-  try{if(actx&&actx.state==='suspended'&&!S.muted&&!audioBlocked())actx.resume();}catch(e){}
-  try{updateMute();}catch(e){}
+  try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=0.55;
+    const p=a.play(); if(p&&p.then)p.then(()=>{}).catch(()=>beep(name)); }catch(e){ beep(name); }
 }
 function updateMute(){ const blocked=audioBlocked(); if($('btnMute')){ $('btnMute').textContent=(S.muted||blocked)?'🔇':'🔊'; $('btnMute').style.opacity=blocked?'.5':''; } updateBgm(); }
 $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
@@ -1311,8 +1291,8 @@ function hideOverlay(){$('overlay').classList.remove('show');$('wordOptions').st
 
 // Zwischenstand / Werbepause
 let interTimer=null;
-function showIntermission(placement){ if(interTimer){clearInterval(interTimer);interTimer=null;}
-  $('interTitle').textContent=placement==='pregame'?t('adBeforeStart'):t('interPause'); $('interMsg').textContent=placement==='pregame'?t('adBeforeStartMsg'):t('interMsg');
+function showIntermission(){ if(interTimer){clearInterval(interTimer);interTimer=null;}
+  $('interTitle').textContent=t('interPause'); $('interMsg').textContent=t('interMsg');
   $('interCount').style.display='none'; $('intermission').classList.add('show'); }
 function hideIntermission(){ if(interTimer){clearInterval(interTimer);interTimer=null;} $('intermission').classList.remove('show'); }
 
@@ -1365,7 +1345,10 @@ function showResult(titleHtml,reveal,nextId,nextName,last){
 function hideResult(){ $('resultBar').classList.remove('show'); $('bottombar').style.display='flex'; }
 
 $('btnContinue').onclick=()=>{$('btnContinue').style.display='none';$('waitText').style.display='block';$('waitText').textContent=t('loading');post({type:'continue'});};
-$('btnNewGame').onclick=()=>post({type:'newgame'});$('btnToMenu').onclick=()=>location.reload();
+// Werbepausen an natuerlichen Bruchstellen: nach der Partie und beim Zurueck ins Menue.
+// Ohne Portal-SDK loest showPortalAd() sofort auf -> unveraendertes Verhalten.
+$('btnNewGame').onclick=()=>{ showPortalAd('next','game-over').then(()=>post({type:'newgame'})); };
+$('btnToMenu').onclick=()=>{ showPortalAd('browse','back-to-menu').then(()=>location.reload()); };
 
 let lastTick=99;
 function handle(event,d){switch(event){
@@ -1425,13 +1408,11 @@ function handle(event,d){switch(event){
     if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
     overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
   case 'round_intermission':
-    if(d.id!=null&&S._adBreakId===d.id)break;
-    S._adBreakId=d.id;
     try{Platform.gameplayStop();}catch(e){}
     try{Platform.audioPause();}catch(e){}
-    showIntermission(d.placement||'midgame');
-    // Werbung nur an diesem sicheren Übergang anfragen, danach synchronisiert "bereit" melden.
-    (async()=>{ try{ await Platform.requestAd(d.placement||'midgame'); }catch(e){} post({type:'ready_after_intermission'}); })();
+    showIntermission();
+    // Werbung anfragen (Basic Launch: NoOp -> sofort), danach "bereit" melden – blockiert nie
+    (async()=>{ try{ await Platform.requestMidgameAd(); }catch(e){} post({type:'ready_after_intermission'}); })();
     break;
   case 'round_countdown':
     try{Platform.audioResume();}catch(e){}
