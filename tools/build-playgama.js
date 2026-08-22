@@ -158,11 +158,36 @@ copyDir('sounds', f => /\.(mp3)$/i.test(f));
 ok('Client-Assets kopiert (platform, js, img, sounds)');
 
 // --- playgama-bridge-config.json ---
-// Ohne Eintraege bleibt es die neutrale Vorlage; die Kennungen traegt der
-// Entwickler im Playgama-Dashboard ein bzw. Playgama ersetzt die Datei.
+// Struktur nach der Bridge-Dokumentation. Wichtig sind hier die Werbeplaetze:
+// platform/playgama.js ruft showInterstitial() mit genau diesen Namen auf, und
+// nur deklarierte Plaetze kann die Plattform zuordnen und abrechnen.
+// "platforms" bleibt leer - die Kennungen darin gelten fremden Portalen
+// (Yandex, VK, Game Distribution). Fuer Playgama selbst braucht es sie nicht.
+const bridgeConfig = {
+  advertisement: {
+    // Unser Abstand ist strenger als die 60 Sekunden der Plattform. Hier
+    // deklariert, damit ihn auch das SDK selbst durchsetzt.
+    minimumDelayBetweenInterstitial: 180,
+    interstitial: {
+      placements: [
+        { id: 'round-break' },    // Pause zwischen zwei Runden
+        { id: 'game-over' },      // Partie zu Ende
+        { id: 'back-to-menu' }    // zurueck ins Menue
+      ]
+    }
+  }
+};
 fs.writeFileSync(path.join(OUT, 'playgama-bridge-config.json'),
-  JSON.stringify({ playgama: { gameId: process.env.PLAYGAMA_GAME_ID || '' } }, null, 2) + '\n', 'utf8');
-ok('playgama-bridge-config.json geschrieben' + (process.env.PLAYGAMA_GAME_ID ? '' : ' (gameId noch leer - im Dashboard nachtragen)'));
+  JSON.stringify(bridgeConfig, null, 4) + '\n', 'utf8');
+// Gegenprobe: jeder in der Plattformdatei erlaubte Platz muss deklariert sein.
+{
+  const quelle = fs.readFileSync(platformSrc, 'utf8');
+  const erlaubt = (quelle.match(/'([a-z-]+)':\s*true/g) || []).map(s => s.split("'")[1]);
+  const deklariert = bridgeConfig.advertisement.interstitial.placements.map(p => p.id);
+  const fehlend = erlaubt.filter(p => deklariert.indexOf(p) < 0);
+  if (fehlend.length) die('Werbeplatz nicht in der Bridge-Konfiguration deklariert: ' + fehlend.join(', '));
+  ok('playgama-bridge-config.json geschrieben (' + deklariert.join(', ') + ')');
+}
 
 // --- Referenzpruefung ---
 const refs = new Set();
