@@ -1642,7 +1642,12 @@ $('btnNewGame').onclick=()=>{ showPortalAd('next','game-over').then(()=>post({ty
 $('btnToMenu').onclick=()=>{ sitzungVergessen(); showPortalAd('browse','back-to-menu').then(()=>location.reload()); };
 
 let lastTick=99;
-function handle(event,d){switch(event){
+function handle(event,d){
+  // Die laufende Rundennummer festhalten. Sie steckt in mehreren Ereignissen,
+  // wurde bisher aber nur angezeigt und nirgends gemerkt - die Portal-Schicht
+  // braucht sie, um Werbung genau zur Halbzeit einer Partie zu setzen.
+  if(d && typeof d.roundNumber==='number' && d.roundNumber>0) S.roundNumber=d.roundNumber;
+  switch(event){
   case 'room_update':
     sitzungMerken();
     S.isHost=d.hostId===S.playerId;

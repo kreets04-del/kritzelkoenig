@@ -97,16 +97,27 @@ Uhr und direkt beim Start. Danach richtet sich der Einbau:
 |---|---|
 | Spielstart | **nein** – ausdrücklich ausgeschlossen |
 | während des Zeichnens oder Ratens | **nie** – gibt es an diesen Stellen gar keinen Aufruf |
-| Rundenpause | erst ab **20 gespielten Runden** |
+| zur Halbzeit einer langen Partie | ab 20 Runden, genau einmal |
 | nach einer beendeten Partie („Neues Spiel") | ja |
 | zurück zum Menü | ja |
 
 Die beiden letzten Stellen sind nur aus dem Endstand-Fenster erreichbar, also
 ausschließlich **nach** einer vollständigen Partie.
 
-Bei den wählbaren Partielängen heißt das: **10 und 15 Runden bleiben komplett
-werbefrei.** Ab 20 Runden kommt einmal zwischendurch etwas, bei 50 Runden
-zweimal. Nach jeder gezeigten Anzeige beginnt die Zählung von vorn.
+Was ein Spieler je nach Partielänge sieht:
+
+| Runden | während der Partie | am Ende |
+|---|---|---|
+| 10 | – | ✓ |
+| 15 | – | ✓ |
+| 20 | nach Runde 10 | ✓ |
+| 25 | nach Runde 12 | ✓ |
+| 30 | nach Runde 15 | ✓ |
+| 40 | nach Runde 20 | ✓ |
+| 50 | nach Runde 25 | ✓ |
+
+Die Bedingung hängt an einer bestimmten Rundennummer – mehr als eine Anzeige
+während einer Partie kann es deshalb gar nicht geben.
 
 Zusätzlich liegen **mindestens drei Minuten** zwischen zwei Anzeigen. Eine
 fehlgeschlagene Anzeige verbraucht diese Sperre nicht.

@@ -68,18 +68,34 @@
     // Start durch einen selbst ausgeloesten Interstitial-Aufruf").
     'game-start': false
   };
-  // Wie viele Rundenpausen ohne Werbung vergehen muessen, bevor dort eine
-  // Anzeige kommen darf. Bei den waehlbaren Partielaengen heisst das: 10 und 15
-  // Runden bleiben komplett werbefrei, ab 20 Runden kommt einmal zwischendurch
-  // etwas, bei 50 zweimal. Der Mindestabstand von drei Minuten gilt zusaetzlich.
-  var RUNDEN_BIS_WERBUNG = 20;
-  PG.rundenSeitWerbung = 0;
+  // Werbung mitten in der Partie: genau EINE, und zwar zur Halbzeit - und nur,
+  // wenn die Partie lang genug ist.
+  //   10 und 15 Runden : gar nichts waehrend der Partie, nur am Ende
+  //   20 Runden        : nach Runde 10
+  //   25 Runden        : nach Runde 12
+  //   30 Runden        : nach Runde 15
+  //   40 Runden        : nach Runde 20
+  //   50 Runden        : nach Runde 25
+  // Weil die Bedingung an eine bestimmte Rundennummer haengt, kann es pro Partie
+  // gar nicht mehr als eine werden. Der Mindestabstand von drei Minuten gilt
+  // zusaetzlich.
+  var MINDEST_PARTIELAENGE = 20;
+  // Partielaenge und laufende Runde stehen im Spielzustand des Hauptskripts.
+  // Fehlt etwas davon, gilt die Partie als kurz - im Zweifel keine Werbung.
+  function ausSpiel(feld) {
+    try { return (typeof S !== 'undefined' && S && S[feld]) ? Number(S[feld]) : 0; }
+    catch (e) { return 0; }
+  }
 
   function darfWerbung(name) {
     if (!PG.bereit || PG.werbungLaeuft) return false;
     if (ERLAUBT[name] !== true) return false;
-    // Mitten in der Partie nur, wenn wirklich lange gespielt wurde.
-    if (name === 'round-break' && PG.rundenSeitWerbung < RUNDEN_BIS_WERBUNG) return false;
+    // Mitten in der Partie nur bei langen Partien, und dort genau zur Halbzeit.
+    if (name === 'round-break') {
+      var laenge = ausSpiel('maxRounds');
+      if (laenge < MINDEST_PARTIELAENGE) return false;
+      if (ausSpiel('roundNumber') !== Math.floor(laenge / 2)) return false;
+    }
     // Meldet die Plattform, dass sie keine Interstitials kann, gar nicht erst fragen.
     var kann = versuche(function () { return PG.bridge.advertisement.isInterstitialSupported; });
     if (kann === false) return false;
@@ -94,9 +110,6 @@
 
   function zeigeInterstitial(type, name) {
     return new Promise(function (auf) {
-      // Jede Rundenpause zaehlt mit, auch die uebersprungenen - sonst wuerde der
-      // Zaehler nie steigen und mitten in der Partie kaeme nie etwas.
-      if (name === 'round-break') PG.rundenSeitWerbung++;
       if (!darfWerbung(name)) {
         log('uebersprungen', name + ' (' + (PG.bereit ? 'zu frueh oder nicht vorgesehen' : 'Bridge nicht bereit') + ')');
         auf(false);
@@ -119,7 +132,7 @@
         if (wache) clearTimeout(wache);
         abmelden();
         PG.werbungLaeuft = false;
-        if (gezeigt) { PG.letzteWerbung = Date.now(); PG.rundenSeitWerbung = 0; }
+        if (gezeigt) PG.letzteWerbung = Date.now();
         tonAn();
         if (warLaufend) { PG.spielLaeuft = true; melde('level_started'); }
         auf(!!gezeigt);
