@@ -188,9 +188,9 @@ const bridgeConfig = {
     minimumDelayBetweenInterstitial: 180,
     interstitial: {
       placements: [
-        { id: 'round-break' },    // Pause zwischen zwei Runden
-        { id: 'game-over' },      // Partie zu Ende
-        { id: 'back-to-menu' }    // zurueck ins Menue
+        { id: 'game-over' },      // Partie zu Ende, Spieler startet eine neue
+        { id: 'back-to-menu' },   // Spieler geht zurueck ins Menue
+        { id: 'round-break' }     // Rundenpause, erst ab 20 gespielten Runden
       ]
     }
   }

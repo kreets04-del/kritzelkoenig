@@ -61,15 +61,25 @@
   // Ratens, bei laufendem Timer und direkt beim Start. Erlaubt sind natuerliche
   // Pausen. Diese Liste entscheidet, welche Aufrufstelle durchgelassen wird.
   var ERLAUBT = {
-    'round-break': true,     // Rundenpause: alle Spieler warten ohnehin
-    'game-over': true,       // Partie zu Ende
-    'back-to-menu': true,    // zurueck ins Menue
-    'game-start': false      // ausdruecklich NICHT: kein Interstitial beim Start
+    'game-over': true,       // Partie zu Ende, Spieler klickt "Neues Spiel"
+    'back-to-menu': true,    // Spieler geht zurueck ins Menue
+    'round-break': true,     // Rundenpause - aber nur selten, siehe unten
+    // Beim Start verbietet es die Playgama-Vorgabe ("niemals unmittelbar beim
+    // Start durch einen selbst ausgeloesten Interstitial-Aufruf").
+    'game-start': false
   };
+  // Wie viele Rundenpausen ohne Werbung vergehen muessen, bevor dort eine
+  // Anzeige kommen darf. Bei den waehlbaren Partielaengen heisst das: 10 und 15
+  // Runden bleiben komplett werbefrei, ab 20 Runden kommt einmal zwischendurch
+  // etwas, bei 50 zweimal. Der Mindestabstand von drei Minuten gilt zusaetzlich.
+  var RUNDEN_BIS_WERBUNG = 20;
+  PG.rundenSeitWerbung = 0;
 
   function darfWerbung(name) {
     if (!PG.bereit || PG.werbungLaeuft) return false;
     if (ERLAUBT[name] !== true) return false;
+    // Mitten in der Partie nur, wenn wirklich lange gespielt wurde.
+    if (name === 'round-break' && PG.rundenSeitWerbung < RUNDEN_BIS_WERBUNG) return false;
     // Meldet die Plattform, dass sie keine Interstitials kann, gar nicht erst fragen.
     var kann = versuche(function () { return PG.bridge.advertisement.isInterstitialSupported; });
     if (kann === false) return false;
@@ -84,6 +94,9 @@
 
   function zeigeInterstitial(type, name) {
     return new Promise(function (auf) {
+      // Jede Rundenpause zaehlt mit, auch die uebersprungenen - sonst wuerde der
+      // Zaehler nie steigen und mitten in der Partie kaeme nie etwas.
+      if (name === 'round-break') PG.rundenSeitWerbung++;
       if (!darfWerbung(name)) {
         log('uebersprungen', name + ' (' + (PG.bereit ? 'zu frueh oder nicht vorgesehen' : 'Bridge nicht bereit') + ')');
         auf(false);
@@ -106,7 +119,7 @@
         if (wache) clearTimeout(wache);
         abmelden();
         PG.werbungLaeuft = false;
-        if (gezeigt) PG.letzteWerbung = Date.now();
+        if (gezeigt) { PG.letzteWerbung = Date.now(); PG.rundenSeitWerbung = 0; }
         tonAn();
         if (warLaufend) { PG.spielLaeuft = true; melde('level_started'); }
         auf(!!gezeigt);
