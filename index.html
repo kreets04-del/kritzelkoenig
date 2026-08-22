@@ -1219,7 +1219,7 @@ $('btnSettings').onclick=openSettings;
 $('setClose').onclick=()=>{$('settings').classList.remove('show');updateBgm();};
 $('setMute').onclick=()=>{S.muted=!S.muted;updateMute();$('setMute').textContent=S.muted?'🔇':'🔊';try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 $('setFs').onclick=toggleFs;
-function quitGame(){ if(confirm(t('confirmExit'))){ try{cgLeftRoom();}catch(e){} if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
+function quitGame(){ if(confirm(t('confirmExit'))){ sitzungVergessen(); try{cgLeftRoom();}catch(e){} if(bgm){try{bgm.pause()}catch(e){}} location.reload(); } }
 $('setExit').onclick=quitGame;
 $('btnExit').onclick=quitGame;
 
@@ -1290,8 +1290,40 @@ $('rulesClose').onclick=()=>$('rules').classList.remove('show');
 const _setRules=$('setRules'); if(_setRules) _setRules.onclick=()=>{ $('settings').classList.remove('show'); openRules(); };
 
 applyFormat(currentFmt);
+// ---------- Wiedereinstieg nach einem Neuladen ----------
+// Der Server haelt den Platz eines getrennten Spielers kurz frei und schickt beim
+// Verbinden den vollstaendigen Spielstand nach - bis hin zum eigenen Wort, wenn
+// man gerade zeichnet. Der Client warf seinen Ausweis beim Neuladen aber weg,
+// also war die Partie unwiederbringlich verloren. sessionStorage ist hier genau
+// richtig: ueberlebt das Neuladen, verschwindet mit dem Tab.
+const SITZUNG = 'kk_sitzung_v1';
+function sitzungMerken(){
+  if(!S.roomCode || !S.playerId) return;
+  try{ sessionStorage.setItem(SITZUNG, JSON.stringify({
+    roomCode:S.roomCode, playerId:S.playerId, sessionToken:S.sessionToken,
+    name:S.name, isHost:S.isHost, invite:S.invite, solo:S.solo, ts:Date.now() })); }catch(e){}
+}
+function sitzungVergessen(){ try{ sessionStorage.removeItem(SITZUNG); }catch(e){} }
+async function sitzungFortsetzen(){
+  let g=null; try{ g=JSON.parse(sessionStorage.getItem(SITZUNG)||'null'); }catch(e){}
+  if(!g || !/^\d{4}$/.test(String(g.roomCode||'')) || !g.playerId) return false;
+  if(Date.now()-(g.ts||0) > 600000){ sitzungVergessen(); return false; }
+  // Gibt es den Raum ueberhaupt noch? Sonst gar nicht erst versuchen.
+  let info=null; try{ info=await post({type:'room_info',roomCode:g.roomCode}); }catch(e){}
+  if(!info || !info.ok){ sitzungVergessen(); return false; }
+  S.playerId=g.playerId; S.roomCode=g.roomCode; S.sessionToken=g.sessionToken||null;
+  S.name=g.name||S.name; S.isHost=!!g.isHost; S.invite=g.invite||null; S.solo=!!g.solo;
+  S.fairShown=true; S._sseTries=0;
+  $('lobbyCode').textContent=g.roomCode;
+  openStream(); show('lobby'); startBgm();
+  return true;
+}
+
 renderStartup();
 show('startup');
+// Lief vor dem Neuladen eine Partie, geht es direkt dort weiter. Klappt es
+// nicht, bleibt der Startbildschirm einfach stehen.
+sitzungFortsetzen();
 applyI18n();
 // CrazyGames SDK v3 initialisieren (Standalone: No-Op), dann Einladungen behandeln, dann Laden beenden.
 (async function initCG(){
@@ -1362,6 +1394,7 @@ function enter(r,name,isHost){S.playerId=r.playerId;S.roomCode=r.roomCode;S.name
   $('lobbyCode').textContent=r.roomCode;$('shareMsg').textContent='';$('qrBox').style.display='none';$('qrBox').innerHTML='';
   openStream();show('lobby');startBgm();
   try{ cgUpdateRoom(); }catch(e){}
+  sitzungMerken();
   if(isHost) post({type:'language',value:S.lang}); }
 
 // ---------- Lobby ----------
@@ -1371,7 +1404,7 @@ $('roundSel').addEventListener('click',e=>{const b=e.target.closest('button');if
   S.maxRounds=parseInt(b.dataset.r,10);post({type:'rounds',value:S.maxRounds});});
 $('teamToggle').onclick=()=>{if(!S.isHost)return;S.teamMode=!S.teamMode;post({type:'team_mode',value:S.teamMode});};
 $('btnStart').onclick=async()=>{const r=await post({type:'start',value:S.difficulty,rounds:S.maxRounds});if(!r.ok)$('lobbyHint').textContent=r.error;};
-$('btnLeave').onclick=()=>{ try{cgLeftRoom();}catch(e){} location.reload(); };
+$('btnLeave').onclick=()=>{ sitzungVergessen(); try{cgLeftRoom();}catch(e){} location.reload(); };
 $('modeSel').addEventListener('click',e=>{const b=e.target.closest('button[data-m]');if(!b||!S.isHost)return;post({type:'mode',value:b.dataset.m});});
 
 function renderLobby(st){
@@ -1606,11 +1639,12 @@ $('btnContinue').onclick=()=>{$('btnContinue').style.display='none';$('waitText'
 // Werbepausen an natuerlichen Bruchstellen: nach der Partie und beim Zurueck ins Menue.
 // Ohne Portal-SDK loest showPortalAd() sofort auf -> unveraendertes Verhalten.
 $('btnNewGame').onclick=()=>{ showPortalAd('next','game-over').then(()=>post({type:'newgame'})); };
-$('btnToMenu').onclick=()=>{ showPortalAd('browse','back-to-menu').then(()=>location.reload()); };
+$('btnToMenu').onclick=()=>{ sitzungVergessen(); showPortalAd('browse','back-to-menu').then(()=>location.reload()); };
 
 let lastTick=99;
 function handle(event,d){switch(event){
   case 'room_update':
+    sitzungMerken();
     S.isHost=d.hostId===S.playerId;
     if(d.difficulty)S.difficulty=d.difficulty;
     if(d.maxRounds)S.maxRounds=d.maxRounds;
