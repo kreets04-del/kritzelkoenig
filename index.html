@@ -1120,6 +1120,9 @@ function onLangClick(l){ if(S.roomCode && !S.isHost) return; setLang(l); if(S.ro
 let actx=null;
 function beep(name){
   try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    // Ohne Nutzergeste startet der AudioContext angehalten und bleibt es -
+    // ohne Fehlermeldung, einfach stumm. Deshalb hier immer nachfassen.
+    if(actx.state==='suspended'){ try{ const r=actx.resume(); if(r&&r.catch)r.catch(()=>{}); }catch(e){} }
     const o=actx.createOscillator(),g=actx.createGain();o.connect(g);g.connect(actx.destination);
     const map={correct:[660,880],win:[523,784,1046],round_start:[440],tick:[300],click:[500]};
     const seq=map[name]||[500];let t=actx.currentTime;
@@ -1146,6 +1149,23 @@ function updateBgm(){ if(!bgm)return;
   const play = !S.muted && !audioBlocked() && (S.state==='menu' || S.state==='lobby' || setOpen);
   // Robust gegen In-App-Browser: play() liefert dort evtl. kein Promise -> darf show() nie brechen.
   try{ if(play){ const p=bgm.play(); if(p&&p.catch)p.catch(()=>{}); } else bgm.pause(); }catch(e){} }
+
+// ---------- Ton aufschliessen ----------
+// Browser lassen Ton erst zu, wenn der Spieler wirklich etwas getan hat. In
+// einem fremden Rahmen - also im iFrame eines Portals - wird das strenger
+// gehandhabt als auf der eigenen Seite: bgm.play() wird abgewiesen und der
+// AudioContext bleibt angehalten. Beides meldet keinen Fehler, es bleibt
+// einfach still. Deshalb bei der ersten echten Geste einmal aufschliessen.
+let tonAufgeschlossen=false;
+function tonAufschliessen(){
+  if(tonAufgeschlossen)return; tonAufgeschlossen=true;
+  try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); }catch(e){}
+  try{ if(actx&&actx.state==='suspended'){ const r=actx.resume(); if(r&&r.catch)r.catch(()=>{}); } }catch(e){}
+  updateBgm();
+}
+['pointerdown','touchend','keydown'].forEach(function(art){
+  window.addEventListener(art, tonAufschliessen, {passive:true, capture:true});
+});
 
 // Werkzeug-Icon-Fallback (ersetzt fehlendes Bild durch Emoji)
 function ico(img,emoji){ const s=document.createElement('span'); s.className='ic'; s.textContent=emoji; img.replaceWith(s); }
