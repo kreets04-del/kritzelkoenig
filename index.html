@@ -101,8 +101,10 @@
     border:1px solid var(--line);box-shadow:none}
   .roundsel button{flex:1 0 calc(25% - 8px);min-width:54px}
   .diffsel button.on,.roundsel button.on,.modesel button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
-  .langrow{display:flex;gap:8px;margin:4px 0 6px}
-  .langrow button{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none;padding:11px;font-size:15px}
+  /* Fuenf Sprachen passen auf einem Handy nicht in eine Zeile - ohne Umbruch
+     wird der letzte Knopf am Bildschirmrand abgeschnitten. */
+  .langrow{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
+  .langrow button{flex:1 1 28%;min-width:92px;background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none;padding:11px;font-size:15px}
   .langrow button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
   .langrow.disabled{opacity:.5;pointer-events:none}
   .diffsel.disabled{opacity:.5;pointer-events:none}
@@ -243,7 +245,7 @@
     .fmttitle{margin-top:4px;font-size:15px}
     .fmtdesc{display:none}
     .langrow{margin:2px 0 4px}
-    .langrow button{padding:9px;font-size:14px}
+    .langrow button{padding:9px 6px;font-size:13px;min-width:84px}
     button{padding:11px 12px;font-size:15px}
     .big{font-size:16px;padding:12px}
     .code-box{font-size:clamp(30px,7vw,48px);letter-spacing:8px;padding:6px 0;margin:4px 0 8px}
@@ -836,7 +838,20 @@ function inviteUrl(){
   // Auf localhost die LAN-IP des Servers verwenden, damit der Link auf anderen
   // Geräten im selben WLAN öffnet (localhost zeigt sonst auf das jeweilige Gerät).
   const local=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname);
-  const base=(local && S.lanBase) ? S.lanBase+'/' : location.origin+location.pathname;
+  // Im Portal-Build laeuft das Spiel in einem fremden Rahmen unter einer internen
+  // Auslieferungsadresse (z. B. …games.playgama.net/<Kennung>/index.html). Die kann
+  // von aussen niemand sinnvoll oeffnen - ein Einladungslink daraus ist wertlos.
+  // Dann zeigt der Link auf unsere eigene, oeffentliche Adresse: dieselbe, mit der
+  // das Spiel ohnehin spricht. Der Raum liegt auf demselben Server, der Gast landet
+  // also in genau derselben Partie.
+  // KK_INVITE_BASE hat Vorrang: Sobald das Spiel im Portal veroeffentlicht ist,
+  // traegt der Build dort die oeffentliche Portalseite ein, damit Eingeladene
+  // beim Portal landen statt auf der eigenen Webseite.
+  let base;
+  if(local && S.lanBase) base=S.lanBase+'/';
+  else if(window.KK_INVITE_BASE) base=String(window.KK_INVITE_BASE).replace(/\/+$/,'')+'/';
+  else if(window.API_BASE) base=String(window.API_BASE).replace(/\/+$/,'')+'/';
+  else base=location.origin+location.pathname;
   return base+'?room='+encodeURIComponent(S.roomCode)+(S.invite?'&invite='+encodeURIComponent(S.invite):'');
 }
 function cgInviteLink(){

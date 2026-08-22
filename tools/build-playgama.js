@@ -82,10 +82,18 @@ const PLATFORM_SRC = 'platform/playgama.js?v=' + Math.floor(fs.statSync(platform
 // Ein Paketstempel. Ohne ihn heissen zwei Pakete vom selben Tag gleich, und man
 // kann nicht erkennen, welches gerade im Portal liegt.
 const BUILD_STAMP = stamp;   // derselbe Stempel wie im Dateinamen
+// Wohin Einladungslink und QR-Code zeigen. Ohne Angabe die eigene Render-Adresse -
+// die ist immer erreichbar. Die Bridge kennt die oeffentliche Playgama-Adresse des
+// Spiels NICHT (sie liefert ueberhaupt keine Spieladresse), das laesst sich also
+// nicht automatisch ermitteln. Nach der Veroeffentlichung einmal so bauen:
+//   PLAYGAMA_INVITE_BASE=https://playgama.com/game/... node tools/build-playgama.js
+const INVITE_BASE = process.env.PLAYGAMA_INVITE_BASE || '';
+if (INVITE_BASE && !/^https:\/\//.test(INVITE_BASE)) die('PLAYGAMA_INVITE_BASE muss mit https:// beginnen: ' + INVITE_BASE);
 const inject =
   '<script src="' + BRIDGE_URL + '"></script>\n' +
   '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PLAYGAMA_BUILD=' +
-    JSON.stringify(BUILD_STAMP) + ';</script>\n' +
+    JSON.stringify(BUILD_STAMP) + ';' +
+    (INVITE_BASE ? 'window.KK_INVITE_BASE=' + JSON.stringify(INVITE_BASE) + ';' : '') + '</script>\n' +
   '<script src="' + PLATFORM_SRC + '"></script>\n';
 if (html.indexOf('<script>\n"use strict";') < 0) die('Anker <script>"use strict" nicht gefunden - Transform abgebrochen.');
 html = html.replace('<script>\n"use strict";', inject + '<script>\n"use strict";');
