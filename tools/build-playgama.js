@@ -23,7 +23,13 @@ const API_BASE = process.env.PLAYGAMA_API_BASE || 'https://kritzelkoenig.onrende
 // Ueber PLAYGAMA_BRIDGE_URL umstellbar, falls Playgama etwas anderes verlangt.
 const BRIDGE_URL = process.env.PLAYGAMA_BRIDGE_URL || 'https://bridge.playgama.com/v2/stable/playgama-bridge.js';
 
-const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+// Datum UND Uhrzeit im Namen. Zwei Pakete vom selben Tag hiessen sonst gleich -
+// und das QA-Werkzeug zeigt genau diesen Namen oben an, dort ist er die einzige
+// Stelle, an der man erkennt, welches Paket wirklich geladen wurde.
+const jetzt = new Date();
+const zz = (n) => String(n).padStart(2, '0');
+const stamp = jetzt.getFullYear() + zz(jetzt.getMonth() + 1) + zz(jetzt.getDate())
+            + '_' + zz(jetzt.getHours()) + zz(jetzt.getMinutes());
 const ZIP = path.join(DIST, 'Kritzelkoenig_Playgama_' + stamp + '.zip');
 
 function die(m) { console.error('\n  BUILD-FEHLER: ' + m + '\n'); process.exit(1); }
@@ -75,7 +81,7 @@ fs.mkdirSync(OUT, { recursive: true });
 const PLATFORM_SRC = 'platform/playgama.js?v=' + Math.floor(fs.statSync(platformSrc).mtimeMs / 1000).toString(36);
 // Ein Paketstempel. Ohne ihn heissen zwei Pakete vom selben Tag gleich, und man
 // kann nicht erkennen, welches gerade im Portal liegt.
-const BUILD_STAMP = new Date().toISOString().slice(0, 16).replace('T', ' ');
+const BUILD_STAMP = stamp;   // derselbe Stempel wie im Dateinamen
 const inject =
   '<script src="' + BRIDGE_URL + '"></script>\n' +
   '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PLAYGAMA_BUILD=' +
