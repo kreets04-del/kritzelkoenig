@@ -194,6 +194,43 @@
     });
   };
 
+  // ---------- Selbstauskunft ----------
+  // In der Konsole des Portals  KK_DIAG()  eingeben. Das liefert in einem Rutsch
+  // alles, was zur Fehlersuche noetig ist - ohne Entwicklerwissen.
+  window.KK_DIAG = function () {
+    function frag(tue, sonst) { try { var w = tue(); return w === undefined ? sonst : w; } catch (e) { return 'Fehler: ' + e.message; } }
+    var b = window.bridge;
+    var ton = document.getElementById('bgm');
+    return {
+      Paketstand: window.KK_PLAYGAMA_BUILD || 'unbekannt',
+      Bridge: {
+        geladen: !!b,
+        initialisiert: PG.bereit,
+        Plattform: frag(function () { return b.platform.id; }, '-'),
+        TonErlaubt: frag(function () { return b.platform.isAudioEnabled; }, '-'),
+        pausiert: frag(function () { return b.platform.isPaused; }, '-'),
+        WerbungMoeglich: frag(function () { return b.advertisement.isInterstitialSupported; }, '-')
+      },
+      Ton: {
+        SpielStumm: frag(function () { return S.muted; }, '-'),
+        WerbungStumm: frag(function () { return AD.muted; }, '-'),
+        gesperrt: frag(function () { return audioBlocked(); }, '-'),
+        aufgeschlossen: frag(function () { return tonAufgeschlossen; }, '-'),
+        AudioContext: frag(function () { return actx ? actx.state : 'noch keiner'; }, '-'),
+        MusikLaeuft: ton ? !ton.paused : '-',
+        MusikFehler: ton && ton.error ? ('Code ' + ton.error.code) : 'keiner',
+        MusikQuelle: ton ? (ton.currentSrc || 'nicht geladen') : '-',
+        Nutzergeste: frag(function () { return navigator.userActivation.hasBeenActive; }, '-')
+      },
+      Spiel: {
+        Zustand: frag(function () { return S.state; }, '-'),
+        Raum: frag(function () { return S.roomCode; }, '-'),
+        Sprache: frag(function () { return S.lang; }, '-'),
+        Backend: window.API_BASE || '(gleiche Adresse)'
+      }
+    };
+  };
+
   // ---------- Start ----------
   function uebernehmeSprache() {
     var code = versuche(function () { return PG.bridge.platform.language; });
@@ -312,9 +349,16 @@
     PG.bridge = b;
     // Vor initialize() darf nichts an die Plattform gehen - die Bridge meldet
     // sonst "Before using the SDK you must initialize it" in die Konsole.
+    log('Paketstand ' + (window.KK_PLAYGAMA_BUILD || 'unbekannt') + ' - Bridge wird gestartet');
     b.initialize().then(function () {
       PG.bereit = true;
-      log('Bridge bereit (Plattform: ' + versuche(function () { return b.platform.id; }) + ')');
+      // Diese eine Zeile beantwortet die wichtigste Frage: Erkennt die Bridge das
+      // Portal, oder faellt sie auf "mock" zurueck? Bei "mock" gehen game_ready
+      // und alle Ton-Ereignisse ins Leere.
+      log('Bridge bereit', 'Plattform=' + versuche(function () { return b.platform.id; })
+        + ' | Ton erlaubt=' + versuche(function () { return b.platform.isAudioEnabled; })
+        + ' | pausiert=' + versuche(function () { return b.platform.isPaused; })
+        + ' | Werbung moeglich=' + versuche(function () { return b.advertisement.isInterstitialSupported; }));
       hoerAufPlattform();
       schreibenAbfangen();
       // Erst den gesicherten Stand holen, dann die Sprache setzen - sonst
