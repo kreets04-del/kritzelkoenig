@@ -42,10 +42,16 @@ html = html.replace('<script>\n"use strict";', inject + '<script>\n"use strict";
 // PWA raus: Manifest-Link + Service-Worker-Registrierung entfernen
 html = html.replace(/\n?\s*<link[^>]*rel=["']manifest["'][^>]*>/gi, '');
 html = html.replace(/\n?\s*<link[^>]*rel=["'](?:apple-touch-icon|icon|shortcut icon)["'][^>]*>/gi, ''); // PWA-Icons weg (CrazyGames)
-html = html.replace(/if\s*\(\s*'serviceWorker'[\s\S]*?register\([^)]*\)[\s\S]*?\}\s*;?/,
-  '/* Service Worker im CrazyGames-Build deaktiviert */');
+// Service-Worker-Registrierung entfernen: die komplette EINE Zeile (serviceWorker + register) ersetzen
+html = html.replace(/^.*serviceWorker.*register\([^\n]*$/m, '/* Service Worker deaktiviert (CrazyGames) */');
 if (html.indexOf(API_BASE) < 0) die('Injektion der Backend-Adresse fehlgeschlagen.');
-if (/serviceWorker\s*\)\s*\{[\s\S]*register\(/.test(html)) die('Service-Worker-Registrierung nicht entfernt.');
+if (/navigator\.serviceWorker\.register\(/.test(html)) die('Service-Worker-Registrierung nicht entfernt.');
+// Sicherheitsnetz: transformiertes Client-Skript erneut syntaktisch pruefen (faengt kaputte Transforms ab)
+{
+  const outScripts = html.match(/<script>[\s\S]*?<\/script>/g) || [];
+  const mainScript = outScripts.map(b => b.replace(/^<script>/, '').replace(/<\/script>$/, '')).join('\n;\n');
+  try { new Function(mainScript); } catch (e) { die('Transformiertes Client-Skript ist ungueltig: ' + e.message); }
+}
 fs.writeFileSync(path.join(OUT, 'index.html'), html, 'utf8');
 ok('index.html transformiert (SDK v3 + API_BASE=' + API_BASE + ', SW/Manifest entfernt)');
 
@@ -64,8 +70,7 @@ function copyDir(rel, filter) {
 copyFile('js/qrcode.min.js');
 ['logo.png', 'bg.png', 'brush.png', 'eraser.png', 'undo.png', 'trash.png', 'win.png'].forEach(f => copyFile('img/' + f));
 copyDir('sounds', f => /\.(mp3)$/i.test(f));
-['tutorial_de.mp4', 'tutorial_en.mp4', 'tutorial_poster.jpg', 'tutorial_de.vtt', 'tutorial_en.vtt'].forEach(f => copyFile('video/' + f));
-ok('Client-Assets kopiert (js, img, sounds, video)');
+ok('Client-Assets kopiert (js, img, sounds)');
 
 // --- Referenzpruefung: alle im HTML referenzierten lokalen Dateien vorhanden? ---
 const refs = new Set();
@@ -73,7 +78,7 @@ const htmlNoScript = html.replace(/<script[\s\S]*?<\/script>/gi, '');
 const re = /(?:src|href|poster)\s*=\s*["']([^"']+)["']/gi; let mm;
 while ((mm = re.exec(htmlNoScript))) { const u = mm[1]; if (!/^https?:|^data:|^#/.test(u)) refs.add(u.replace(/^\.?\//, '')); }
 // dynamisch geladene Video-/Sound-Pfade
-['video/tutorial_de.mp4', 'video/tutorial_en.mp4', 'sounds/music.mp3', 'js/qrcode.min.js'].forEach(r => refs.add(r));
+['sounds/music.mp3', 'js/qrcode.min.js'].forEach(r => refs.add(r));
 for (const r of refs) {
   if (!fs.existsSync(path.join(OUT, r))) console.warn('  ! referenzierte Datei fehlt im Build (evtl. optional): ' + r);
 }
@@ -111,4 +116,19 @@ function zipWithPython() {
     'z.close()\n';
   const tmp = path.join(require('os').tmpdir(), 'kk_zip_' + Date.now() + '.py');
   fs.writeFileSync(tmp, py);
-  execSync('python3 "' + tmp + '" "' + OUT +
+  execSync('python3 "' + tmp + '" "' + OUT + '" "' + ZIP + '"', { stdio: 'ignore' });
+  fs.rmSync(tmp, { force: true });
+}
+try {
+  if (process.platform === 'win32') {
+    execSync('powershell -NoProfile -Command "Compress-Archive -Path \'' + OUT + '\\*\' -DestinationPath \'' + ZIP + '\' -Force"', { stdio: 'ignore' });
+  } else {
+    try { execSync('cd "' + OUT + '" && zip -r -q "' + ZIP + '" .', { stdio: 'ignore' }); }
+    catch (e) { fs.rmSync(ZIP, { force: true }); zipWithPython(); }   // Fallback ohne zip-CLI
+  }
+} catch (e) { die('ZIP-Erstellung fehlgeschlagen: ' + e.message); }
+if (!fs.existsSync(ZIP)) die('ZIP wurde nicht erstellt.');
+const zipMb = (fs.statSync(ZIP).size / 1048576).toFixed(2);
+ok('ZIP erstellt: ' + path.relative(ROOT, ZIP) + '  (' + zipMb + ' MB)');
+
+console.log('\n  BUILD OK  ->  ' + path.relative(ROOT, OUT) + '  |  ' + files.length + ' Dateien  |  ' + mb + ' MB  |  ZIP ' + zipMb + ' MB\n');

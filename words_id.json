@@ -1,0 +1,8546 @@
+[
+ {
+  "wordId": "id_e001",
+  "text": "Anjing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e002",
+  "text": "Kucing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e003",
+  "text": "Tikus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e004",
+  "text": "Ikan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e005",
+  "text": "Ikan mas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e006",
+  "text": "Bebek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e007",
+  "text": "Sapi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e008",
+  "text": "Babi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e009",
+  "text": "Kuda",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e010",
+  "text": "Domba",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e011",
+  "text": "Kambing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e012",
+  "text": "Ayam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e013",
+  "text": "Ayam jantan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e014",
+  "text": "Landak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e015",
+  "text": "Beruang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e016",
+  "text": "Serigala",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e017",
+  "text": "Rubah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e018",
+  "text": "Rusa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e019",
+  "text": "Lebah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e020",
+  "text": "Laba-laba",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e021",
+  "text": "Siput",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e022",
+  "text": "Kumbang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e023",
+  "text": "Lalat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e024",
+  "text": "Hiu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e025",
+  "text": "Paus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e026",
+  "text": "Kepiting",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e027",
+  "text": "Kerang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e028",
+  "text": "Penguin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e029",
+  "text": "Apel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e030",
+  "text": "Pir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e031",
+  "text": "Pisang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e032",
+  "text": "Ceri",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e033",
+  "text": "Anggur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e034",
+  "text": "Lemon",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e035",
+  "text": "Tomat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e036",
+  "text": "Wortel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e037",
+  "text": "Mentimun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e038",
+  "text": "Bawang bombay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e039",
+  "text": "Paprika",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e040",
+  "text": "Kacang polong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e041",
+  "text": "Jamur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e042",
+  "text": "Telur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e043",
+  "text": "Roti",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e044",
+  "text": "Roti bulat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e045",
+  "text": "Keju",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e046",
+  "text": "Es krim",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e047",
+  "text": "Pizza",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e048",
+  "text": "Kentang goreng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e049",
+  "text": "Biskuit",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e050",
+  "text": "Permen lolipop",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e051",
+  "text": "Permen",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e052",
+  "text": "Matahari",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e053",
+  "text": "Bulan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e054",
+  "text": "Bintang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e055",
+  "text": "Pohon",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e056",
+  "text": "Bunga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e057",
+  "text": "Mawar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e058",
+  "text": "Daun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e059",
+  "text": "Rumput",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e060",
+  "text": "Gunung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e061",
+  "text": "Bukit",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e062",
+  "text": "Danau",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e063",
+  "text": "Sungai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e064",
+  "text": "Batu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e065",
+  "text": "Awan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e066",
+  "text": "Hujan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e067",
+  "text": "Salju",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e068",
+  "text": "Petir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e069",
+  "text": "Kaktus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e070",
+  "text": "Pohon palem",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e071",
+  "text": "Pulau",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e072",
+  "text": "Pantai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e073",
+  "text": "Angin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e074",
+  "text": "Genangan air",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e075",
+  "text": "Rumah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e076",
+  "text": "Gubuk",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e077",
+  "text": "Tenda",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e078",
+  "text": "Menara",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e079",
+  "text": "Pintu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e080",
+  "text": "Jendela",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e081",
+  "text": "Pagar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e082",
+  "text": "Gerbang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e083",
+  "text": "Mobil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e084",
+  "text": "Bus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e085",
+  "text": "Kereta api",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e086",
+  "text": "Perahu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e087",
+  "text": "Kapal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e088",
+  "text": "Roket",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e089",
+  "text": "Sepeda",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e090",
+  "text": "Taksi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e091",
+  "text": "Bola",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e092",
+  "text": "Boneka beruang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e093",
+  "text": "Boneka",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e094",
+  "text": "Dadu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e095",
+  "text": "Kelereng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e096",
+  "text": "Yoyo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e097",
+  "text": "Gasing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e098",
+  "text": "Piala",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e099",
+  "text": "Medali",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e100",
+  "text": "Layang-layang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e101",
+  "text": "Topi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e102",
+  "text": "Topi kupluk",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e103",
+  "text": "Sepatu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e104",
+  "text": "Kaus kaki",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e105",
+  "text": "Syal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e106",
+  "text": "Kemeja",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e107",
+  "text": "Celana",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e108",
+  "text": "Rok",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e109",
+  "text": "Gaun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e110",
+  "text": "Jaket",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e111",
+  "text": "Mantel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e112",
+  "text": "Sabuk",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e113",
+  "text": "Dasi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e114",
+  "text": "Pita",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e115",
+  "text": "Kacamata",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e116",
+  "text": "Sepatu bot",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e117",
+  "text": "Tas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e118",
+  "text": "Cincin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e119",
+  "text": "Mahkota",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e120",
+  "text": "Kunci",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e121",
+  "text": "Meja",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e122",
+  "text": "Kursi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e123",
+  "text": "Tempat tidur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e124",
+  "text": "Sofa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e125",
+  "text": "Kursi berlengan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e126",
+  "text": "Bangku panjang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e127",
+  "text": "Bangku kecil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e128",
+  "text": "Rak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e129",
+  "text": "Lampu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e130",
+  "text": "Cermin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e131",
+  "text": "Karpet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e132",
+  "text": "Bantal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e133",
+  "text": "Vas bunga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e134",
+  "text": "Lilin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e135",
+  "text": "Jam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e136",
+  "text": "Buku",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e137",
+  "text": "Gelas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e138",
+  "text": "Cangkir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e139",
+  "text": "Piring",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e140",
+  "text": "Panci",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e141",
+  "text": "Wajan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e142",
+  "text": "Garpu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e143",
+  "text": "Sendok",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e144",
+  "text": "Pisau",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e145",
+  "text": "Teko",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e146",
+  "text": "Ember",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e147",
+  "text": "Sapu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e148",
+  "text": "Hati",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e149",
+  "text": "Lingkaran",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e150",
+  "text": "Segitiga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e151",
+  "text": "Persegi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e152",
+  "text": "Panah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e153",
+  "text": "Tanda silang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e154",
+  "text": "Emotikon senyum",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e155",
+  "text": "Berlian",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e156",
+  "text": "Tapal kuda",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e157",
+  "text": "Spiral",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e158",
+  "text": "Jangkar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e159",
+  "text": "Mata",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e160",
+  "text": "Hidung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e161",
+  "text": "Mulut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e162",
+  "text": "Telinga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e163",
+  "text": "Tangan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e164",
+  "text": "Kaki",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e165",
+  "text": "Tungkai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e166",
+  "text": "Lengan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e167",
+  "text": "Gigi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e168",
+  "text": "Lidah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e169",
+  "text": "Jari",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e170",
+  "text": "Ibu jari",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e171",
+  "text": "Lutut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e172",
+  "text": "Janggut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e173",
+  "text": "Rambut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e174",
+  "text": "Kado",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e175",
+  "text": "Lonceng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e176",
+  "text": "Balon",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e177",
+  "text": "Kereta luncur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e178",
+  "text": "Telur Paskah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e179",
+  "text": "Plester luka",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e180",
+  "text": "Suntikan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e181",
+  "text": "Topeng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e182",
+  "text": "Kaca pembesar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e183",
+  "text": "Sabun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e184",
+  "text": "Handuk",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e185",
+  "text": "Sisir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e186",
+  "text": "Gunting",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e187",
+  "text": "Pulpen",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e188",
+  "text": "Pensil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e189",
+  "text": "Penggaris",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e190",
+  "text": "Buku tulis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e191",
+  "text": "Papan tulis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e192",
+  "text": "Kapur tulis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e193",
+  "text": "Kuas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e194",
+  "text": "Palu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e195",
+  "text": "Paku",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e196",
+  "text": "Sekrup",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e197",
+  "text": "Gergaji",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e198",
+  "text": "Kapak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e199",
+  "text": "Tangga lipat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e200",
+  "text": "Sekop",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e201",
+  "text": "Garu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e202",
+  "text": "Bunga matahari",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e203",
+  "text": "Panggangan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e204",
+  "text": "Pancing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e205",
+  "text": "Lentera",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e206",
+  "text": "Nyala api",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e207",
+  "text": "Rumah burung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e208",
+  "text": "Pohon apel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e209",
+  "text": "Naga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e210",
+  "text": "Ksatria",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e211",
+  "text": "Raja",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e212",
+  "text": "Ratu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e213",
+  "text": "Penyihir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e214",
+  "text": "Peri",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e215",
+  "text": "Hantu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e216",
+  "text": "Kurcaci",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e217",
+  "text": "Bajak laut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e218",
+  "text": "Planet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e219",
+  "text": "UFO",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e220",
+  "text": "Alien",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e221",
+  "text": "Komet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e222",
+  "text": "Mars",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e223",
+  "text": "Permen tongkat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e224",
+  "text": "Toples selai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e225",
+  "text": "Gelas jus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e226",
+  "text": "Sedotan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e227",
+  "text": "Sarung tangan panci",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e228",
+  "text": "Cangkir telur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e229",
+  "text": "Kotak bekal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e230",
+  "text": "Sikat rambut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e231",
+  "text": "Sandal rumah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e232",
+  "text": "Topi hujan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e233",
+  "text": "Celana renang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e234",
+  "text": "Gembok",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e235",
+  "text": "Gagang pintu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e236",
+  "text": "Ambang jendela",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e237",
+  "text": "Pesawat kertas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e238",
+  "text": "Gelas susu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e239",
+  "text": "Lilin kecil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e240",
+  "text": "Karton telur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e241",
+  "text": "Daun bawang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e242",
+  "text": "Selada",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e243",
+  "text": "Roti kering",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e244",
+  "text": "Kue beras",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e247",
+  "text": "Blueberry",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e248",
+  "text": "Kurma",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e249",
+  "text": "Pepaya",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e252",
+  "text": "Batang asparagus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e253",
+  "text": "Burung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e254",
+  "text": "Katak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e255",
+  "text": "Burung hantu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e256",
+  "text": "Merpati",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e257",
+  "text": "Elang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e258",
+  "text": "Cacing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e259",
+  "text": "Angsa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e260",
+  "text": "Camar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e261",
+  "text": "Bangau",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e262",
+  "text": "Kelinci",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e263",
+  "text": "Mentega",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e264",
+  "text": "Madu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e265",
+  "text": "Sosis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e266",
+  "text": "Nasi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e267",
+  "text": "Mi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e268",
+  "text": "Garam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e269",
+  "text": "Gula",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e270",
+  "text": "Air",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e271",
+  "text": "Kopi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e272",
+  "text": "Teh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e273",
+  "text": "Saus tomat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e274",
+  "text": "Mustar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e275",
+  "text": "Roti panggang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e276",
+  "text": "Bubur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e277",
+  "text": "Yogurt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e278",
+  "text": "Laut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e279",
+  "text": "Anak sungai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e280",
+  "text": "Padang rumput",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e281",
+  "text": "Pasir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e282",
+  "text": "Api",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e283",
+  "text": "Kabut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e284",
+  "text": "Semak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e285",
+  "text": "Dahan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e286",
+  "text": "Akar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e287",
+  "text": "Pohon cemara",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e288",
+  "text": "Pohon ek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e289",
+  "text": "Lumut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e290",
+  "text": "Peti",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e291",
+  "text": "Keranjang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e292",
+  "text": "Botol",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e293",
+  "text": "Kaleng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e294",
+  "text": "Mangkuk",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e295",
+  "text": "Selimut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e296",
+  "text": "Kasur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e297",
+  "text": "Gabus botol",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e298",
+  "text": "Kancing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e299",
+  "text": "Jarum",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e300",
+  "text": "Benang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e301",
+  "text": "Kertas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e302",
+  "text": "Surat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e303",
+  "text": "Koin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e304",
+  "text": "Uang kertas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e305",
+  "text": "Tali",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e306",
+  "text": "Rantai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e307",
+  "text": "Tongkat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e308",
+  "text": "Kepala",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e309",
+  "text": "Perut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e310",
+  "text": "Punggung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e311",
+  "text": "Bahu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e312",
+  "text": "Siku",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e313",
+  "text": "Leher",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e314",
+  "text": "Perosotan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e315",
+  "text": "Ayunan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e316",
+  "text": "Jungkat-jungkit",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e317",
+  "text": "Not musik",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e318",
+  "text": "Radio",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e319",
+  "text": "Kereta bawah tanah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e320",
+  "text": "Kapal feri",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e321",
+  "text": "Sarung tangan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e322",
+  "text": "Sweter",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e323",
+  "text": "Celana dalam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e324",
+  "text": "Gelas kuas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e325",
+  "text": "Toples biskuit",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e326",
+  "text": "Kotak susu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e327",
+  "text": "Irisan roti",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e328",
+  "text": "Gigi ompong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e329",
+  "text": "Perahu kertas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e330",
+  "text": "Keran air",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e331",
+  "text": "Belut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e332",
+  "text": "Alap-alap",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e333",
+  "text": "Burung pegar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e334",
+  "text": "Kungkang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e335",
+  "text": "Tokek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e336",
+  "text": "Jaguar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e337",
+  "text": "Lynx",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e338",
+  "text": "Puma",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e339",
+  "text": "Gagak besar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e340",
+  "text": "Salamander",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e341",
+  "text": "Burung hantu besar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e342",
+  "text": "Cerpelai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e343",
+  "text": "Yak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e344",
+  "text": "Kacang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e345",
+  "text": "Cabai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e346",
+  "text": "Selai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e347",
+  "text": "Pasta",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e348",
+  "text": "Zaitun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e349",
+  "text": "Kayu manis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e350",
+  "text": "Lampu lalu lintas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e351",
+  "text": "Perangko",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e352",
+  "text": "Magnet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e353",
+  "text": "Map berkas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e354",
+  "text": "Paket",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e355",
+  "text": "Kardus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e356",
+  "text": "Mutiara",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e357",
+  "text": "Pipa rokok",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e358",
+  "text": "Kotak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e359",
+  "text": "Kantong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e360",
+  "text": "Bukit pasir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e361",
+  "text": "Ladang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e362",
+  "text": "Tebing batu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e363",
+  "text": "Kebun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e364",
+  "text": "Pagar tanaman",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e365",
+  "text": "Pesisir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e366",
+  "text": "Rawa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e367",
+  "text": "Mata air",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e368",
+  "text": "Kolam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e369",
+  "text": "Toko roti",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e370",
+  "text": "Kantor",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e371",
+  "text": "Kafe",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e372",
+  "text": "Pasar",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e373",
+  "text": "Taman",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e374",
+  "text": "Bikini",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e375",
+  "text": "Blus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e376",
+  "text": "Tudung kepala",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e377",
+  "text": "Sandal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e378",
+  "text": "Sepatu olahraga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e379",
+  "text": "Balkon",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e380",
+  "text": "Kamar mandi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e381",
+  "text": "Lorong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e382",
+  "text": "Ruang bawah tanah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e383",
+  "text": "Dapur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e384",
+  "text": "Oven",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e385",
+  "text": "Tangga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e386",
+  "text": "Danau bekas galian",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e387",
+  "text": "Lokasi konstruksi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e388",
+  "text": "Sumur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e389",
+  "text": "Monumen",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e390",
+  "text": "Patung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e391",
+  "text": "Terowongan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e392",
+  "text": "Papan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e393",
+  "text": "Kawat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e394",
+  "text": "Kait",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e395",
+  "text": "Jepitan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e396",
+  "text": "Lem",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e397",
+  "text": "Lilin mainan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e398",
+  "text": "Gulungan benang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e399",
+  "text": "Tali kecil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e400",
+  "text": "Cincin nanas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e401",
+  "text": "Biji apel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e402",
+  "text": "Roti tawar utuh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e403",
+  "text": "Irisan mentimun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e404",
+  "text": "Dadu keju",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e405",
+  "text": "Kue ceri",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e406",
+  "text": "Limun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e407",
+  "text": "Kenari",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e408",
+  "text": "Ham",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e409",
+  "text": "Telur mata sapi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e410",
+  "text": "Perahu nelayan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e411",
+  "text": "Pelampung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e412",
+  "text": "Rakit",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e413",
+  "text": "Gondola",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e414",
+  "text": "Jip",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e415",
+  "text": "Motor bebek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e416",
+  "text": "Becak",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e417",
+  "text": "Bambu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e418",
+  "text": "Bunga duri",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e419",
+  "text": "Pakis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e420",
+  "text": "Bunga tulip",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e421",
+  "text": "Bebek karet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e422",
+  "text": "Bumerang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e423",
+  "text": "Domino",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e424",
+  "text": "Kok bulu tangkis",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e425",
+  "text": "Bola karet pantul",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e426",
+  "text": "Frisbee",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e427",
+  "text": "Sarung tangan tebal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e428",
+  "text": "Selop",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e429",
+  "text": "Anting",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e430",
+  "text": "Jas hujan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e431",
+  "text": "Kacamata hitam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e432",
+  "text": "Sepatu bot karet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e433",
+  "text": "Bagasi mobil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e434",
+  "text": "Kerucut lalu lintas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e435",
+  "text": "Tempat sampah",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e436",
+  "text": "Bangku taman",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e437",
+  "text": "Eskalator",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e438",
+  "text": "Rambu jalan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e439",
+  "text": "Apotek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e440",
+  "text": "Toko buku",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e441",
+  "text": "Kantor pemadam kebakaran",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e442",
+  "text": "Warung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e443",
+  "text": "Bayi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e444",
+  "text": "Kakak laki-laki",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e445",
+  "text": "Kakak perempuan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e446",
+  "text": "Nenek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e447",
+  "text": "Kakek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e448",
+  "text": "Bendera",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e449",
+  "text": "Topi pet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e450",
+  "text": "Bintang jasa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e451",
+  "text": "Kerudung",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e452",
+  "text": "Gelembung udara",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e453",
+  "text": "Kuntum bunga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e454",
+  "text": "Percikan api",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e455",
+  "text": "Asap",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e456",
+  "text": "Bayangan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e457",
+  "text": "Tambang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e458",
+  "text": "Jalan setapak hutan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e459",
+  "text": "Jalur",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e460",
+  "text": "Gundukan pasir",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e461",
+  "text": "Bonsai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e462",
+  "text": "Biji ek",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e463",
+  "text": "Kastanye",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e464",
+  "text": "Semanggi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e465",
+  "text": "Bunga dandelion",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e466",
+  "text": "Buah pinus",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e467",
+  "text": "Bola pantai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e468",
+  "text": "Kapal kertas",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e469",
+  "text": "Gelembung sabun",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e470",
+  "text": "Baterai isi ulang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e471",
+  "text": "Kabel",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e472",
+  "text": "Baterai kancing",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e473",
+  "text": "Alas mouse",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e474",
+  "text": "Colokan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e475",
+  "text": "Lencana",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e476",
+  "text": "Mata kail",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e477",
+  "text": "Rautan pensil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e478",
+  "text": "Stiker",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e479",
+  "text": "Baju renang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e480",
+  "text": "Topi renang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e481",
+  "text": "Handuk pantai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e482",
+  "text": "Gelas tinggi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e483",
+  "text": "Toples permen",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e484",
+  "text": "Roti mentega",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e485",
+  "text": "Tas belanja",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e486",
+  "text": "Es batu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e487",
+  "text": "Kaleng cat",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e488",
+  "text": "Bulu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e489",
+  "text": "Uang logam",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e490",
+  "text": "Pita kado",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e491",
+  "text": "Bola karet",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e492",
+  "text": "Ikat rambut",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e493",
+  "text": "Sapu kecil",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e494",
+  "text": "Sendok kayu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e495",
+  "text": "Cangkir kopi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e496",
+  "text": "Gantungan baju",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e497",
+  "text": "Tutup botol",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e498",
+  "text": "Pembatas buku",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e499",
+  "text": "Buku mewarnai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_e500",
+  "text": "Kotak cat air",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "id_m001",
+  "text": "Hamster",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m002",
+  "text": "Terwelu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m003",
+  "text": "Burung beo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m004",
+  "text": "Kura-kura",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m005",
+  "text": "Tikus got",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m006",
+  "text": "Singa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m007",
+  "text": "Harimau",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m008",
+  "text": "Gajah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m009",
+  "text": "Jerapah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m010",
+  "text": "Zebra",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m011",
+  "text": "Monyet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m012",
+  "text": "Rusa jantan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m013",
+  "text": "Panda",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m014",
+  "text": "Unta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m015",
+  "text": "Flamingo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m016",
+  "text": "Gorila",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m017",
+  "text": "Keledai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m018",
+  "text": "Soang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m019",
+  "text": "Anak ayam",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m020",
+  "text": "Anak sapi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m021",
+  "text": "Anak babi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m022",
+  "text": "Anak domba",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m023",
+  "text": "Kandang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m024",
+  "text": "Traktor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m025",
+  "text": "Lumbung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m026",
+  "text": "Lumba-lumba",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m027",
+  "text": "Udang air tawar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m028",
+  "text": "Ubur-ubur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m029",
+  "text": "Bintang laut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m030",
+  "text": "Lobster",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m031",
+  "text": "Karang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m032",
+  "text": "Anjing laut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m033",
+  "text": "Tawon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m034",
+  "text": "Semut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m035",
+  "text": "Nyamuk",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m036",
+  "text": "Ulat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m037",
+  "text": "Cacing tanah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m038",
+  "text": "Ngengat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m039",
+  "text": "Jeruk",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m040",
+  "text": "Stroberi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m041",
+  "text": "Raspberi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m042",
+  "text": "Plum",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m043",
+  "text": "Nanas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m044",
+  "text": "Melon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m045",
+  "text": "Kiwi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m046",
+  "text": "Mangga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m047",
+  "text": "Persik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m048",
+  "text": "Buah ara",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m049",
+  "text": "Kentang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m050",
+  "text": "Bawang putih",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m051",
+  "text": "Salad",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m052",
+  "text": "Kubis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m053",
+  "text": "Brokoli",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m054",
+  "text": "Labu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m055",
+  "text": "Asparagus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m056",
+  "text": "Lobak merah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m057",
+  "text": "Terong",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m058",
+  "text": "Zukini",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m059",
+  "text": "Aprikot",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m060",
+  "text": "Burger",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m061",
+  "text": "Hot dog",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m062",
+  "text": "Sup",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m063",
+  "text": "Wafel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m064",
+  "text": "Kue",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m065",
+  "text": "Kue tart",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m066",
+  "text": "Donat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m067",
+  "text": "Pretzel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m068",
+  "text": "Kebab",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m069",
+  "text": "Cokelat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m070",
+  "text": "Mufin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m071",
+  "text": "Kue mangkuk",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m072",
+  "text": "Berondong jagung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m073",
+  "text": "Cokelat praline",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m074",
+  "text": "Es krim sundae",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m075",
+  "text": "Jus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m076",
+  "text": "Susu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m077",
+  "text": "Cokelat panas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m078",
+  "text": "Cola",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m079",
+  "text": "Teko teh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m080",
+  "text": "Tang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m081",
+  "text": "Bor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m082",
+  "text": "Helm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m083",
+  "text": "Batu bata",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m084",
+  "text": "Gitar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m085",
+  "text": "Piano",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m086",
+  "text": "Biola",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m087",
+  "text": "Selo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m088",
+  "text": "Terompet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m089",
+  "text": "Trombon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m090",
+  "text": "Seruling",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m091",
+  "text": "Drum",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m092",
+  "text": "Rebana",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m093",
+  "text": "Harpa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m094",
+  "text": "Mikrofon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m095",
+  "text": "Triangel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m096",
+  "text": "Sepeda motor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m097",
+  "text": "Skuter",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m098",
+  "text": "Pesawat terbang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m099",
+  "text": "Kano",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m100",
+  "text": "Mobil atap terbuka",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m101",
+  "text": "Mobil sport",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m102",
+  "text": "Lemari",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m103",
+  "text": "Lemari laci",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m104",
+  "text": "Tirai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m105",
+  "text": "Keranjang sampah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m106",
+  "text": "Pot bunga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m107",
+  "text": "Gedung bertingkat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m108",
+  "text": "Istana",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m109",
+  "text": "Benteng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m110",
+  "text": "Gereja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m111",
+  "text": "Sekolah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m112",
+  "text": "Pabrik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m113",
+  "text": "Garasi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m114",
+  "text": "Jembatan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m115",
+  "text": "Kincir angin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m116",
+  "text": "Mercusuar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m117",
+  "text": "Televisi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m118",
+  "text": "Jam weker",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m119",
+  "text": "Telepon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m120",
+  "text": "Kompor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m121",
+  "text": "Oven roti",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m122",
+  "text": "Blender",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m123",
+  "text": "Pemanggang roti",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m124",
+  "text": "Saringan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m125",
+  "text": "Pengering rambut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m126",
+  "text": "Sikat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m127",
+  "text": "Alat cukur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m128",
+  "text": "Spons",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m129",
+  "text": "Komputer",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m130",
+  "text": "Laptop",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m131",
+  "text": "Printer",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m132",
+  "text": "Stempel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m133",
+  "text": "Kalender",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m134",
+  "text": "Pelubang kertas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m135",
+  "text": "Stapler",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m136",
+  "text": "Bola dunia",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m137",
+  "text": "Bola sepak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m138",
+  "text": "Bola basket",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m139",
+  "text": "Bola voli",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m140",
+  "text": "Bola tangan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m141",
+  "text": "Dumbel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m142",
+  "text": "Papan luncur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m143",
+  "text": "Sepatu es",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m144",
+  "text": "Trampolin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m145",
+  "text": "Ski",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m146",
+  "text": "Anak panah dart",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m147",
+  "text": "Balok mainan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m148",
+  "text": "Puzel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m149",
+  "text": "Kartu remi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m150",
+  "text": "Istana pasir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m151",
+  "text": "Tali lompat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m152",
+  "text": "Robot",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m153",
+  "text": "Tongkat sihir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m154",
+  "text": "Ponsel pintar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m155",
+  "text": "Tablet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m156",
+  "text": "Kamera",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m157",
+  "text": "Drone",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m158",
+  "text": "Baterai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m159",
+  "text": "Stopkontak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m160",
+  "text": "Teropong",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m161",
+  "text": "Air terjun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m162",
+  "text": "Gua",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m163",
+  "text": "Hutan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m164",
+  "text": "Gunung berapi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m165",
+  "text": "Payung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m166",
+  "text": "Badai petir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m167",
+  "text": "Tornado",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m168",
+  "text": "Pelangi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m169",
+  "text": "Manusia salju",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m170",
+  "text": "Serpihan salju",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m171",
+  "text": "Es menggantung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m172",
+  "text": "Termometer",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m173",
+  "text": "Koper",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m174",
+  "text": "Ransel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m175",
+  "text": "Topi matahari",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m176",
+  "text": "Peta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m177",
+  "text": "Kompas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m178",
+  "text": "Kantong tidur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m179",
+  "text": "Sandal jepit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m180",
+  "text": "Hotel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m181",
+  "text": "Dokter",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m182",
+  "text": "Polisi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m183",
+  "text": "Koki",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m184",
+  "text": "Tukang roti",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m185",
+  "text": "Guru",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m186",
+  "text": "Pelukis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m187",
+  "text": "Tukang kebun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m188",
+  "text": "Pilot",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m189",
+  "text": "Badut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m190",
+  "text": "Pesulap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m191",
+  "text": "Tukang cukur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m192",
+  "text": "Petani",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m193",
+  "text": "Kapten kapal",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m194",
+  "text": "Hakim",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m195",
+  "text": "Putri raja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m196",
+  "text": "Unicorn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m197",
+  "text": "Monster",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m198",
+  "text": "Raksasa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m199",
+  "text": "Vampir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m200",
+  "text": "Peti harta karun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m201",
+  "text": "Satelit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m202",
+  "text": "Teleskop",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m203",
+  "text": "Saturnus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m204",
+  "text": "Pil",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m205",
+  "text": "Perban",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m206",
+  "text": "Tongkat penyangga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m207",
+  "text": "Kerangka",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m208",
+  "text": "Otak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m209",
+  "text": "Penyiram tanaman",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m210",
+  "text": "Sekop taman",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m211",
+  "text": "Tempat tidur gantung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m212",
+  "text": "Ekskavator",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m213",
+  "text": "Derek",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m214",
+  "text": "Tiang listrik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m215",
+  "text": "Sirene",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m216",
+  "text": "Rusa kutub",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m217",
+  "text": "Kalung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m218",
+  "text": "Dompet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m219",
+  "text": "Kipas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m220",
+  "text": "Kumis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m221",
+  "text": "Gelang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m222",
+  "text": "Kincir ria",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m223",
+  "text": "Komidi putar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m224",
+  "text": "Arum manis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m225",
+  "text": "Jembatan gantung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m226",
+  "text": "Stasiun kereta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m227",
+  "text": "Halte",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m228",
+  "text": "Sosok lampu lalu lintas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m229",
+  "text": "Pulau jalan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m230",
+  "text": "Zebra cross",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m231",
+  "text": "Mesin tiket",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m232",
+  "text": "Troli bagasi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m233",
+  "text": "Bus tingkat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m234",
+  "text": "Helm motor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m235",
+  "text": "Pom bensin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m236",
+  "text": "Tempat cuci mobil",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m237",
+  "text": "Kotak perkakas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m238",
+  "text": "Mesin jahit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m239",
+  "text": "Jemuran",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m240",
+  "text": "Kereta belanja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m241",
+  "text": "Ban berjalan kasir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m242",
+  "text": "Penggiling kopi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m243",
+  "text": "Loyang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m244",
+  "text": "Penggilas adonan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m245",
+  "text": "Panci sup",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m246",
+  "text": "Buket bunga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m247",
+  "text": "Tempat payung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m248",
+  "text": "Kotak surat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m249",
+  "text": "Panjatan anak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m250",
+  "text": "Rumah pohon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m251",
+  "text": "Talang air",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m252",
+  "text": "Instalasi surya",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m253",
+  "text": "Halte bus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m254",
+  "text": "Tiket konser",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m255",
+  "text": "Koala",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m256",
+  "text": "Citah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m257",
+  "text": "Macan tutul",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m258",
+  "text": "Kerbau",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m259",
+  "text": "Luak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m260",
+  "text": "Berang-berang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m261",
+  "text": "Rusa besar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m262",
+  "text": "Llama",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m263",
+  "text": "Alpaka",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m264",
+  "text": "Burung merak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m265",
+  "text": "Burung unta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m266",
+  "text": "Tikus tanah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m267",
+  "text": "Beaver",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m268",
+  "text": "Kelelawar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m269",
+  "text": "Gagak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m270",
+  "text": "Burung pelatuk",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m271",
+  "text": "Ikan trout",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m272",
+  "text": "Ikan karper",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m273",
+  "text": "Ikan todak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m274",
+  "text": "Burung jenjang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m275",
+  "text": "Kroisan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m276",
+  "text": "Donat isi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m277",
+  "text": "Telur dadar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m278",
+  "text": "Sereal",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m279",
+  "text": "Puding",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m280",
+  "text": "Kue keju",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m281",
+  "text": "Lasagna",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m282",
+  "text": "Ravioli",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m283",
+  "text": "Sushi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m284",
+  "text": "Salami",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m285",
+  "text": "Alpukat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m286",
+  "text": "Blackberry",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m287",
+  "text": "Kismis merah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m288",
+  "text": "Pembuka kaleng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m289",
+  "text": "Pembuka botol anggur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m290",
+  "text": "Pengocok telur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m291",
+  "text": "Gelas ukur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m292",
+  "text": "Timbangan dapur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m293",
+  "text": "Sodet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m294",
+  "text": "Lap piring",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m295",
+  "text": "Gantungan mantel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m296",
+  "text": "Rak sepatu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m297",
+  "text": "Jam dinding",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m298",
+  "text": "Lampu berdiri",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m299",
+  "text": "Tumpukan buku",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m300",
+  "text": "Tongkat bisbol",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m301",
+  "text": "Bola boling",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m302",
+  "text": "Raket bulu tangkis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m303",
+  "text": "Papan selancar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m304",
+  "text": "Kacamata selam",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m305",
+  "text": "Ban renang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m306",
+  "text": "Penjaga gawang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m307",
+  "text": "Wasit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m308",
+  "text": "Sepeda balap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m309",
+  "text": "Dokter gigi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m310",
+  "text": "Dokter hewan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m311",
+  "text": "Tukang pos",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m312",
+  "text": "Penjual",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m313",
+  "text": "Musisi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m314",
+  "text": "Penari",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m315",
+  "text": "Aktor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m316",
+  "text": "Detektif",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m317",
+  "text": "Peneliti",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m318",
+  "text": "Museum",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m319",
+  "text": "Perpustakaan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m320",
+  "text": "Bioskop",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m321",
+  "text": "Restoran",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m322",
+  "text": "Rumah sakit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m323",
+  "text": "Bandara",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m324",
+  "text": "Pelabuhan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m325",
+  "text": "Peternakan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m326",
+  "text": "Taman bermain",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m327",
+  "text": "Kolam renang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m328",
+  "text": "Stadion",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m329",
+  "text": "Sirkus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m330",
+  "text": "Kebun binatang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m331",
+  "text": "Gletser",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m332",
+  "text": "Gurun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m333",
+  "text": "Tebing",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m334",
+  "text": "Oasis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m335",
+  "text": "Longsoran salju",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m336",
+  "text": "Pemakan semut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m337",
+  "text": "Antelop",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m338",
+  "text": "Bison",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m339",
+  "text": "Bunglon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m340",
+  "text": "Unta punuk satu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m341",
+  "text": "Hiena",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m342",
+  "text": "Musang hutan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m343",
+  "text": "Kobra",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m344",
+  "text": "Lemur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m346",
+  "text": "Orangutan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m347",
+  "text": "Oselot",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m348",
+  "text": "Babun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m349",
+  "text": "Anak rusa kutub",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m350",
+  "text": "Landak besar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m351",
+  "text": "Tapir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m352",
+  "text": "Tukan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m353",
+  "text": "Walrus",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m354",
+  "text": "Jeruk keprok",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m355",
+  "text": "Jeruk bali",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m356",
+  "text": "Kacang arab",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m357",
+  "text": "Leci",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m358",
+  "text": "Markisa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m359",
+  "text": "Nektarin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m360",
+  "text": "Bit merah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m361",
+  "text": "Seledri",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m362",
+  "text": "Ubi jalar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m363",
+  "text": "Obeng listrik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m364",
+  "text": "Landasan besi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m365",
+  "text": "Linggis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m366",
+  "text": "Kikir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m367",
+  "text": "Ketam kayu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m368",
+  "text": "Pahat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m369",
+  "text": "Kunci pipa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m370",
+  "text": "Bagpipe",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m371",
+  "text": "Gitar listrik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m372",
+  "text": "Gong",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m373",
+  "text": "Kontrabas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m374",
+  "text": "Harmonika",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m375",
+  "text": "Saksofon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m376",
+  "text": "Xilofon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m377",
+  "text": "Pesawat sayap ganda",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m378",
+  "text": "Forklif",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m379",
+  "text": "Mobil off-road",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m380",
+  "text": "Limosin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m381",
+  "text": "Mobil balap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m382",
+  "text": "Saluran air kuno",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m383",
+  "text": "Aula stasiun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m384",
+  "text": "Rumah pertanian",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m385",
+  "text": "Pondok kayu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m386",
+  "text": "Rumah perahu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m387",
+  "text": "Rumah berangka kayu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m388",
+  "text": "Iglu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m389",
+  "text": "Kapel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m390",
+  "text": "Kios",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m391",
+  "text": "Masjid",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m392",
+  "text": "Pagoda",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m393",
+  "text": "Piramida",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m394",
+  "text": "Candi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m395",
+  "text": "Vila",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m396",
+  "text": "Mesin penjawab telepon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m397",
+  "text": "Proyektor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m398",
+  "text": "Stik game",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m399",
+  "text": "Monitor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m400",
+  "text": "Pemutar piringan hitam",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m401",
+  "text": "Kipas angin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m402",
+  "text": "Topi bisbol",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m403",
+  "text": "Setelan hujan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m404",
+  "text": "Bretel celana",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m405",
+  "text": "Celana olahraga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m406",
+  "text": "Pelindung lutut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m407",
+  "text": "Jaket kulit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m408",
+  "text": "Piyama",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m409",
+  "text": "Kacamata pelindung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m410",
+  "text": "Papan setrika",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m411",
+  "text": "Keset",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m412",
+  "text": "Cermin tangan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m413",
+  "text": "Tas kerja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m414",
+  "text": "Pembuka surat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m415",
+  "text": "Pena tinta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m416",
+  "text": "Papan pin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m417",
+  "text": "Stabilo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m418",
+  "text": "Kereta gunung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m419",
+  "text": "Lokomotif uap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m420",
+  "text": "Lori tangan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m421",
+  "text": "Sepeda listrik",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m422",
+  "text": "Troli belanja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m423",
+  "text": "Gokar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m424",
+  "text": "Kereta kuda",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m425",
+  "text": "Perahu motor",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m426",
+  "text": "Perahu kayuh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m427",
+  "text": "Kolam katak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m428",
+  "text": "Labirin tanaman",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m429",
+  "text": "Kebun rempah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m430",
+  "text": "Kotak sarang burung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m431",
+  "text": "Gerbang mawar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m432",
+  "text": "Istana balon",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m433",
+  "text": "Kios undian",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m434",
+  "text": "Seluncuran",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m435",
+  "text": "Ayunan kapal",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m436",
+  "text": "Busur silang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m437",
+  "text": "Bumerang kayu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m438",
+  "text": "Topeng anggar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m439",
+  "text": "Tongkat hoki",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m440",
+  "text": "Pin boling",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m441",
+  "text": "Kettlebell",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m442",
+  "text": "Dinding tembak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m443",
+  "text": "Jaring bulu tangkis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m444",
+  "text": "Sepatu balet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m445",
+  "text": "Kanvas lukis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m446",
+  "text": "Pengeras suara",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m447",
+  "text": "Papan lukis",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m448",
+  "text": "Sepatu dansa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m449",
+  "text": "Pengantar surat",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m450",
+  "text": "Tukang atap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m451",
+  "text": "Tukang daging",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m452",
+  "text": "Kaleng nanas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m453",
+  "text": "Keranjang roti",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m454",
+  "text": "Sumpit",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m455",
+  "text": "Sate",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m456",
+  "text": "Tudung keju",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m457",
+  "text": "Mangkuk salad",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m458",
+  "text": "Nampan saji",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m459",
+  "text": "Alarm rumah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m460",
+  "text": "Antena",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m461",
+  "text": "Sensor gerak",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m462",
+  "text": "Tombol bel",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m463",
+  "text": "Panel surya",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m464",
+  "text": "Kamera pengawas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m465",
+  "text": "Turbin angin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m466",
+  "text": "Batang tirai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m467",
+  "text": "Kayu bakar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m468",
+  "text": "Lemari dapur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m469",
+  "text": "Rak dinding",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m470",
+  "text": "Karangan bunga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m471",
+  "text": "Kristal es",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m472",
+  "text": "Kembang api",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m473",
+  "text": "Geiser",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m474",
+  "text": "Butiran es",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m475",
+  "text": "Aliran lava",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m476",
+  "text": "Aurora",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m477",
+  "text": "Badai pasir",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m478",
+  "text": "Gerhana matahari",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m479",
+  "text": "Perahu karet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m480",
+  "text": "Lonceng selam",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m481",
+  "text": "Lampu bawah air",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m482",
+  "text": "Cincin kawin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m483",
+  "text": "Pita kertas",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m484",
+  "text": "Topi pesta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m485",
+  "text": "Pinata",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m486",
+  "text": "Kembang api pegang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m487",
+  "text": "Sarang lebah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m488",
+  "text": "Tempat pakan burung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m489",
+  "text": "Kebun sayur",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m490",
+  "text": "Tumpukan kompos",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m491",
+  "text": "Semak mawar",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m492",
+  "text": "Struk belanja",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m493",
+  "text": "Etalase",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m494",
+  "text": "Pusat perbelanjaan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m495",
+  "text": "Perancah",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m496",
+  "text": "Tiang beton",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m497",
+  "text": "Gerbang kebun",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m498",
+  "text": "Tutup got",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m499",
+  "text": "Cerobong asap",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_m500",
+  "text": "Lampu jalan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "id_h001",
+  "text": "Marmut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h002",
+  "text": "Burung parkit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h003",
+  "text": "Feret",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h004",
+  "text": "Akuarium",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h005",
+  "text": "Rumah anjing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h006",
+  "text": "Sangkar burung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h007",
+  "text": "Pohon garuk kucing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h008",
+  "text": "Mangkuk makan hewan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h009",
+  "text": "Tupai",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h010",
+  "text": "Rakun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h011",
+  "text": "Kanguru",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h012",
+  "text": "Badak",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h013",
+  "text": "Kuda nil",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h014",
+  "text": "Buaya",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h015",
+  "text": "Ular",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h016",
+  "text": "Beruang kutub",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h017",
+  "text": "Burung pelikan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h018",
+  "text": "Meerkat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h019",
+  "text": "Kalkun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h020",
+  "text": "Bal jerami",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h021",
+  "text": "Kuda laut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h022",
+  "text": "Gurita",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h023",
+  "text": "Cumi-cumi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h024",
+  "text": "Ikan pari",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h025",
+  "text": "Bulu babi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h026",
+  "text": "Kupu-kupu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h027",
+  "text": "Kumbang koksi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h028",
+  "text": "Capung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h029",
+  "text": "Kalajengking",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h030",
+  "text": "Semangka",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h031",
+  "text": "Kelapa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h032",
+  "text": "Delima",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h033",
+  "text": "Kembang kol",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h034",
+  "text": "Jagung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h035",
+  "text": "Spageti",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h036",
+  "text": "Panekuk",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h037",
+  "text": "Roti lapis",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h040",
+  "text": "Cokelat batang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h041",
+  "text": "Agar-agar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h042",
+  "text": "Botol air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h043",
+  "text": "Gelas kopi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h044",
+  "text": "Botol minum",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h045",
+  "text": "Termos",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h046",
+  "text": "Gelas koktail",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h047",
+  "text": "Smoothie",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h048",
+  "text": "Obeng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h049",
+  "text": "Kunci pas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h050",
+  "text": "Meteran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h051",
+  "text": "Waterpas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h052",
+  "text": "Rol cat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h054",
+  "text": "Selotip",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h055",
+  "text": "Mesin bor",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h056",
+  "text": "Sendok semen",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h057",
+  "text": "Klarinet",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h058",
+  "text": "Set drum",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h059",
+  "text": "Akordeon",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h060",
+  "text": "Penyangga not",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h063",
+  "text": "Piano besar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h064",
+  "text": "Helikopter",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h065",
+  "text": "Perahu layar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h066",
+  "text": "Trem",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h067",
+  "text": "Truk",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h068",
+  "text": "Mobil polisi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h069",
+  "text": "Mobil pemadam kebakaran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h070",
+  "text": "Ambulans",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h071",
+  "text": "Truk sampah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h072",
+  "text": "Mobil boks",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h073",
+  "text": "Karavan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h074",
+  "text": "Mobil rumah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h075",
+  "text": "Bajak salju",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h076",
+  "text": "Mobil derek",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h077",
+  "text": "Truk jungkit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h078",
+  "text": "Lemari pakaian",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h079",
+  "text": "Kursi goyang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h080",
+  "text": "Rak buku",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h081",
+  "text": "Meja tulis",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h082",
+  "text": "Gantungan pakaian",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h083",
+  "text": "Hanger baju",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h084",
+  "text": "Bingkai foto",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h085",
+  "text": "Meja samping tempat tidur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h086",
+  "text": "Penyedot debu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h087",
+  "text": "Setrika",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h088",
+  "text": "Keranjang cucian",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h089",
+  "text": "Remote TV",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h090",
+  "text": "Kulkas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h091",
+  "text": "Microwave",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h092",
+  "text": "Ceret listrik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h093",
+  "text": "Tempat garam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h094",
+  "text": "Talenan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h095",
+  "text": "Sendok masak",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h096",
+  "text": "Kepala pancuran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h097",
+  "text": "Mesin cuci",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h098",
+  "text": "Lampu meja",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h099",
+  "text": "Mesin kopi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h100",
+  "text": "Bak mandi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h101",
+  "text": "Pancuran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h102",
+  "text": "Wastafel",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h103",
+  "text": "Toilet",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h104",
+  "text": "Sikat gigi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h105",
+  "text": "Pasta gigi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h106",
+  "text": "Jubah mandi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h107",
+  "text": "Tas sekolah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h108",
+  "text": "Penghapus",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h109",
+  "text": "Kotak pensil",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h111",
+  "text": "Kalkulator",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h112",
+  "text": "Ruang kelas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h113",
+  "text": "Papan ketik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h114",
+  "text": "Headphone",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h115",
+  "text": "Speaker",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h116",
+  "text": "Kontroler game",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h117",
+  "text": "Senter",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h118",
+  "text": "Kabel pengisi daya",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h119",
+  "text": "Walkie talkie",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h120",
+  "text": "Konsol game",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h121",
+  "text": "Parabola",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h122",
+  "text": "Amplop",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h123",
+  "text": "Klip kertas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h124",
+  "text": "Keranjang kertas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h125",
+  "text": "Blok catatan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h126",
+  "text": "Kursi putar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h127",
+  "text": "Raket tenis",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h128",
+  "text": "Stik golf",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h129",
+  "text": "Sarung tinju",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h130",
+  "text": "Helm sepeda",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h131",
+  "text": "Kacamata renang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h132",
+  "text": "Mobil mainan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h133",
+  "text": "Kuda goyang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h135",
+  "text": "Boneka bulu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h136",
+  "text": "Rumah boneka",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h137",
+  "text": "Paspor",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h138",
+  "text": "Kursi lipat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h139",
+  "text": "Kursi berjemur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h140",
+  "text": "Tiket pesawat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h141",
+  "text": "Pemadam kebakaran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h142",
+  "text": "Astronaut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h143",
+  "text": "Montir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h144",
+  "text": "Fotografer",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h145",
+  "text": "Pelayan restoran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h146",
+  "text": "Putri duyung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h147",
+  "text": "Baju antariksa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h148",
+  "text": "Meteorit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h149",
+  "text": "Bintang jatuh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h150",
+  "text": "Galaksi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h151",
+  "text": "Stasiun luar angkasa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h152",
+  "text": "Stetoskop",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h153",
+  "text": "Kursi roda",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h154",
+  "text": "Ranjang rumah sakit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h155",
+  "text": "Tas dokter",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h156",
+  "text": "Gerobak dorong",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h157",
+  "text": "Gunting taman",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h158",
+  "text": "Mesin pemotong rumput",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h160",
+  "text": "Bedeng sayur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h161",
+  "text": "Selang taman",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h162",
+  "text": "Rumah kaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h163",
+  "text": "Kompos",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h165",
+  "text": "Denah bangunan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h167",
+  "text": "Rambu peringatan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h168",
+  "text": "Pembatas jalan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h169",
+  "text": "Bor jalan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h170",
+  "text": "Molen beton",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h171",
+  "text": "Borgol",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h172",
+  "text": "Topi polisi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h173",
+  "text": "Penjara",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h174",
+  "text": "Helm pemadam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h175",
+  "text": "Alat pemadam api",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h176",
+  "text": "Selang air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h177",
+  "text": "Detektor asap",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h178",
+  "text": "Pelampung penyelamat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h179",
+  "text": "Api unggun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h180",
+  "text": "Keranjang piknik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h181",
+  "text": "Pohon Natal",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h182",
+  "text": "Sinterklas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h184",
+  "text": "Kue ulang tahun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h186",
+  "text": "Lampu hias",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h187",
+  "text": "Bola salju kaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h188",
+  "text": "Gantungan kunci",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h189",
+  "text": "Rumah hantu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h190",
+  "text": "Mobil tabrakan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h191",
+  "text": "Roller coaster",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h192",
+  "text": "Kios tembak",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h193",
+  "text": "Roda keberuntungan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h194",
+  "text": "Tiket masuk",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h196",
+  "text": "Kelabang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h197",
+  "text": "Jaring laba-laba",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h198",
+  "text": "Planetarium",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h199",
+  "text": "Dunia bawah laut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h200",
+  "text": "Terumbu karang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h201",
+  "text": "Bangkai kapal",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h202",
+  "text": "Kapal selam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h203",
+  "text": "Helikopter penyelamat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h204",
+  "text": "Penerjun payung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h205",
+  "text": "Perahu naga",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h206",
+  "text": "Pejalan tali",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h207",
+  "text": "Pertunjukan sulap",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h208",
+  "text": "Wayang golek",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h209",
+  "text": "Panggung boneka",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h210",
+  "text": "Wayang kulit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h211",
+  "text": "Pesta topeng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h213",
+  "text": "Meja mixer",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h214",
+  "text": "Papan klaper",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h215",
+  "text": "Lampu sorot",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h216",
+  "text": "Studio foto",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h217",
+  "text": "Kamar gelap",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h218",
+  "text": "Kacamata lab",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h220",
+  "text": "Stasiun cuaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h221",
+  "text": "Menara listrik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h222",
+  "text": "Menara air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h223",
+  "text": "Mesin bor terowongan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h225",
+  "text": "Ruang operasi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h226",
+  "text": "Foto rontgen",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h227",
+  "text": "Lemari apotek",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h228",
+  "text": "Ruang sidang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h229",
+  "text": "Palu hakim",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h230",
+  "text": "Kantor detektif",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h231",
+  "text": "Ruang brankas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h232",
+  "text": "Pesan dalam botol",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h233",
+  "text": "Kapsul waktu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h234",
+  "text": "Peta harta karun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h235",
+  "text": "Menara bandara",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h236",
+  "text": "Landasan roket",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h237",
+  "text": "Lab rahasia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h238",
+  "text": "Kotak lebah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h239",
+  "text": "Bukit semut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h240",
+  "text": "Liang rubah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h241",
+  "text": "Orang-orangan sawah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h242",
+  "text": "Delman",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h243",
+  "text": "Kaleng susu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h244",
+  "text": "Pasar tani",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h245",
+  "text": "Kandang ayam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h246",
+  "text": "Gandengan traktor",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h247",
+  "text": "Mesin panen",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h248",
+  "text": "Klinik hewan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h249",
+  "text": "Tali anjing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h250",
+  "text": "Keranjang kucing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h251",
+  "text": "Filter akuarium",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h252",
+  "text": "Tempat minum burung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h253",
+  "text": "Tulang anjing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h254",
+  "text": "Pintu kucing",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h255",
+  "text": "Pelana kuda",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h257",
+  "text": "Jala ikan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h258",
+  "text": "Mesin cuci piring",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h259",
+  "text": "Penyedot asap dapur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h260",
+  "text": "Mesin dapur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h261",
+  "text": "Mesin espreso",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h262",
+  "text": "Mesin pemotong roti",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h263",
+  "text": "Rak bumbu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h264",
+  "text": "Tikar piknik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h265",
+  "text": "Keranjang belanja",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h266",
+  "text": "Peti pendingin",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h267",
+  "text": "Lemari penyimpanan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h268",
+  "text": "Stasiun kereta bawah tanah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h269",
+  "text": "Perlintasan kereta",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h270",
+  "text": "Bundaran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h271",
+  "text": "Gedung parkir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h272",
+  "text": "Bengkel mobil",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h273",
+  "text": "Parkiran sepeda",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h274",
+  "text": "Kereta gantung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h275",
+  "text": "Lift kursi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h276",
+  "text": "Lift ski",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h277",
+  "text": "Pelabuhan feri",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h278",
+  "text": "Kapal kontainer",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h279",
+  "text": "Sekoci",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h280",
+  "text": "Pesawat layang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h281",
+  "text": "Balon udara panas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h282",
+  "text": "Mobil salju",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h283",
+  "text": "Balai kota",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h284",
+  "text": "Kantor pos",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h285",
+  "text": "Lemari pajang museum",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h286",
+  "text": "Panggung teater",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h287",
+  "text": "Gedung konser",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h288",
+  "text": "Stadion sepak bola",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h289",
+  "text": "Kolam renang indoor",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h290",
+  "text": "Dinding panjat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h291",
+  "text": "Lintasan boling",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h292",
+  "text": "Arena seluncur es",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h293",
+  "text": "Tempat berkemah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h294",
+  "text": "Perkemahan tenda",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h295",
+  "text": "Pondok gunung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h296",
+  "text": "Menara pandang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h297",
+  "text": "Alun-alun pasar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h299",
+  "text": "Kuali penyihir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h300",
+  "text": "Cermin ajaib",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h301",
+  "text": "Istana hantu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h302",
+  "text": "Kapal bajak laut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h304",
+  "text": "Singgasana raja",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h305",
+  "text": "Pulau harta karun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h306",
+  "text": "Ramuan ajaib",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h307",
+  "text": "Bola kristal",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h308",
+  "text": "Tabung reaksi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h309",
+  "text": "Set kimia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h310",
+  "text": "Model tata surya",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h311",
+  "text": "Pendarat bulan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h312",
+  "text": "Peluncuran roket",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h313",
+  "text": "Teleskop antariksa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h314",
+  "text": "Lengan robot",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h317",
+  "text": "Kapal riset",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h318",
+  "text": "Kursi dokter gigi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h319",
+  "text": "Selimut darurat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h320",
+  "text": "Alat tensi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h321",
+  "text": "Kotak P3K",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h322",
+  "text": "Lampu operasi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h323",
+  "text": "Koridor rumah sakit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h324",
+  "text": "Klinik mata",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h325",
+  "text": "Lemari obat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h326",
+  "text": "Alat bantu dengar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h327",
+  "text": "Gips patah tulang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h328",
+  "text": "Kotak sekring",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h329",
+  "text": "Album perangko",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h331",
+  "text": "Papan kunci",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h333",
+  "text": "Kereta bayi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h334",
+  "text": "Taman air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h335",
+  "text": "Seluncuran air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h339",
+  "text": "Kalong",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h340",
+  "text": "Armadilo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h341",
+  "text": "Hiu martil",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h342",
+  "text": "Penguin kaisar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h343",
+  "text": "Komodo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h346",
+  "text": "Pari manta",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h349",
+  "text": "Paus orka",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h350",
+  "text": "Katak racun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h351",
+  "text": "Kura-kura raksasa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h352",
+  "text": "Harimau bertaring tajam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h353",
+  "text": "Macan tutul salju",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h354",
+  "text": "Platipus",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h356",
+  "text": "Wombat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h358",
+  "text": "Amfiteater",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h360",
+  "text": "Reruntuhan benteng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h362",
+  "text": "Menara televisi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h363",
+  "text": "Istana kaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h364",
+  "text": "Katedral",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h365",
+  "text": "Papan reklame neon",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h366",
+  "text": "Observatorium",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h367",
+  "text": "Gedung opera",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h369",
+  "text": "Bendungan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h370",
+  "text": "Gerbang kemenangan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h371",
+  "text": "Pipa saluran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h373",
+  "text": "Panci presto",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h374",
+  "text": "Pemasak telur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h375",
+  "text": "Penggiling daging",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h376",
+  "text": "Mikser tangan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h377",
+  "text": "Penggiling lada",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h378",
+  "text": "Parutan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h379",
+  "text": "Pemeras jus",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h380",
+  "text": "Cetakan wafel",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h382",
+  "text": "Gergaji pita",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h383",
+  "text": "Pemotong baut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h384",
+  "text": "Mesin bubut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h386",
+  "text": "Gergaji mesin",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h387",
+  "text": "Peniup daun",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h388",
+  "text": "Solder",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h389",
+  "text": "Alat las",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h390",
+  "text": "Ragum",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h391",
+  "text": "Gergaji ukir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h392",
+  "text": "Meja kerja",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h393",
+  "text": "Helikopter ambulans",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h394",
+  "text": "Truk pengangkut mobil",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h396",
+  "text": "Pompa beton",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h397",
+  "text": "Tangga pemadam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h399",
+  "text": "Kereta barang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h404",
+  "text": "Mobil penyapu jalan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h405",
+  "text": "Truk tangki",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h407",
+  "text": "Jembatan kanopi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h409",
+  "text": "Ngarai",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h411",
+  "text": "Danau kawah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h412",
+  "text": "Hutan bakau",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h413",
+  "text": "Hutan berkabut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h415",
+  "text": "Gurun garam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h416",
+  "text": "Gua stalaktit",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h417",
+  "text": "Gua bawah air",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h418",
+  "text": "Kawah gunung berapi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h419",
+  "text": "Air mancur",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h420",
+  "text": "Helm astronaut",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h421",
+  "text": "Kendaraan bulan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h422",
+  "text": "Kapsul antariksa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h423",
+  "text": "Wahana antariksa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h428",
+  "text": "Arkeolog",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h429",
+  "text": "Penjaga kolam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h430",
+  "text": "Pustakawan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h431",
+  "text": "Pendaki gunung",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h433",
+  "text": "Dokter bedah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h434",
+  "text": "Pawang sirkus",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h435",
+  "text": "Penjaga hutan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h437",
+  "text": "Peternak lebah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h439",
+  "text": "Masinis",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h440",
+  "text": "Pembaca berita",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h442",
+  "text": "Pemeran pengganti",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h443",
+  "text": "Instruktur selam",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h444",
+  "text": "Pembawa acara cuaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h445",
+  "text": "Penari balet",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h447",
+  "text": "Penelan api",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h448",
+  "text": "Pemain juggling",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h449",
+  "text": "Dalang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h450",
+  "text": "Pantomim",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h452",
+  "text": "Bola pohon Natal",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h454",
+  "text": "Sapu penyihir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h455",
+  "text": "Lampion labu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h458",
+  "text": "Kelinci Paskah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h459",
+  "text": "Bintang Natal",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h460",
+  "text": "Pintu putar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h461",
+  "text": "Tangga darurat",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h463",
+  "text": "Jembatan penyeberangan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h464",
+  "text": "Pintu garasi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h465",
+  "text": "Atap kaca",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h466",
+  "text": "Jam menara gereja",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h467",
+  "text": "Pintu rol",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h468",
+  "text": "Pintu geser",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h469",
+  "text": "Tangga spiral",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h470",
+  "text": "Penghancur kertas",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h471",
+  "text": "Pemindai barkode",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h472",
+  "text": "Printer label",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h473",
+  "text": "ATM",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h474",
+  "text": "Mesin fotokopi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h476",
+  "text": "Mesin kasir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h477",
+  "text": "Mesin tik",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h480",
+  "text": "Sistem penyiram",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h481",
+  "text": "Gunting pagar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h482",
+  "text": "Penyiram rumput",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h483",
+  "text": "Tong air hujan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h484",
+  "text": "Penangkal petir",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h488",
+  "text": "Ban berjalan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h491",
+  "text": "Pipa gorong-gorong",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h492",
+  "text": "Lift barang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h493",
+  "text": "Kapal uap",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h494",
+  "text": "Kapal tiang tiga",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h496",
+  "text": "Kapal nelayan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h497",
+  "text": "Kapal kargo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h498",
+  "text": "Perahu rumah",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h499",
+  "text": "Katamaran",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "id_h500",
+  "text": "Kapal pesiar",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ }
+]

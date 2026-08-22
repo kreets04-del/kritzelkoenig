@@ -1,0 +1,7802 @@
+[
+ {
+  "wordId": "th_e001",
+  "text": "สุนัข",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e002",
+  "text": "แมว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e003",
+  "text": "หนู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e004",
+  "text": "ปลา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e005",
+  "text": "ปลาทอง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e006",
+  "text": "เป็ด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e007",
+  "text": "วัว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e008",
+  "text": "หมู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e009",
+  "text": "ม้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e010",
+  "text": "แกะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e011",
+  "text": "แพะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e012",
+  "text": "ไก่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e013",
+  "text": "ไก่ตัวผู้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e014",
+  "text": "เม่นแคระ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e015",
+  "text": "หมี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e016",
+  "text": "หมาป่า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e017",
+  "text": "สุนัขจิ้งจอก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e018",
+  "text": "กวาง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e019",
+  "text": "ผึ้ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e020",
+  "text": "แมงมุม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e021",
+  "text": "หอยทาก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e022",
+  "text": "ด้วง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e023",
+  "text": "แมลงวัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e024",
+  "text": "ฉลาม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e025",
+  "text": "วาฬ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e026",
+  "text": "ปู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e027",
+  "text": "หอย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e028",
+  "text": "เพนกวิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e029",
+  "text": "แอปเปิล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e030",
+  "text": "ลูกแพร์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e031",
+  "text": "กล้วย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e032",
+  "text": "เชอร์รี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e033",
+  "text": "องุ่น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e034",
+  "text": "มะนาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e035",
+  "text": "มะเขือเทศ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e036",
+  "text": "แครอท",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e037",
+  "text": "แตงกวา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e038",
+  "text": "หัวหอม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e039",
+  "text": "พริกหวาน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e040",
+  "text": "ถั่วลันเตา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e041",
+  "text": "เห็ด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e042",
+  "text": "ไข่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e043",
+  "text": "ขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e044",
+  "text": "ขนมปังกลม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e045",
+  "text": "ชีส",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e046",
+  "text": "ไอศกรีม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e047",
+  "text": "พิซซ่า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e048",
+  "text": "เฟรนช์ฟรายส์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e049",
+  "text": "คุกกี้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e050",
+  "text": "อมยิ้ม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e051",
+  "text": "ลูกอม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e052",
+  "text": "ดวงอาทิตย์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e053",
+  "text": "ดวงจันทร์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e054",
+  "text": "ดาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e055",
+  "text": "ต้นไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e056",
+  "text": "ดอกไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e057",
+  "text": "ดอกกุหลาบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e058",
+  "text": "ใบไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e059",
+  "text": "หญ้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e060",
+  "text": "ภูเขา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e061",
+  "text": "เนินเขา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e062",
+  "text": "ทะเลสาบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e063",
+  "text": "แม่น้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e064",
+  "text": "ก้อนหิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e065",
+  "text": "เมฆ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e066",
+  "text": "ฝน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e067",
+  "text": "หิมะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e068",
+  "text": "ฟ้าผ่า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e069",
+  "text": "กระบองเพชร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e070",
+  "text": "ต้นปาล์ม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e071",
+  "text": "เกาะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e072",
+  "text": "ชายหาด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e073",
+  "text": "ลม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e074",
+  "text": "แอ่งน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e075",
+  "text": "บ้าน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e076",
+  "text": "กระท่อม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e077",
+  "text": "เต็นท์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e078",
+  "text": "หอคอย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e079",
+  "text": "ประตู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e080",
+  "text": "หน้าต่าง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e081",
+  "text": "รั้ว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e082",
+  "text": "ประตูรั้ว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e083",
+  "text": "รถยนต์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e084",
+  "text": "รถบัส",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e085",
+  "text": "รถไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e086",
+  "text": "เรือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e087",
+  "text": "เรือใหญ่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e088",
+  "text": "จรวด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e089",
+  "text": "จักรยาน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e090",
+  "text": "แท็กซี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e091",
+  "text": "ลูกบอล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e092",
+  "text": "ตุ๊กตาหมี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e093",
+  "text": "ตุ๊กตา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e094",
+  "text": "ลูกเต๋า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e095",
+  "text": "ลูกแก้ว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e096",
+  "text": "โยโย่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e097",
+  "text": "ลูกข่าง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e098",
+  "text": "ถ้วยรางวัล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e099",
+  "text": "เหรียญรางวัล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e100",
+  "text": "ว่าว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e101",
+  "text": "หมวก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e102",
+  "text": "หมวกไหมพรม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e103",
+  "text": "รองเท้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e104",
+  "text": "ถุงเท้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e105",
+  "text": "ผ้าพันคอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e106",
+  "text": "เสื้อเชิ้ต",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e107",
+  "text": "กางเกง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e108",
+  "text": "กระโปรง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e109",
+  "text": "ชุดเดรส",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e110",
+  "text": "เสื้อแจ็กเก็ต",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e111",
+  "text": "เสื้อโค้ท",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e112",
+  "text": "เข็มขัด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e113",
+  "text": "เนกไท",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e114",
+  "text": "โบว์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e115",
+  "text": "แว่นตา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e116",
+  "text": "รองเท้าบูท",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e117",
+  "text": "กระเป๋า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e118",
+  "text": "แหวน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e119",
+  "text": "มงกุฎ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e120",
+  "text": "กุญแจ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e121",
+  "text": "โต๊ะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e122",
+  "text": "เก้าอี้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e123",
+  "text": "เตียง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e124",
+  "text": "โซฟา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e125",
+  "text": "เก้าอี้นวม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e126",
+  "text": "ม้านั่งยาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e127",
+  "text": "สตูล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e128",
+  "text": "ชั้นวางของ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e129",
+  "text": "โคมไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e130",
+  "text": "กระจกเงา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e131",
+  "text": "พรม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e132",
+  "text": "หมอน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e133",
+  "text": "แจกัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e134",
+  "text": "เทียน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e135",
+  "text": "นาฬิกา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e136",
+  "text": "หนังสือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e137",
+  "text": "แก้วน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e138",
+  "text": "ถ้วยกาแฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e139",
+  "text": "จาน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e140",
+  "text": "หม้อ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e141",
+  "text": "กระทะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e142",
+  "text": "ส้อม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e143",
+  "text": "ช้อน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e144",
+  "text": "มีด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e145",
+  "text": "กาน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e146",
+  "text": "ถังน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e147",
+  "text": "ไม้กวาด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e148",
+  "text": "รูปหัวใจ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e149",
+  "text": "วงกลม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e150",
+  "text": "สามเหลี่ยม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e151",
+  "text": "สี่เหลี่ยมจัตุรัส",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e152",
+  "text": "ลูกศร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e153",
+  "text": "เครื่องหมายกากบาท",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e154",
+  "text": "หน้ายิ้ม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e155",
+  "text": "เพชร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e156",
+  "text": "เกือกม้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e157",
+  "text": "เกลียวก้นหอย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e158",
+  "text": "สมอเรือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e159",
+  "text": "ตา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e160",
+  "text": "จมูก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e161",
+  "text": "ปาก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e162",
+  "text": "หู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e163",
+  "text": "มือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e164",
+  "text": "เท้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e165",
+  "text": "ขา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e166",
+  "text": "แขน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e167",
+  "text": "ฟัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e168",
+  "text": "ลิ้น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e169",
+  "text": "นิ้วมือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e170",
+  "text": "นิ้วหัวแม่มือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e171",
+  "text": "หัวเข่า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e172",
+  "text": "เครา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e173",
+  "text": "เส้นผม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e174",
+  "text": "ของขวัญ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e175",
+  "text": "ระฆัง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e176",
+  "text": "ลูกโป่ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e177",
+  "text": "เลื่อนหิมะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e178",
+  "text": "ไข่อีสเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e179",
+  "text": "พลาสเตอร์ปิดแผล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e180",
+  "text": "เข็มฉีดยา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e181",
+  "text": "หน้ากาก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e182",
+  "text": "แว่นขยาย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e183",
+  "text": "สบู่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e184",
+  "text": "ผ้าเช็ดตัว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e185",
+  "text": "หวี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e186",
+  "text": "กรรไกร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e187",
+  "text": "ปากกา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e188",
+  "text": "ดินสอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e189",
+  "text": "ไม้บรรทัด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e190",
+  "text": "สมุด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e191",
+  "text": "กระดานดำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e192",
+  "text": "ชอล์ก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e193",
+  "text": "พู่กัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e194",
+  "text": "ค้อน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e195",
+  "text": "ตะปู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e196",
+  "text": "สกรู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e197",
+  "text": "เลื่อย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e198",
+  "text": "ขวาน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e199",
+  "text": "บันไดพาด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e200",
+  "text": "พลั่ว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e201",
+  "text": "คราด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e202",
+  "text": "ดอกทานตะวัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e203",
+  "text": "เตาย่าง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e204",
+  "text": "คันเบ็ด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e205",
+  "text": "โคมไฟถือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e206",
+  "text": "เปลวไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e207",
+  "text": "บ้านนก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e208",
+  "text": "ต้นแอปเปิล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e209",
+  "text": "มังกร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e210",
+  "text": "อัศวิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e211",
+  "text": "พระราชา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e212",
+  "text": "พระราชินี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e213",
+  "text": "แม่มด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e214",
+  "text": "นางฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e215",
+  "text": "ผี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e216",
+  "text": "คนแคระ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e217",
+  "text": "โจรสลัด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e218",
+  "text": "ดาวเคราะห์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e219",
+  "text": "จานบิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e220",
+  "text": "มนุษย์ต่างดาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e221",
+  "text": "ดาวหาง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e222",
+  "text": "ดาวอังคาร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e223",
+  "text": "ลูกกวาดไม้เท้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e224",
+  "text": "ขวดโหลแยม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e225",
+  "text": "แก้วน้ำผลไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e226",
+  "text": "หลอดดูด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e227",
+  "text": "ผ้าจับหม้อ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e228",
+  "text": "ถ้วยใส่ไข่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e229",
+  "text": "กล่องข้าว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e230",
+  "text": "แปรงผม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e231",
+  "text": "รองเท้าแตะในบ้าน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e232",
+  "text": "หมวกกันฝน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e233",
+  "text": "กางเกงว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e234",
+  "text": "แม่กุญแจ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e235",
+  "text": "ลูกบิดประตู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e236",
+  "text": "ขอบหน้าต่าง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e237",
+  "text": "เครื่องบินกระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e238",
+  "text": "แก้วนม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e239",
+  "text": "เทียนหอมเล็ก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e240",
+  "text": "กล่องไข่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e241",
+  "text": "ต้นหอม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e242",
+  "text": "ผักกาดหอม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e243",
+  "text": "ขนมปังกรอบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e244",
+  "text": "ข้าวพอง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e247",
+  "text": "บลูเบอร์รี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e248",
+  "text": "อินทผลัม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e249",
+  "text": "มะละกอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e252",
+  "text": "หน่อไม้ฝรั่ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e253",
+  "text": "นก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e254",
+  "text": "กบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e255",
+  "text": "นกฮูก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e256",
+  "text": "นกพิราบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e257",
+  "text": "นกอินทรี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e258",
+  "text": "หนอน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e259",
+  "text": "หงส์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e260",
+  "text": "นกนางนวล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e261",
+  "text": "นกกระสา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e262",
+  "text": "กระต่าย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e263",
+  "text": "เนย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e264",
+  "text": "น้ำผึ้ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e265",
+  "text": "ไส้กรอก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e266",
+  "text": "ข้าว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e267",
+  "text": "เส้นก๋วยเตี๋ยว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e268",
+  "text": "เกลือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e269",
+  "text": "น้ำตาล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e270",
+  "text": "น้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e271",
+  "text": "กาแฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e272",
+  "text": "ชา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e273",
+  "text": "ซอสมะเขือเทศ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e274",
+  "text": "มัสตาร์ด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e275",
+  "text": "ขนมปังปิ้ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e276",
+  "text": "โจ๊ก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e277",
+  "text": "โยเกิร์ต",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e278",
+  "text": "ทะเล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e279",
+  "text": "ลำธาร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e280",
+  "text": "ทุ่งหญ้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e281",
+  "text": "ทราย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e282",
+  "text": "ไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e283",
+  "text": "หมอก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e284",
+  "text": "พุ่มไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e285",
+  "text": "กิ่งไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e286",
+  "text": "รากไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e287",
+  "text": "ต้นสน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e290",
+  "text": "ลังไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e291",
+  "text": "ตะกร้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e292",
+  "text": "ขวด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e293",
+  "text": "กระป๋อง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e294",
+  "text": "ชาม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e295",
+  "text": "ผ้าห่ม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e296",
+  "text": "ที่นอน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e297",
+  "text": "จุกไม้ก๊อก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e298",
+  "text": "กระดุม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e299",
+  "text": "เข็ม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e300",
+  "text": "ด้าย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e301",
+  "text": "กระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e302",
+  "text": "จดหมาย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e303",
+  "text": "เหรียญ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e304",
+  "text": "ธนบัตร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e305",
+  "text": "เชือก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e306",
+  "text": "โซ่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e307",
+  "text": "ไม้เท้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e308",
+  "text": "หัว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e309",
+  "text": "ท้อง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e310",
+  "text": "หลัง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e311",
+  "text": "ไหล่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e312",
+  "text": "ข้อศอก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e313",
+  "text": "คอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e314",
+  "text": "กระดานลื่น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e315",
+  "text": "ชิงช้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e316",
+  "text": "ไม้กระดก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e317",
+  "text": "โน้ตดนตรี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e318",
+  "text": "วิทยุ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e319",
+  "text": "รถไฟใต้ดิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e320",
+  "text": "เรือเฟอร์รี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e321",
+  "text": "ถุงมือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e322",
+  "text": "เสื้อกันหนาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e323",
+  "text": "กางเกงใน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e325",
+  "text": "กระปุกคุกกี้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e326",
+  "text": "กล่องนม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e327",
+  "text": "ขนมปังแผ่น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e328",
+  "text": "ฟันหลอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e329",
+  "text": "เรือกระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e330",
+  "text": "ก๊อกน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e331",
+  "text": "ปลาไหล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e332",
+  "text": "เหยี่ยว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e333",
+  "text": "ไก่ฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e334",
+  "text": "สลอธ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e335",
+  "text": "ตุ๊กแก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e336",
+  "text": "เสือจากัวร์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e339",
+  "text": "อีกา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e344",
+  "text": "ถั่ว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e345",
+  "text": "พริก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e346",
+  "text": "แยม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e348",
+  "text": "มะกอก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e349",
+  "text": "อบเชย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e350",
+  "text": "ไฟจราจร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e351",
+  "text": "แสตมป์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e352",
+  "text": "แม่เหล็ก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e353",
+  "text": "แฟ้มเอกสาร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e354",
+  "text": "พัสดุ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e355",
+  "text": "กระดาษแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e356",
+  "text": "ไข่มุก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e357",
+  "text": "นกหวีด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e358",
+  "text": "กล่อง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e359",
+  "text": "ถุง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e360",
+  "text": "เนินทราย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e361",
+  "text": "ทุ่งนา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e362",
+  "text": "โขดหิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e363",
+  "text": "สวน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e365",
+  "text": "ชายฝั่ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e367",
+  "text": "น้ำพุ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e368",
+  "text": "บ่อน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e369",
+  "text": "ร้านขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e370",
+  "text": "สำนักงาน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e371",
+  "text": "ร้านกาแฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e372",
+  "text": "ตลาด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e373",
+  "text": "สวนสาธารณะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e374",
+  "text": "บิกินี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e376",
+  "text": "เสื้อฮู้ด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e377",
+  "text": "รองเท้าแตะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e378",
+  "text": "รองเท้าผ้าใบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e379",
+  "text": "ระเบียง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e380",
+  "text": "ห้องน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e381",
+  "text": "โถงทางเดิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e382",
+  "text": "ห้องใต้ดิน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e383",
+  "text": "ครัว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e384",
+  "text": "เตาอบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e385",
+  "text": "บันได",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e387",
+  "text": "ไซต์ก่อสร้าง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e389",
+  "text": "อนุสาวรีย์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e390",
+  "text": "รูปปั้น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e391",
+  "text": "อุโมงค์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e392",
+  "text": "แผ่นไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e393",
+  "text": "ลวด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e394",
+  "text": "ตะขอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e395",
+  "text": "ที่หนีบผ้า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e396",
+  "text": "กาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e397",
+  "text": "ดินน้ำมัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e398",
+  "text": "กลุ่มไหมพรม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e400",
+  "text": "สับปะรด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e401",
+  "text": "เมล็ดแอปเปิล",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e403",
+  "text": "แตงกวาหั่นแว่น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e404",
+  "text": "ชีสหั่นเต๋า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e405",
+  "text": "เค้กเชอร์รี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e406",
+  "text": "น้ำมะนาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e408",
+  "text": "แฮม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e409",
+  "text": "ไข่ดาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e410",
+  "text": "เรือตกปลา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e411",
+  "text": "ทุ่นลอยน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e412",
+  "text": "แพ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e414",
+  "text": "รถจี๊ป",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e415",
+  "text": "รถมอเตอร์ไซค์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e416",
+  "text": "สามล้อถีบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e417",
+  "text": "ต้นไผ่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e419",
+  "text": "เฟิร์น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e420",
+  "text": "ทิวลิป",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e421",
+  "text": "เป็ดยาง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e422",
+  "text": "บูมเมอแรง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e423",
+  "text": "โดมิโน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e424",
+  "text": "ลูกแบดมินตัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e426",
+  "text": "จานร่อน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e427",
+  "text": "ถุงมือกันหนาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e429",
+  "text": "ต่างหู",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e430",
+  "text": "เสื้อกันฝน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e431",
+  "text": "แว่นกันแดด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e432",
+  "text": "รองเท้าบูทยาง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e433",
+  "text": "กระโปรงท้ายรถ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e434",
+  "text": "กรวยจราจร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e435",
+  "text": "ถังขยะ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e436",
+  "text": "ม้านั่งในสวน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e437",
+  "text": "บันไดเลื่อน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e438",
+  "text": "ป้ายถนน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e439",
+  "text": "ร้านขายยา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e440",
+  "text": "ร้านหนังสือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e441",
+  "text": "สถานีดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e442",
+  "text": "รถเข็นขายอาหาร",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e443",
+  "text": "ทารก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e444",
+  "text": "พี่ชาย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e445",
+  "text": "พี่สาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e446",
+  "text": "คุณยาย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e447",
+  "text": "คุณตา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e448",
+  "text": "ธง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e449",
+  "text": "หมวกแก๊ป",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e451",
+  "text": "ผ้าคลุมหน้าเจ้าสาว",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e452",
+  "text": "ฟองอากาศ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e454",
+  "text": "ประกายไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e455",
+  "text": "ควัน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e456",
+  "text": "เงา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e457",
+  "text": "เหมืองแร่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e458",
+  "text": "ทางเดินในป่า",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e460",
+  "text": "กองทราย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e461",
+  "text": "บอนไซ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e463",
+  "text": "เกาลัด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e466",
+  "text": "ลูกสน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e467",
+  "text": "ลูกบอลชายหาด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e469",
+  "text": "ฟองสบู่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e470",
+  "text": "แบตเตอรี่",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e471",
+  "text": "สายไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e472",
+  "text": "ถ่านกระดุม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e473",
+  "text": "แผ่นรองเมาส์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e474",
+  "text": "ปลั๊กไฟ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e475",
+  "text": "เข็มกลัด",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e476",
+  "text": "เบ็ดตกปลา",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e477",
+  "text": "กบเหลาดินสอ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e478",
+  "text": "สติกเกอร์",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e479",
+  "text": "ชุดว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e480",
+  "text": "หมวกว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e482",
+  "text": "แก้วมัค",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e483",
+  "text": "กระปุกลูกอม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e484",
+  "text": "ขนมปังทาเนย",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e485",
+  "text": "ถุงช้อปปิ้ง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e486",
+  "text": "น้ำแข็งก้อน",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e487",
+  "text": "กระป๋องสี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e488",
+  "text": "ขนนก",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e490",
+  "text": "ริบบิ้น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e491",
+  "text": "ลูกบอลยาง",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e492",
+  "text": "ยางรัดผม",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e493",
+  "text": "แปรงปัดฝุ่น",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e494",
+  "text": "ช้อนไม้",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e496",
+  "text": "ที่แขวนเสื้อ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e497",
+  "text": "ฝาจีบ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e498",
+  "text": "ที่คั่นหนังสือ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e499",
+  "text": "สมุดระบายสี",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_e500",
+  "text": "กล่องสีน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "th_m001",
+  "text": "หนูแฮมสเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m003",
+  "text": "นกแก้ว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m004",
+  "text": "เต่า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m006",
+  "text": "สิงโต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m007",
+  "text": "เสือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m008",
+  "text": "ช้าง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m009",
+  "text": "ยีราฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m010",
+  "text": "ม้าลาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m011",
+  "text": "ลิง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m013",
+  "text": "แพนด้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m014",
+  "text": "อูฐ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m015",
+  "text": "นกฟลามิงโก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m016",
+  "text": "กอริลลา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m017",
+  "text": "ลา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m018",
+  "text": "ห่าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m019",
+  "text": "ลูกเจี๊ยบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m020",
+  "text": "ลูกวัว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m021",
+  "text": "ลูกหมู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m022",
+  "text": "ลูกแกะ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m023",
+  "text": "คอกสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m024",
+  "text": "รถแทรกเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m025",
+  "text": "ยุ้งฉาง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m026",
+  "text": "โลมา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m028",
+  "text": "แมงกะพรุน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m029",
+  "text": "ปลาดาว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m030",
+  "text": "กุ้งมังกร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m031",
+  "text": "ปะการัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m032",
+  "text": "แมวน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m033",
+  "text": "ตัวต่อ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m034",
+  "text": "มด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m035",
+  "text": "ยุง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m036",
+  "text": "หนอนผีเสื้อ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m037",
+  "text": "ไส้เดือน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m038",
+  "text": "ผีเสื้อกลางคืน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m039",
+  "text": "ส้ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m040",
+  "text": "สตรอว์เบอร์รี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m041",
+  "text": "ราสเบอร์รี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m042",
+  "text": "ลูกพลัม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m044",
+  "text": "แตงโม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m045",
+  "text": "กีวี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m046",
+  "text": "มะม่วง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m047",
+  "text": "ลูกพีช",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m048",
+  "text": "มะเดื่อ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m049",
+  "text": "มันฝรั่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m050",
+  "text": "กระเทียม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m052",
+  "text": "กะหล่ำปลี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m053",
+  "text": "บรอกโคลี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m054",
+  "text": "ฟักทอง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m057",
+  "text": "มะเขือยาว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m060",
+  "text": "เบอร์เกอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m061",
+  "text": "ฮอตดอก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m062",
+  "text": "ซุป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m063",
+  "text": "วาฟเฟิล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m064",
+  "text": "เค้ก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m066",
+  "text": "โดนัท",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m069",
+  "text": "ช็อกโกแลต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m070",
+  "text": "มัฟฟิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m071",
+  "text": "คัพเค้ก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m072",
+  "text": "ป๊อปคอร์น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m074",
+  "text": "ไอศกรีมถ้วย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m076",
+  "text": "นม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m077",
+  "text": "โกโก้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m078",
+  "text": "น้ำอัดลม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m079",
+  "text": "กาน้ำชา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m080",
+  "text": "คีม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m081",
+  "text": "สว่าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m082",
+  "text": "หมวกกันน็อก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m083",
+  "text": "อิฐ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m084",
+  "text": "กีตาร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m085",
+  "text": "เปียโน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m086",
+  "text": "ไวโอลิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m087",
+  "text": "เชลโล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m088",
+  "text": "ทรัมเป็ต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m089",
+  "text": "ทรอมโบน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m090",
+  "text": "ขลุ่ย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m091",
+  "text": "กลอง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m092",
+  "text": "แทมบูรีน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m093",
+  "text": "ฮาร์ป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m094",
+  "text": "ไมโครโฟน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m097",
+  "text": "สกู๊ตเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m098",
+  "text": "เครื่องบิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m099",
+  "text": "เรือแคนู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m100",
+  "text": "รถเปิดประทุน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m101",
+  "text": "รถสปอร์ต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m102",
+  "text": "ตู้เสื้อผ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m103",
+  "text": "ตู้ลิ้นชัก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m104",
+  "text": "ผ้าม่าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m106",
+  "text": "กระถางต้นไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m107",
+  "text": "ตึกสูง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m108",
+  "text": "ปราสาท",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m110",
+  "text": "โบสถ์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m111",
+  "text": "โรงเรียน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m112",
+  "text": "โรงงาน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m113",
+  "text": "โรงรถ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m114",
+  "text": "สะพาน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m115",
+  "text": "กังหันลม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m116",
+  "text": "ประภาคาร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m117",
+  "text": "โทรทัศน์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m118",
+  "text": "นาฬิกาปลุก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m119",
+  "text": "โทรศัพท์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m120",
+  "text": "เตาแก๊ส",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m122",
+  "text": "เครื่องปั่น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m123",
+  "text": "เครื่องปิ้งขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m124",
+  "text": "กระชอน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m125",
+  "text": "ไดร์เป่าผม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m127",
+  "text": "มีดโกน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m128",
+  "text": "ฟองน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m129",
+  "text": "คอมพิวเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m130",
+  "text": "แล็ปท็อป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m131",
+  "text": "เครื่องพิมพ์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m132",
+  "text": "ตราปั๊ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m133",
+  "text": "ปฏิทิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m134",
+  "text": "เครื่องเจาะกระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m135",
+  "text": "เครื่องเย็บกระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m136",
+  "text": "ลูกโลก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m137",
+  "text": "ฟุตบอล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m138",
+  "text": "บาสเกตบอล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m139",
+  "text": "วอลเลย์บอล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m141",
+  "text": "ดัมเบล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m142",
+  "text": "สเกตบอร์ด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m143",
+  "text": "รองเท้าสเกตน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m144",
+  "text": "แทรมโพลีน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m145",
+  "text": "สกี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m146",
+  "text": "ลูกดอก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m147",
+  "text": "บล็อกไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m148",
+  "text": "จิ๊กซอว์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m149",
+  "text": "ไพ่",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m150",
+  "text": "ปราสาททราย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m151",
+  "text": "เชือกกระโดด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m152",
+  "text": "หุ่นยนต์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m153",
+  "text": "ไม้กายสิทธิ์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m154",
+  "text": "สมาร์ตโฟน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m155",
+  "text": "แท็บเล็ต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m156",
+  "text": "กล้องถ่ายรูป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m157",
+  "text": "โดรน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m158",
+  "text": "ถ่านไฟฉาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m159",
+  "text": "เต้ารับไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m160",
+  "text": "กล้องส่องทางไกล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m161",
+  "text": "น้ำตก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m162",
+  "text": "ถ้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m163",
+  "text": "ป่า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m164",
+  "text": "ภูเขาไฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m165",
+  "text": "ร่ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m166",
+  "text": "พายุฝนฟ้าคะนอง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m167",
+  "text": "พายุทอร์นาโด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m168",
+  "text": "รุ้งกินน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m169",
+  "text": "ตุ๊กตาหิมะ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m170",
+  "text": "เกล็ดหิมะ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m172",
+  "text": "เทอร์โมมิเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m173",
+  "text": "กระเป๋าเดินทาง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m174",
+  "text": "เป้สะพายหลัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m175",
+  "text": "หมวกปีกกว้าง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m176",
+  "text": "แผนที่",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m177",
+  "text": "เข็มทิศ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m178",
+  "text": "ถุงนอน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m179",
+  "text": "รองเท้าแตะหนีบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m180",
+  "text": "โรงแรม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m181",
+  "text": "หมอ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m182",
+  "text": "ตำรวจ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m183",
+  "text": "พ่อครัว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m184",
+  "text": "คนทำขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m185",
+  "text": "ครู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m186",
+  "text": "จิตรกร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m187",
+  "text": "คนสวน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m188",
+  "text": "นักบิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m189",
+  "text": "ตัวตลก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m190",
+  "text": "นักมายากล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m191",
+  "text": "ช่างตัดผม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m192",
+  "text": "ชาวนา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m193",
+  "text": "กัปตันเรือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m194",
+  "text": "ผู้พิพากษา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m195",
+  "text": "เจ้าหญิง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m196",
+  "text": "ยูนิคอร์น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m197",
+  "text": "สัตว์ประหลาด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m198",
+  "text": "ยักษ์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m199",
+  "text": "แวมไพร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m200",
+  "text": "หีบสมบัติ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m201",
+  "text": "ดาวเทียม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m202",
+  "text": "กล้องโทรทรรศน์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m203",
+  "text": "ดาวเสาร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m204",
+  "text": "ยาเม็ด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m205",
+  "text": "ผ้าพันแผล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m206",
+  "text": "ไม้ค้ำยัน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m207",
+  "text": "โครงกระดูก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m208",
+  "text": "สมอง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m209",
+  "text": "บัวรดน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m211",
+  "text": "เปลญวน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m212",
+  "text": "รถขุด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m213",
+  "text": "เครน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m215",
+  "text": "ไซเรน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m216",
+  "text": "กวางเรนเดียร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m217",
+  "text": "สร้อยคอ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m218",
+  "text": "กระเป๋าสตางค์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m219",
+  "text": "พัด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m220",
+  "text": "หนวด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m221",
+  "text": "สร้อยข้อมือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m222",
+  "text": "ชิงช้าสวรรค์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m223",
+  "text": "ม้าหมุน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m224",
+  "text": "สายไหม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m225",
+  "text": "สะพานแขวน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m226",
+  "text": "สถานีรถไฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m229",
+  "text": "เกาะกลางถนน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m230",
+  "text": "ทางม้าลาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m231",
+  "text": "ตู้ขายตั๋วอัตโนมัติ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m232",
+  "text": "รถเข็นกระเป๋า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m233",
+  "text": "รถบัสสองชั้น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m235",
+  "text": "ปั๊มน้ำมัน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m236",
+  "text": "ที่ล้างรถ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m237",
+  "text": "กล่องเครื่องมือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m238",
+  "text": "จักรเย็บผ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m239",
+  "text": "ราวตากผ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m240",
+  "text": "รถเข็นซูเปอร์มาร์เก็ต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m242",
+  "text": "เครื่องบดกาแฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m243",
+  "text": "ถาดอบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m244",
+  "text": "ไม้นวดแป้ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m245",
+  "text": "หม้อซุป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m246",
+  "text": "ช่อดอกไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m247",
+  "text": "ที่วางร่ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m248",
+  "text": "ตู้ไปรษณีย์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m249",
+  "text": "เครื่องเล่นปีนป่าย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m250",
+  "text": "บ้านต้นไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m251",
+  "text": "รางน้ำฝน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m252",
+  "text": "แผงโซลาร์เซลล์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m253",
+  "text": "ป้ายรถเมล์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m254",
+  "text": "บัตรคอนเสิร์ต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m255",
+  "text": "โคอาลา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m256",
+  "text": "เสือชีตาห์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m257",
+  "text": "เสือดาว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m258",
+  "text": "ควาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m260",
+  "text": "นาก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m262",
+  "text": "ตัวลามา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m263",
+  "text": "อัลปาก้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m264",
+  "text": "นกยูง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m265",
+  "text": "นกกระจอกเทศ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m266",
+  "text": "ตัวตุ่น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m267",
+  "text": "บีเวอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m268",
+  "text": "ค้างคาว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m270",
+  "text": "นกหัวขวาน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m272",
+  "text": "ปลาคาร์ป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m273",
+  "text": "ปลากระโทงแทง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m274",
+  "text": "นกกระเรียน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m275",
+  "text": "ครัวซองต์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m277",
+  "text": "ไข่เจียว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m279",
+  "text": "พุดดิ้ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m280",
+  "text": "ชีสเค้ก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m281",
+  "text": "ลาซานญ่า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m283",
+  "text": "ซูชิ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m284",
+  "text": "ซาลามี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m285",
+  "text": "อะโวคาโด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m286",
+  "text": "แบล็กเบอร์รี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m288",
+  "text": "ที่เปิดกระป๋อง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m289",
+  "text": "ที่เปิดจุกไม้ก๊อก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m290",
+  "text": "ตะกร้อตีไข่",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m291",
+  "text": "ถ้วยตวง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m292",
+  "text": "เครื่องชั่งในครัว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m293",
+  "text": "ตะหลิว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m294",
+  "text": "ผ้าเช็ดจาน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m296",
+  "text": "ชั้นวางรองเท้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m297",
+  "text": "นาฬิกาแขวนผนัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m298",
+  "text": "โคมไฟตั้งพื้น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m299",
+  "text": "กองหนังสือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m300",
+  "text": "ไม้เบสบอล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m301",
+  "text": "ลูกโบว์ลิ่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m302",
+  "text": "ไม้แบดมินตัน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m303",
+  "text": "กระดานโต้คลื่น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m304",
+  "text": "แว่นดำน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m305",
+  "text": "ห่วงยาง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m306",
+  "text": "ผู้รักษาประตู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m307",
+  "text": "กรรมการ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m308",
+  "text": "จักรยานเสือหมอบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m309",
+  "text": "หมอฟัน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m310",
+  "text": "สัตวแพทย์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m311",
+  "text": "บุรุษไปรษณีย์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m312",
+  "text": "พนักงานขาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m313",
+  "text": "นักดนตรี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m314",
+  "text": "นักเต้น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m315",
+  "text": "นักแสดง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m316",
+  "text": "นักสืบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m317",
+  "text": "นักวิทยาศาสตร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m318",
+  "text": "พิพิธภัณฑ์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m319",
+  "text": "ห้องสมุด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m320",
+  "text": "โรงภาพยนตร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m321",
+  "text": "ร้านอาหาร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m322",
+  "text": "โรงพยาบาล",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m323",
+  "text": "สนามบิน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m324",
+  "text": "ท่าเรือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m325",
+  "text": "ฟาร์ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m326",
+  "text": "สนามเด็กเล่น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m327",
+  "text": "สระว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m328",
+  "text": "สนามกีฬา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m329",
+  "text": "ละครสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m330",
+  "text": "สวนสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m331",
+  "text": "ธารน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m332",
+  "text": "ทะเลทราย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m333",
+  "text": "หน้าผา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m334",
+  "text": "โอเอซิส",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m335",
+  "text": "หิมะถล่ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m336",
+  "text": "ตัวกินมด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m339",
+  "text": "กิ้งก่าเปลี่ยนสี",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m341",
+  "text": "ไฮยีน่า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m343",
+  "text": "งูจงอาง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m344",
+  "text": "ลีเมอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m346",
+  "text": "อุรังอุตัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m348",
+  "text": "ลิงบาบูน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m350",
+  "text": "เม่น",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m351",
+  "text": "สมเสร็จ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m352",
+  "text": "นกทูแคน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m353",
+  "text": "วอลรัส",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m355",
+  "text": "ส้มโอ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m357",
+  "text": "ลิ้นจี่",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m358",
+  "text": "เสาวรส",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m360",
+  "text": "บีทรูท",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m361",
+  "text": "ขึ้นฉ่าย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m362",
+  "text": "มันเทศ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m363",
+  "text": "ไขควงไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m364",
+  "text": "ทั่งตีเหล็ก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m365",
+  "text": "ชะแลง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m366",
+  "text": "ตะไบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m367",
+  "text": "กบไสไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m368",
+  "text": "สิ่ว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m369",
+  "text": "ประแจจับท่อ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m371",
+  "text": "กีตาร์ไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m372",
+  "text": "ฆ้อง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m373",
+  "text": "ดับเบิลเบส",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m374",
+  "text": "ฮาร์โมนิกา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m375",
+  "text": "แซกโซโฟน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m376",
+  "text": "ระนาด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m377",
+  "text": "เครื่องบินสองปีก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m378",
+  "text": "รถโฟล์คลิฟท์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m379",
+  "text": "รถออฟโรด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m380",
+  "text": "รถลีมูซีน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m381",
+  "text": "รถแข่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m384",
+  "text": "บ้านชาวนา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m385",
+  "text": "กระท่อมไม้ซุง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m386",
+  "text": "โรงเก็บเรือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m388",
+  "text": "อิกลู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m390",
+  "text": "แผงขายของ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m391",
+  "text": "มัสยิด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m392",
+  "text": "เจดีย์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m393",
+  "text": "พีระมิด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m394",
+  "text": "วัด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m395",
+  "text": "บ้านหรู",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m397",
+  "text": "โปรเจกเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m398",
+  "text": "จอยเกม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m399",
+  "text": "จอคอมพิวเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m400",
+  "text": "เครื่องเล่นแผ่นเสียง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m401",
+  "text": "พัดลม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m405",
+  "text": "กางเกงวอร์ม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m406",
+  "text": "สนับเข่า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m407",
+  "text": "เสื้อแจ็กเก็ตหนัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m408",
+  "text": "ชุดนอน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m409",
+  "text": "แว่นตานิรภัย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m410",
+  "text": "โต๊ะรีดผ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m411",
+  "text": "พรมเช็ดเท้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m412",
+  "text": "กระจกส่องหน้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m413",
+  "text": "กระเป๋าเอกสาร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m414",
+  "text": "ที่เปิดจดหมาย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m415",
+  "text": "ปากกาหมึกซึม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m416",
+  "text": "บอร์ดปักหมุด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m417",
+  "text": "ปากกาไฮไลต์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m419",
+  "text": "รถจักรไอน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m421",
+  "text": "จักรยานไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m423",
+  "text": "รถโกคาร์ท",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m424",
+  "text": "รถม้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m425",
+  "text": "เรือยนต์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m426",
+  "text": "เรือถีบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m428",
+  "text": "เขาวงกต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m429",
+  "text": "สวนสมุนไพร",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m431",
+  "text": "ซุ้มดอกกุหลาบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m432",
+  "text": "ปราสาทเป่าลม",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m436",
+  "text": "หน้าไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m438",
+  "text": "หน้ากากฟันดาบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m439",
+  "text": "ไม้ฮอกกี้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m440",
+  "text": "พินโบว์ลิ่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m443",
+  "text": "ตาข่ายแบดมินตัน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m444",
+  "text": "รองเท้าบัลเลต์",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m445",
+  "text": "ผ้าใบวาดรูป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m446",
+  "text": "โทรโข่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m447",
+  "text": "ขาตั้งวาดรูป",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m450",
+  "text": "ช่างมุงหลังคา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m451",
+  "text": "คนขายเนื้อ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m452",
+  "text": "สับปะรดกระป๋อง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m453",
+  "text": "ตะกร้าขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m454",
+  "text": "ตะเกียบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m455",
+  "text": "หมูปิ้ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m457",
+  "text": "ชามสลัด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m458",
+  "text": "ถาดเสิร์ฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m459",
+  "text": "สัญญาณกันขโมย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m460",
+  "text": "เสาอากาศ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m462",
+  "text": "ปุ่มกดกริ่ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m464",
+  "text": "กล้องวงจรปิด",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m465",
+  "text": "กังหันลมผลิตไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m466",
+  "text": "ราวแขวนผ้าม่าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m467",
+  "text": "ฟืน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m468",
+  "text": "ตู้ครัว",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m469",
+  "text": "ชั้นวางติดผนัง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m470",
+  "text": "พวงมาลัยดอกไม้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m471",
+  "text": "ผลึกน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m472",
+  "text": "พลุ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m473",
+  "text": "น้ำพุร้อน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m474",
+  "text": "ลูกเห็บ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m475",
+  "text": "ธารลาวา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m476",
+  "text": "แสงเหนือ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m477",
+  "text": "พายุทราย",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m478",
+  "text": "สุริยุปราคา",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m479",
+  "text": "เรือยาง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m481",
+  "text": "ไฟฉายดำน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m482",
+  "text": "แหวนแต่งงาน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m484",
+  "text": "หมวกปาร์ตี้",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m487",
+  "text": "รังผึ้ง",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m488",
+  "text": "ที่ให้อาหารนก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m489",
+  "text": "สวนผัก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m490",
+  "text": "กองปุ๋ยหมัก",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m491",
+  "text": "พุ่มกุหลาบ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m492",
+  "text": "ใบเสร็จ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m493",
+  "text": "ตู้โชว์หน้าร้าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m494",
+  "text": "ห้างสรรพสินค้า",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m495",
+  "text": "นั่งร้าน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m496",
+  "text": "เสาคอนกรีต",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m498",
+  "text": "ฝาท่อระบายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m499",
+  "text": "ปล่องไฟ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_m500",
+  "text": "เสาไฟถนน",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "th_h001",
+  "text": "หนูตะเภา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h002",
+  "text": "นกหงส์หยก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h004",
+  "text": "ตู้ปลา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h005",
+  "text": "บ้านสุนัข",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h006",
+  "text": "กรงนก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h007",
+  "text": "ที่ลับเล็บแมว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h008",
+  "text": "ชามอาหารสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h009",
+  "text": "กระรอก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h010",
+  "text": "แรคคูน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h011",
+  "text": "จิงโจ้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h012",
+  "text": "แรด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h013",
+  "text": "ฮิปโป",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h014",
+  "text": "จระเข้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h015",
+  "text": "งู",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h016",
+  "text": "หมีขั้วโลก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h017",
+  "text": "นกกระทุง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h018",
+  "text": "เมียร์แคต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h019",
+  "text": "ไก่งวง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h020",
+  "text": "ฟ่อนฟาง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h021",
+  "text": "ม้าน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h022",
+  "text": "ปลาหมึกยักษ์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h023",
+  "text": "ปลาหมึก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h024",
+  "text": "ปลากระเบน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h025",
+  "text": "เม่นทะเล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h026",
+  "text": "ผีเสื้อ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h027",
+  "text": "เต่าทอง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h028",
+  "text": "แมลงปอ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h029",
+  "text": "แมงป่อง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h031",
+  "text": "มะพร้าว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h032",
+  "text": "ทับทิม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h033",
+  "text": "ดอกกะหล่ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h034",
+  "text": "ข้าวโพดฝัก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h035",
+  "text": "สปาเกตตี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h036",
+  "text": "แพนเค้ก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h037",
+  "text": "แซนด์วิช",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h039",
+  "text": "เยลลี่หมี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h040",
+  "text": "ช็อกโกแลตแท่ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h041",
+  "text": "เยลลี่",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h042",
+  "text": "ขวดน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h044",
+  "text": "กระติกน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h045",
+  "text": "กระติกน้ำร้อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h046",
+  "text": "แก้วค็อกเทล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h047",
+  "text": "สมูทตี้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h048",
+  "text": "ไขควง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h049",
+  "text": "ประแจ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h050",
+  "text": "สายวัด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h052",
+  "text": "ลูกกลิ้งทาสี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h054",
+  "text": "เทปกาว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h056",
+  "text": "เกรียงโบกปูน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h057",
+  "text": "คลาริเน็ต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h058",
+  "text": "กลองชุด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h059",
+  "text": "หีบเพลงชัก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h060",
+  "text": "ที่วางโน้ตเพลง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h063",
+  "text": "เปียโนหางยาว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h064",
+  "text": "เฮลิคอปเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h065",
+  "text": "เรือใบ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h066",
+  "text": "รถราง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h067",
+  "text": "รถบรรทุก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h068",
+  "text": "รถตำรวจ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h069",
+  "text": "รถดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h070",
+  "text": "รถพยาบาล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h071",
+  "text": "รถขยะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h072",
+  "text": "รถตู้ส่งของ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h074",
+  "text": "รถบ้าน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h076",
+  "text": "รถลาก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h077",
+  "text": "รถบรรทุกเทท้าย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h079",
+  "text": "เก้าอี้โยก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h080",
+  "text": "ชั้นหนังสือ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h081",
+  "text": "โต๊ะทำงาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h083",
+  "text": "ไม้แขวนเสื้อ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h084",
+  "text": "กรอบรูป",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h085",
+  "text": "โต๊ะข้างเตียง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h086",
+  "text": "เครื่องดูดฝุ่น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h087",
+  "text": "เตารีด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h088",
+  "text": "ตะกร้าผ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h089",
+  "text": "รีโมต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h090",
+  "text": "ตู้เย็น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h091",
+  "text": "ไมโครเวฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h092",
+  "text": "กาต้มน้ำไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h093",
+  "text": "ขวดเกลือ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h094",
+  "text": "เขียง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h096",
+  "text": "ฝักบัว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h097",
+  "text": "เครื่องซักผ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h098",
+  "text": "โคมไฟตั้งโต๊ะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h099",
+  "text": "เครื่องชงกาแฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h100",
+  "text": "อ่างอาบน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h102",
+  "text": "อ่างล้างหน้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h103",
+  "text": "โถส้วม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h104",
+  "text": "แปรงสีฟัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h105",
+  "text": "ยาสีฟัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h106",
+  "text": "เสื้อคลุมอาบน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h107",
+  "text": "กระเป๋านักเรียน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h108",
+  "text": "ยางลบ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h109",
+  "text": "กล่องดินสอ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h111",
+  "text": "เครื่องคิดเลข",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h112",
+  "text": "ห้องเรียน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h113",
+  "text": "คีย์บอร์ด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h114",
+  "text": "หูฟัง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h115",
+  "text": "ลำโพง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h117",
+  "text": "ไฟฉาย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h118",
+  "text": "สายชาร์จ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h119",
+  "text": "วิทยุสื่อสาร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h120",
+  "text": "เครื่องเล่นเกม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h121",
+  "text": "จานดาวเทียม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h122",
+  "text": "ซองจดหมาย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h123",
+  "text": "คลิปหนีบกระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h124",
+  "text": "ตะกร้าใส่กระดาษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h125",
+  "text": "สมุดจดโน้ต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h126",
+  "text": "เก้าอี้หมุน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h127",
+  "text": "ไม้เทนนิส",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h128",
+  "text": "ไม้กอล์ฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h129",
+  "text": "นวมชกมวย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h130",
+  "text": "หมวกกันน็อกจักรยาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h131",
+  "text": "แว่นตาว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h132",
+  "text": "รถของเล่น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h133",
+  "text": "ม้าโยก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h135",
+  "text": "ตุ๊กตาผ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h136",
+  "text": "บ้านตุ๊กตา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h137",
+  "text": "หนังสือเดินทาง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h138",
+  "text": "เก้าอี้พับ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h139",
+  "text": "เตียงอาบแดด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h140",
+  "text": "ตั๋วเครื่องบิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h141",
+  "text": "นักดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h142",
+  "text": "นักบินอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h143",
+  "text": "ช่างซ่อมรถ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h144",
+  "text": "ช่างภาพ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h145",
+  "text": "พนักงานเสิร์ฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h146",
+  "text": "นางเงือก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h147",
+  "text": "ชุดอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h148",
+  "text": "อุกกาบาต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h149",
+  "text": "ดาวตก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h150",
+  "text": "กาแล็กซี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h151",
+  "text": "สถานีอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h152",
+  "text": "หูฟังแพทย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h153",
+  "text": "รถเข็นผู้ป่วย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h154",
+  "text": "เตียงผู้ป่วย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h155",
+  "text": "กระเป๋าหมอ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h156",
+  "text": "รถเข็นล้อเดียว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h157",
+  "text": "กรรไกรตัดกิ่ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h158",
+  "text": "เครื่องตัดหญ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h160",
+  "text": "แปลงผัก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h161",
+  "text": "สายยางรดน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h162",
+  "text": "โรงเรือนปลูกพืช",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h165",
+  "text": "แบบแปลนบ้าน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h167",
+  "text": "ป้ายเตือน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h168",
+  "text": "แผงกั้น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h169",
+  "text": "เครื่องเจาะถนน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h170",
+  "text": "รถโม่ปูน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h171",
+  "text": "กุญแจมือ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h172",
+  "text": "หมวกตำรวจ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h173",
+  "text": "คุก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h174",
+  "text": "หมวกนักดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h175",
+  "text": "ถังดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h176",
+  "text": "สายฉีดน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h177",
+  "text": "เครื่องตรวจจับควัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h178",
+  "text": "ห่วงชูชีพ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h179",
+  "text": "กองไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h180",
+  "text": "ตะกร้าปิกนิก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h181",
+  "text": "ต้นคริสต์มาส",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h182",
+  "text": "ซานตาคลอส",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h184",
+  "text": "เค้กวันเกิด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h186",
+  "text": "ไฟประดับ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h187",
+  "text": "ลูกแก้วหิมะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h188",
+  "text": "พวงกุญแจ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h189",
+  "text": "บ้านผีสิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h190",
+  "text": "รถบัมเปอร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h191",
+  "text": "รถไฟเหาะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h192",
+  "text": "ซุ้มยิงปืน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h193",
+  "text": "วงล้อเสี่ยงโชค",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h194",
+  "text": "บัตรเข้าชม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h196",
+  "text": "ตะขาบ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h197",
+  "text": "ใยแมงมุม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h198",
+  "text": "ท้องฟ้าจำลอง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h199",
+  "text": "โลกใต้ทะเล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h200",
+  "text": "แนวปะการัง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h201",
+  "text": "ซากเรือจม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h202",
+  "text": "เรือดำน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h203",
+  "text": "เฮลิคอปเตอร์กู้ภัย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h204",
+  "text": "นักกระโดดร่ม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h205",
+  "text": "เรือมังกร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h206",
+  "text": "นักไต่ลวด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h207",
+  "text": "โชว์มายากล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h208",
+  "text": "หุ่นกระบอก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h209",
+  "text": "โรงละครหุ่น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h210",
+  "text": "หนังตะลุง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h211",
+  "text": "งานเต้นรำหน้ากาก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h213",
+  "text": "มิกเซอร์เสียง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h214",
+  "text": "สเลทถ่ายหนัง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h215",
+  "text": "ไฟสปอตไลต์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h216",
+  "text": "สตูดิโอถ่ายภาพ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h217",
+  "text": "ห้องมืดล้างฟิล์ม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h220",
+  "text": "สถานีตรวจอากาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h221",
+  "text": "เสาไฟฟ้าแรงสูง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h222",
+  "text": "หอเก็บน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h223",
+  "text": "เครื่องเจาะอุโมงค์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h225",
+  "text": "ห้องผ่าตัด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h226",
+  "text": "ภาพเอกซเรย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h227",
+  "text": "ตู้ยา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h228",
+  "text": "ห้องพิจารณาคดี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h229",
+  "text": "ค้อนผู้พิพากษา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h230",
+  "text": "สำนักงานนักสืบ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h231",
+  "text": "ห้องนิรภัย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h232",
+  "text": "จดหมายในขวด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h233",
+  "text": "แคปซูลเวลา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h234",
+  "text": "แผนที่ขุมทรัพย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h235",
+  "text": "หอบังคับการบิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h236",
+  "text": "ฐานปล่อยจรวด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h237",
+  "text": "ห้องแล็บลับ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h239",
+  "text": "รังมด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h240",
+  "text": "โพรงจิ้งจอก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h241",
+  "text": "หุ่นไล่กา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h243",
+  "text": "ถังนม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h244",
+  "text": "ตลาดนัดเกษตรกร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h245",
+  "text": "เล้าไก่",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h246",
+  "text": "รถพ่วงแทรกเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h247",
+  "text": "รถเกี่ยวข้าว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h248",
+  "text": "คลินิกสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h249",
+  "text": "สายจูงสุนัข",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h250",
+  "text": "ตะกร้าแมว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h251",
+  "text": "เครื่องกรองตู้ปลา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h252",
+  "text": "อ่างน้ำนก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h253",
+  "text": "กระดูกสุนัข",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h254",
+  "text": "ช่องแมวลอด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h255",
+  "text": "อานม้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h257",
+  "text": "แหจับปลา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h258",
+  "text": "เครื่องล้างจาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h259",
+  "text": "เครื่องดูดควัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h260",
+  "text": "เครื่องผสมอาหาร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h261",
+  "text": "เครื่องชงเอสเปรสโซ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h262",
+  "text": "เครื่องหั่นขนมปัง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h263",
+  "text": "ชั้นวางเครื่องเทศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h264",
+  "text": "ผ้าปูปิกนิก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h265",
+  "text": "ตะกร้าจ่ายตลาด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h266",
+  "text": "ตู้แช่แข็ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h267",
+  "text": "ตู้เก็บของแห้ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h268",
+  "text": "สถานีรถไฟฟ้าใต้ดิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h269",
+  "text": "จุดตัดทางรถไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h270",
+  "text": "วงเวียน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h271",
+  "text": "อาคารจอดรถ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h272",
+  "text": "อู่ซ่อมรถ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h273",
+  "text": "ที่จอดจักรยาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h274",
+  "text": "กระเช้าลอยฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h277",
+  "text": "ท่าเรือเฟอร์รี่",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h278",
+  "text": "เรือบรรทุกตู้สินค้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h279",
+  "text": "เรือชูชีพ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h280",
+  "text": "เครื่องร่อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h281",
+  "text": "บอลลูนลมร้อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h283",
+  "text": "ศาลากลางจังหวัด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h284",
+  "text": "ที่ทำการไปรษณีย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h285",
+  "text": "ตู้จัดแสดงในพิพิธภัณฑ์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h286",
+  "text": "เวทีละคร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h287",
+  "text": "หอแสดงคอนเสิร์ต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h288",
+  "text": "สนามฟุตบอล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h289",
+  "text": "สระว่ายน้ำในร่ม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h290",
+  "text": "กำแพงปีนเขาจำลอง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h291",
+  "text": "ลานโบว์ลิ่ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h292",
+  "text": "ลานสเกตน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h293",
+  "text": "ลานกางเต็นท์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h294",
+  "text": "ค่ายพักแรม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h295",
+  "text": "กระท่อมบนภูเขา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h296",
+  "text": "หอชมวิว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h297",
+  "text": "ลานตลาด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h298",
+  "text": "ปราสาทมังกร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h299",
+  "text": "หม้อต้มแม่มด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h300",
+  "text": "กระจกวิเศษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h301",
+  "text": "ปราสาทผีสิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h302",
+  "text": "เรือโจรสลัด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h303",
+  "text": "การประลองอัศวิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h304",
+  "text": "บัลลังก์กษัตริย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h305",
+  "text": "เกาะสมบัติ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h306",
+  "text": "ยาวิเศษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h307",
+  "text": "ลูกแก้ววิเศษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h308",
+  "text": "หลอดทดลอง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h309",
+  "text": "ชุดทดลองเคมี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h310",
+  "text": "แบบจำลองระบบสุริยะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h311",
+  "text": "ยานลงจอดบนดวงจันทร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h312",
+  "text": "การปล่อยจรวด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h313",
+  "text": "กล้องโทรทรรศน์อวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h314",
+  "text": "แขนกล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h317",
+  "text": "เรือวิจัย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h318",
+  "text": "เก้าอี้ทำฟัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h319",
+  "text": "ผ้าห่มฉุกเฉิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h320",
+  "text": "เครื่องวัดความดัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h321",
+  "text": "กล่องปฐมพยาบาล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h322",
+  "text": "โคมไฟห้องผ่าตัด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h323",
+  "text": "ทางเดินโรงพยาบาล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h324",
+  "text": "คลินิกจักษุแพทย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h326",
+  "text": "เครื่องช่วยฟัง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h327",
+  "text": "เฝือก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h328",
+  "text": "ตู้ควบคุมไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h329",
+  "text": "อัลบั้มแสตมป์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h331",
+  "text": "แผงแขวนกุญแจ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h333",
+  "text": "รถเข็นเด็ก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h334",
+  "text": "สวนน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h335",
+  "text": "สไลเดอร์น้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h339",
+  "text": "ค้างคาวแม่ไก่",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h341",
+  "text": "ฉลามหัวค้อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h342",
+  "text": "เพนกวินจักรพรรดิ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h343",
+  "text": "มังกรโคโมโด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h344",
+  "text": "หมีควาย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h346",
+  "text": "ปลากระเบนราหู",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h349",
+  "text": "วาฬเพชฌฆาต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h350",
+  "text": "กบพิษ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h351",
+  "text": "เต่ายักษ์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h352",
+  "text": "เสือเขี้ยวดาบ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h353",
+  "text": "เสือดาวหิมะ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h354",
+  "text": "ตุ่นปากเป็ด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h358",
+  "text": "โรงละครกลางแจ้ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h360",
+  "text": "ซากปราสาท",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h362",
+  "text": "หอคอยโทรทัศน์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h363",
+  "text": "วังกระจก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h364",
+  "text": "มหาวิหาร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h365",
+  "text": "ป้ายไฟนีออน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h366",
+  "text": "หอดูดาว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h367",
+  "text": "โรงอุปรากร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h369",
+  "text": "เขื่อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h370",
+  "text": "ประตูชัย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h371",
+  "text": "ท่อระบายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h373",
+  "text": "หม้อความดัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h374",
+  "text": "เครื่องต้มไข่",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h375",
+  "text": "เครื่องบดเนื้อ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h376",
+  "text": "เครื่องตีแป้งมือถือ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h377",
+  "text": "เครื่องบดพริกไทย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h378",
+  "text": "ที่ขูด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h379",
+  "text": "เครื่องคั้นน้ำผลไม้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h380",
+  "text": "เครื่องทำวาฟเฟิล",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h382",
+  "text": "เลื่อยสายพาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h383",
+  "text": "คีมตัดเหล็ก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h384",
+  "text": "เครื่องกลึง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h386",
+  "text": "เลื่อยยนต์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h387",
+  "text": "เครื่องเป่าใบไม้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h388",
+  "text": "หัวแร้งบัดกรี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h389",
+  "text": "เครื่องเชื่อมเหล็ก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h390",
+  "text": "ปากกาจับชิ้นงาน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h391",
+  "text": "เลื่อยฉลุไฟฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h392",
+  "text": "โต๊ะช่าง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h394",
+  "text": "รถบรรทุกขนรถ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h396",
+  "text": "รถปั๊มคอนกรีต",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h397",
+  "text": "บันไดรถดับเพลิง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h399",
+  "text": "รถไฟขนสินค้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h401",
+  "text": "รถกวาดถนน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h402",
+  "text": "รถพ่วงข้าง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h405",
+  "text": "รถบรรทุกน้ำมัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h407",
+  "text": "ทางเดินเรือนยอดไม้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h408",
+  "text": "แผ่นน้ำแข็งลอย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h409",
+  "text": "หุบเขาลึก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h410",
+  "text": "ถ้ำน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h411",
+  "text": "ทะเลสาบปากปล่องภูเขาไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h412",
+  "text": "ป่าชายเลน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h413",
+  "text": "ป่าดิบเขา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h415",
+  "text": "ทะเลทรายเกลือ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h416",
+  "text": "ถ้ำหินงอกหินย้อย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h417",
+  "text": "ถ้ำใต้น้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h418",
+  "text": "ปากปล่องภูเขาไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h420",
+  "text": "หมวกนักบินอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h421",
+  "text": "ยานสำรวจดวงจันทร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h422",
+  "text": "แคปซูลอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h423",
+  "text": "ยานสำรวจอวกาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h426",
+  "text": "สภาพไร้น้ำหนัก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h428",
+  "text": "นักโบราณคดี",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h429",
+  "text": "เจ้าหน้าที่ดูแลสระว่ายน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h430",
+  "text": "บรรณารักษ์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h431",
+  "text": "นักปีนเขา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h433",
+  "text": "ศัลยแพทย์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h434",
+  "text": "ผู้ฝึกสัตว์ในละครสัตว์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h435",
+  "text": "เจ้าหน้าที่ป่าไม้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h437",
+  "text": "คนเลี้ยงผึ้ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h439",
+  "text": "พนักงานขับรถไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h440",
+  "text": "ผู้ประกาศข่าว",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h442",
+  "text": "นักแสดงแทน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h443",
+  "text": "ครูสอนดำน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h444",
+  "text": "ผู้รายงานพยากรณ์อากาศ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h445",
+  "text": "นักบัลเลต์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h447",
+  "text": "นักกลืนไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h449",
+  "text": "คนเชิดหุ่น",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h450",
+  "text": "นักแสดงใบ้",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h452",
+  "text": "ลูกบอลประดับต้นคริสต์มาส",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h454",
+  "text": "ไม้กวาดแม่มด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h455",
+  "text": "โคมไฟฟักทอง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h458",
+  "text": "กระต่ายอีสเตอร์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h459",
+  "text": "ดาวคริสต์มาส",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h460",
+  "text": "ประตูหมุน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h461",
+  "text": "บันไดหนีไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h463",
+  "text": "สะพานลอย",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h464",
+  "text": "ประตูโรงรถ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h465",
+  "text": "หลังคากระจก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h466",
+  "text": "นาฬิกาหอคอยโบสถ์",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h467",
+  "text": "ประตูม้วน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h468",
+  "text": "ประตูบานเลื่อน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h469",
+  "text": "บันไดวน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h470",
+  "text": "เครื่องทำลายเอกสาร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h471",
+  "text": "เครื่องสแกนบาร์โค้ด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h472",
+  "text": "เครื่องพิมพ์ฉลาก",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h473",
+  "text": "ตู้เอทีเอ็ม",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h474",
+  "text": "เครื่องถ่ายเอกสาร",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h475",
+  "text": "เครื่องชั่งพัสดุ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h476",
+  "text": "เครื่องคิดเงิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h477",
+  "text": "เครื่องพิมพ์ดีด",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h479",
+  "text": "ปั๊มลมตู้ปลา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h480",
+  "text": "ระบบรดน้ำอัตโนมัติ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h482",
+  "text": "สปริงเกอร์รดน้ำ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h483",
+  "text": "ถังเก็บน้ำฝน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h484",
+  "text": "สายล่อฟ้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h488",
+  "text": "สายพานลำเลียง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h491",
+  "text": "ท่อระบายน้ำใต้ดิน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h492",
+  "text": "ลิฟต์ขนของ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h493",
+  "text": "เรือกลไฟ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h494",
+  "text": "เรือสามเสา",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h495",
+  "text": "เรือตัดน้ำแข็ง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h496",
+  "text": "เรือประมง",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h497",
+  "text": "เรือสินค้า",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h498",
+  "text": "เรือนแพ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h499",
+  "text": "เรือคาตามารัน",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "th_h500",
+  "text": "เรือสำราญ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ }
+]

@@ -50,14 +50,24 @@ function originAllowed(origin) {
   if (!origin) return false;
   if (ALLOW_ALL_ORIGINS) return true;
   if (ALLOWED_ORIGINS.includes(origin)) return true;
-  // Offizielle CrazyGames-Vorschau-/Spiel-Ursprünge (exakte Host-Endungen, keine unsichere includes-Prüfung)
+  // Offizielle Portal-Ursprünge (exakte Host-Endungen, keine unsichere includes-Prüfung)
   try {
     const h = new URL(origin).hostname;
     if (h === 'crazygames.com' || h.endsWith('.crazygames.com')) return true;
     if (h === 'crazygames.io' || h.endsWith('.crazygames.io')) return true;
+    if (h === 'playgama.com' || h.endsWith('.playgama.com')) return true;
+    if (h === 'playgama.io' || h.endsWith('.playgama.io')) return true;
   } catch (e) {}
   return false;
 }
+// Playgama verteilt dasselbe Spiel über viele Partnerportale mit eigenen Domains.
+// Eine feste Liste kann die deshalb nicht abdecken - genau davor warnt die
+// Playgama-Vorgabe ("darf Spieler nicht blockieren, nur weil das Spiel von einer
+// anderen Partnerdomain geladen wird"). Mit ALLOWED_ORIGINS='*' (Standard) ist das
+// abgedeckt. Das ist hier vertretbar, weil der Server keine Cookies setzt und keine
+// Sitzung am Ursprung haengt: Wer mitspielen will, braucht Raumcode plus
+// sessionToken im Anfragekoerper. CORS schuetzt hier also nichts, was nicht ohnehin
+// ueber die Tokens geschuetzt waere - Ratenbegrenzung und Raumlimits bleiben aktiv.
 function applyCors(req, res) {
   const origin = req.headers.origin;
   res.setHeader('Vary', 'Origin');
@@ -88,16 +98,26 @@ function rateOk(ip) {
   return e.count <= MAX_ACTIONS_PER_MINUTE;
 }
 
-// ---------- Begriffe laden (Deutsch + Englisch) ----------
+// ---------- Begriffe laden ----------
+// Deutsch ist die Quelle und muss da sein; jede weitere Sprache ist optional.
+// Fehlt eine Datei, faellt die Sprache still auf Deutsch zurueck - das Spiel
+// laeuft dann weiter, statt beim Start abzubrechen.
 const WORDS_DE = JSON.parse(fs.readFileSync(path.join(__dirname, 'words_de.json'), 'utf8'))
   .map(w => ({ ...w, normalizedText: normalize(w.text) }));
-let WORDS_EN = [];
-try {
-  WORDS_EN = JSON.parse(fs.readFileSync(path.join(__dirname, 'words_en.json'), 'utf8'))
-    .map(w => ({ ...w, normalizedText: normalize(w.text) }));
-} catch (_) {}
+const EXTRA_LANGS = ['en', 'id', 'th', 'vi'];
+const WORDS_BY_LANG = { de: WORDS_DE };
+for (const lg of EXTRA_LANGS) {
+  try {
+    const list = JSON.parse(fs.readFileSync(path.join(__dirname, `words_${lg}.json`), 'utf8'))
+      .map(w => ({ ...w, normalizedText: normalize(w.text) }));
+    if (list.length) WORDS_BY_LANG[lg] = list;
+  } catch (_) {}
+}
+// Welche Sprachen der Raum anbieten darf - genau die, fuer die Begriffe da sind.
+const LANGS = Object.keys(WORDS_BY_LANG);
+let WORDS_EN = WORDS_BY_LANG.en || [];
 const WORDS = WORDS_DE; // Alias (Online-Begriffe werden hier ergänzt)
-function wordsFor(room) { return (room.lang === 'en' && WORDS_EN.length) ? WORDS_EN : WORDS_DE; }
+function wordsFor(room) { return WORDS_BY_LANG[room.lang] || WORDS_DE; }
 
 // Emoji-Mini-Bild pro Begriff (für die Jüngsten) – separate Datei, stört die Wortliste nicht
 let EMOJI = {};
@@ -120,6 +140,10 @@ function normalize(input) {
   if (!input) return '';
   let s = String(input).trim().toLowerCase();
   s = s.replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+  // Vietnamesisches d mit Querstrich ist ein eigener Buchstabe, kein Zeichen mit
+  // Akzent - die NFD-Zerlegung unten fasst es nicht an. Ohne diese Zeile muesste
+  // ein Spieler "Đồng hồ" mit dem Sonderzeichen tippen, damit der Tipp zaehlt.
+  s = s.replace(/đ/g, 'd');
   // Diakritika entfernen
   s = s.normalize('NFD').replace(/[̀-ͯ]/g, '');
   s = s.replace(/\s+/g, ' ');
@@ -149,8 +173,10 @@ function normLeet(input) {
 }
 // True, wenn der Text ein gesperrtes Wort enthält (mit Token-/Wortgrenzen + Whitelist).
 function containsBlocked(text, lang) {
-  const blocked = BLOCKED[lang] || BLOCKED.de;
-  const white = WHITELIST[lang] || WHITELIST.de;
+  // Fuer Sprachen ohne eigene Liste ist Englisch der sinnvollere Rueckfall als
+  // Deutsch: die englische Liste trifft auch international gebraeuchliche Woerter.
+  const blocked = BLOCKED[lang] || BLOCKED.en || BLOCKED.de;
+  const white = WHITELIST[lang] || WHITELIST.en || WHITELIST.de;
   if (!blocked.size) return false;
   const norm = normLeet(text);
   const tokens = norm.split(/[^a-z0-9]+/).filter(Boolean);
@@ -258,7 +284,7 @@ function createRoom(hostId) {
     timer: null,
     difficulty: 'mixed',    // easy | medium | hard | mixed
     teamMode: false,
-    lang: 'de',             // de | en  (Begriffe + UI raumweit)
+    lang: 'de',             // de | en | id | th | vi  (Begriffe + UI raumweit)
     solo: false,            // Einzelspieler-Testmodus (mit Computer-Rater)
     botTimers: [],          // laufende Timer des simulierten Raters
     strokeCount: 0,         // gezeichnete Striche in der aktuellen Runde
@@ -1002,7 +1028,7 @@ function handleAction(msg, ip) {
 
     case 'language':
       if (msg.playerId !== room.hostId) return { ok: false, error: 'Nur der Host' };
-      if (['de','en'].includes(msg.value)) { room.lang = msg.value; pushRoomUpdate(room); }
+      if (LANGS.includes(msg.value)) { room.lang = msg.value; pushRoomUpdate(room); }
       return { ok: true };
 
     case 'rounds': {

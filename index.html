@@ -22,7 +22,7 @@
   html,body{height:100%;margin:0}
   body{
     color:var(--ink);overflow:hidden;overflow-x:hidden;touch-action:manipulation;
-    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+    font-family:"Segoe UI","Leelawadee UI","Noto Sans Thai",Tahoma,system-ui,-apple-system,Roboto,Arial,sans-serif;
     background:
       url('img/bg.png') center/cover no-repeat,
       radial-gradient(1200px 700px at 12% -10%, #2c365e 0%, transparent 55%),
@@ -36,7 +36,10 @@
   .center{align-items:center;overflow-y:auto;overflow-x:hidden;padding-top:18px;padding-bottom:22px;
     /* Portale (Y8) beanstanden sichtbare Scrollbalken bei aktivem Resize.
        Scrollen bleibt per Rad/Touch moeglich, nur die Leiste wird ausgeblendet. */
-    scrollbar-width:none;-ms-overflow-style:none}
+    scrollbar-width:none;-ms-overflow-style:none;
+    /* Zentriert; bei Ueberlauf faellt "safe" auf oben-buendig zurueck (nichts wird abgeschnitten).
+       Noetig, weil die Auto-Margins unten nicht greifen, sobald Logo/Tagline ausgeblendet sind. */
+    justify-content:safe center}
   .center::-webkit-scrollbar{width:0;height:0}
   .center>:first-child{margin-top:auto}
   .center>:last-child{margin-bottom:auto}
@@ -80,6 +83,12 @@
     text-align:center;background:#1f2740;border-radius:16px;padding:12px 0;margin:6px 0 14px;
     text-shadow:0 4px 18px rgba(255,207,69,.35)}
   .players{list-style:none;margin:0;padding:0;max-height:30vh;overflow:auto;scrollbar-width:none;-ms-overflow-style:none}
+  /* "Spiel starten" muss ohne Scrollen sichtbar sein (Y8-Review):
+     Die Aktionszeile klebt am unteren Rand der Lobby-Karte. */
+  #lobby .lobby-actions{position:sticky;bottom:0;z-index:3;margin:16px -24px -24px;padding:12px 24px 14px;
+    background:linear-gradient(180deg,rgba(37,44,68,0) 0,#2b3352 26%,#2b3352 100%);
+    border-bottom-left-radius:22px;border-bottom-right-radius:22px}
+  #lobby .lobby-actions .hint{margin-top:6px;text-align:center}
   .players::-webkit-scrollbar{width:0;height:0}
   .players li{display:flex;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line)}
   .badge{font-size:11px;background:var(--accent);color:#161a26;border-radius:20px;padding:2px 9px;font-weight:800}
@@ -109,7 +118,6 @@
     background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;font-size:11px;font-weight:800;border-radius:20px;padding:3px 12px;white-space:nowrap}
   .fmtcard.recommend .fmtbadge{display:block}
   /* Tutorial-Video */
-  #tutVideo{outline:none}
   /* Format-Grundhaltung */
   body.fmt-landscape .card{max-width:min(560px,92vw)}
   body.fmt-landscape .logo{width:min(380px,44vw)}
@@ -196,7 +204,12 @@
     z-index:30;backdrop-filter:blur(3px)}
   .overlay.show{display:flex}
   .overlay .box{background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:20px;
-    padding:30px 36px;text-align:center;max-width:92vw;animation:popin .2s ease}
+    padding:30px 36px;text-align:center;max-width:92vw;animation:popin .2s ease;
+    /* Nie hoeher als der Rahmen: sonst liegen Knoepfe (z. B. "Schliessen") unerreichbar darunter. */
+    max-height:calc(100% - 16px);overflow:auto}
+  /* Die Knopfzeile eines Dialogs bleibt immer sichtbar, egal wie lang der Text ist. */
+  .overlay .box>.row:last-child{position:sticky;bottom:0;z-index:2;padding:10px 0 2px;
+    background:linear-gradient(180deg,rgba(39,46,69,0) 0,#2b3352 30%,#2b3352 100%)}
   .overlay .big2{font-size:clamp(24px,5vw,42px);font-weight:900;margin-bottom:8px}
   .overlay .reveal{color:var(--accent);font-size:clamp(20px,4vw,34px);font-weight:900;letter-spacing:2px}
   .word-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
@@ -204,18 +217,50 @@
   .word-options button b{font-size:18px;color:var(--accent)}
   .word-options button span{font-size:12px;color:var(--muted)}
 
-  /* ---------- Niedrige Portal-Frames: alles ohne Scrollen unterbringen ---------- */
+  /* ---------- Niedrige Portal-Frames: alles ohne Scrollen unterbringen ----------
+     Y8 rendert das Spiel in einem Rahmen mit Seitenverhaeltnis 1280/800 und
+     overflow:hidden – was unten hinausragt, ist fuer Spieler unerreichbar.
+     Darum wird der Startbildschirm mit der Rahmenhoehe kleiner. */
   @media (max-height:820px){
     .center{padding-top:10px;padding-bottom:12px}
-    .logo{max-height:26vh}
-    .sub{margin:4px 0 14px}
+    .logo{max-height:22vh}
+    .sub{margin:4px 0 12px}
     .card{padding:18px}
+    .fmtcard{padding:14px 10px 12px}
+    .fmticon{font-size:38px}
+    #lobby .lobby-actions{margin:12px -18px -18px;padding:10px 18px 12px;
+      border-bottom-left-radius:18px;border-bottom-right-radius:18px}
   }
   @media (max-height:640px){
     .center{padding-top:6px;padding-bottom:8px}
-    .logo{max-height:20vh}
-    .sub{margin:2px 0 8px;font-size:13px}
-    .card{padding:14px;border-radius:16px}
+    .logo{max-height:15vh}
+    .sub{display:none}
+    .card{padding:12px;border-radius:14px}
+    label{margin:8px 0 4px}
+    .fmtcards{gap:8px;margin:4px 0}
+    .fmtcard{padding:10px 8px}
+    .fmticon{font-size:26px}
+    .fmttitle{margin-top:4px;font-size:15px}
+    .fmtdesc{display:none}
+    .langrow{margin:2px 0 4px}
+    .langrow button{padding:9px;font-size:14px}
+    button{padding:11px 12px;font-size:15px}
+    .big{font-size:16px;padding:12px}
+    .code-box{font-size:clamp(30px,7vw,48px);letter-spacing:8px;padding:6px 0;margin:4px 0 8px}
+    .diffsel button,.roundsel button,.modesel button{padding:8px 5px;font-size:13px}
+    .players{max-height:22vh}
+    .players li{padding:7px 10px}
+    .overlay .box{padding:14px 16px}
+    .overlay .big2{font-size:clamp(20px,4vw,30px);margin-bottom:4px}
+    #lobby .lobby-actions{margin:10px -12px -12px;padding:8px 12px 10px;
+      border-bottom-left-radius:14px;border-bottom-right-radius:14px}
+    input[type=text]{padding:10px 12px;font-size:16px}
+    .err:empty{display:none}
+  }
+  @media (max-height:470px){
+    .logo{max-height:14vh}
+    .fmticon{font-size:20px}
+    .card{padding:10px}
   }
 
   /* ---------- Safe-Areas (Notch / Dynamic Island) ---------- */
@@ -282,6 +327,9 @@
     <div class="langrow" id="startLang">
       <button data-l="en">🇬🇧 English</button>
       <button data-l="de">🇩🇪 Deutsch</button>
+      <button data-l="id">🇮🇩 Indonesia</button>
+      <button data-l="th">🇹🇭 ไทย</button>
+      <button data-l="vi">🇻🇳 Tiếng Việt</button>
     </div>
     <button class="big" id="btnStartGo" style="width:100%;margin-top:18px" data-i18n="letsGo">Los geht's</button>
   </div>
@@ -297,6 +345,9 @@
     <div class="langrow" id="menuLang">
       <button data-l="en">🇬🇧 English</button>
       <button data-l="de">🇩🇪 Deutsch</button>
+      <button data-l="id">🇮🇩 Indonesia</button>
+      <button data-l="th">🇹🇭 ไทย</button>
+      <button data-l="vi">🇻🇳 Tiếng Việt</button>
     </div>
     <div id="inviteBanner" style="display:none;margin:6px 0 4px;padding:10px 12px;border-radius:12px;
       background:linear-gradient(180deg,#243a2c,#1e3325);border:1px solid #3a6b4a;text-align:center;font-weight:600"></div>
@@ -344,8 +395,13 @@
 <div class="overlay" id="tutorial">
   <div class="box" style="max-width:min(560px,94vw);max-height:92vh;overflow:auto;text-align:center">
     <div class="big2" data-i18n="howToTitle" style="margin-bottom:10px">So funktioniert es</div>
-    <video id="tutVideo" playsinline controls preload="none" poster="video/tutorial_poster.jpg"
-      style="width:100%;border-radius:14px;background:#000;max-height:58vh"></video>
+    <ol id="tutText" style="text-align:left;margin:4px 0 0;padding-left:1.3em;line-height:1.65">
+      <li data-i18n="howStep1"></li>
+      <li data-i18n="howStep2"></li>
+      <li data-i18n="howStep3"></li>
+      <li data-i18n="howStep4"></li>
+      <li data-i18n="howStep5"></li>
+    </ol>
     <label style="display:flex;align-items:center;gap:10px;justify-content:center;margin-top:14px;cursor:pointer;color:var(--muted)">
       <input type="checkbox" id="tutHide" style="width:20px;height:20px">
       <span data-i18n="dontShowAgain">Beim nächsten Start nicht mehr anzeigen</span>
@@ -404,11 +460,13 @@
 
     <label style="margin-top:14px" data-i18n="players">Spieler</label>
     <ul class="players" id="lobbyPlayers"></ul>
-    <div class="row" style="margin-top:16px">
-      <button class="secondary" id="btnLeave" style="flex:.6" data-i18n="leave">Verlassen</button>
-      <button class="big" id="btnStart" style="flex:1.6" disabled data-i18n="startGame">Spiel starten</button>
+    <div class="lobby-actions">
+      <div class="row">
+        <button class="secondary" id="btnLeave" style="flex:.6" data-i18n="leave">Verlassen</button>
+        <button class="big" id="btnStart" style="flex:1.6" disabled data-i18n="startGame">Spiel starten</button>
+      </div>
+      <div class="hint" id="lobbyHint"></div>
     </div>
-    <div class="hint" id="lobbyHint"></div>
   </div>
 </div>
 
@@ -543,6 +601,9 @@
     <div class="langrow" id="setLang">
       <button data-l="en">🇬🇧 English</button>
       <button data-l="de">🇩🇪 Deutsch</button>
+      <button data-l="id">🇮🇩 Indonesia</button>
+      <button data-l="th">🇹🇭 ไทย</button>
+      <button data-l="vi">🇻🇳 Tiếng Việt</button>
     </div>
     <div class="hint" id="setLangHint" style="display:none"></div>
     <label data-i18n="difficulty" style="margin-top:14px">Schwierigkeit</label>
@@ -602,11 +663,15 @@ function cgGameplayStart(){ if(CG.mode!=='crazygames'||CG._gp)return; try{ var g
 function cgGameplayStop(){ if(CG.mode!=='crazygames'||!CG._gp)return; try{ var g=_sdkGame(); if(g&&g.gameplayStop){ g.gameplayStop(); CG._gp=false; } }catch(e){} }
 var AD = { muted:false, busy:false };   // Werbung laeuft -> Musik UND Soundeffekte aus
 function audioBlocked(){ return (CG.mode==='crazygames' && CG.muteAudio) || AD.muted; } // muteAudio/Werbung haben Vorrang
+// Ein Portal kann sich zusaetzlich in den Spielverlauf einklinken:
+//   window.KK_PORTAL_HOOKS = { gameplayStart:fn, gameplayStop:fn, loadingStart:fn, loadingStop:fn }
+// Fehlt der Eintrag oder wirft er, aendert sich am Spiel nichts.
+function portalHook(name){ try{ var p=window.KK_PORTAL_HOOKS; if(p&&typeof p[name]==='function') p[name](); }catch(e){} }
 // Fassade für bestehende Aufrufe im Code
 var Platform = {
   isCrazyGames(){ return CG.mode==='crazygames'; },
-  loadingStart(){ cgLoadingStart(); }, loadingStop(){ cgLoadingStop(); },
-  gameplayStart(){ cgGameplayStart(); }, gameplayStop(){ cgGameplayStop(); },
+  loadingStart(){ cgLoadingStart(); portalHook('loadingStart'); }, loadingStop(){ cgLoadingStop(); portalHook('loadingStop'); },
+  gameplayStart(){ cgGameplayStart(); portalHook('gameplayStart'); }, gameplayStop(){ cgGameplayStop(); portalHook('gameplayStop'); },
   audioPause(){ try{ if(typeof bgm!=='undefined'&&bgm) bgm.pause(); }catch(e){} },
   audioResume(){ try{ if(typeof updateBgm==='function') updateBgm(); }catch(e){} },
   // Werbepause zwischen zwei kompletten Runden (servergesteuert). Loest immer auf,
@@ -625,8 +690,29 @@ function adAudioOff(){ AD.muted=true;
 function adAudioOn(){ AD.muted=false;
   try{ if(typeof updateMute==='function') updateMute(); }catch(e){} }
 function y8AdReady(){ try{ return !!(ENABLE_Y8_ADS && window.KK_Y8 && window.y8Sdk && window.y8Sdk.showAd); }catch(e){ return false; } }
+// Anschluss fuer andere Portale: eine Portal-Datei kann hier
+//   window.KK_AD_PROVIDER = { show:function(type,name){ return Promise<boolean>; } }
+// eintragen. Dann laeuft die Werbung darueber statt ueber Y8. Traegt sich keines
+// ein, bleibt alles wie bisher. Der Spielcode kennt nur showPortalAd().
+// Ton-Regel gilt fuer jedes Portal: adAudioOff() vor, adAudioOn() nach der Anzeige.
+function portalAdProvider(){ try{ var p=window.KK_AD_PROVIDER; return (p&&typeof p.show==='function')?p:null; }catch(e){ return null; } }
 // type: 'start' | 'pause' | 'next' | 'browse'  -> loest mit true auf, wenn Werbung lief
 function showPortalAd(type,name){
+  var prov=portalAdProvider();
+  if(prov){
+    if(AD.busy) return Promise.resolve(false);
+    AD.busy=true;
+    var fertig=false;
+    var schluss=function(gezeigt){
+      if(fertig) return false; fertig=true;
+      AD.busy=false; adAudioOn(); return !!gezeigt;
+    };
+    // Notbremse wie beim Y8-Weg: meldet das Portal nicht zurueck, geht es trotzdem weiter.
+    var wache=new Promise(function(r){ setTimeout(function(){ r(true); },AD_MAX_MS); });
+    var lauf;
+    try{ lauf=Promise.resolve(prov.show(type,name)); }catch(e){ lauf=Promise.resolve(false); }
+    return Promise.race([lauf,wache]).then(schluss,function(){ return schluss(false); });
+  }
   return new Promise(function(resolve){
     if(!y8AdReady() || AD.busy){ resolve(false); return; }
     AD.busy=true;
@@ -634,15 +720,19 @@ function showPortalAd(type,name){
     function finish(shown){ if(done)return; done=true; if(guard)clearTimeout(guard);
       AD.busy=false; adAudioOn(); resolve(!!shown); }
     guard=setTimeout(function(){ finish(true); },AD_MAX_MS);
+    // Kurze Protokollzeile: zeigt beim Testen in der Konsole, ob die Werbepause
+    // ausgeloest wurde und was das SDK zurueckmeldet (kein Fehler, nur Info).
+    function adLog(what,info){ try{ console.log('[Y8] Werbepause "'+name+'" ('+type+'): '+what+(info?' – '+info:'')); }catch(e){} }
+    adLog('angefragt');
     try{
       var pr=window.y8Sdk.showAd({
         type:type, name:name,
-        beforeAd:function(){ adAudioOff(); },
-        afterAd:function(){ adAudioOn(); },
-        adBreakDone:function(){ finish(true); }
+        beforeAd:function(){ adAudioOff(); adLog('startet – Ton aus'); },
+        afterAd:function(){ adAudioOn(); adLog('beendet – Ton wieder an'); },
+        adBreakDone:function(info){ adLog('abgeschlossen', info&&info.breakStatus); finish(true); }
       });
-      if(pr&&pr.catch)pr.catch(function(){ finish(false); });
-    }catch(e){ finish(false); }
+      if(pr&&pr.catch)pr.catch(function(err){ adLog('keine Werbung verfuegbar', err&&err.message); finish(false); });
+    }catch(e){ adLog('keine Werbung verfuegbar', e&&e.message); finish(false); }
   });
 }
 function applyChatMode(){ /* disableChat: falsche Rateversuche werden serverseitig ohne Text verteilt; hier kein Chat-UI zu verbergen */ }
@@ -694,7 +784,20 @@ async function cgInit(){
 
 // ---------- Format (9:16 / 16:9) ----------
 // Standard-Empfehlung: Handy (9:16). 16:9 bleibt jederzeit frei wählbar.
-function recommendFormat(){ return 'portrait'; }
+// Empfehlung fuers Startbild. Hochkant bleibt der Normalfall und auch am PC die
+// bessere Wahl: bei 1366x768 misst die Zeichenflaeche im Hochkant-Layout 1354x504,
+// im Querformat nur 630x630.
+// Die eine Ausnahme ist das gedrehte Handy - ein niedriges, breites Fenster. Dort
+// presst das Hochkant-Layout die Zeichenflaeche auf einen Streifen von rund 120
+// Pixeln Hoehe; quer bleibt sie quadratisch und bespielbar.
+function recommendFormat(){
+  try{
+    var b=Math.max(window.innerWidth||0, document.documentElement.clientWidth||0);
+    var h=Math.max(window.innerHeight||0, document.documentElement.clientHeight||0);
+    if(b && h && h<500 && b>h) return 'landscape';
+  }catch(e){}
+  return 'portrait';
+}
 let currentFmt = Store.get(KEY_FMT,null) || recommendFormat();
 function applyFormat(fmt){
   currentFmt=fmt; Store.set(KEY_FMT,fmt);
@@ -717,32 +820,16 @@ $('btnStartGo').onclick=()=>{ applyFormat(currentFmt); show('menu');
   showPortalAd('start','game-start').then(()=>maybeShowTutorial()); };
 
 // ---------- Tutorial ("So funktioniert es") ----------
-function loadTutVideo(){
-  const v=$('tutVideo'); const lang=S.lang==='en'?'en':'de';
-  if(v.dataset.lang===lang) return;              // schon in dieser Sprache geladen
-  v.dataset.lang=lang; v.removeAttribute('src');
-  v.src='video/tutorial_'+lang+'.mp4';           // Lazy-Load: erst hier setzen (Text ist im Video)
-  try{ v.load(); }catch(e){}
-}
 function openTutorial(){
-  loadTutVideo();
   $('tutHide').checked = Store.getBool(KEY_TUT,false);
   $('tutorial').classList.add('show');
 }
 function closeTutorial(){
-  try{ $('tutVideo').pause(); }catch(e){}
   Store.setBool(KEY_TUT, $('tutHide').checked);
   $('tutorial').classList.remove('show');
 }
 function maybeShowTutorial(){ if(!Store.getBool(KEY_TUT,false)) openTutorial(); }
 $('tutSkip').onclick=closeTutorial;
-// Während das Anleitungsvideo läuft: Hintergrundmusik aus (kein Ton-Überlappen); danach wieder an.
-let tutVideoActive=false;
-(function(){ const v=$('tutVideo'); if(!v)return;
-  v.addEventListener('play',()=>{ tutVideoActive=true; try{ if(typeof bgm!=='undefined'&&bgm)bgm.pause(); }catch(e){} });
-  const resume=()=>{ tutVideoActive=false; try{ updateBgm(); }catch(e){} };
-  v.addEventListener('pause',resume); v.addEventListener('ended',resume);
-})();
 
 // ---------- Einladen / Teilen / QR ----------
 function inviteUrl(){
@@ -815,8 +902,48 @@ async function checkInviteParams(){
 const bgm=$('bgm'); if(bgm)bgm.volume=0.22;
 
 // gespeicherte Einstellungen
-try{ S.name=localStorage.getItem('kk_name')||''; S.muted=localStorage.getItem('kk_mute')==='1'; S.lang=localStorage.getItem('kk_lang')||'en'; }catch(e){} if(S.lang!=='de'&&S.lang!=='en')S.lang='en';
+// Die Liste muss zu den Sprachbloecken in T und zu den Wortlisten des Servers
+// passen. Steht hier eine Sprache, fuer die es keine words_<code>.json gibt,
+// bekommt der Raum stillschweigend die deutschen Begriffe.
+const KK_LANGS=['de','en','id','th','vi'];
+// Ohne gespeicherte Wahl entscheidet die Browsersprache. Aeltere Android-Geraete
+// melden Indonesisch noch als "in" - der alte ISO-Code aus den Neunzigern.
+function guessLang(){
+  try{
+    const tags=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+    for(const tag of tags){
+      let code=String(tag).toLowerCase().slice(0,2);
+      if(code==='in')code='id';
+      if(KK_LANGS.includes(code))return code;
+    }
+  }catch(e){}
+  return 'en';
+}
+// Merken, ob der Spieler die Sprache schon einmal selbst gewaehlt hat. Nur dann
+// darf ein Portal sie spaeter nicht mehr ueberschreiben.
+let sprachWahlGespeichert=false;
+try{ sprachWahlGespeichert=!!localStorage.getItem('kk_lang'); }catch(e){}
+try{ S.name=localStorage.getItem('kk_name')||''; S.muted=localStorage.getItem('kk_mute')==='1'; S.lang=localStorage.getItem('kk_lang')||guessLang(); }catch(e){}
+if(!KK_LANGS.includes(S.lang))S.lang=guessLang();
 $('name').value=S.name; updateMute();
+// Anschluss fuer Portale: die Plattformsprache steht erst nach dem Start des
+// Portal-SDK fest, also lange nachdem dieses Skript gelaufen ist. Eine
+// Portal-Datei ruft das hier nach. Zwei Grenzen: eine eigene Wahl des Spielers
+// wiegt schwerer, und in einem laufenden Raum bestimmt der Host die Sprache.
+window.KK_setPortalLanguage=function(code){
+  try{
+    if(sprachWahlGespeichert) return false;
+    if(typeof code!=='string') return false;
+    let c=code.toLowerCase().slice(0,2); if(c==='in')c='id';
+    if(!KK_LANGS.includes(c)) return false;
+    if(S.roomCode && !S.isHost) return false;
+    if(c===S.lang) return true;
+    S.lang=c; applyI18n();
+    if(typeof renderStartup==='function' && S.state==='startup') renderStartup();
+    if(S.roomCode && S.isHost) post({type:'language',value:c});
+    return true;
+  }catch(e){ return false; }
+};
 
 // ---------- Sprachen (i18n) ----------
 const T={
@@ -836,7 +963,7 @@ const T={
    descEasy:'🟢 Einfach – leicht zeichenbare Begriffe für Einsteiger',descMedium:'🙂 Mittel – gemischte Begriffe',descHard:'🔥 Schwer – auch kniffligere Begriffe',descMixed:'🎲 Alle Schwierigkeiten gemischt',
    chooseFormat:'Format wählen',recommended:'Empfohlen',fmtPortraitTitle:'📱 Hochkant',fmtLandscapeTitle:'🖥️ Querformat',
    fmtPortraitDesc:'Für Smartphones (9:16)',fmtLandscapeDesc:'Für PC & Tablet (16:9)',letsGo:'Los geht’s',
-   howToTitle:'So funktioniert’s',dontShowAgain:'Nicht mehr zeigen',readAsText:'Als Text lesen',skipToGame:'Überspringen',changeFormat:'🖥️ Format ändern',
+   howToTitle:'So funktioniert’s',dontShowAgain:'Nicht mehr zeigen',skipToGame:'Überspringen',changeFormat:'🖥️ Format ändern',
    invite:'🔗 Einladen',showQR:'📷 QR-Code',inviteText:'Spiel mit mir Kritzelkönig! Raum-Code',linkCopied:'✅ Link kopiert',qrError:'QR-Code konnte nicht geladen werden',
    joiningRoom:'Du trittst bei · Raum',roomFull:'Dieser Raum ist voll.',roomStarted:'Das Spiel läuft schon – du steigst als Mitspieler ein.',
    soloTest:'🤖 Solo-Test (gegen Computer)',
@@ -847,7 +974,9 @@ const T={
    fairOutro:'Viel Spaß und bleibt fair!',fairUnderstood:'Verstanden',fairMod:'Keine beleidigenden, sexuellen, hasserfüllten oder anderweitig unangemessenen Zeichnungen.',reportDrawing:'⚠ Zeichnung melden',reported:'Danke – Meldung gesendet.',drawingRemoved:'Zeichnung wurde gemeldet und entfernt.',rulesTitle:'ℹ️ Regeln & Datenschutz',
    drawHint:'✏️ nur zeichnen – keine Buchstaben/Zahlen',
    nameBlocked:'Dieser Name ist nicht erlaubt. Bitte wähle einen anderen.',
-   inputBlocked:'Dieser Ausdruck kann im Spiel nicht verwendet werden. Bitte wähle eine andere Eingabe.'},
+   inputBlocked:'Dieser Ausdruck kann im Spiel nicht verwendet werden. Bitte wähle eine andere Eingabe.',
+   netBusy:'Zu viele Anfragen – bitte kurz warten.',netDown:'Server nicht erreichbar.',netLost:'Verbindung verloren.',
+   howStep1:'Ein Spieler bekommt einen Begriff und zeichnet ihn.',howStep2:'Alle anderen tippen ihren Tipp ins Feld.',howStep3:'Wer zuerst richtig rät, bekommt die meisten Punkte – der Zeichner auch.',howStep4:'Danach ist der Nächste mit Zeichnen dran.',howStep5:'Nur zeichnen: keine Buchstaben, keine Zahlen.'},
  en:{tagline:'Draw & Guess – anywhere',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
    roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
@@ -864,7 +993,7 @@ const T={
    descEasy:'🟢 Easy – simple, beginner-friendly words',descMedium:'🙂 Medium – mixed words',descHard:'🔥 Hard – trickier words too',descMixed:'🎲 All difficulties mixed',
    chooseFormat:'Choose format',recommended:'Recommended',fmtPortraitTitle:'📱 Portrait',fmtLandscapeTitle:'🖥️ Landscape',
    fmtPortraitDesc:'For smartphones (9:16)',fmtLandscapeDesc:'For PC & tablet (16:9)',letsGo:'Let’s go',
-   howToTitle:'How it works',dontShowAgain:'Don’t show again',readAsText:'Read as text',skipToGame:'Skip',changeFormat:'🖥️ Change format',
+   howToTitle:'How it works',dontShowAgain:'Don’t show again',skipToGame:'Skip',changeFormat:'🖥️ Change format',
    invite:'🔗 Invite',showQR:'📷 QR code',inviteText:'Play Kritzelkönig with me! Room code',linkCopied:'✅ Link copied',qrError:'Could not load QR code',
    joiningRoom:'You are joining · Room',roomFull:'This room is full.',roomStarted:'The game is already running – you’ll join as a player.',
    soloTest:'🤖 Solo test (vs. computer)',
@@ -875,9 +1004,103 @@ const T={
    fairOutro:'Have fun and stay fair!',fairUnderstood:'Got it',fairMod:'No offensive, sexual, hateful or otherwise inappropriate drawings.',reportDrawing:'⚠ Report drawing',reported:'Thanks – report sent.',drawingRemoved:'Drawing was reported and removed.',rulesTitle:'ℹ️ Rules & Privacy',
    drawHint:'✏️ draw only – no letters/numbers',
    nameBlocked:'This name is not allowed. Please choose another.',
-   inputBlocked:'This expression cannot be used in the game. Please choose another input.'}
+   inputBlocked:'This expression cannot be used in the game. Please choose another input.',
+   netBusy:'Too many requests – please slow down.',netDown:'Server not reachable.',netLost:'Connection lost.',
+   howStep1:'One player gets a word and draws it.',howStep2:'Everyone else types their guess.',howStep3:'The first correct guess scores the most – the drawer scores too.',howStep4:'Then it is the next player’s turn to draw.',howStep5:'Drawing only: no letters, no numbers.'},
+ id:{tagline:'Gambar & Tebak – di mana saja',yourName:'Nama kamu',namePh:'mis. Anna',
+   createGame:'Buat permainan',joinGame:'Gabung permainan',roomCode4:'Kode ruang (4 angka)',join:'Gabung',
+   roomCode:'Kode ruang',difficulty:'Tingkat kesulitan',rounds:'Ronde',teamMode:'Mode tim',teamOn:'Aktif',teamOff:'Mati',players:'Pemain',leave:'Keluar',startGame:'Mulai permainan',
+   easy:'🟢 Mudah',medium:'🙂 Sedang',hard:'🔥 Sulit',mixed:'🎲 Campur',
+   guessPh:'Tebakan kamu …',send:'Kirim',newGame:'Permainan baru',toMenu:'Ke menu',
+   settings:'Pengaturan',language:'Bahasa',sound:'Suara',fullscreen:'Layar penuh',endGame:'Akhiri permainan',close:'Tutup',howToPlay:'📖 Cara bermain',
+   youDraw:'Kamu menggambar ✏',draws:'sedang menggambar …',round:'Ronde',teamLocked:'Tim kamu sedang menggambar – tunggu',
+   timeUp:'⏱ Waktu habis –',waitFor:'Menunggu',continueDraw:'▶ Lanjut – aku menggambar!',showResult:'🏁 Tampilkan hasil',endstand:'(hasil akhir)',
+   wins:'menang!',chooseWord:'Pilih sebuah kata',chooseWordHint:'Kata yang lebih sulit memberi poin lebih banyak.',choosingWord:'sedang memilih kata …',
+   teamRed:'Tim Merah',teamBlue:'Tim Biru',teamHintOn:'Mode tim aktif.',teamHintOff:'Semua bermain sendiri.',
+   enterName:'Silakan masukkan nama',enterCode:'Masukkan kode 4 angka',
+   waitPlayers:'Menunggu pemain lain … (min. 2)',readyHost:'Siap! Kamu bisa mulai.',waitHost:'Menunggu host …',
+   hostChoosesLang:'Bahasa & kata ditentukan oleh host.',loading:'Memuat …',confirmExit:'Yakin ingin mengakhiri permainan?',
+   descEasy:'🟢 Mudah – kata sederhana untuk pemula',descMedium:'🙂 Sedang – kata campuran',descHard:'🔥 Sulit – termasuk kata yang rumit',descMixed:'🎲 Semua tingkat dicampur',
+   chooseFormat:'Pilih format',recommended:'Disarankan',fmtPortraitTitle:'📱 Potret',fmtLandscapeTitle:'🖥️ Lanskap',
+   fmtPortraitDesc:'Untuk ponsel (9:16)',fmtLandscapeDesc:'Untuk PC & tablet (16:9)',letsGo:'Ayo mulai',
+   howToTitle:'Cara kerjanya',dontShowAgain:'Jangan tampilkan lagi',skipToGame:'Lewati',changeFormat:'🖥️ Ubah format',
+   invite:'🔗 Undang',showQR:'📷 Kode QR',inviteText:'Ayo main Kritzelkönig bersamaku! Kode ruang',linkCopied:'✅ Tautan disalin',qrError:'Kode QR gagal dimuat',
+   joiningRoom:'Kamu bergabung · Ruang',roomFull:'Ruang ini sudah penuh.',roomStarted:'Permainan sudah berjalan – kamu masuk sebagai pemain.',
+   soloTest:'🤖 Uji solo (lawan komputer)',
+   interPause:'🎬 Jeda singkat',interMsg:'Menyiapkan ronde berikutnya …',interReady:'Sebentar lagi mulai!',
+   fairTitle:'🎨 Menggambar dengan jujur!',fairIntro:'Gambarkan kata itu hanya sebagai gambar.',
+   fairNotAllowed:'🚫 Tidak boleh',fairLetters:'Huruf',fairWords:'Kata',fairNumbers:'Angka',
+   fairAllowed:'✅ Boleh',fairDrawings:'gambar biasa',fairShapes:'bentuk',fairArrows:'panah',fairColors:'warna',fairIdeas:'ide gambar kreatif',
+   fairOutro:'Selamat bermain dan tetap jujur!',fairUnderstood:'Mengerti',fairMod:'Dilarang menggambar hal yang menghina, seksual, penuh kebencian, atau tidak pantas.',reportDrawing:'⚠ Laporkan gambar',reported:'Terima kasih – laporan terkirim.',drawingRemoved:'Gambar telah dilaporkan dan dihapus.',rulesTitle:'ℹ️ Aturan & Privasi',
+   drawHint:'✏️ hanya menggambar – tanpa huruf/angka',
+   nameBlocked:'Nama ini tidak diperbolehkan. Silakan pilih yang lain.',
+   inputBlocked:'Ungkapan ini tidak bisa dipakai dalam permainan. Silakan pilih yang lain.',
+   netBusy:'Terlalu banyak permintaan – mohon tunggu sebentar.',netDown:'Server tidak dapat dihubungi.',netLost:'Koneksi terputus.',
+   howStep1:'Satu pemain mendapat sebuah kata dan menggambarnya.',howStep2:'Pemain lain mengetik tebakan mereka.',howStep3:'Yang menebak benar lebih dulu mendapat poin terbanyak – penggambar juga dapat poin.',howStep4:'Setelah itu giliran pemain berikutnya menggambar.',howStep5:'Hanya menggambar: tanpa huruf, tanpa angka.'},
+ th:{tagline:'วาดและทาย – ได้ทุกที่',yourName:'ชื่อผู้เล่นของคุณ',namePh:'เช่น อันนา',
+   createGame:'สร้างห้องเล่น',joinGame:'เข้าร่วมเกม',roomCode4:'รหัสห้อง (4 หลัก)',join:'เข้าร่วม',
+   roomCode:'รหัสห้อง',difficulty:'ระดับความยาก',rounds:'จำนวนรอบ',teamMode:'โหมดทีม',teamOn:'เปิด',teamOff:'ปิด',players:'ผู้เล่น',leave:'ออกจากห้อง',startGame:'เริ่มเกม',
+   easy:'🟢 ง่าย',medium:'🙂 ปานกลาง',hard:'🔥 ยาก',mixed:'🎲 คละ',
+   guessPh:'คำตอบของคุณ …',send:'ส่ง',newGame:'เกมใหม่',toMenu:'กลับเมนู',
+   settings:'ตั้งค่า',language:'ภาษา',sound:'เสียง',fullscreen:'เต็มจอ',endGame:'จบเกม',close:'ปิด',howToPlay:'📖 วิธีเล่น',
+   youDraw:'คุณเป็นคนวาด ✏',draws:'กำลังวาด …',round:'รอบที่',teamLocked:'ทีมของคุณกำลังวาด – กรุณารอ',
+   timeUp:'⏱ หมดเวลา –',waitFor:'กำลังรอ',continueDraw:'▶ ไปต่อ – ฉันวาดเอง!',showResult:'🏁 ดูผลคะแนน',endstand:'(ผลรวม)',
+   wins:'ชนะ!',chooseWord:'เลือกคำหนึ่งคำ',chooseWordHint:'คำที่ยากกว่าให้คะแนนมากกว่า',choosingWord:'กำลังเลือกคำ …',
+   teamRed:'ทีมแดง',teamBlue:'ทีมน้ำเงิน',teamHintOn:'โหมดทีมเปิดอยู่',teamHintOff:'ทุกคนเล่นเดี่ยว',
+   enterName:'กรุณากรอกชื่อ',enterCode:'กรุณากรอกรหัส 4 หลัก',
+   waitPlayers:'รอผู้เล่นเพิ่ม … (อย่างน้อย 2 คน)',readyHost:'พร้อมแล้ว! เริ่มได้เลย',waitHost:'รอเจ้าของห้อง …',
+   hostChoosesLang:'ภาษาและคำศัพท์กำหนดโดยเจ้าของห้อง',loading:'กำลังโหลด …',confirmExit:'ต้องการจบเกมจริงหรือไม่?',
+   descEasy:'🟢 ง่าย – คำที่วาดง่ายสำหรับมือใหม่',descMedium:'🙂 ปานกลาง – คำคละระดับ',descHard:'🔥 ยาก – มีคำที่ท้าทายด้วย',descMixed:'🎲 คละทุกระดับความยาก',
+   chooseFormat:'เลือกรูปแบบหน้าจอ',recommended:'แนะนำ',fmtPortraitTitle:'📱 แนวตั้ง',fmtLandscapeTitle:'🖥️ แนวนอน',
+   fmtPortraitDesc:'สำหรับมือถือ (9:16)',fmtLandscapeDesc:'สำหรับพีซีและแท็บเล็ต (16:9)',letsGo:'เริ่มกันเลย',
+   howToTitle:'วิธีการเล่น',dontShowAgain:'ไม่ต้องแสดงอีก',skipToGame:'ข้าม',changeFormat:'🖥️ เปลี่ยนรูปแบบ',
+   invite:'🔗 ชวนเพื่อน',showQR:'📷 คิวอาร์โค้ด',inviteText:'มาเล่น Kritzelkönig กับฉัน! รหัสห้อง',linkCopied:'✅ คัดลอกลิงก์แล้ว',qrError:'โหลดคิวอาร์โค้ดไม่สำเร็จ',
+   joiningRoom:'คุณกำลังเข้าร่วม · ห้อง',roomFull:'ห้องนี้เต็มแล้ว',roomStarted:'เกมเริ่มไปแล้ว – คุณจะเข้าร่วมเป็นผู้เล่น',
+   soloTest:'🤖 ทดลองเล่นเดี่ยว (สู้กับคอมพิวเตอร์)',
+   interPause:'🎬 พักสักครู่',interMsg:'กำลังเตรียมรอบถัดไป …',interReady:'อีกไม่นานก็ไปต่อ!',
+   fairTitle:'🎨 วาดอย่างยุติธรรม!',fairIntro:'วาดคำนั้นเป็นภาพเท่านั้น',
+   fairNotAllowed:'🚫 ห้าม',fairLetters:'ตัวอักษร',fairWords:'คำ',fairNumbers:'ตัวเลข',
+   fairAllowed:'✅ อนุญาต',fairDrawings:'ภาพวาดทั่วไป',fairShapes:'รูปทรง',fairArrows:'ลูกศร',fairColors:'สี',fairIdeas:'ไอเดียภาพสร้างสรรค์',
+   fairOutro:'ขอให้สนุกและเล่นอย่างยุติธรรม!',fairUnderstood:'เข้าใจแล้ว',fairMod:'ห้ามวาดภาพที่หยาบคาย ลามก สร้างความเกลียดชัง หรือไม่เหมาะสม',reportDrawing:'⚠ รายงานภาพวาด',reported:'ขอบคุณ – ส่งรายงานแล้ว',drawingRemoved:'ภาพวาดถูกรายงานและลบออกแล้ว',rulesTitle:'ℹ️ กติกาและความเป็นส่วนตัว',
+   drawHint:'✏️ วาดอย่างเดียว – ห้ามเขียนตัวอักษรหรือตัวเลข',
+   nameBlocked:'ชื่อนี้ใช้ไม่ได้ กรุณาเลือกชื่ออื่น',
+   inputBlocked:'ข้อความนี้ใช้ในเกมไม่ได้ กรุณาเลือกคำอื่น',
+   netBusy:'มีคำขอมากเกินไป – กรุณารอสักครู่',netDown:'ติดต่อเซิร์ฟเวอร์ไม่ได้',netLost:'การเชื่อมต่อหลุด',
+   howStep1:'ผู้เล่นคนหนึ่งจะได้รับคำและวาดคำนั้น',howStep2:'ผู้เล่นคนอื่นพิมพ์คำตอบของตัวเอง',howStep3:'ใครทายถูกก่อนได้คะแนนมากที่สุด คนวาดก็ได้คะแนนด้วย',howStep4:'จากนั้นเปลี่ยนให้คนถัดไปเป็นคนวาด',howStep5:'วาดอย่างเดียว ห้ามเขียนตัวอักษรหรือตัวเลข'},
+ vi:{tagline:'Vẽ & Đoán – ở mọi nơi',yourName:'Tên của bạn',namePh:'ví dụ Anna',
+   createGame:'Tạo phòng chơi',joinGame:'Vào phòng',roomCode4:'Mã phòng (4 chữ số)',join:'Tham gia',
+   roomCode:'Mã phòng',difficulty:'Độ khó',rounds:'Số vòng',teamMode:'Chế độ đội',teamOn:'Bật',teamOff:'Tắt',players:'Người chơi',leave:'Rời phòng',startGame:'Bắt đầu',
+   easy:'🟢 Dễ',medium:'🙂 Trung bình',hard:'🔥 Khó',mixed:'🎲 Trộn lẫn',
+   guessPh:'Câu trả lời của bạn …',send:'Gửi',newGame:'Ván mới',toMenu:'Về menu',
+   settings:'Cài đặt',language:'Ngôn ngữ',sound:'Âm thanh',fullscreen:'Toàn màn hình',endGame:'Kết thúc ván',close:'Đóng',howToPlay:'📖 Cách chơi',
+   youDraw:'Bạn vẽ ✏',draws:'đang vẽ …',round:'Vòng',teamLocked:'Đội của bạn đang vẽ – hãy chờ',
+   timeUp:'⏱ Hết giờ –',waitFor:'Đang chờ',continueDraw:'▶ Tiếp tục – tôi vẽ!',showResult:'🏁 Xem kết quả',endstand:'(kết quả)',
+   wins:'thắng!',chooseWord:'Chọn một từ',chooseWordHint:'Từ khó hơn được nhiều điểm hơn.',choosingWord:'đang chọn từ …',
+   teamRed:'Đội Đỏ',teamBlue:'Đội Xanh',teamHintOn:'Chế độ đội đang bật.',teamHintOff:'Mọi người chơi riêng.',
+   enterName:'Vui lòng nhập tên',enterCode:'Vui lòng nhập mã 4 chữ số',
+   waitPlayers:'Đang chờ thêm người chơi … (tối thiểu 2)',readyHost:'Sẵn sàng! Bạn có thể bắt đầu.',waitHost:'Đang chờ chủ phòng …',
+   hostChoosesLang:'Ngôn ngữ & từ vựng do chủ phòng chọn.',loading:'Đang tải …',confirmExit:'Bạn có chắc muốn kết thúc ván?',
+   descEasy:'🟢 Dễ – từ đơn giản cho người mới',descMedium:'🙂 Trung bình – từ pha trộn',descHard:'🔥 Khó – có cả từ hóc búa',descMixed:'🎲 Trộn mọi độ khó',
+   chooseFormat:'Chọn khổ màn hình',recommended:'Nên dùng',fmtPortraitTitle:'📱 Dọc',fmtLandscapeTitle:'🖥️ Ngang',
+   fmtPortraitDesc:'Cho điện thoại (9:16)',fmtLandscapeDesc:'Cho PC & máy tính bảng (16:9)',letsGo:'Bắt đầu nào',
+   howToTitle:'Cách hoạt động',dontShowAgain:'Không hiện lại',skipToGame:'Bỏ qua',changeFormat:'🖥️ Đổi khổ màn hình',
+   invite:'🔗 Mời bạn',showQR:'📷 Mã QR',inviteText:'Chơi Kritzelkönig với tôi nhé! Mã phòng',linkCopied:'✅ Đã sao chép liên kết',qrError:'Không tải được mã QR',
+   joiningRoom:'Bạn đang vào · Phòng',roomFull:'Phòng này đã đầy.',roomStarted:'Ván đang diễn ra – bạn sẽ vào với tư cách người chơi.',
+   soloTest:'🤖 Chơi thử một mình (đấu với máy)',
+   interPause:'🎬 Nghỉ ngắn',interMsg:'Đang chuẩn bị vòng tiếp theo …',interReady:'Sắp tiếp tục rồi!',
+   fairTitle:'🎨 Vẽ công bằng!',fairIntro:'Chỉ vẽ từ đó thành hình ảnh.',
+   fairNotAllowed:'🚫 Không được phép',fairLetters:'Chữ cái',fairWords:'Từ ngữ',fairNumbers:'Chữ số',
+   fairAllowed:'✅ Được phép',fairDrawings:'hình vẽ thông thường',fairShapes:'hình khối',fairArrows:'mũi tên',fairColors:'màu sắc',fairIdeas:'ý tưởng hình ảnh sáng tạo',
+   fairOutro:'Chúc vui vẻ và luôn chơi đẹp!',fairUnderstood:'Đã hiểu',fairMod:'Không vẽ nội dung xúc phạm, khiêu dâm, thù ghét hay không phù hợp.',reportDrawing:'⚠ Báo cáo hình vẽ',reported:'Cảm ơn – đã gửi báo cáo.',drawingRemoved:'Hình vẽ đã bị báo cáo và gỡ bỏ.',rulesTitle:'ℹ️ Luật chơi & Quyền riêng tư',
+   drawHint:'✏️ chỉ vẽ – không chữ/số',
+   nameBlocked:'Tên này không được phép. Vui lòng chọn tên khác.',
+   inputBlocked:'Cụm từ này không dùng được trong game. Vui lòng nhập nội dung khác.',
+   netBusy:'Quá nhiều yêu cầu – vui lòng chờ một chút.',netDown:'Không kết nối được máy chủ.',netLost:'Mất kết nối.',
+   howStep1:'Một người chơi nhận được một từ và vẽ từ đó.',howStep2:'Những người còn lại gõ câu trả lời của mình.',howStep3:'Ai đoán đúng trước được nhiều điểm nhất – người vẽ cũng được điểm.',howStep4:'Sau đó đến lượt người tiếp theo vẽ.',howStep5:'Chỉ vẽ: không chữ cái, không chữ số.'}
 };
-function t(k){return (T[S.lang]&&T[S.lang][k])||T.de[k]||k;}
+// Fehlt eine Zeile in einer Sprache, greift Englisch - nicht Deutsch. Ein
+// thailaendischer Spieler kaeme mit einem deutschen Satz sonst nicht weiter.
+function t(k){return (T[S.lang]&&T[S.lang][k])||T.en[k]||T.de[k]||k;}
 function applyI18n(){
   document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>el.placeholder=t(el.dataset.i18nPh));
@@ -890,7 +1113,7 @@ function applyI18n(){
   if($('btnReport'))$('btnReport').title=t('reportDrawing');
   if($('setMute'))$('setMute').textContent=S.muted?'🔇':'🔊';
 }
-function setLang(lang){ S.lang=lang; try{localStorage.setItem('kk_lang',lang)}catch(e){} applyI18n(); if(S.state==='lobby'&&S.lastRoom)renderLobby(S.lastRoom); }
+function setLang(lang){ S.lang=lang; sprachWahlGespeichert=true; try{localStorage.setItem('kk_lang',lang)}catch(e){} applyI18n(); if(S.state==='lobby'&&S.lastRoom)renderLobby(S.lastRoom); }
 function onLangClick(l){ if(S.roomCode && !S.isHost) return; setLang(l); if(S.roomCode && S.isHost) post({type:'language',value:l}); }
 
 // ---------- Sound ----------
@@ -920,7 +1143,7 @@ function startBgm(){ updateBgm(); }
 // Musik am Start (Menü/Lobby) und in den Einstellungen – sobald das Spiel läuft: Ruhe
 function updateBgm(){ if(!bgm)return;
   const setOpen = $('settings') && $('settings').classList.contains('show');
-  const play = !S.muted && !audioBlocked() && !tutVideoActive && (S.state==='menu' || S.state==='lobby' || setOpen);
+  const play = !S.muted && !audioBlocked() && (S.state==='menu' || S.state==='lobby' || setOpen);
   // Robust gegen In-App-Browser: play() liefert dort evtl. kein Promise -> darf show() nie brechen.
   try{ if(play){ const p=bgm.play(); if(p&&p.catch)p.catch(()=>{}); } else bgm.pause(); }catch(e){} }
 
@@ -1056,9 +1279,9 @@ async function post(o){ o.roomCode=(o.roomCode!=null?o.roomCode:S.roomCode); o.p
   try{
     const r=await fetch((window.API_BASE||'')+'/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o),signal:ctrl?ctrl.signal:undefined});
     if(timer)clearTimeout(timer);
-    if(r.status===429) return {ok:false,error:(S.lang==='en'?'Too many requests – please slow down.':'Zu viele Anfragen – bitte kurz warten.')};
+    if(r.status===429) return {ok:false,error:t('netBusy')};
     return await r.json();
-  }catch(e){ if(timer)clearTimeout(timer); return {ok:false,error:(S.lang==='en'?'Server not reachable.':'Server nicht erreichbar.')}; } }
+  }catch(e){ if(timer)clearTimeout(timer); return {ok:false,error:t('netDown')}; } }
 // Robuster SSE-Stream: eine Verbindung, Auto-Reconnect mit exponentiellem Backoff, Reconnect nach Tabwechsel.
 function openStream(){
   if(S.es){ try{S.es.close()}catch(e){} S.es=null; }
@@ -1072,7 +1295,7 @@ function openStream(){
     if(S.es!==es) return; S.es=null;
     if(!S.roomCode || S.state==='menu' || S.state==='startup') return;
     S._sseTries=(S._sseTries||0)+1;
-    if(S._sseTries>8){ try{showToast(S.lang==='en'?'Connection lost.':'Verbindung verloren.')}catch(e){} return; }
+    if(S._sseTries>8){ try{showToast(t('netLost'))}catch(e){} return; }
     const delay=Math.min(1000*Math.pow(2,S._sseTries-1),15000);
     setTimeout(()=>{ if(!S.es && S.roomCode) openStream(); }, delay);
   };

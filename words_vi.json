@@ -1,0 +1,7820 @@
+[
+ {
+  "wordId": "vi_e001",
+  "text": "Con chó",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e002",
+  "text": "Con mèo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e003",
+  "text": "Con chuột",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e004",
+  "text": "Con cá",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e005",
+  "text": "Cá vàng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e006",
+  "text": "Con vịt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e007",
+  "text": "Con bò",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e008",
+  "text": "Con lợn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e009",
+  "text": "Con ngựa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e010",
+  "text": "Con cừu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e011",
+  "text": "Con dê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e012",
+  "text": "Con gà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e013",
+  "text": "Gà trống",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e014",
+  "text": "Con nhím",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e015",
+  "text": "Con gấu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e016",
+  "text": "Con sói",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e017",
+  "text": "Con cáo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e018",
+  "text": "Con nai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e019",
+  "text": "Con ong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e020",
+  "text": "Con nhện",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e021",
+  "text": "Con ốc sên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e022",
+  "text": "Con bọ cánh cứng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e023",
+  "text": "Con ruồi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e024",
+  "text": "Cá mập",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e025",
+  "text": "Cá voi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e026",
+  "text": "Con cua",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e027",
+  "text": "Vỏ sò",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e028",
+  "text": "Chim cánh cụt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e029",
+  "text": "Quả táo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e030",
+  "text": "Quả lê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e031",
+  "text": "Quả chuối",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e032",
+  "text": "Quả anh đào",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e033",
+  "text": "Chùm nho",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e034",
+  "text": "Quả chanh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e035",
+  "text": "Quả cà chua",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e036",
+  "text": "Củ cà rốt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e037",
+  "text": "Quả dưa chuột",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e038",
+  "text": "Củ hành",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e039",
+  "text": "Quả ớt chuông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e040",
+  "text": "Hạt đậu Hà Lan",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e041",
+  "text": "Cây nấm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e042",
+  "text": "Quả trứng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e043",
+  "text": "Bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e045",
+  "text": "Phô mai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e046",
+  "text": "Kem",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e047",
+  "text": "Bánh pizza",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e048",
+  "text": "Khoai tây chiên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e049",
+  "text": "Bánh quy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e050",
+  "text": "Kẹo mút",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e051",
+  "text": "Viên kẹo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e052",
+  "text": "Mặt trời",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e053",
+  "text": "Mặt trăng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e054",
+  "text": "Ngôi sao",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e055",
+  "text": "Cái cây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e056",
+  "text": "Bông hoa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e057",
+  "text": "Hoa hồng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e058",
+  "text": "Chiếc lá",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e059",
+  "text": "Bãi cỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e060",
+  "text": "Ngọn núi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e061",
+  "text": "Ngọn đồi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e062",
+  "text": "Cái hồ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e063",
+  "text": "Dòng sông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e064",
+  "text": "Hòn đá",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e065",
+  "text": "Đám mây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e066",
+  "text": "Cơn mưa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e067",
+  "text": "Tuyết",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e068",
+  "text": "Tia sét",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e069",
+  "text": "Cây xương rồng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e070",
+  "text": "Cây cọ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e071",
+  "text": "Hòn đảo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e072",
+  "text": "Bãi biển",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e073",
+  "text": "Cơn gió",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e074",
+  "text": "Vũng nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e075",
+  "text": "Ngôi nhà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e076",
+  "text": "Túp lều",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e077",
+  "text": "Lều trại",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e078",
+  "text": "Cái tháp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e079",
+  "text": "Cánh cửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e080",
+  "text": "Cửa sổ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e081",
+  "text": "Hàng rào",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e082",
+  "text": "Cổng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e083",
+  "text": "Ô tô",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e084",
+  "text": "Xe buýt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e085",
+  "text": "Tàu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e086",
+  "text": "Chiếc thuyền",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e087",
+  "text": "Con tàu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e088",
+  "text": "Tên lửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e089",
+  "text": "Xe đạp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e090",
+  "text": "Xe taxi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e091",
+  "text": "Quả bóng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e092",
+  "text": "Gấu bông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e093",
+  "text": "Búp bê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e094",
+  "text": "Con xúc xắc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e095",
+  "text": "Viên bi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e096",
+  "text": "Yo-yo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e097",
+  "text": "Con quay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e098",
+  "text": "Chiếc cúp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e099",
+  "text": "Huy chương",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e100",
+  "text": "Con diều",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e101",
+  "text": "Cái mũ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e102",
+  "text": "Mũ len",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e103",
+  "text": "Chiếc giày",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e104",
+  "text": "Chiếc tất",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e105",
+  "text": "Khăn quàng cổ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e106",
+  "text": "Áo sơ mi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e107",
+  "text": "Cái quần",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e108",
+  "text": "Chân váy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e109",
+  "text": "Váy đầm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e110",
+  "text": "Áo khoác",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e111",
+  "text": "Áo choàng dài",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e112",
+  "text": "Thắt lưng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e113",
+  "text": "Cà vạt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e114",
+  "text": "Chiếc nơ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e115",
+  "text": "Cặp kính",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e116",
+  "text": "Đôi bốt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e117",
+  "text": "Cái túi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e118",
+  "text": "Chiếc nhẫn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e119",
+  "text": "Vương miện",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e120",
+  "text": "Chìa khóa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e121",
+  "text": "Cái bàn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e122",
+  "text": "Cái ghế",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e123",
+  "text": "Cái giường",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e124",
+  "text": "Ghế sofa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e125",
+  "text": "Ghế bành",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e126",
+  "text": "Ghế băng dài",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e127",
+  "text": "Ghế đẩu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e128",
+  "text": "Cái kệ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e129",
+  "text": "Cái đèn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e130",
+  "text": "Cái gương",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e131",
+  "text": "Tấm thảm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e132",
+  "text": "Cái gối",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e133",
+  "text": "Bình hoa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e134",
+  "text": "Cây nến",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e135",
+  "text": "Đồng hồ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e136",
+  "text": "Quyển sách",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e137",
+  "text": "Cái cốc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e138",
+  "text": "Tách cà phê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e139",
+  "text": "Cái đĩa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e140",
+  "text": "Cái nồi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e141",
+  "text": "Cái chảo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e142",
+  "text": "Cái nĩa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e143",
+  "text": "Cái thìa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e144",
+  "text": "Con dao",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e145",
+  "text": "Ấm nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e146",
+  "text": "Cái xô",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e147",
+  "text": "Cây chổi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e148",
+  "text": "Trái tim",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e149",
+  "text": "Hình tròn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e150",
+  "text": "Hình tam giác",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e151",
+  "text": "Hình vuông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e152",
+  "text": "Mũi tên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e153",
+  "text": "Dấu chữ thập",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e154",
+  "text": "Mặt cười",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e155",
+  "text": "Viên kim cương",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e156",
+  "text": "Móng ngựa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e157",
+  "text": "Hình xoắn ốc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e158",
+  "text": "Mỏ neo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e159",
+  "text": "Con mắt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e160",
+  "text": "Cái mũi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e161",
+  "text": "Cái miệng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e162",
+  "text": "Cái tai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e163",
+  "text": "Bàn tay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e164",
+  "text": "Bàn chân",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e165",
+  "text": "Cái chân",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e166",
+  "text": "Cánh tay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e167",
+  "text": "Cái răng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e168",
+  "text": "Cái lưỡi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e169",
+  "text": "Ngón tay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e170",
+  "text": "Ngón cái",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e171",
+  "text": "Đầu gối",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e172",
+  "text": "Bộ râu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e173",
+  "text": "Mái tóc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e174",
+  "text": "Món quà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e175",
+  "text": "Cái chuông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e176",
+  "text": "Quả bóng bay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e177",
+  "text": "Xe trượt tuyết",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e178",
+  "text": "Trứng Phục sinh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e179",
+  "text": "Miếng băng dán",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e180",
+  "text": "Ống tiêm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e181",
+  "text": "Mặt nạ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e182",
+  "text": "Kính lúp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e183",
+  "text": "Bánh xà phòng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e184",
+  "text": "Khăn tắm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e185",
+  "text": "Cái lược",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e186",
+  "text": "Cái kéo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e187",
+  "text": "Cây bút",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e188",
+  "text": "Bút chì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e189",
+  "text": "Cái thước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e190",
+  "text": "Quyển vở",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e191",
+  "text": "Bảng đen",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e192",
+  "text": "Viên phấn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e193",
+  "text": "Cây cọ vẽ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e194",
+  "text": "Cái búa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e195",
+  "text": "Cái đinh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e196",
+  "text": "Con ốc vít",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e197",
+  "text": "Cái cưa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e198",
+  "text": "Cái rìu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e199",
+  "text": "Cái thang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e200",
+  "text": "Cái xẻng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e201",
+  "text": "Cái cào",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e202",
+  "text": "Hoa hướng dương",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e203",
+  "text": "Bếp nướng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e204",
+  "text": "Cần câu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e205",
+  "text": "Chiếc lồng đèn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e206",
+  "text": "Ngọn lửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e207",
+  "text": "Nhà cho chim",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e208",
+  "text": "Cây táo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e209",
+  "text": "Con rồng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e210",
+  "text": "Hiệp sĩ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e211",
+  "text": "Nhà vua",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e212",
+  "text": "Hoàng hậu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e213",
+  "text": "Mụ phù thủy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e214",
+  "text": "Nàng tiên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e215",
+  "text": "Con ma",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e216",
+  "text": "Chú lùn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e217",
+  "text": "Tên cướp biển",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e218",
+  "text": "Hành tinh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e219",
+  "text": "Đĩa bay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e220",
+  "text": "Người ngoài hành tinh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e221",
+  "text": "Sao chổi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e222",
+  "text": "Sao Hỏa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e223",
+  "text": "Kẹo gậy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e224",
+  "text": "Lọ mứt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e225",
+  "text": "Ly nước ép",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e226",
+  "text": "Ống hút",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e227",
+  "text": "Miếng lót nồi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e229",
+  "text": "Hộp cơm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e230",
+  "text": "Bàn chải tóc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e231",
+  "text": "Dép đi trong nhà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e232",
+  "text": "Mũ đi mưa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e233",
+  "text": "Quần bơi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e234",
+  "text": "Ổ khóa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e235",
+  "text": "Tay nắm cửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e236",
+  "text": "Bệ cửa sổ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e237",
+  "text": "Máy bay giấy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e238",
+  "text": "Ly sữa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e239",
+  "text": "Nến nhỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e240",
+  "text": "Hộp đựng trứng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e241",
+  "text": "Hành lá",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e242",
+  "text": "Cây xà lách",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e244",
+  "text": "Bánh gạo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e247",
+  "text": "Quả việt quất",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e248",
+  "text": "Quả chà là",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e249",
+  "text": "Quả đu đủ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e251",
+  "text": "Hoa a-ti-sô",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e252",
+  "text": "Măng tây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e253",
+  "text": "Con chim",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e254",
+  "text": "Con ếch",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e255",
+  "text": "Con cú",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e256",
+  "text": "Chim bồ câu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e257",
+  "text": "Đại bàng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e258",
+  "text": "Con sâu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e259",
+  "text": "Thiên nga",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e260",
+  "text": "Chim hải âu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e261",
+  "text": "Con cò",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e262",
+  "text": "Con thỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e263",
+  "text": "Bơ lạt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e264",
+  "text": "Mật ong",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e265",
+  "text": "Cây xúc xích",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e266",
+  "text": "Hạt gạo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e267",
+  "text": "Sợi mì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e268",
+  "text": "Hạt muối",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e269",
+  "text": "Đường",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e270",
+  "text": "Nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e271",
+  "text": "Cà phê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e272",
+  "text": "Trà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e273",
+  "text": "Tương cà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e274",
+  "text": "Mù tạt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e275",
+  "text": "Bánh mì nướng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e276",
+  "text": "Cháo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e277",
+  "text": "Sữa chua",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e278",
+  "text": "Biển",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e279",
+  "text": "Con suối",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e280",
+  "text": "Đồng cỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e281",
+  "text": "Cát",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e282",
+  "text": "Đống lửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e283",
+  "text": "Sương mù",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e284",
+  "text": "Bụi cây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e285",
+  "text": "Cành cây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e286",
+  "text": "Rễ cây",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e287",
+  "text": "Cây thông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e290",
+  "text": "Thùng gỗ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e291",
+  "text": "Cái giỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e292",
+  "text": "Cái chai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e293",
+  "text": "Lon nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e294",
+  "text": "Cái bát",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e295",
+  "text": "Cái chăn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e296",
+  "text": "Tấm nệm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e297",
+  "text": "Nút bần",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e298",
+  "text": "Cúc áo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e299",
+  "text": "Cây kim",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e300",
+  "text": "Sợi chỉ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e301",
+  "text": "Tờ giấy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e302",
+  "text": "Lá thư",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e303",
+  "text": "Đồng xu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e304",
+  "text": "Tờ tiền",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e305",
+  "text": "Sợi dây thừng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e306",
+  "text": "Sợi xích",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e307",
+  "text": "Cây gậy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e308",
+  "text": "Cái đầu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e309",
+  "text": "Cái bụng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e310",
+  "text": "Cái lưng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e311",
+  "text": "Bờ vai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e312",
+  "text": "Khuỷu tay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e313",
+  "text": "Cái cổ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e314",
+  "text": "Cầu trượt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e315",
+  "text": "Cái xích đu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e316",
+  "text": "Bập bênh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e317",
+  "text": "Nốt nhạc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e318",
+  "text": "Cái đài",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e319",
+  "text": "Tàu điện ngầm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e320",
+  "text": "Phà",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e321",
+  "text": "Găng tay",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e322",
+  "text": "Áo len",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e323",
+  "text": "Quần lót",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e325",
+  "text": "Hộp bánh quy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e326",
+  "text": "Hộp sữa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e327",
+  "text": "Lát bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e328",
+  "text": "Răng sún",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e329",
+  "text": "Thuyền giấy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e330",
+  "text": "Vòi nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e331",
+  "text": "Con lươn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e332",
+  "text": "Chim ưng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e333",
+  "text": "Chim trĩ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e334",
+  "text": "Con lười",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e335",
+  "text": "Con tắc kè",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e336",
+  "text": "Báo đốm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e339",
+  "text": "Con quạ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e344",
+  "text": "Hạt đậu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e345",
+  "text": "Quả ớt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e346",
+  "text": "Mứt",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e348",
+  "text": "Quả ô liu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e349",
+  "text": "Quế",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e350",
+  "text": "Đèn giao thông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e351",
+  "text": "Con tem",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e352",
+  "text": "Nam châm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e353",
+  "text": "Tập hồ sơ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e354",
+  "text": "Bưu kiện",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e355",
+  "text": "Bìa các tông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e356",
+  "text": "Viên ngọc trai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e357",
+  "text": "Cái còi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e358",
+  "text": "Cái hộp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e359",
+  "text": "Túi ni lông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e360",
+  "text": "Đồi cát",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e361",
+  "text": "Ruộng lúa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e362",
+  "text": "Tảng đá lớn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e363",
+  "text": "Khu vườn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e365",
+  "text": "Bờ biển",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e367",
+  "text": "Đài phun nước",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e368",
+  "text": "Cái ao",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e369",
+  "text": "Tiệm bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e370",
+  "text": "Văn phòng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e371",
+  "text": "Quán cà phê",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e372",
+  "text": "Cái chợ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e373",
+  "text": "Công viên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e374",
+  "text": "Bộ bikini",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e376",
+  "text": "Áo hoodie",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e377",
+  "text": "Dép sandal",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e378",
+  "text": "Giày thể thao",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e379",
+  "text": "Ban công",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e380",
+  "text": "Phòng tắm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e381",
+  "text": "Hành lang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e382",
+  "text": "Tầng hầm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e383",
+  "text": "Nhà bếp",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e384",
+  "text": "Lò nướng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e385",
+  "text": "Cầu thang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e387",
+  "text": "Công trường xây dựng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e388",
+  "text": "Cái giếng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e389",
+  "text": "Đài tưởng niệm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e390",
+  "text": "Bức tượng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e391",
+  "text": "Đường hầm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e392",
+  "text": "Tấm ván",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e393",
+  "text": "Sợi dây thép",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e394",
+  "text": "Cái móc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e395",
+  "text": "Cái kẹp phơi đồ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e396",
+  "text": "Lọ keo dán",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e397",
+  "text": "Đất nặn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e398",
+  "text": "Cuộn len",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e400",
+  "text": "Quả dứa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e401",
+  "text": "Hạt táo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e403",
+  "text": "Lát dưa chuột",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e404",
+  "text": "Viên phô mai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e405",
+  "text": "Bánh anh đào",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e406",
+  "text": "Nước chanh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e408",
+  "text": "Thịt nguội",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e409",
+  "text": "Trứng ốp la",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e410",
+  "text": "Thuyền câu cá",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e411",
+  "text": "Cái phao nổi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e412",
+  "text": "Cái bè",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e414",
+  "text": "Xe jeep",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e415",
+  "text": "Xe máy",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e416",
+  "text": "Xe xích lô",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e417",
+  "text": "Cây tre",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e419",
+  "text": "Cây dương xỉ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e420",
+  "text": "Hoa tulip",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e421",
+  "text": "Vịt cao su",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e422",
+  "text": "Boomerang",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e423",
+  "text": "Quân domino",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e424",
+  "text": "Quả cầu lông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e426",
+  "text": "Đĩa ném",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e427",
+  "text": "Găng tay bao",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e429",
+  "text": "Bông tai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e430",
+  "text": "Áo mưa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e431",
+  "text": "Kính râm",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e432",
+  "text": "Ủng cao su",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e433",
+  "text": "Cốp xe",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e434",
+  "text": "Nón giao thông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e435",
+  "text": "Thùng rác",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e436",
+  "text": "Ghế công viên",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e437",
+  "text": "Thang cuốn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e438",
+  "text": "Biển báo đường",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e439",
+  "text": "Hiệu thuốc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e440",
+  "text": "Hiệu sách",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e441",
+  "text": "Trạm cứu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e442",
+  "text": "Quán ăn vỉa hè",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e443",
+  "text": "Em bé",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e444",
+  "text": "Anh trai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e445",
+  "text": "Chị gái",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e446",
+  "text": "Bà ngoại",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e447",
+  "text": "Ông ngoại",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e448",
+  "text": "Lá cờ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e449",
+  "text": "Mũ lưỡi trai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e451",
+  "text": "Khăn voan cô dâu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e452",
+  "text": "Bong bóng khí",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e454",
+  "text": "Tia lửa",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e455",
+  "text": "Làn khói",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e456",
+  "text": "Cái bóng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e457",
+  "text": "Hầm mỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e458",
+  "text": "Lối mòn trong rừng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e460",
+  "text": "Đống cát",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e461",
+  "text": "Cây bonsai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e463",
+  "text": "Hạt dẻ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e466",
+  "text": "Quả thông",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e467",
+  "text": "Bóng bãi biển",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e469",
+  "text": "Bong bóng xà phòng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e470",
+  "text": "Cục pin",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e471",
+  "text": "Sợi dây điện",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e472",
+  "text": "Pin cúc áo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e473",
+  "text": "Miếng lót chuột",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e474",
+  "text": "Phích cắm điện",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e475",
+  "text": "Cái huy hiệu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e476",
+  "text": "Lưỡi câu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e477",
+  "text": "Cái gọt bút chì",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e478",
+  "text": "Miếng dán",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e479",
+  "text": "Đồ bơi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e480",
+  "text": "Mũ bơi",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e482",
+  "text": "Cái ly",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e483",
+  "text": "Hộp kẹo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e484",
+  "text": "Bánh mì phết bơ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e485",
+  "text": "Túi đi chợ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e486",
+  "text": "Viên đá lạnh",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e487",
+  "text": "Hộp sơn",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e488",
+  "text": "Chiếc lông vũ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e490",
+  "text": "Ruy băng",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e491",
+  "text": "Quả bóng cao su",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e492",
+  "text": "Dây buộc tóc",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e493",
+  "text": "Chổi quét nhỏ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e494",
+  "text": "Thìa gỗ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e496",
+  "text": "Móc treo áo",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e497",
+  "text": "Nắp chai",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e498",
+  "text": "Cái đánh dấu sách",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e499",
+  "text": "Sách tô màu",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_e500",
+  "text": "Hộp màu vẽ",
+  "category": "Allgemein",
+  "difficulty": "Easy"
+ },
+ {
+  "wordId": "vi_m001",
+  "text": "Chuột hamster",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m003",
+  "text": "Con vẹt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m004",
+  "text": "Con rùa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m006",
+  "text": "Sư tử",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m007",
+  "text": "Con hổ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m008",
+  "text": "Con voi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m009",
+  "text": "Hươu cao cổ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m010",
+  "text": "Ngựa vằn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m011",
+  "text": "Con khỉ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m012",
+  "text": "Con hươu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m013",
+  "text": "Gấu trúc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m014",
+  "text": "Lạc đà",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m015",
+  "text": "Chim hồng hạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m016",
+  "text": "Khỉ đột",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m017",
+  "text": "Con lừa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m018",
+  "text": "Con ngỗng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m019",
+  "text": "Gà con",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m020",
+  "text": "Bê con",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m021",
+  "text": "Lợn con",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m022",
+  "text": "Cừu con",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m023",
+  "text": "Chuồng gia súc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m024",
+  "text": "Máy cày",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m025",
+  "text": "Nhà kho lúa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m026",
+  "text": "Cá heo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m028",
+  "text": "Con sứa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m029",
+  "text": "Sao biển",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m030",
+  "text": "Tôm hùm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m031",
+  "text": "San hô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m032",
+  "text": "Hải cẩu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m033",
+  "text": "Con ong bắp cày",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m034",
+  "text": "Con kiến",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m035",
+  "text": "Con muỗi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m036",
+  "text": "Con sâu bướm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m037",
+  "text": "Con giun đất",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m038",
+  "text": "Con bướm đêm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m039",
+  "text": "Quả cam",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m040",
+  "text": "Quả dâu tây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m041",
+  "text": "Quả mâm xôi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m042",
+  "text": "Quả mận",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m044",
+  "text": "Quả dưa hấu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m045",
+  "text": "Quả kiwi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m046",
+  "text": "Quả xoài",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m047",
+  "text": "Quả đào",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m048",
+  "text": "Quả sung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m049",
+  "text": "Củ khoai tây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m050",
+  "text": "Củ tỏi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m052",
+  "text": "Bắp cải",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m053",
+  "text": "Bông cải xanh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m054",
+  "text": "Quả bí ngô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m056",
+  "text": "Củ cải đỏ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m057",
+  "text": "Quả cà tím",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m058",
+  "text": "Quả bí ngòi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m059",
+  "text": "Quả mơ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m060",
+  "text": "Bánh burger",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m061",
+  "text": "Bánh mì xúc xích",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m062",
+  "text": "Bát súp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m063",
+  "text": "Bánh quế",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m064",
+  "text": "Cái bánh ngọt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m066",
+  "text": "Bánh donut",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m069",
+  "text": "Sô cô la",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m070",
+  "text": "Bánh muffin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m071",
+  "text": "Bánh cupcake",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m072",
+  "text": "Bỏng ngô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m074",
+  "text": "Ly kem",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m076",
+  "text": "Sữa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m077",
+  "text": "Ca cao",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m078",
+  "text": "Nước ngọt có ga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m079",
+  "text": "Ấm trà",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m080",
+  "text": "Cái kìm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m081",
+  "text": "Mũi khoan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m082",
+  "text": "Mũ bảo hiểm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m083",
+  "text": "Viên gạch",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m084",
+  "text": "Đàn ghi ta",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m085",
+  "text": "Đàn piano",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m086",
+  "text": "Đàn violin",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m087",
+  "text": "Đàn cello",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m088",
+  "text": "Kèn trumpet",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m089",
+  "text": "Kèn trombone",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m090",
+  "text": "Cây sáo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m091",
+  "text": "Cái trống",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m092",
+  "text": "Trống lục lạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m093",
+  "text": "Đàn hạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m094",
+  "text": "Micro",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m097",
+  "text": "Xe tay ga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m098",
+  "text": "Máy bay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m099",
+  "text": "Thuyền ca nô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m100",
+  "text": "Xe mui trần",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m101",
+  "text": "Xe thể thao",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m102",
+  "text": "Tủ quần áo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m103",
+  "text": "Tủ ngăn kéo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m104",
+  "text": "Tấm rèm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m106",
+  "text": "Chậu cây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m107",
+  "text": "Tòa nhà cao tầng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m108",
+  "text": "Lâu đài",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m110",
+  "text": "Nhà thờ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m111",
+  "text": "Trường học",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m112",
+  "text": "Nhà máy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m113",
+  "text": "Nhà để xe",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m114",
+  "text": "Cây cầu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m115",
+  "text": "Cối xay gió",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m116",
+  "text": "Ngọn hải đăng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m117",
+  "text": "Cái tivi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m118",
+  "text": "Đồng hồ báo thức",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m119",
+  "text": "Điện thoại",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m120",
+  "text": "Bếp ga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m122",
+  "text": "Máy xay sinh tố",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m123",
+  "text": "Máy nướng bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m124",
+  "text": "Cái rây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m125",
+  "text": "Máy sấy tóc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m127",
+  "text": "Dao cạo râu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m128",
+  "text": "Miếng bọt biển",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m129",
+  "text": "Máy tính",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m130",
+  "text": "Máy tính xách tay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m131",
+  "text": "Máy in",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m132",
+  "text": "Con dấu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m133",
+  "text": "Tờ lịch",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m134",
+  "text": "Máy đục lỗ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m135",
+  "text": "Cái dập ghim",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m136",
+  "text": "Quả địa cầu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m137",
+  "text": "Bóng đá",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m138",
+  "text": "Bóng rổ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m139",
+  "text": "Bóng chuyền",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m140",
+  "text": "Bóng ném",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m141",
+  "text": "Quả tạ tay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m142",
+  "text": "Ván trượt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m143",
+  "text": "Giày trượt băng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m144",
+  "text": "Bạt nhún",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m145",
+  "text": "Ván trượt tuyết",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m146",
+  "text": "Phi tiêu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m147",
+  "text": "Khối gỗ xếp hình",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m148",
+  "text": "Trò xếp hình",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m149",
+  "text": "Lá bài",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m150",
+  "text": "Lâu đài cát",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m151",
+  "text": "Dây nhảy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m152",
+  "text": "Người máy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m153",
+  "text": "Cây đũa phép",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m154",
+  "text": "Điện thoại thông minh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m155",
+  "text": "Máy tính bảng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m156",
+  "text": "Máy ảnh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m157",
+  "text": "Máy bay không người lái",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m158",
+  "text": "Pin tiểu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m159",
+  "text": "Ổ cắm điện",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m160",
+  "text": "Ống nhòm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m161",
+  "text": "Thác nước",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m162",
+  "text": "Cái hang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m163",
+  "text": "Khu rừng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m164",
+  "text": "Núi lửa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m165",
+  "text": "Cái ô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m166",
+  "text": "Cơn giông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m167",
+  "text": "Cơn lốc xoáy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m168",
+  "text": "Cầu vồng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m169",
+  "text": "Người tuyết",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m170",
+  "text": "Bông tuyết",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m172",
+  "text": "Nhiệt kế",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m173",
+  "text": "Vali",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m174",
+  "text": "Ba lô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m175",
+  "text": "Mũ rộng vành",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m176",
+  "text": "Tấm bản đồ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m177",
+  "text": "La bàn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m178",
+  "text": "Túi ngủ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m179",
+  "text": "Dép xỏ ngón",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m180",
+  "text": "Khách sạn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m181",
+  "text": "Bác sĩ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m182",
+  "text": "Cảnh sát",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m183",
+  "text": "Đầu bếp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m184",
+  "text": "Thợ làm bánh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m185",
+  "text": "Thầy giáo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m186",
+  "text": "Họa sĩ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m187",
+  "text": "Người làm vườn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m188",
+  "text": "Phi công",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m189",
+  "text": "Chú hề",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m190",
+  "text": "Nhà ảo thuật",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m191",
+  "text": "Thợ cắt tóc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m192",
+  "text": "Bác nông dân",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m193",
+  "text": "Thuyền trưởng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m194",
+  "text": "Vị thẩm phán",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m195",
+  "text": "Nàng công chúa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m196",
+  "text": "Kỳ lân",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m197",
+  "text": "Con quái vật",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m198",
+  "text": "Người khổng lồ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m199",
+  "text": "Ma cà rồng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m200",
+  "text": "Rương kho báu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m201",
+  "text": "Vệ tinh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m202",
+  "text": "Kính thiên văn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m203",
+  "text": "Sao Thổ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m204",
+  "text": "Viên thuốc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m205",
+  "text": "Băng gạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m206",
+  "text": "Cái nạng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m207",
+  "text": "Bộ xương",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m208",
+  "text": "Bộ não",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m209",
+  "text": "Bình tưới cây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m211",
+  "text": "Cái võng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m212",
+  "text": "Máy xúc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m213",
+  "text": "Cần cẩu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m215",
+  "text": "Còi hú",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m216",
+  "text": "Tuần lộc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m217",
+  "text": "Dây chuyền",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m218",
+  "text": "Cái ví",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m219",
+  "text": "Cái quạt giấy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m220",
+  "text": "Bộ ria mép",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m221",
+  "text": "Vòng tay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m222",
+  "text": "Vòng đu quay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m223",
+  "text": "Ngựa gỗ quay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m224",
+  "text": "Kẹo bông gòn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m225",
+  "text": "Cầu treo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m226",
+  "text": "Nhà ga",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m229",
+  "text": "Đảo giao thông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m230",
+  "text": "Vạch qua đường",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m231",
+  "text": "Máy bán vé tự động",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m232",
+  "text": "Xe đẩy hành lý",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m233",
+  "text": "Xe buýt hai tầng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m235",
+  "text": "Cây xăng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m236",
+  "text": "Tiệm rửa xe",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m237",
+  "text": "Hộp đồ nghề",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m238",
+  "text": "Máy khâu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m239",
+  "text": "Giàn phơi quần áo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m240",
+  "text": "Xe đẩy siêu thị",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m242",
+  "text": "Máy xay cà phê",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m243",
+  "text": "Khay nướng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m244",
+  "text": "Cây cán bột",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m245",
+  "text": "Nồi nấu súp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m246",
+  "text": "Bó hoa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m247",
+  "text": "Giá để ô",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m248",
+  "text": "Hòm thư",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m249",
+  "text": "Giàn leo trèo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m250",
+  "text": "Nhà trên cây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m251",
+  "text": "Máng xối",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m252",
+  "text": "Tấm pin mặt trời",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m253",
+  "text": "Trạm xe buýt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m254",
+  "text": "Vé xem ca nhạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m255",
+  "text": "Gấu koala",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m256",
+  "text": "Báo săn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m257",
+  "text": "Con báo hoa mai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m258",
+  "text": "Con trâu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m260",
+  "text": "Rái cá",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m262",
+  "text": "Lạc đà không bướu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m264",
+  "text": "Chim công",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m265",
+  "text": "Đà điểu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m266",
+  "text": "Chuột chũi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m267",
+  "text": "Hải ly",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m268",
+  "text": "Con dơi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m270",
+  "text": "Chim gõ kiến",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m272",
+  "text": "Cá chép",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m273",
+  "text": "Cá kiếm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m274",
+  "text": "Chim hạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m275",
+  "text": "Bánh sừng bò",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m277",
+  "text": "Trứng chiên",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m279",
+  "text": "Bánh pudding",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m280",
+  "text": "Bánh phô mai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m281",
+  "text": "Bánh lasagne",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m283",
+  "text": "Món sushi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m284",
+  "text": "Xúc xích salami",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m285",
+  "text": "Quả bơ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m286",
+  "text": "Quả mâm xôi đen",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m288",
+  "text": "Cái mở hộp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m289",
+  "text": "Cái mở nút chai",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m290",
+  "text": "Cái đánh trứng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m291",
+  "text": "Cốc đong",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m292",
+  "text": "Cân nhà bếp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m293",
+  "text": "Cái xẻng xào",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m294",
+  "text": "Khăn lau bát",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m296",
+  "text": "Kệ để giày",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m297",
+  "text": "Đồng hồ treo tường",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m298",
+  "text": "Đèn cây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m299",
+  "text": "Chồng sách",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m300",
+  "text": "Gậy bóng chày",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m301",
+  "text": "Quả bóng bowling",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m302",
+  "text": "Vợt cầu lông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m303",
+  "text": "Ván lướt sóng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m304",
+  "text": "Kính lặn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m305",
+  "text": "Phao bơi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m306",
+  "text": "Thủ môn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m307",
+  "text": "Trọng tài",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m308",
+  "text": "Xe đạp đua",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m309",
+  "text": "Nha sĩ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m310",
+  "text": "Bác sĩ thú y",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m311",
+  "text": "Người đưa thư",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m312",
+  "text": "Người bán hàng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m313",
+  "text": "Nhạc sĩ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m314",
+  "text": "Vũ công",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m315",
+  "text": "Diễn viên",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m316",
+  "text": "Thám tử",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m317",
+  "text": "Nhà khoa học",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m318",
+  "text": "Bảo tàng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m319",
+  "text": "Thư viện",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m320",
+  "text": "Rạp chiếu phim",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m321",
+  "text": "Nhà hàng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m322",
+  "text": "Bệnh viện",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m323",
+  "text": "Sân bay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m324",
+  "text": "Bến cảng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m325",
+  "text": "Nông trại",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m326",
+  "text": "Sân chơi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m327",
+  "text": "Bể bơi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m328",
+  "text": "Sân vận động",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m329",
+  "text": "Rạp xiếc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m330",
+  "text": "Sở thú",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m331",
+  "text": "Sông băng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m332",
+  "text": "Sa mạc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m333",
+  "text": "Vách đá",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m334",
+  "text": "Ốc đảo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m335",
+  "text": "Trận lở tuyết",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m336",
+  "text": "Thú ăn kiến",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m337",
+  "text": "Linh dương",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m339",
+  "text": "Tắc kè hoa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m341",
+  "text": "Linh cẩu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m343",
+  "text": "Rắn hổ mang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m344",
+  "text": "Vượn cáo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m346",
+  "text": "Đười ươi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m348",
+  "text": "Khỉ đầu chó",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m351",
+  "text": "Con heo vòi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m352",
+  "text": "Chim toucan",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m353",
+  "text": "Hải mã",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m355",
+  "text": "Quả bưởi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m357",
+  "text": "Quả vải",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m358",
+  "text": "Quả chanh dây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m360",
+  "text": "Củ dền",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m361",
+  "text": "Cần tây",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m362",
+  "text": "Củ khoai lang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m363",
+  "text": "Máy vặn vít",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m364",
+  "text": "Cái đe",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m365",
+  "text": "Xà beng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m366",
+  "text": "Cái giũa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m367",
+  "text": "Cái bào gỗ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m368",
+  "text": "Cái đục",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m369",
+  "text": "Mỏ lết ống",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m371",
+  "text": "Đàn ghi ta điện",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m372",
+  "text": "Cái cồng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m373",
+  "text": "Đàn công bát",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m374",
+  "text": "Kèn harmonica",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m375",
+  "text": "Kèn saxophone",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m376",
+  "text": "Đàn mộc cầm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m377",
+  "text": "Máy bay hai tầng cánh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m378",
+  "text": "Xe nâng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m379",
+  "text": "Xe địa hình",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m380",
+  "text": "Xe limousine",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m381",
+  "text": "Xe đua",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m384",
+  "text": "Nhà nông thôn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m385",
+  "text": "Nhà gỗ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m386",
+  "text": "Nhà thuyền",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m388",
+  "text": "Nhà tuyết",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m390",
+  "text": "Quầy bán hàng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m391",
+  "text": "Nhà thờ Hồi giáo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m392",
+  "text": "Ngôi chùa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m393",
+  "text": "Kim tự tháp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m394",
+  "text": "Ngôi đền",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m395",
+  "text": "Biệt thự",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m397",
+  "text": "Máy chiếu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m398",
+  "text": "Tay cầm chơi game",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m399",
+  "text": "Màn hình máy tính",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m400",
+  "text": "Máy quay đĩa than",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m401",
+  "text": "Cái quạt máy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m405",
+  "text": "Quần thể thao",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m406",
+  "text": "Miếng bảo vệ đầu gối",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m407",
+  "text": "Áo khoác da",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m408",
+  "text": "Bộ đồ ngủ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m409",
+  "text": "Kính bảo hộ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m410",
+  "text": "Bàn để ủi đồ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m411",
+  "text": "Tấm thảm chùi chân",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m412",
+  "text": "Gương cầm tay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m413",
+  "text": "Cặp tài liệu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m414",
+  "text": "Dao rọc thư",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m415",
+  "text": "Bút máy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m416",
+  "text": "Bảng ghim",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m417",
+  "text": "Bút dạ quang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m419",
+  "text": "Đầu máy hơi nước",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m421",
+  "text": "Xe đạp điện",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m423",
+  "text": "Xe go-kart",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m424",
+  "text": "Xe ngựa kéo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m425",
+  "text": "Ca nô máy",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m426",
+  "text": "Thuyền đạp vịt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m428",
+  "text": "Mê cung",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m429",
+  "text": "Vườn thảo mộc",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m431",
+  "text": "Cổng vòm hoa hồng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m432",
+  "text": "Nhà hơi",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m436",
+  "text": "Cái nỏ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m438",
+  "text": "Mặt nạ đấu kiếm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m439",
+  "text": "Gậy khúc côn cầu",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m440",
+  "text": "Ky bowling",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m443",
+  "text": "Lưới cầu lông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m444",
+  "text": "Giày múa ba lê",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m445",
+  "text": "Khung vải vẽ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m446",
+  "text": "Loa cầm tay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m447",
+  "text": "Giá vẽ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m450",
+  "text": "Thợ lợp mái",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m451",
+  "text": "Người bán thịt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m452",
+  "text": "Hộp dứa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m453",
+  "text": "Giỏ bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m454",
+  "text": "Đôi đũa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m455",
+  "text": "Xiên thịt nướng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m457",
+  "text": "Tô salad",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m458",
+  "text": "Cái khay",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m459",
+  "text": "Chuông báo trộm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m460",
+  "text": "Cột ăng ten",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m462",
+  "text": "Nút chuông cửa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m464",
+  "text": "Camera an ninh",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m465",
+  "text": "Tua bin gió",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m466",
+  "text": "Thanh treo rèm",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m467",
+  "text": "Củi đốt",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m468",
+  "text": "Tủ bếp",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m469",
+  "text": "Kệ treo tường",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m470",
+  "text": "Vòng hoa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m471",
+  "text": "Tinh thể băng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m472",
+  "text": "Pháo hoa",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m473",
+  "text": "Suối nước nóng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m474",
+  "text": "Hạt mưa đá",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m475",
+  "text": "Dòng dung nham",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m476",
+  "text": "Cực quang",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m477",
+  "text": "Bão cát",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m478",
+  "text": "Nhật thực",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m479",
+  "text": "Thuyền phao",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m481",
+  "text": "Đèn lặn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m482",
+  "text": "Nhẫn cưới",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m484",
+  "text": "Mũ sinh nhật",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m486",
+  "text": "Que pháo bông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m487",
+  "text": "Tổ ong",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m488",
+  "text": "Máng ăn cho chim",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m489",
+  "text": "Vườn rau",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m490",
+  "text": "Đống phân ủ",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m491",
+  "text": "Bụi hoa hồng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m492",
+  "text": "Hóa đơn",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m493",
+  "text": "Tủ kính bày hàng",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m494",
+  "text": "Trung tâm thương mại",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m495",
+  "text": "Giàn giáo",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m496",
+  "text": "Cột bê tông",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m498",
+  "text": "Nắp cống",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m499",
+  "text": "Ống khói",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_m500",
+  "text": "Cột đèn đường",
+  "category": "Allgemein",
+  "difficulty": "Medium"
+ },
+ {
+  "wordId": "vi_h001",
+  "text": "Chuột lang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h002",
+  "text": "Vẹt yến phụng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h004",
+  "text": "Bể cá cảnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h005",
+  "text": "Chuồng chó",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h006",
+  "text": "Lồng chim",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h007",
+  "text": "Trụ cào móng cho mèo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h008",
+  "text": "Bát ăn thú cưng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h009",
+  "text": "Con sóc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h010",
+  "text": "Gấu mèo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h011",
+  "text": "Chuột túi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h012",
+  "text": "Tê giác",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h013",
+  "text": "Hà mã",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h014",
+  "text": "Cá sấu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h015",
+  "text": "Con rắn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h016",
+  "text": "Gấu Bắc Cực",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h017",
+  "text": "Bồ nông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h019",
+  "text": "Gà tây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h020",
+  "text": "Cuộn rơm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h021",
+  "text": "Cá ngựa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h022",
+  "text": "Bạch tuộc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h023",
+  "text": "Con mực",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h024",
+  "text": "Cá đuối",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h025",
+  "text": "Nhím biển",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h026",
+  "text": "Con bướm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h027",
+  "text": "Bọ rùa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h028",
+  "text": "Chuồn chuồn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h029",
+  "text": "Bọ cạp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h031",
+  "text": "Quả dừa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h032",
+  "text": "Quả lựu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h033",
+  "text": "Súp lơ trắng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h034",
+  "text": "Bắp ngô",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h035",
+  "text": "Mì Ý",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h036",
+  "text": "Bánh kếp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h037",
+  "text": "Bánh sandwich",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h039",
+  "text": "Kẹo dẻo gấu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h040",
+  "text": "Thanh sô cô la",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h041",
+  "text": "Thạch rau câu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h042",
+  "text": "Chai nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h044",
+  "text": "Bình nước cá nhân",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h045",
+  "text": "Phích nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h046",
+  "text": "Ly cocktail",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h047",
+  "text": "Sinh tố",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h048",
+  "text": "Tua vít",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h049",
+  "text": "Cờ lê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h050",
+  "text": "Thước dây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h052",
+  "text": "Con lăn sơn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h054",
+  "text": "Băng keo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h055",
+  "text": "Máy khoan",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h056",
+  "text": "Bay xây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h057",
+  "text": "Kèn clarinet",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h058",
+  "text": "Bộ trống",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h059",
+  "text": "Đàn accordion",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h060",
+  "text": "Giá để bản nhạc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h063",
+  "text": "Đàn dương cầm lớn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h064",
+  "text": "Trực thăng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h065",
+  "text": "Thuyền buồm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h066",
+  "text": "Tàu điện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h067",
+  "text": "Xe tải",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h068",
+  "text": "Xe cảnh sát",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h069",
+  "text": "Xe cứu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h070",
+  "text": "Xe cứu thương",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h071",
+  "text": "Xe chở rác",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h072",
+  "text": "Xe giao hàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h074",
+  "text": "Xe nhà di động",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h076",
+  "text": "Xe cứu hộ kéo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h077",
+  "text": "Xe ben",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h079",
+  "text": "Ghế bập bênh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h080",
+  "text": "Kệ sách",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h081",
+  "text": "Bàn làm việc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h083",
+  "text": "Cái mắc áo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h084",
+  "text": "Khung ảnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h085",
+  "text": "Bàn đầu giường",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h086",
+  "text": "Máy hút bụi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h087",
+  "text": "Bàn là",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h088",
+  "text": "Giỏ đựng quần áo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h089",
+  "text": "Điều khiển từ xa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h090",
+  "text": "Tủ lạnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h091",
+  "text": "Lò vi sóng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h092",
+  "text": "Ấm siêu tốc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h093",
+  "text": "Lọ muối",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h094",
+  "text": "Cái thớt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h096",
+  "text": "Vòi hoa sen",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h097",
+  "text": "Máy giặt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h098",
+  "text": "Đèn bàn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h099",
+  "text": "Máy pha cà phê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h100",
+  "text": "Bồn tắm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h102",
+  "text": "Bồn rửa mặt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h103",
+  "text": "Bồn cầu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h104",
+  "text": "Bàn chải đánh răng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h105",
+  "text": "Kem đánh răng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h106",
+  "text": "Áo choàng tắm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h107",
+  "text": "Cặp sách",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h108",
+  "text": "Cục tẩy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h109",
+  "text": "Hộp bút",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h111",
+  "text": "Máy tính bỏ túi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h112",
+  "text": "Lớp học",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h113",
+  "text": "Bàn phím",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h114",
+  "text": "Tai nghe",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h115",
+  "text": "Cái loa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h117",
+  "text": "Đèn pin",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h118",
+  "text": "Dây sạc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h119",
+  "text": "Bộ đàm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h120",
+  "text": "Máy chơi game",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h121",
+  "text": "Chảo vệ tinh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h122",
+  "text": "Phong bì",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h123",
+  "text": "Kẹp giấy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h124",
+  "text": "Sọt rác giấy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h125",
+  "text": "Sổ tay ghi chép",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h126",
+  "text": "Ghế xoay",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h127",
+  "text": "Vợt tennis",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h128",
+  "text": "Gậy đánh gôn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h129",
+  "text": "Găng tay đấm bốc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h130",
+  "text": "Mũ bảo hiểm xe đạp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h131",
+  "text": "Kính bơi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h132",
+  "text": "Ô tô đồ chơi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h133",
+  "text": "Ngựa bập bênh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h135",
+  "text": "Thú nhồi bông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h136",
+  "text": "Nhà búp bê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h137",
+  "text": "Hộ chiếu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h138",
+  "text": "Ghế xếp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h139",
+  "text": "Ghế tắm nắng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h140",
+  "text": "Vé máy bay",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h141",
+  "text": "Lính cứu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h142",
+  "text": "Phi hành gia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h143",
+  "text": "Thợ sửa xe",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h144",
+  "text": "Nhiếp ảnh gia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h145",
+  "text": "Người phục vụ bàn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h146",
+  "text": "Nàng tiên cá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h147",
+  "text": "Bộ đồ phi hành gia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h148",
+  "text": "Thiên thạch",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h149",
+  "text": "Sao băng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h150",
+  "text": "Thiên hà",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h151",
+  "text": "Trạm vũ trụ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h152",
+  "text": "Ống nghe bác sĩ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h153",
+  "text": "Xe lăn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h154",
+  "text": "Giường bệnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h155",
+  "text": "Cặp y tế",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h156",
+  "text": "Xe cút kít",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h157",
+  "text": "Kéo tỉa cành",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h158",
+  "text": "Máy cắt cỏ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h160",
+  "text": "Luống rau",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h161",
+  "text": "Ống nước tưới vườn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h162",
+  "text": "Nhà kính",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h165",
+  "text": "Bản vẽ xây dựng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h167",
+  "text": "Biển cảnh báo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h168",
+  "text": "Rào chắn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h169",
+  "text": "Máy khoan đường",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h170",
+  "text": "Xe trộn bê tông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h171",
+  "text": "Còng tay",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h172",
+  "text": "Mũ cảnh sát",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h173",
+  "text": "Nhà tù",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h174",
+  "text": "Mũ lính cứu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h175",
+  "text": "Bình chữa cháy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h176",
+  "text": "Vòi chữa cháy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h177",
+  "text": "Đầu báo khói",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h178",
+  "text": "Phao cứu sinh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h179",
+  "text": "Đống lửa trại",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h180",
+  "text": "Giỏ picnic",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h181",
+  "text": "Cây thông Noel",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h182",
+  "text": "Ông già Noel",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h184",
+  "text": "Bánh sinh nhật",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h186",
+  "text": "Dây đèn nháy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h187",
+  "text": "Quả cầu tuyết",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h188",
+  "text": "Chùm chìa khóa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h189",
+  "text": "Tàu ma",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h190",
+  "text": "Xe đụng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h191",
+  "text": "Tàu lượn siêu tốc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h192",
+  "text": "Quầy bắn súng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h193",
+  "text": "Vòng quay may mắn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h194",
+  "text": "Vé vào cửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h196",
+  "text": "Con rết",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h197",
+  "text": "Mạng nhện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h198",
+  "text": "Nhà chiếu hình vũ trụ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h199",
+  "text": "Thế giới dưới nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h200",
+  "text": "Rạn san hô",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h201",
+  "text": "Xác tàu đắm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h202",
+  "text": "Tàu ngầm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h203",
+  "text": "Trực thăng cứu hộ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h204",
+  "text": "Người nhảy dù",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h205",
+  "text": "Thuyền rồng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h206",
+  "text": "Người đi trên dây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h207",
+  "text": "Màn ảo thuật",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h208",
+  "text": "Con rối dây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h209",
+  "text": "Nhà hát múa rối",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h211",
+  "text": "Vũ hội hóa trang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h213",
+  "text": "Bàn trộn âm thanh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h215",
+  "text": "Đèn sân khấu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h216",
+  "text": "Studio chụp ảnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h217",
+  "text": "Buồng tối rửa ảnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h220",
+  "text": "Trạm khí tượng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h221",
+  "text": "Cột điện cao thế",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h222",
+  "text": "Tháp nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h223",
+  "text": "Máy khoan hầm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h225",
+  "text": "Phòng mổ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h226",
+  "text": "Phim chụp X-quang",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h227",
+  "text": "Tủ thuốc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h228",
+  "text": "Phòng xử án",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h229",
+  "text": "Búa của thẩm phán",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h230",
+  "text": "Văn phòng thám tử",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h231",
+  "text": "Phòng két sắt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h232",
+  "text": "Thư trong chai",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h233",
+  "text": "Hộp lưu giữ thời gian",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h234",
+  "text": "Bản đồ kho báu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h235",
+  "text": "Đài kiểm soát không lưu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h236",
+  "text": "Bệ phóng tên lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h237",
+  "text": "Phòng thí nghiệm bí mật",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h239",
+  "text": "Tổ kiến",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h240",
+  "text": "Hang cáo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h241",
+  "text": "Bù nhìn rơm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h243",
+  "text": "Thùng đựng sữa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h244",
+  "text": "Chợ quê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h245",
+  "text": "Chuồng gà",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h246",
+  "text": "Rơ moóc máy cày",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h247",
+  "text": "Máy gặt đập liên hợp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h248",
+  "text": "Phòng khám thú y",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h249",
+  "text": "Dây dắt chó",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h250",
+  "text": "Giỏ đựng mèo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h251",
+  "text": "Bộ lọc bể cá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h252",
+  "text": "Máng nước cho chim",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h253",
+  "text": "Khúc xương chó",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h254",
+  "text": "Cửa nhỏ cho mèo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h255",
+  "text": "Yên ngựa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h257",
+  "text": "Lưới đánh cá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h258",
+  "text": "Máy rửa bát",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h259",
+  "text": "Máy hút mùi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h260",
+  "text": "Máy trộn thực phẩm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h261",
+  "text": "Máy pha espresso",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h262",
+  "text": "Máy cắt bánh mì",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h263",
+  "text": "Kệ gia vị",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h264",
+  "text": "Tấm trải picnic",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h265",
+  "text": "Giỏ mua hàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h266",
+  "text": "Tủ đông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h267",
+  "text": "Tủ đựng thực phẩm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h268",
+  "text": "Ga tàu điện ngầm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h269",
+  "text": "Đường ngang xe lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h270",
+  "text": "Vòng xuyến",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h271",
+  "text": "Nhà để xe nhiều tầng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h272",
+  "text": "Gara sửa xe",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h273",
+  "text": "Chỗ để xe đạp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h274",
+  "text": "Cáp treo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h277",
+  "text": "Bến phà",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h278",
+  "text": "Tàu container",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h279",
+  "text": "Xuồng cứu sinh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h280",
+  "text": "Tàu lượn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h281",
+  "text": "Khinh khí cầu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h283",
+  "text": "Tòa thị chính",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h284",
+  "text": "Bưu điện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h285",
+  "text": "Tủ trưng bày bảo tàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h286",
+  "text": "Sân khấu kịch",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h287",
+  "text": "Phòng hòa nhạc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h288",
+  "text": "Sân bóng đá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h289",
+  "text": "Bể bơi trong nhà",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h290",
+  "text": "Tường leo núi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h291",
+  "text": "Đường bowling",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h292",
+  "text": "Sân trượt băng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h293",
+  "text": "Khu cắm trại",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h294",
+  "text": "Trại lều",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h295",
+  "text": "Nhà nghỉ trên núi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h296",
+  "text": "Tháp ngắm cảnh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h297",
+  "text": "Quảng trường chợ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h298",
+  "text": "Lâu đài rồng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h299",
+  "text": "Vạc của phù thủy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h300",
+  "text": "Gương thần",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h301",
+  "text": "Lâu đài ma",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h302",
+  "text": "Tàu cướp biển",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h303",
+  "text": "Giải đấu hiệp sĩ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h304",
+  "text": "Ngai vàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h305",
+  "text": "Đảo kho báu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h306",
+  "text": "Thuốc phép",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h307",
+  "text": "Quả cầu pha lê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h308",
+  "text": "Ống nghiệm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h309",
+  "text": "Bộ thí nghiệm hóa học",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h310",
+  "text": "Mô hình hệ mặt trời",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h311",
+  "text": "Tàu đổ bộ mặt trăng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h312",
+  "text": "Vụ phóng tên lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h313",
+  "text": "Kính viễn vọng không gian",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h314",
+  "text": "Cánh tay robot",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h317",
+  "text": "Tàu nghiên cứu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h318",
+  "text": "Ghế nha khoa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h319",
+  "text": "Chăn cứu hộ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h320",
+  "text": "Máy đo huyết áp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h321",
+  "text": "Hộp cứu thương",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h322",
+  "text": "Đèn phòng mổ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h323",
+  "text": "Hành lang bệnh viện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h324",
+  "text": "Phòng khám mắt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h326",
+  "text": "Máy trợ thính",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h327",
+  "text": "Bó bột",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h328",
+  "text": "Tủ cầu dao điện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h329",
+  "text": "Album tem",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h331",
+  "text": "Bảng treo chìa khóa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h333",
+  "text": "Xe nôi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h334",
+  "text": "Công viên nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h335",
+  "text": "Cầu trượt nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h339",
+  "text": "Dơi quạ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h341",
+  "text": "Cá mập đầu búa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h342",
+  "text": "Chim cánh cụt hoàng đế",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h343",
+  "text": "Rồng Komodo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h344",
+  "text": "Gấu ngựa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h346",
+  "text": "Cá đuối manta",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h349",
+  "text": "Cá voi sát thủ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h350",
+  "text": "Ếch phi tiêu độc",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h351",
+  "text": "Rùa khổng lồ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h352",
+  "text": "Hổ răng kiếm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h353",
+  "text": "Báo tuyết",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h354",
+  "text": "Thú mỏ vịt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h358",
+  "text": "Nhà hát vòng tròn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h360",
+  "text": "Phế tích lâu đài",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h362",
+  "text": "Tháp truyền hình",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h363",
+  "text": "Cung điện kính",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h364",
+  "text": "Nhà thờ lớn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h365",
+  "text": "Biển hiệu đèn neon",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h366",
+  "text": "Đài thiên văn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h367",
+  "text": "Nhà hát opera",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h369",
+  "text": "Đập thủy điện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h370",
+  "text": "Khải hoàn môn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h371",
+  "text": "Ống thoát nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h373",
+  "text": "Nồi áp suất",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h374",
+  "text": "Máy luộc trứng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h375",
+  "text": "Máy xay thịt",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h376",
+  "text": "Máy đánh trứng cầm tay",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h377",
+  "text": "Cối xay tiêu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h378",
+  "text": "Bàn nạo",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h379",
+  "text": "Máy ép trái cây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h380",
+  "text": "Khuôn nướng bánh quế",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h382",
+  "text": "Cưa vòng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h383",
+  "text": "Kìm cộng lực",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h384",
+  "text": "Máy tiện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h386",
+  "text": "Cưa máy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h387",
+  "text": "Máy thổi lá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h388",
+  "text": "Mỏ hàn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h389",
+  "text": "Máy hàn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h390",
+  "text": "Ê tô kẹp",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h391",
+  "text": "Cưa lọng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h392",
+  "text": "Bàn thợ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h394",
+  "text": "Xe chở ô tô",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h396",
+  "text": "Xe bơm bê tông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h397",
+  "text": "Thang xe cứu hỏa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h399",
+  "text": "Tàu chở hàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h401",
+  "text": "Xe quét đường",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h402",
+  "text": "Xe máy có thùng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h405",
+  "text": "Xe bồn chở xăng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h407",
+  "text": "Đường đi trên ngọn cây",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h408",
+  "text": "Tảng băng trôi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h409",
+  "text": "Hẻm núi đá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h410",
+  "text": "Hang băng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h411",
+  "text": "Hồ miệng núi lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h412",
+  "text": "Rừng ngập mặn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h413",
+  "text": "Rừng sương mù",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h415",
+  "text": "Sa mạc muối",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h416",
+  "text": "Hang thạch nhũ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h417",
+  "text": "Hang ngầm dưới nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h418",
+  "text": "Miệng núi lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h420",
+  "text": "Mũ phi hành gia",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h421",
+  "text": "Xe thám hiểm mặt trăng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h422",
+  "text": "Khoang tàu vũ trụ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h423",
+  "text": "Tàu thăm dò vũ trụ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h426",
+  "text": "Trạng thái không trọng lực",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h428",
+  "text": "Nhà khảo cổ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h429",
+  "text": "Nhân viên cứu hộ bể bơi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h430",
+  "text": "Thủ thư",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h431",
+  "text": "Người leo núi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h433",
+  "text": "Bác sĩ phẫu thuật",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h434",
+  "text": "Người thuần thú",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h435",
+  "text": "Kiểm lâm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h437",
+  "text": "Người nuôi ong",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h439",
+  "text": "Người lái tàu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h440",
+  "text": "Phát thanh viên",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h442",
+  "text": "Diễn viên đóng thế",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h443",
+  "text": "Huấn luyện viên lặn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h444",
+  "text": "Người dẫn dự báo thời tiết",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h445",
+  "text": "Diễn viên múa ba lê",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h447",
+  "text": "Người phun lửa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h448",
+  "text": "Người tung hứng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h449",
+  "text": "Người điều khiển rối",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h450",
+  "text": "Diễn viên kịch câm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h452",
+  "text": "Quả cầu trang trí Noel",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h454",
+  "text": "Chổi phù thủy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h455",
+  "text": "Đèn bí ngô",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h458",
+  "text": "Thỏ Phục sinh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h459",
+  "text": "Ngôi sao Giáng sinh",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h460",
+  "text": "Cửa xoay",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h461",
+  "text": "Thang thoát hiểm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h463",
+  "text": "Cầu vượt bộ hành",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h464",
+  "text": "Cửa nhà xe",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h465",
+  "text": "Mái kính",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h466",
+  "text": "Đồng hồ tháp chuông",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h467",
+  "text": "Cửa cuốn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h468",
+  "text": "Cửa lùa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h469",
+  "text": "Cầu thang xoắn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h470",
+  "text": "Máy hủy tài liệu",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h471",
+  "text": "Máy quét mã vạch",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h472",
+  "text": "Máy in nhãn",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h473",
+  "text": "Máy rút tiền",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h474",
+  "text": "Máy photocopy",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h475",
+  "text": "Cân bưu kiện",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h476",
+  "text": "Máy tính tiền",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h477",
+  "text": "Máy đánh chữ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h479",
+  "text": "Máy sục khí bể cá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h480",
+  "text": "Hệ thống tưới tự động",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h482",
+  "text": "Vòi phun tưới cỏ",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h483",
+  "text": "Bể hứng nước mưa",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h484",
+  "text": "Cột thu lôi",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h488",
+  "text": "Băng chuyền",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h491",
+  "text": "Ống cống",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h492",
+  "text": "Thang máy chở hàng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h493",
+  "text": "Tàu hơi nước",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h494",
+  "text": "Thuyền ba cột buồm",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h495",
+  "text": "Tàu phá băng",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h496",
+  "text": "Tàu đánh cá",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h497",
+  "text": "Tàu vận tải biển",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h498",
+  "text": "Nhà bè",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h499",
+  "text": "Thuyền hai thân",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ },
+ {
+  "wordId": "vi_h500",
+  "text": "Du thuyền",
+  "category": "Allgemein",
+  "difficulty": "Hard"
+ }
+]
