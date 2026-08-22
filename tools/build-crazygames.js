@@ -6,6 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { schreibeZip, pruefeZip } = require('./zip');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'dist', 'crazygames');
@@ -120,14 +121,11 @@ function zipWithPython() {
   fs.rmSync(tmp, { force: true });
 }
 try {
-  if (process.platform === 'win32') {
-    execSync('powershell -NoProfile -Command "Compress-Archive -Path \'' + OUT + '\\*\' -DestinationPath \'' + ZIP + '\' -Force"', { stdio: 'ignore' });
-  } else {
-    try { execSync('cd "' + OUT + '" && zip -r -q "' + ZIP + '" .', { stdio: 'ignore' }); }
-    catch (e) { fs.rmSync(ZIP, { force: true }); zipWithPython(); }   // Fallback ohne zip-CLI
-  }
+  schreibeZip(OUT, ZIP);
+  var zipDateien = pruefeZip(ZIP);
 } catch (e) { die('ZIP-Erstellung fehlgeschlagen: ' + e.message); }
 if (!fs.existsSync(ZIP)) die('ZIP wurde nicht erstellt.');
+ok('Archiv normkonform (' + zipDateien.length + ' Eintraege, nur Schraegstriche, index.html an der Wurzel)');
 const zipMb = (fs.statSync(ZIP).size / 1048576).toFixed(2);
 ok('ZIP erstellt: ' + path.relative(ROOT, ZIP) + '  (' + zipMb + ' MB)');
 
