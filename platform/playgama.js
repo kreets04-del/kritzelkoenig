@@ -70,7 +70,15 @@
   function darfWerbung(name) {
     if (!PG.bereit || PG.werbungLaeuft) return false;
     if (ERLAUBT[name] !== true) return false;
-    if (Date.now() - PG.letzteWerbung < MIN_ABSTAND_MS) return false;
+    // Meldet die Plattform, dass sie keine Interstitials kann, gar nicht erst fragen.
+    var kann = versuche(function () { return PG.bridge.advertisement.isInterstitialSupported; });
+    if (kann === false) return false;
+    // Das SDK gibt einen eigenen Mindestabstand vor (Sekunden). Unserer ist
+    // strenger; falls die Plattform mehr verlangt, gilt ihrer.
+    var sdkAbstand = versuche(function () { return PG.bridge.advertisement.minimumDelayBetweenInterstitial; });
+    var abstand = MIN_ABSTAND_MS;
+    if (typeof sdkAbstand === 'number' && sdkAbstand * 1000 > abstand) abstand = sdkAbstand * 1000;
+    if (Date.now() - PG.letzteWerbung < abstand) return false;
     return true;
   }
 
@@ -196,22 +204,90 @@
     log('Plattformsprache', String(code) + (gesetzt ? ' - uebernommen' : ' - nicht uebernommen (eigene Wahl oder nicht unterstuetzt)'));
   }
 
+  // ACHTUNG: Die Bridge hat KEIN bridge.game. Ton-, Pause- und Sichtbarkeits-
+  // Ereignisse haengen an bridge.platform. Ein Zuhoerer an der falschen Stelle
+  // wirft nur intern und wird stillschweigend geschluckt - die Anzeige laeuft
+  // dann mit Spielton weiter, und genau das ist ein Ablehnungsgrund bei Playgama.
   function hoerAufPlattform() {
-    // Plattform schaltet den Ton stumm (z. B. Tab im Hintergrund).
-    versuche(function () {
-      var e = PG.bridge.EVENT_NAME && PG.bridge.EVENT_NAME.AUDIO_STATE_CHANGED;
-      if (e && PG.bridge.game.on) PG.bridge.game.on(e, function (zustand) {
-        if (zustand === 'muted') tonAus(); else tonAn();
-      });
+    var EN = PG.bridge.EVENT_NAME || {};
+    var p = PG.bridge.platform;
+    if (!p || typeof p.on !== 'function') { log('platform.on fehlt - keine Ton-/Pausenereignisse'); return; }
+
+    function binde(name, tue) {
+      if (!name) return false;
+      var ok = versuche(function () { p.on(name, tue); return true; });
+      log('Ereignis verbunden', name + (ok ? '' : ' FEHLGESCHLAGEN'));
+      return !!ok;
+    }
+
+    // Plattform schaltet den Ton stumm.
+    binde(EN.AUDIO_STATE_CHANGED, function (zustand) {
+      if (zustand === 'muted' || zustand === false) tonAus(); else tonAn();
     });
     // Plattform pausiert das Spiel.
-    versuche(function () {
-      var e = PG.bridge.EVENT_NAME && PG.bridge.EVENT_NAME.PAUSE_STATE_CHANGED;
-      if (e && PG.bridge.game.on) PG.bridge.game.on(e, function (zustand) {
-        if (zustand === 'paused') { tonAus(); melde('level_paused'); }
-        else { tonAn(); if (PG.spielLaeuft) melde('level_started'); }
-      });
+    binde(EN.PAUSE_STATE_CHANGED, function (zustand) {
+      if (zustand === 'paused' || zustand === true) { tonAus(); if (PG.spielLaeuft) { PG.spielLaeuft = false; PG._warLaufend = true; melde('level_paused'); } }
+      else { tonAn(); if (PG._warLaufend) { PG._warLaufend = false; PG.spielLaeuft = true; melde('level_started'); } }
     });
+    // Fenster/Tab nicht mehr sichtbar - Playgama prueft ausdruecklich, dass der
+    // Ton auch dann schweigt ("screen is minimized").
+    binde(EN.VISIBILITY_STATE_CHANGED, function (zustand) {
+      if (zustand === 'hidden') tonAus(); else tonAn();
+    });
+  }
+
+  // ---------- Fortschritt ueber die Bridge sichern ----------
+  // Playgama verlangt ausdruecklich: "Save and load progress through Storage -
+  // never use localStorage directly." Das Spiel liest seine Einstellungen aber
+  // beim Start synchron, und bridge.storage ist asynchron. Deshalb bleibt
+  // localStorage der schnelle lokale Zwischenspeicher, und diese Schicht spiegelt
+  // die Werte zusaetzlich in die Bridge: beim Start von dort lesen, bei jeder
+  // Aenderung dorthin schreiben. Damit liegt der Fortschritt dort, wo die
+  // Plattform ihn erwartet, ohne den synchronen Start des Spiels umzubauen.
+  var GESICHERT = ['kk_name', 'kk_lang', 'kk_mute', 'kritzelkoenig_format_v1', 'kritzelkoenig_tutorial_hidden_v1'];
+
+  function spiegelSchreiben(schluessel, wert) {
+    if (!PG.bereit || GESICHERT.indexOf(schluessel) < 0) return;
+    versuche(function () {
+      var s = PG.bridge.storage;
+      if (s && typeof s.set === 'function') s.set(schluessel, String(wert));
+    });
+  }
+
+  function schreibenAbfangen() {
+    // Nur die eigenen kk-Schluessel werden gespiegelt, alles andere bleibt
+    // unberuehrt. Der urspruengliche Aufruf laeuft immer zuerst.
+    versuche(function () {
+      var original = window.localStorage.setItem.bind(window.localStorage);
+      window.localStorage.setItem = function (k, v) {
+        original(k, v);
+        spiegelSchreiben(k, v);
+      };
+    });
+  }
+
+  function gesichertesLaden() {
+    var s = versuche(function () { return PG.bridge.storage; });
+    if (!s || typeof s.get !== 'function') return Promise.resolve();
+    return Promise.resolve(versuche(function () { return s.get(GESICHERT); }))
+      .then(function (werte) {
+        if (!werte) return;
+        // get() liefert je nach Plattform ein Feld in derselben Reihenfolge.
+        var liste = Array.isArray(werte) ? werte : GESICHERT.map(function (k) { return werte[k]; });
+        var uebernommen = [];
+        GESICHERT.forEach(function (k, i) {
+          var v = liste[i];
+          if (v === null || v === undefined || v === '') return;
+          // Nicht ueberschreiben, was auf diesem Geraet schon steht - sonst
+          // springt eine gerade getroffene Wahl beim naechsten Start zurueck.
+          var da = versuche(function () { return window.localStorage.getItem(k); });
+          if (da !== null && da !== undefined) return;
+          versuche(function () { window.localStorage.setItem(k, String(v)); });
+          uebernommen.push(k);
+        });
+        if (uebernommen.length) log('aus der Plattform uebernommen', uebernommen.join(', '));
+      })
+      .catch(function () {});
   }
 
   // Das Spiel meldet selbst, wann eine Partie laeuft - damit level_started und
@@ -238,10 +314,26 @@
     // sonst "Before using the SDK you must initialize it" in die Konsole.
     b.initialize().then(function () {
       PG.bereit = true;
-      log('Bridge bereit');
-      uebernehmeSprache();
+      log('Bridge bereit (Plattform: ' + versuche(function () { return b.platform.id; }) + ')');
       hoerAufPlattform();
-      melde('game_ready');
+      schreibenAbfangen();
+      // Erst den gesicherten Stand holen, dann die Sprache setzen - sonst
+      // ueberschriebe die Plattformsprache eine frueher getroffene Wahl.
+      // game_ready darf unter keinen Umstaenden ausbleiben - fehlt es, gilt das
+      // Spiel bei Playgama als nicht startbereit. Antwortet der Speicher einer
+      // Partnerplattform nicht, geht es nach zwei Sekunden ohne ihn weiter.
+      var fertig = false;
+      var mitFrist = Promise.race([
+        gesichertesLaden().then(function () { fertig = true; }),
+        new Promise(function (r) {
+          setTimeout(function () { if (!fertig) log('Speicher antwortet nicht - weiter ohne'); r(); }, 2000);
+        })
+      ]);
+      return mitFrist.then(function () {
+        uebernehmeSprache();
+        melde('game_ready');
+        log('game_ready gesendet');
+      });
     }).catch(function (err) {
       // Kein Abbruch: ohne Bridge fehlen nur Werbung und Plattformsprache.
       log('Initialisierung fehlgeschlagen', err && err.message);

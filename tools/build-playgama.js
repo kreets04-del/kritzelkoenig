@@ -69,10 +69,14 @@ fs.mkdirSync(OUT, { recursive: true });
 // Reihenfolge zaehlt: erst die Bridge (klassisches Skript, laeuft beim Parsen),
 // dann API_BASE, dann platform/playgama.js. Die Plattformdatei wartet selbst auf
 // DOMContentLoaded, bevor sie initialize() ruft.
+// Die Plattformdatei bekommt eine Version an die Adresse. Ohne die haelt der
+// Browser eines Spielers nach einer Aktualisierung im Portal die alte Fassung
+// fest - der Fehler faellt dann erst spaeter und schwer auffindbar auf.
+const PLATFORM_SRC = 'platform/playgama.js?v=' + Math.floor(fs.statSync(platformSrc).mtimeMs / 1000).toString(36);
 const inject =
   '<script src="' + BRIDGE_URL + '"></script>\n' +
   '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PLAYGAMA_BUILD=true;</script>\n' +
-  '<script src="platform/playgama.js"></script>\n';
+  '<script src="' + PLATFORM_SRC + '"></script>\n';
 if (html.indexOf('<script>\n"use strict";') < 0) die('Anker <script>"use strict" nicht gefunden - Transform abgebrochen.');
 html = html.replace('<script>\n"use strict";', inject + '<script>\n"use strict";');
 
