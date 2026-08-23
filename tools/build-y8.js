@@ -49,7 +49,10 @@ fs.mkdirSync(OUT, { recursive: true });
 const inject =
   '<script src="https://cdn.y8.com/minimal-sdk/2-0/y8.min.js" async></script>\n' +
   '<script>\n' +
-  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;\n' +
+  // Y8 verlangt einen stummen Start - kein Ton, bevor der Spieler etwas getan
+  // hat. Wer den Lautsprecher schon einmal selbst bedient hat, behaelt seine
+  // Einstellung (siehe KK_START_MUTED in index.html).
+  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_MUTED=true;\n' +
   'var y8Sdk=null;\n' +
   'window.addEventListener("y8sdk.ready",function(){\n' +
   '  try{\n' +

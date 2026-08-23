@@ -940,6 +940,15 @@ let sprachWahlGespeichert=false;
 try{ sprachWahlGespeichert=!!localStorage.getItem('kk_lang'); }catch(e){}
 try{ S.name=localStorage.getItem('kk_name')||''; S.muted=localStorage.getItem('kk_mute')==='1'; S.lang=localStorage.getItem('kk_lang')||guessLang(); }catch(e){}
 if(!KK_LANGS.includes(S.lang))S.lang=guessLang();
+// Portale verlangen teils, dass ein Spiel stumm startet - kein Ton, bevor der
+// Spieler etwas getan hat. Der jeweilige Build setzt dann KK_START_MUTED.
+// Eine eigene Wahl des Spielers wiegt schwerer und bleibt erhalten: nur wer noch
+// nie am Lautsprecher war, startet stumm.
+if(window.KK_START_MUTED){
+  let hatSelbstGewaehlt=false;
+  try{ hatSelbstGewaehlt = localStorage.getItem('kk_mute')!==null; }catch(e){}
+  if(!hatSelbstGewaehlt) S.muted=true;
+}
 $('name').value=S.name; updateMute();
 // Anschluss fuer Portale: die Plattformsprache steht erst nach dem Start des
 // Portal-SDK fest, also lange nachdem dieses Skript gelaufen ist. Eine
