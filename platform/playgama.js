@@ -57,45 +57,14 @@
   function tonAn()  { versuche(function () { if (typeof adAudioOn  === 'function') adAudioOn();  }); }
 
   // ---------- Interstitial ----------
-  // Die Playgama-Vorgabe verbietet Werbung waehrend des Zeichnens, waehrend des
-  // Ratens, bei laufendem Timer und direkt beim Start. Erlaubt sind natuerliche
-  // Pausen. Diese Liste entscheidet, welche Aufrufstelle durchgelassen wird.
-  var ERLAUBT = {
-    'game-over': true,       // Partie zu Ende, Spieler klickt "Neues Spiel"
-    'back-to-menu': true,    // Spieler geht zurueck ins Menue
-    'round-break': true,     // Rundenpause - aber nur selten, siehe unten
-    // Beim Start verbietet es die Playgama-Vorgabe ("niemals unmittelbar beim
-    // Start durch einen selbst ausgeloesten Interstitial-Aufruf").
-    'game-start': false
-  };
-  // Werbung mitten in der Partie: genau EINE, und zwar zur Halbzeit - und nur,
-  // wenn die Partie lang genug ist.
-  //   10 und 15 Runden : gar nichts waehrend der Partie, nur am Ende
-  //   20 Runden        : nach Runde 10
-  //   25 Runden        : nach Runde 12
-  //   30 Runden        : nach Runde 15
-  //   40 Runden        : nach Runde 20
-  //   50 Runden        : nach Runde 25
-  // Weil die Bedingung an eine bestimmte Rundennummer haengt, kann es pro Partie
-  // gar nicht mehr als eine werden. Der Mindestabstand von drei Minuten gilt
-  // zusaetzlich.
-  var MINDEST_PARTIELAENGE = 20;
-  // Partielaenge und laufende Runde stehen im Spielzustand des Hauptskripts.
-  // Fehlt etwas davon, gilt die Partie als kurz - im Zweifel keine Werbung.
-  function ausSpiel(feld) {
-    try { return (typeof S !== 'undefined' && S && S[feld]) ? Number(S[feld]) : 0; }
-    catch (e) { return 0; }
-  }
+  // WANN eine Werbepause passt, entscheidet das Spiel selbst
+  // (werbestelleErlaubt() in index.html) - dort kennt man Rundenzahl und
+  // Spielverlauf. Hier geht es nur noch darum, OB die Plattform gerade eine
+  // Anzeige liefern kann. Die Regel stand frueher doppelt, hier und im Spiel;
+  // das waere mit der Zeit auseinandergelaufen.
 
   function darfWerbung(name) {
     if (!PG.bereit || PG.werbungLaeuft) return false;
-    if (ERLAUBT[name] !== true) return false;
-    // Mitten in der Partie nur bei langen Partien, und dort genau zur Halbzeit.
-    if (name === 'round-break') {
-      var laenge = ausSpiel('maxRounds');
-      if (laenge < MINDEST_PARTIELAENGE) return false;
-      if (ausSpiel('roundNumber') !== Math.floor(laenge / 2)) return false;
-    }
     // Meldet die Plattform, dass sie keine Interstitials kann, gar nicht erst fragen.
     var kann = versuche(function () { return PG.bridge.advertisement.isInterstitialSupported; });
     if (kann === false) return false;

@@ -49,10 +49,21 @@ fs.mkdirSync(OUT, { recursive: true });
 const inject =
   '<script src="https://cdn.y8.com/minimal-sdk/2-0/y8.min.js" async></script>\n' +
   '<script>\n' +
-  // Y8 verlangt einen stummen Start - kein Ton, bevor der Spieler etwas getan
-  // hat. Wer den Lautsprecher schon einmal selbst bedient hat, behaelt seine
-  // Einstellung (siehe KK_START_MUTED in index.html).
-  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_MUTED=true;\n' +
+  // Zwei Schalter, die nur den Y8-Build betreffen:
+  //
+  // KK_START_MUTED - Y8 verlangt einen stummen Start: kein Ton, bevor der
+  //   Spieler etwas getan hat. Wer den Lautsprecher schon einmal selbst bedient
+  //   hat, behaelt seine Einstellung (ausgewertet in index.html).
+  //
+  // KK_START_AD - Y8 erlaubt eine Anzeige vor dem Spielstart; Playgama verbietet
+  //   sie ausdruecklich. Wann sonst noch Werbung passt, entscheidet
+  //   werbestelleErlaubt() in index.html - fuer beide Portale gleich.
+  //
+  // Eine eigene Zeitsperre gibt es hier bewusst NICHT: Bei Y8 taktet Googles
+  // Ad Placement API selbst, wie oft eine Anzeige kommt. Ein zweiter Riegel von
+  // uns wuerde ihr nur dazwischenfunken. Der Mindestabstand von drei Minuten
+  // gilt deshalb nur bei Playgama, wo wir ihn selbst setzen muessen.
+  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_MUTED=true;window.KK_START_AD=true;\n' +
   'var y8Sdk=null;\n' +
   'window.addEventListener("y8sdk.ready",function(){\n' +
   '  try{\n' +

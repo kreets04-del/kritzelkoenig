@@ -698,8 +698,29 @@ function y8AdReady(){ try{ return !!(ENABLE_Y8_ADS && window.KK_Y8 && window.y8S
 // ein, bleibt alles wie bisher. Der Spielcode kennt nur showPortalAd().
 // Ton-Regel gilt fuer jedes Portal: adAudioOff() vor, adAudioOn() nach der Anzeige.
 function portalAdProvider(){ try{ var p=window.KK_AD_PROVIDER; return (p&&typeof p.show==='function')?p:null; }catch(e){ return null; } }
+// Wann eine Werbepause ueberhaupt angebracht ist. Das haengt am Spielverlauf,
+// nicht am Portal - deshalb steht die Regel hier und nicht in einer Portal-Datei.
+// Das Portal entscheidet danach nur noch, ob es gerade eine Anzeige liefern kann.
+//
+//   Zeichnen, Raten, laufende Uhr : gibt es gar keinen Aufruf
+//   Rundenpause                   : nur zur Halbzeit, und erst ab 20 Runden
+//                                   (10 und 15 Runden bleiben also frei)
+//   Partieende, Rueckweg ins Menue: immer - beide nur nach einer ganzen Partie
+//                                   erreichbar
+//   Spielstart                    : nur, wenn das Portal es erlaubt. Y8 tut das,
+//                                   Playgama verbietet es ausdruecklich.
+function werbestelleErlaubt(name){
+  if(name==='game-start') return !!window.KK_START_AD;
+  if(name==='round-break'){
+    var laenge=Number(S.maxRounds)||0;
+    if(laenge<20) return false;
+    return Number(S.roundNumber)===Math.floor(laenge/2);
+  }
+  return true;
+}
 // type: 'start' | 'pause' | 'next' | 'browse'  -> loest mit true auf, wenn Werbung lief
 function showPortalAd(type,name){
+  if(!werbestelleErlaubt(name)) return Promise.resolve(false);
   var prov=portalAdProvider();
   if(prov){
     if(AD.busy) return Promise.resolve(false);
