@@ -653,9 +653,9 @@ let letzteBannerZone;
 function werbebannerZone(){
   if(S.state==='startup'||S.state==='menu') return 'menu';
   if(S.state==='lobby') return 'lobby';
-  // Im Spiel nur waehrend der Wartephasen: Wortauswahl, Rundenergebnis,
-  // Rundenpause, Endstand. Waehrend einer laufenden Runde nie.
-  if(S.state==='game') return S.rundeLaeuft ? null : 'round_break';
+  // Im Spiel gar kein Banner - auch nicht in den Wartephasen zwischen den
+  // Runden. Werbung gehoert ins Menue und in die Lobby, nicht in die laufende
+  // Partie.
   return null;
 }
 // Nur bei echtem Zonenwechsel melden. Sonst entstuende bei jedem Bildschirm-

@@ -217,14 +217,6 @@ const bridgeConfig = {
         'desktop:landscape:w>1000': [
           { width: '34%', height: '12%', bottom: '2%', left: '33%' }
         ]
-      },
-      // Wartephasen im Spiel: Wortauswahl, Rundenergebnis, Rundenpause, Endstand.
-      // Waehrend einer laufenden Runde meldet das Spiel gar keine Zone.
-      round_break: {
-        action: 'show',
-        'desktop:landscape:w>1000': [
-          { width: '34%', height: '12%', bottom: '2%', left: '33%' }
-        ]
       }
     }
   }
