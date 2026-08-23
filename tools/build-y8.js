@@ -51,9 +51,10 @@ const inject =
   '<script>\n' +
   // Zwei Schalter, die nur den Y8-Build betreffen:
   //
-  // KK_START_MUTED - Y8 verlangt einen stummen Start: kein Ton, bevor der
-  //   Spieler etwas getan hat. Wer den Lautsprecher schon einmal selbst bedient
-  //   hat, behaelt seine Einstellung (ausgewertet in index.html).
+  // Kein KK_START_MUTED: "kein Ton beim Start" heisst nicht "dauerhaft stumm".
+  //   Vor der ersten Geste des Spielers laeuft ohnehin nichts - der
+  //   Startbildschirm ist still, und der Browser gibt Ton erst nach einer
+  //   Nutzergeste frei. Ab dem Menue soll die Musik dann normal spielen.
   //
   // KK_START_AD - Y8 erlaubt eine Anzeige vor dem Spielstart; Playgama verbietet
   //   sie ausdruecklich. Wann sonst noch Werbung passt, entscheidet
@@ -63,7 +64,7 @@ const inject =
   // Ad Placement API selbst, wie oft eine Anzeige kommt. Ein zweiter Riegel von
   // uns wuerde ihr nur dazwischenfunken. Der Mindestabstand von drei Minuten
   // gilt deshalb nur bei Playgama, wo wir ihn selbst setzen muessen.
-  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_MUTED=true;window.KK_START_AD=true;\n' +
+  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_AD=true;\n' +
   'var y8Sdk=null;\n' +
   'window.addEventListener("y8sdk.ready",function(){\n' +
   '  try{\n' +
