@@ -111,6 +111,14 @@ must('in der CrazyGames-Version stellt CrazyGames Konto und Einladungen bereit',
      'in der Y8-Version stellt Y8 Konto und Einladungen bereit', 'Datenschutz DE 2');
 must('in the CrazyGames version, CrazyGames provides account and invites',
      'in the Y8 version, Y8 provides account and invites', 'Datenschutz EN 2');
+// Fremde Portalnamen aus den Kommentaren nehmen. Kein Code, aber im Y8-Paket
+// hat der Name eines Wettbewerbers nichts verloren - fuer CrazyGames gilt
+// unten dieselbe Regel, und der Build bricht dort sogar ab.
+must('//                                   Playgama verbietet es ausdruecklich.',
+     '//                                   andere Portale verbieten es.', 'Kommentar Startwerbung');
+must('  // Auslieferungsadresse (z. B. …games.playgama.net/<Kennung>/index.html). Die kann',
+     '  // Auslieferungsadresse tief im Portal. Die kann', 'Kommentar Einladungslink');
+
 // Bezeichner/Kommentare neutralisieren
 html = html.replace(/'crazygames'/g, "'portal'");
 html = html.replace(/\bCG\b/g, 'PF');
@@ -125,6 +133,11 @@ if (/crazygames/i.test(html)) {
   die('Es sind noch CrazyGames-Verweise im Y8-Build: ' + (hit ? hit[0] : ''));
 }
 ok('Keine CrazyGames-Verweise mehr im Build (Code, Kommentare, Datenschutztexte)');
+if (/playgama/i.test(html)) {
+  const hit = html.match(/.{0,70}playgama.{0,50}/i);
+  die('Es sind noch Playgama-Verweise im Y8-Build: ' + (hit ? hit[0].replace(/\s+/g, ' ') : ''));
+}
+ok('Keine Playgama-Verweise im Build');
 
 {
   const outScripts = html.match(/<script>[\s\S]*?<\/script>/g) || [];
