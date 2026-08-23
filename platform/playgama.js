@@ -142,6 +142,58 @@
   // Das ist der einzige Anschluss, den index.html kennt.
   window.KK_AD_PROVIDER = { show: zeigeInterstitial };
 
+  // ---------- Advanced Banners ----------
+  // Das Spiel meldet ueber KK_PORTAL_HOOKS.bannerZone nur, in welcher Zone es
+  // gerade ist ('menu', 'lobby', 'round_break') oder null fuer "kein Banner".
+  // Alles Weitere passiert hier.
+  //
+  // Aussehen und Position stehen NICHT im Code, sondern in
+  // playgama-bridge-config.json unter advertisement.advancedBanners. Dort ist
+  // je Zone hinterlegt, wo der Banner sitzt und ab welcher Bildschirmgroesse -
+  // ist eine Zone dort nicht deklariert, passiert stillschweigend nichts.
+  //
+  // Zwei Dinge nimmt die Bridge einem ab: Sie blendet Banner waehrend eines
+  // Interstitials selbst aus und danach wieder ein, und sie rechnet bei
+  // Drehung oder Groessenaenderung die Lage neu aus.
+  var DEBUG_BANNER = false;   // true -> jede Bannerentscheidung in die Konsole
+  PG.bannerZone = null;
+
+  function bannerLog(text) {
+    if (DEBUG_BANNER) log('[Banner] ' + text);
+  }
+  PG.bannerMoeglich = function () {
+    return !!versuche(function () {
+      return PG.bereit && PG.bridge.advertisement.isAdvancedBannersSupported === true;
+    });
+  };
+  function bannerAus(grund) {
+    if (PG.bannerZone === null) return;
+    PG.bannerZone = null;
+    versuche(function () { PG.bridge.advertisement.hideAdvancedBanners(); });
+    bannerLog('aus - ' + grund);
+  }
+  function bannerZone(zone) {
+    // Kein Portal, keine Unterstuetzung, kein Banner - und das Spiel merkt nichts.
+    if (!PG.bannerMoeglich()) { bannerLog('uebersprungen - Plattform kann keine Advanced Banners'); return; }
+    if (zone === PG.bannerZone) return;          // gleiche Zone: nicht neu anfordern
+    if (!zone) { bannerAus('Zone ohne Banner'); return; }
+    PG.bannerZone = zone;
+    versuche(function () { PG.bridge.advertisement.showAdvancedBanners(zone); });
+    bannerLog('an - ' + zone);
+  }
+
+  // Zustandsmeldungen der Plattform mitschreiben, damit ein Fehlschlag sichtbar
+  // ist. 'failed' heisst meist: fuer diese Bildschirmgroesse ist nichts
+  // hinterlegt, oder es gibt gerade keine Anzeige. Beides ist kein Fehler.
+  function bannerHorchen() {
+    versuche(function () {
+      var e = PG.bridge.EVENT_NAME && PG.bridge.EVENT_NAME.ADVANCED_BANNERS_STATE_CHANGED;
+      if (e && PG.bridge.advertisement.on) {
+        PG.bridge.advertisement.on(e, function (zustand) { bannerLog('Zustand: ' + zustand); });
+      }
+    });
+  }
+
   // ---------- Rewarded Ads: nur vorbereitet, noch nicht im Spiel verwendet ----------
   // Vorgabe Abschnitt 18: Infrastruktur bereitstellen, aber noch keine Belohnung
   // vergeben. Wer das spaeter nutzt, ruft KK_PLAYGAMA.zeigeRewarded() auf und
@@ -331,6 +383,7 @@
   window.KK_PORTAL_HOOKS = {
     gameplayStart: PG.partieGestartet,
     gameplayStop:  PG.partieBeendet,
+    bannerZone:    bannerZone,
     loadingStart:  function () { melde('in_game_loading_started'); },
     loadingStop:   function () { melde('in_game_loading_stopped'); }
   };
@@ -370,8 +423,14 @@
       ]);
       return mitFrist.then(function () {
         uebernehmeSprache();
+        bannerHorchen();
         melde('game_ready');
         log('game_ready gesendet');
+        // Die Bridge ist erst jetzt bereit; das Spiel hat seine Zone aber
+        // vorher schon gemeldet. Einmal nachziehen, sonst fehlt der erste Banner.
+        versuche(function () {
+          if (typeof aktualisiereBannerZone === 'function') { PG.bannerZone = null; aktualisiereBannerZone(); }
+        });
       });
     }).catch(function (err) {
       // Kein Abbruch: ohne Bridge fehlen nur Werbung und Plattformsprache.

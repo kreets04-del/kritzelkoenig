@@ -192,6 +192,40 @@ const bridgeConfig = {
         { id: 'back-to-menu' },   // Spieler geht zurueck ins Menue
         { id: 'round-break' }     // Rundenpause, erst ab 20 gespielten Runden
       ]
+    },
+    // Advanced Banners. Massangaben sind laut Bridge-Dokumentation ausschliesslich
+    // Prozente - Pixel werden nicht unterstuetzt.
+    //
+    // Bewusst zurueckhaltend: Banner gibt es nur, wo wirklich Platz ist. Deshalb
+    // hat KEINE Zone einen "default"-Eintrag. Passt keine Bedingung, zeigt die
+    // Bridge nichts an, statt etwas ueber die Oberflaeche zu legen. Das deckt
+    // Handys, schmale Fenster und das Hochformat ab.
+    //
+    // Alle Zonen liegen am unteren Rand. Das Spiel ist mittig aufgebaut und hat
+    // dort freie Flaeche; Knoepfe, Zeichenflaeche und Ratefeld bleiben frei.
+    // 12 % Hoehe sind bei 800 px Rahmenhoehe rund 96 px, bei 1080 px rund 130 -
+    // damit ist die geforderte Mindestflaeche von 320x100 erreicht.
+    advancedBanners: {
+      menu: {
+        action: 'show',
+        'desktop:landscape:w>1000': [
+          { width: '34%', height: '12%', bottom: '2%', left: '33%' }
+        ]
+      },
+      lobby: {
+        action: 'show',
+        'desktop:landscape:w>1000': [
+          { width: '34%', height: '12%', bottom: '2%', left: '33%' }
+        ]
+      },
+      // Wartephasen im Spiel: Wortauswahl, Rundenergebnis, Rundenpause, Endstand.
+      // Waehrend einer laufenden Runde meldet das Spiel gar keine Zone.
+      round_break: {
+        action: 'show',
+        'desktop:landscape:w>1000': [
+          { width: '34%', height: '12%', bottom: '2%', left: '33%' }
+        ]
+      }
     }
   }
 };

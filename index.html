@@ -640,7 +640,33 @@ const ERASER_W=0.05;
 function L(de,en){return S.lang==='en'?en:de;} // kleiner Sprachhelfer für Verräter-Texte
 const $=id=>document.getElementById(id);
 const screens={startup:$('startup'),menu:$('menu'),lobby:$('lobby'),game:$('game')};
-function show(n){for(const k in screens)screens[k].classList.toggle('active',k===n);S.state=n;updateBgm();}
+function show(n){for(const k in screens)screens[k].classList.toggle('active',k===n);S.state=n;updateBgm();aktualisiereBannerZone();}
+
+// ---------- Werbebanner-Zonen ----------
+// Das Spiel sagt nur, in welcher Zone es gerade ist. Ob daraus ein Banner wird,
+// wie er aussieht und ob die Plattform ihn ueberhaupt kann, entscheidet allein
+// die Portal-Datei. Ohne Portal passiert hier gar nichts.
+//
+// null heisst: kein Banner. Das gilt fuer alles, was aktives Spiel ist -
+// Zeichnen und Raten. Dort waere ein Banner im Weg, egal wo er saesse.
+let letzteBannerZone;
+function werbebannerZone(){
+  if(S.state==='startup'||S.state==='menu') return 'menu';
+  if(S.state==='lobby') return 'lobby';
+  // Im Spiel nur waehrend der Wartephasen: Wortauswahl, Rundenergebnis,
+  // Rundenpause, Endstand. Waehrend einer laufenden Runde nie.
+  if(S.state==='game') return S.rundeLaeuft ? null : 'round_break';
+  return null;
+}
+// Nur bei echtem Zonenwechsel melden. Sonst entstuende bei jedem Bildschirm-
+// wechsel eine neue Anzeigenanforderung - Lobby, Einstellungen, Lobby waere
+// dann dreimal.
+function aktualisiereBannerZone(){
+  const zone=werbebannerZone();
+  if(zone===letzteBannerZone) return;
+  letzteBannerZone=zone;
+  portalHook('bannerZone',zone);
+}
 
 // ---------- Storage-Adapter (LocalStorage; CrazyGames-Data-Module später) ----------
 const Store={
@@ -668,7 +694,7 @@ function audioBlocked(){ return (CG.mode==='crazygames' && CG.muteAudio) || AD.m
 // Ein Portal kann sich zusaetzlich in den Spielverlauf einklinken:
 //   window.KK_PORTAL_HOOKS = { gameplayStart:fn, gameplayStop:fn, loadingStart:fn, loadingStop:fn }
 // Fehlt der Eintrag oder wirft er, aendert sich am Spiel nichts.
-function portalHook(name){ try{ var p=window.KK_PORTAL_HOOKS; if(p&&typeof p[name]==='function') p[name](); }catch(e){} }
+function portalHook(name,wert){ try{ var p=window.KK_PORTAL_HOOKS; if(p&&typeof p[name]==='function') p[name](wert); }catch(e){} }
 // Fassade für bestehende Aufrufe im Code
 var Platform = {
   isCrazyGames(){ return CG.mode==='crazygames'; },
@@ -1693,6 +1719,7 @@ function handle(event,d){
     break;
   case 'need_players': if(S.state==='game')show('lobby');break;
   case 'word_choosing':
+    S.rundeLaeuft=false; aktualisiereBannerZone();
     enterGame();maybeFairplay(d.roundNumber);hideResult();S.amDrawer=false;S.strokes=[];redraw();applyRole();
     $('mask').textContent='';$('timer').textContent='--';
     $('statusPill').textContent=`${d.drawerName} ${t('choosingWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
@@ -1703,6 +1730,7 @@ function handle(event,d){
     $('timer').textContent='--';$('statusPill').textContent=`${t('chooseWord')}  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`;
     showWordOptions(d.options||[]);break;
   case 'round_started':
+    S.rundeLaeuft=true; aktualisiereBannerZone();
     enterGame();maybeFairplay(d.roundNumber);hideResult();S.amDrawer=d.drawerId===S.playerId;S.strokes=[];redraw();applyRole();
     $('mask').textContent=d.mask;$('statusPill').textContent=(S.amDrawer?t('youDraw'):(d.drawerName+' '+t('draws')))+(d.roundNumber?`  ·  ${t('round')} ${d.roundNumber}/${d.maxRounds}`:'');
     $('timer').textContent=fmt(d.remaining);$('timer').classList.remove('low');lastTick=d.remaining;
@@ -1724,17 +1752,18 @@ function handle(event,d){
     else if(d.text!=null && d.text!==''){ addFeed(d.playerName,d.text,false); }        // eigener Fehlversuch (nur an sich selbst)
     else { addFeed('', (d.playerName+' '+(S.lang==='en'?'is guessing …':'rät …')), false, true); } // andere: neutral, kein Text
     break;
-  case 'round_solved': {try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
+  case 'round_solved': { S.rundeLaeuft=false; aktualisiereBannerZone();try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
     const bonus=(d.speedMultiplier>1||d.difficultyMultiplier>1)?` <small style="color:var(--muted)">x${d.speedMultiplier} Tempo · x${d.difficultyMultiplier} Wort</small>`:'';
     let title=`✅ ${esc(d.winnerName)} <b style="color:var(--accent2)">+${d.points}</b>`+(d.drawerPoints?` &nbsp;·&nbsp; ✏ ${esc(d.drawerName)} +${d.drawerPoints}`:'');
     title=title.replace('</b>','</b>'+bonus);
     showResult(title,d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;}
-  case 'round_timeout': try{Platform.gameplayStop();}catch(e){}renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
-  case 'game_over': $('tOverlay').classList.remove('show');try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
+  case 'round_timeout': S.rundeLaeuft=false; aktualisiereBannerZone(); try{Platform.gameplayStop();}catch(e){}renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
+  case 'game_over': S.rundeLaeuft=false; aktualisiereBannerZone(); $('tOverlay').classList.remove('show');try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
     const standings=d.teamMode&&d.teamScores&&d.teamScores.length?d.teamScores:d.players.slice().sort((a,b)=>b.score-a.score);
     if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
     overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
   case 'round_intermission':
+    S.rundeLaeuft=false; aktualisiereBannerZone();
     try{Platform.gameplayStop();}catch(e){}
     try{Platform.audioPause();}catch(e){}
     showIntermission();
