@@ -37,7 +37,7 @@ fs.mkdirSync(OUT, { recursive: true });
 // --- index.html transformieren ---
 const inject =
   '<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>\n' +
-  '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_CRAZYGAMES=true;</script>\n';
+  '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PORTAL=true;window.KK_CRAZYGAMES=true;</script>\n';
 if (html.indexOf('<script>\n"use strict";') < 0) die('Anker <script>"use strict" nicht gefunden – Transform abgebrochen.');
 html = html.replace('<script>\n"use strict";', inject + '<script>\n"use strict";');
 // PWA raus: Manifest-Link + Service-Worker-Registrierung entfernen
@@ -69,7 +69,9 @@ function copyDir(rel, filter) {
   for (const f of fs.readdirSync(s)) { if (filter(f)) copyFile(path.join(rel, f)); }
 }
 copyFile('js/qrcode.min.js');
-['logo.png', 'bg.png', 'brush.png', 'eraser.png', 'undo.png', 'trash.png', 'win.png'].forEach(f => copyFile('img/' + f));
+// Schriftzug, Hintergrund, Werkzeugsymbole und Siegerkrone sind jetzt Zeichnungen
+// im Dokument (SVG bzw. programmatisch erzeugt). Die frueheren Rastergrafiken
+// - zusammen rund 7 MB - werden nicht mehr mitgeliefert.
 copyDir('sounds', f => /\.(mp3)$/i.test(f));
 ok('Client-Assets kopiert (js, img, sounds)');
 

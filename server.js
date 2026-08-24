@@ -499,6 +499,7 @@ function beginDrawingRound(room, word) {
   if (room.timer) { clearInterval(room.timer); room.timer = null; }
   clearBotTimers(room);
   room.state = 'playing';
+  room.startedAt = Date.now();   // fuer die Anzeige "geraten nach x,x s"
   room.currentWord = word;
   room.wordOptions = [];
   room.revealed = new Set();
@@ -598,7 +599,12 @@ function endRoundSolved(room, solver) {
   const next = room.solo ? (firstHuman(room)?.id || solver.id)
              : (room.teamMode ? chooseNextDrawer(room, null) : solver.id);
 
+  const gebraucht = room.startedAt
+    ? Math.max(0.1, Math.round((Date.now() - room.startedAt) / 100) / 10)
+    : ROUND_SECONDS - room.remaining;
+
   broadcast(room, 'round_solved', {
+    solvedAfter: gebraucht, remaining: room.remaining,
     winnerId: solver.id, winnerName: solver.name, points: pts,
     basePoints: basePts, speedMultiplier: speedMult, difficultyMultiplier: difficultyMult,
     wordDifficulty: room.currentWord.difficulty,
@@ -1000,8 +1006,18 @@ function handleAction(msg, ip) {
     if (!room) return { ok: false, error: 'Raum nicht gefunden oder abgelaufen' };
     if (isBlockedName(msg.name || '')) return { ok: false, error: 'name_blocked' };
     if (room.players.length >= MAX_PLAYERS) return { ok: false, error: 'Raum ist voll' };
-    // Optionales Einladungstoken: wenn übergeben, muss es passen (Link-Beitritt)
-    if (room.invite && msg.invite && String(msg.invite) !== String(room.invite)) return { ok: false, error: 'Einladung ungültig' };
+    // Einladungstoken: bewusst KEIN Riegel mehr.
+    // Frueher wurde ein nicht passendes Token abgewiesen ("Einladung ungueltig").
+    // Das war verkehrt herum: Wer GAR KEIN Token schickt, darf beitreten - das ist
+    // der normale Weg ueber den vierstelligen Code, den auch jeder eintippen kann.
+    // Abgewiesen wurde also ausgerechnet der eingeladene Gast mit einem leicht
+    // veralteten Link (etwa weil der Server zwischendurch neu gestartet ist und
+    // derselbe Raumcode neu vergeben wurde), waehrend ein Fremder mit demselben
+    // Code ungehindert hereinkam. Ein falsches Token wird deshalb einfach
+    // ignoriert; es entscheidet allein der Raumcode.
+    if (room.invite && msg.invite && String(msg.invite) !== String(room.invite)) {
+      console.log(`Raum ${room.code}: veraltetes Einladungstoken ignoriert`);
+    }
     const playerId = crypto.randomUUID();
     const sessionToken = token(24);
     room.players.push({ id: playerId, name: safeName(msg.name), score: 0,

@@ -64,7 +64,7 @@ const inject =
   // Ad Placement API selbst, wie oft eine Anzeige kommt. Ein zweiter Riegel von
   // uns wuerde ihr nur dazwischenfunken. Der Mindestabstand von drei Minuten
   // gilt deshalb nur bei Playgama, wo wir ihn selbst setzen muessen.
-  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_Y8=true;window.KK_START_AD=true;\n' +
+  'window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PORTAL=true;window.KK_Y8=true;window.KK_START_AD=true;\n' +
   'var y8Sdk=null;\n' +
   'window.addEventListener("y8sdk.ready",function(){\n' +
   '  try{\n' +
@@ -160,7 +160,9 @@ function copyDir(rel, filter) {
   for (const f of fs.readdirSync(s)) { if (filter(f)) copyFile(path.join(rel, f)); }
 }
 copyFile('js/qrcode.min.js');
-['logo.png', 'bg.png', 'brush.png', 'eraser.png', 'undo.png', 'trash.png', 'win.png'].forEach(f => copyFile('img/' + f));
+// Schriftzug, Hintergrund, Werkzeugsymbole und Siegerkrone sind jetzt Zeichnungen
+// im Dokument (SVG bzw. programmatisch erzeugt). Die frueheren Rastergrafiken
+// - zusammen rund 7 MB - werden nicht mehr mitgeliefert.
 copyDir('sounds', f => /\.(mp3)$/i.test(f));
 ok('Client-Assets kopiert (js, img, sounds)');
 

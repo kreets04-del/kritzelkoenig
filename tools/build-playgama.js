@@ -91,7 +91,7 @@ const INVITE_BASE = process.env.PLAYGAMA_INVITE_BASE || '';
 if (INVITE_BASE && !/^https:\/\//.test(INVITE_BASE)) die('PLAYGAMA_INVITE_BASE muss mit https:// beginnen: ' + INVITE_BASE);
 const inject =
   '<script src="' + BRIDGE_URL + '"></script>\n' +
-  '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PLAYGAMA_BUILD=' +
+  '<script>window.API_BASE=' + JSON.stringify(API_BASE) + ';window.KK_PORTAL=true;window.KK_PLAYGAMA_BUILD=' +
     JSON.stringify(BUILD_STAMP) + ';' +
     (INVITE_BASE ? 'window.KK_INVITE_BASE=' + JSON.stringify(INVITE_BASE) + ';' : '') + '</script>\n' +
   '<script src="' + PLATFORM_SRC + '"></script>\n';
@@ -171,7 +171,9 @@ function copyDir(rel, filter) {
 }
 copyFile('platform/playgama.js');
 copyFile('js/qrcode.min.js');
-['logo.png', 'bg.png', 'brush.png', 'eraser.png', 'undo.png', 'trash.png', 'win.png'].forEach(f => copyFile('img/' + f));
+// Schriftzug, Hintergrund, Werkzeugsymbole und Siegerkrone sind jetzt Zeichnungen
+// im Dokument (SVG bzw. programmatisch erzeugt). Die frueheren Rastergrafiken
+// - zusammen rund 7 MB - werden nicht mehr mitgeliefert.
 copyDir('sounds', f => /\.(mp3)$/i.test(f));
 ok('Client-Assets kopiert (platform, js, img, sounds)');
 

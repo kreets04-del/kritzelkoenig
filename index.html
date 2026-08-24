@@ -23,12 +23,20 @@
   body{
     color:var(--ink);overflow:hidden;overflow-x:hidden;touch-action:manipulation;
     font-family:"Segoe UI","Leelawadee UI","Noto Sans Thai",Tahoma,system-ui,-apple-system,Roboto,Arial,sans-serif;
+    /* Frueher lag hier eine 1,3-MB-Rastergrafik mit Kreidekritzeleien. Sie wurde
+       auf jedes Seitenverhaeltnis gezerrt und brachte zwei weiche Farbschleier mit,
+       die zu nichts anderem im Spiel passten. Die Kritzeleien zeichnet jetzt
+       #kritzelgrund selbst - massstabsfrei und in derselben Strichsprache wie
+       Schriftzug und Werkzeugsymbole. */
     background:
-      url('img/bg.png') center/cover no-repeat,
       radial-gradient(1200px 700px at 12% -10%, #2c365e 0%, transparent 55%),
       radial-gradient(1000px 700px at 110% 120%, #34406e 0%, transparent 55%),
       linear-gradient(160deg, var(--bg1), var(--bg2));
   }
+  /* Die Kritzelflaeche liegt hinter allem und wird von kritzelgrundZeichnen()
+     gefuellt. Sehr blass: die Zeichnung des Spielers ist das Bild, das zaehlt. */
+  #kritzelgrund{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  #kritzelgrund svg{width:100%;height:100%;display:block}
   .screen{position:absolute;inset:0;display:none;flex-direction:column}
   .screen.active{display:flex}
   /* Zentriert, aber scrollbar wenn der Inhalt höher als der Bildschirm ist
@@ -47,12 +55,79 @@
   h1{font-size:clamp(30px,6.4vw,62px);margin:0;letter-spacing:3px;font-weight:800;
      text-shadow:0 4px 24px rgba(0,0,0,.4)}
   h1 .crown{color:var(--accent);filter:drop-shadow(0 2px 8px rgba(255,207,69,.5))}
-  .logo{width:min(560px,82vw);height:auto;max-height:min(30vh,312px);object-fit:contain;
-    margin-bottom:2px;filter:drop-shadow(0 8px 28px rgba(0,0,0,.45))}
-  .ic-img{width:22px;height:22px;object-fit:contain;display:block}
-  .winimg{width:min(240px,40vw);height:auto;margin:0 auto 10px;display:none}
+  .logo{width:min(560px,82vw);aspect-ratio:512/130;height:auto;max-height:min(30vh,312px);
+    color:var(--accent);margin-bottom:2px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+  /* Eigene Strichsymbole. currentColor: auf dem aktiven gelben Knopf
+     werden sie dunkel, ohne zweite Grafik. */
+  .ic-svg{width:22px;height:22px;display:block;color:currentColor}
+  /* Inline-SVG braucht das Verhaeltnis ausdruecklich, sonst wird es 0 hoch. */
+  .winimg{width:min(180px,34vw);aspect-ratio:64/44;height:auto;margin:0 auto 10px;display:none;color:var(--accent)}
   .sub{color:var(--muted);margin:6px 0 26px;letter-spacing:.5px}
 
+  /* Startseite: der Satz, der das Spiel erklaert, und der Ablauf in vier Schritten.
+     Bewusst ohne Erklaertext - wer das sieht, weiss in zwei Sekunden, worum es geht. */
+  .pitch{font-size:clamp(15px,3.6vw,21px);font-weight:700;color:var(--ink);
+    margin:2px 0 16px;text-align:center;letter-spacing:.2px}
+  .ablauf{display:flex;align-items:flex-start;justify-content:center;gap:4px;
+    flex-wrap:wrap;margin:0 0 22px;max-width:min(560px,94vw)}
+  .ablauf .schritt{display:flex;flex-direction:column;align-items:center;gap:6px;
+    width:76px;text-align:center}
+  .ablauf .schritt svg{width:27px;height:27px;color:var(--accent)}
+  .ablauf .schritt span{font-size:11.5px;line-height:1.25;color:var(--muted);letter-spacing:.2px}
+  .ablauf .pfeil{color:var(--line);font-size:15px;line-height:27px;flex:0 0 auto}
+  @media (max-width:380px){ .ablauf .schritt{width:66px} .ablauf .pfeil{display:none} }
+  /* Match Gallery: die Zeichnungen dieser Partie. Bewusst als Streifen mit
+     eigenem Bildlauf - er darf nie das ganze Fenster sprengen, und auf dem Handy
+     wischt man seitlich durch. Weisse Karten, weil die Zeichnungen weiss sind. */
+  #galerie{margin-top:18px;text-align:left}
+  .gtitel{font-weight:800;letter-spacing:.4px;margin-bottom:8px;text-align:center;
+    font-size:clamp(15px,3.2vw,19px)}
+  .gband{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;
+    scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .gband::-webkit-scrollbar{height:6px}
+  .gband::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  /* Kacheln sind jetzt Knoepfe - die Knopf-Grundregeln muessen zurueckgenommen
+     werden, sonst haetten sie Polster, Rahmen und Farbverlauf wie das Menue. */
+  .gbild{flex:0 0 auto;margin:0;width:104px;padding:0;background:none;border:0;
+    box-shadow:none;color:inherit;font:inherit;cursor:zoom-in;display:block;text-align:center}
+  .gbild:hover img{transform:translateY(-2px);border-color:var(--accent)}
+  .gbild img{width:104px;height:104px;object-fit:cover;display:block;
+    background:#fff;border-radius:10px;border:1px solid var(--line);transition:.12s}
+  .gtext{display:block;margin-top:5px;line-height:1.3}
+  .gtext b{display:block;font-size:11.5px;letter-spacing:.3px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .gtext span{display:block;font-size:10.5px;color:var(--muted);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  /* Die Lupe. Das Bild bekommt so viel Platz wie da ist, bleibt aber quadratisch. */
+  .lupe{align-items:center;justify-content:center}
+  .lupe-box{text-align:center;max-width:min(560px,92vw)}
+  .lupe-box img{width:min(560px,82vw,74vh);aspect-ratio:1/1;height:auto;display:block;
+    margin:0 auto;background:#fff;border-radius:16px;border:1px solid var(--line)}
+  .lupe-wort{margin-top:12px;font-weight:800;letter-spacing:2px;color:var(--accent);
+    font-size:clamp(18px,4vw,26px)}
+  .lupe-wer{color:var(--muted);font-size:14px;margin-top:2px}
+  .lupe-zaehler{color:var(--muted);font-size:12px;margin-top:8px;opacity:.75}
+  .lupe-zu{position:absolute;top:max(10px,env(safe-area-inset-top));right:14px;
+    width:44px;height:44px;padding:0;font-size:26px;line-height:1;border-radius:50%;
+    background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  .lupe-pfeil{width:48px;height:48px;padding:0;flex:0 0 auto;margin:0 6px;
+    font-size:30px;line-height:1;border-radius:50%;
+    background:var(--panel2);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  @media (max-width:520px){
+    .lupe-pfeil{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));margin:0}
+    .lupe-pfeil.links{left:18px} .lupe-pfeil.rechts{right:18px}
+    .lupe-box img{width:min(88vw,58vh)}
+  }
+  .ghinweis{margin-top:6px;text-align:center;font-size:11.5px;color:var(--muted)}
+  @media (max-height:640px){
+    .gbild,.gbild img{width:74px} .gbild img{height:74px}
+    #galerie{margin-top:10px} .ghinweis{display:none}
+  }
+  .lobbyhinweis{margin:8px 0 2px;text-align:center;font-size:12.5px;line-height:1.45;
+    color:var(--muted);padding:8px 10px;border-radius:12px;
+    background:rgba(255,255,255,.04);border:1px solid var(--line)}
+  @media (max-height:640px){ .lobbyhinweis{font-size:11.5px;padding:6px 8px;margin:6px 0 0} }
   .card{background:var(--panel);backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.08);border-radius:22px;
     padding:24px;width:min(540px,93vw);box-shadow:0 24px 70px rgba(0,0,0,.45)}
@@ -155,8 +230,7 @@
   .toolbar button{padding:0;width:40px;height:40px;flex:0 0 auto;background:var(--panel2);color:var(--ink);
     border:1px solid var(--line);box-shadow:none;display:flex;align-items:center;justify-content:center}
   .toolbar button.on{background:linear-gradient(180deg,var(--accent),var(--accent-d));color:#161a26;border-color:transparent}
-  .toolbar .ic{font-size:22px}
-  .toolbar .ic-img{width:24px;height:24px}
+  .toolbar .ic-svg{width:24px;height:24px}
   .toolbar .sep{width:1px;align-self:stretch;background:var(--line);margin:2px 3px}
   .sizes{display:flex;gap:5px;align-items:center}
   .sizes .sz{width:34px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center}
@@ -171,10 +245,17 @@
 
   /* Wrap zentriert die Bühne; die Bühne hat ein FESTES Seitenverhältnis,
      damit die Zeichnung auf allen Geräten gleich (unverzerrt) aussieht. */
-  .canvas-wrap{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}
+  /* Die Zeichenflaeche muss ueberall exakt quadratisch sein. Striche werden als
+     relative Koordinaten (0..1) uebertragen; ist die Flaeche beim einen breit und
+     beim anderen quadratisch, landet derselbe Strich woanders - die Zeichnung
+     kommt verzerrt an. Deshalb misst sich das Quadrat an der kuerzeren Seite
+     dieses Rahmens. */
+  .canvas-wrap{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;min-width:0;
+    container-type:size}
   /* FESTES 1:1 – auf 9:16 und 16:9 geometrisch identisch (normalisierte Koordinaten). */
   .canvas-stage{position:relative;background:#fff;border-radius:14px;overflow:hidden;
-    aspect-ratio:1/1;width:100%;max-height:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    width:min(100cqw,100cqh);height:min(100cqw,100cqh);aspect-ratio:1/1;margin:auto;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
   canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block}
   .feed{position:absolute;left:10px;bottom:10px;display:flex;flex-direction:column;gap:6px;pointer-events:none;max-width:62%}
   .feed .g{background:rgba(22,26,38,.86);color:#fff;border-radius:14px;padding:7px 13px;font-size:14px;align-self:flex-start;max-width:100%;
@@ -187,8 +268,21 @@
   .resultbar{display:none;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
     background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 14px}
   .resultbar.show{display:flex}
-  .result-info{font-size:clamp(16px,3.5vw,22px);font-weight:700}
+  /* Rundenabschluss: eine Hauptzeile mit dem Wort, darunter klein, wer was getan hat.
+     Gleiche Rundungen, gleiche Abstaende und dieselbe Farbrolle wie im uebrigen Spiel. */
+  .result-info{font-size:clamp(14px,3vw,17px);font-weight:600;text-align:left;min-width:0}
   .result-info .rev{color:var(--accent);font-weight:900;letter-spacing:2px;margin-left:8px}
+  .rz-marke{color:var(--muted);font-weight:600;font-size:.78em;letter-spacing:.4px;
+    text-transform:uppercase;margin-right:6px}
+  .rz-wort{font-size:clamp(17px,3.8vw,24px);font-weight:800;line-height:1.2}
+  .rz-wort b{color:var(--accent);letter-spacing:2px}
+  .rz-zeile{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:5px;
+    font-size:clamp(12px,2.6vw,14px);font-weight:600}
+  .rz-paar i{color:var(--accent2);font-style:normal;font-weight:800}
+  .rz-abzeichen{display:inline-block;margin-top:7px;padding:3px 10px;border-radius:999px;
+    background:rgba(255,207,69,.14);border:1px solid rgba(255,207,69,.45);
+    color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.4px}
+  .resultbar .wait b{color:var(--ink)}
   .resultbar .wait{color:var(--muted);font-weight:600}
   .resultbar #btnContinue{font-size:18px}
   .mask{font-size:clamp(20px,4.6vw,38px);font-weight:900;letter-spacing:4px;white-space:pre-wrap;word-break:break-word;
@@ -237,6 +331,14 @@
     .center{padding-top:6px;padding-bottom:8px}
     .logo{max-height:15vh}
     .sub{display:none}
+    /* Vier Schritte nebeneinander brauchen Hoehe. Hier bleibt der Satz, der das
+       Spiel erklaert - er ist der wichtigere Teil - und der Ablauf rueckt zusammen. */
+    .pitch{font-size:15px;margin:0 0 8px}
+    .ablauf{gap:2px;margin-bottom:10px}
+    .ablauf .schritt{width:64px;gap:3px}
+    .ablauf .schritt svg{width:21px;height:21px}
+    .ablauf .schritt span{font-size:10.5px}
+    .ablauf .pfeil{line-height:21px;font-size:12px}
     .card{padding:12px;border-radius:14px}
     label{margin:8px 0 4px}
     .fmtcards{gap:8px;margin:4px 0}
@@ -260,6 +362,10 @@
     .err:empty{display:none}
   }
   @media (max-height:470px){
+    /* Zu flach fuer beides. Der Startknopf muss ohne Scrollen erreichbar sein
+       (Vorgabe von Y8), deshalb entfaellt hier der Ablaufstreifen. */
+    .ablauf{display:none}
+    .pitch{font-size:14px;margin:0 0 8px}
     .logo{max-height:14vh}
     .fmticon{font-size:20px}
     .card{padding:10px}
@@ -294,12 +400,111 @@
     body.fmt-landscape #game .bottombar{grid-area:bot}
     body.fmt-landscape #game .resultbar{grid-area:bot}
     /* Größtes Quadrat, das in die Mittelspalte passt (kleinere von Breite/Höhe der Wrap) */
-    body.fmt-landscape #game .canvas-stage{width:min(100cqw,100cqh);height:min(100cqw,100cqh);
-      max-width:none;max-height:none;aspect-ratio:1/1;margin:auto}
   }
 </style>
 </head>
 <body>
+<div id="kritzelgrund" aria-hidden="true"></div>
+<!-- ================= Eigene Symbole =================
+     Von Hand gezeichnete Strichsymbole im Stiftduktus des Spiels. Sie ersetzen
+     die frueheren PNG-Icons: die waren 1024x1024 gross, rund ein Megabyte
+     schwer, wurden bei 22 Pixeln angezeigt - und ihr Hochglanz-Vektorstil passte
+     nicht zum Kreide-Kritzelmuster des Hintergrunds. Zwei Stile in einem Spiel.
+
+     Bewusst mit Strich statt Flaeche, runden Enden und leicht unregelmaessigen
+     Punkten: In einem Zeichenspiel sollen die Werkzeuge aussehen, als waeren sie
+     gezeichnet worden. currentColor sorgt dafuer, dass sie auf dem gelben
+     aktiven Knopf automatisch dunkel werden.
+================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Bleistift: Koerper, Spitze, Mine. Leicht schief, wie hingelegt. -->
+    <symbol id="kk-stift" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.4 19.7 6 15.2 16.6 4.5c.7-.7 1.8-.7 2.5 0l.5.5c.7.7.7 1.8 0 2.5L8.9 18.2l-4.5 1.5z"/>
+        <path d="M15.4 5.8 18.3 8.7"/>
+        <path d="M6 15.2 8.9 18.1"/>
+      </g>
+    </symbol>
+    <!-- Radierer: schraeger Block mit Trennlinie, darunter der abgeriebene Strich. -->
+    <symbol id="kk-radierer" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8.2 18.6 4.6 15c-.7-.7-.7-1.9 0-2.6l8-8c.7-.7 1.9-.7 2.6 0l4.4 4.4c.7.7.7 1.9 0 2.6l-6.6 6.6z"/>
+        <path d="M9.6 7.4 15.9 13.7"/>
+        <path d="M5 20.4h9.6"/>
+      </g>
+    </symbol>
+    <!-- Rueckgaengig: Pfeil, der eine Schleife zurueck nach links macht. -->
+    <symbol id="kk-zurueck" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 9.3h9.1c3.1 0 5.6 2.4 5.6 5.4s-2.5 5.4-5.6 5.4H8.6"/>
+        <path d="M8 4.6 3.6 9.3 8 13.6"/>
+      </g>
+    </symbol>
+    <!-- Leeren: Blatt mit Wischbewegung - loescht die Zeichnung, nicht "Muell". -->
+    <symbol id="kk-leeren" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5.4 4.3h9.3l4 4v11.4H5.4z"/>
+        <path d="M14.6 4.3v4.1h4"/>
+        <path d="M8.4 15.4c1.6-1.9 3.4-1.9 5 0"/>
+        <path d="M8.6 11.6c1.9.7 3.9.7 5.8 0"/>
+      </g>
+    </symbol>
+    <!-- Schriftzug. Jeder Buchstabe besteht aus wenigen Strichen mit runden Enden,
+         jeder steht minimal anders - geschrieben, nicht gesetzt. Die Werte sind fest
+         gewaehlt und nicht zufaellig, damit der Titel bei jedem Laden gleich aussieht.
+         Ersetzt das frueher hier liegende Hochglanz-Logo (1 MB Rastergrafik), das
+         weder zum Kreidehintergrund noch zu einem Zeichenspiel passte. -->
+    <symbol id="kk-wortmarke" viewBox="0 0 512 130">
+      <g fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(22,50) rotate(-2.5 18 30)"><path d="M5,1 L5,60 M33,2 L7,32 M9,29 L34,60"/></g>
+        <g transform="translate(66,48) rotate(1.5 18 30)"><path d="M5,1 L5,60 M5,2 L21,2 C31,2 31,30 21,30 L5,30 M18,30 L33,60"/></g>
+        <g transform="translate(110,51) rotate(-1 18 30)"><path d="M9,1 L9,60"/></g>
+        <g transform="translate(133,49) rotate(2 18 30)"><path d="M2,3 L35,1 M19,2 L18,60"/></g>
+        <g transform="translate(176,52) rotate(-1.8 18 30)"><path d="M4,3 L34,2 M34,2 L5,57 M5,57 L35,59"/></g>
+        <g transform="translate(219,50) rotate(1.2 18 30)"><path d="M6,1 L5,60 M6,1 L32,3 M6,30 L26,29 M5,60 L33,58"/></g>
+        <g transform="translate(260,48) rotate(-2.2 18 30)"><path d="M6,1 L5,58 M5,58 L31,57"/></g>
+        <g transform="translate(299,51) rotate(1.8 18 30)"><path d="M5,1 L5,60 M33,2 L7,32 M9,29 L34,60"/></g>
+        <g transform="translate(299,51) rotate(-4 18 -20)"><path d="M3,-11 L1,-31 L10,-23 L18,-34 L27,-23 L36,-31 L34,-11"/></g>
+        <g transform="translate(343,47) rotate(0 18 30)"><path d="M19,1 C6,2 3,15 3,31 C3,48 8,59 19,59 C31,59 36,47 36,31 C36,14 32,1 19,1 Z"/></g>
+        <g transform="translate(343,47)"><path d="M12,-12 L12,-10 M27,-13 L27,-11"/></g>
+        <g transform="translate(387,51) rotate(-1.4 18 30)"><path d="M5,60 L6,1 M6,3 L32,56 M33,58 L32,2"/></g>
+        <g transform="translate(430,49) rotate(2.2 18 30)"><path d="M9,1 L9,60"/></g>
+        <g transform="translate(453,50) rotate(-1.6 18 30)"><path d="M33,13 C27,3 20,1 15,2 C6,4 3,17 3,31 C3,48 10,59 20,59 C30,59 34,50 34,40 L20,40"/></g>
+      </g>
+    </symbol>
+    <!-- Wortauswahl: drei Karten, die mittlere herausgehoben - genau das,
+         was der Zeichner zu Rundenbeginn sieht. -->
+    <symbol id="kk-waehlen" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2.6,9.5 h4.6 v9 h-4.6 z M16.8,9.5 h4.6 v9 h-4.6 z"/>
+        <g transform="translate(9.2,4.6) rotate(-7)"><path d="M0,0 h5.6 v13 h-5.6 z"/></g>
+      </g>
+    </symbol>
+    <!-- Raten: Sprechblase mit Fragezeichen. -->
+    <symbol id="kk-raten" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5,4.5 h14 a2.2,2.2 0 0 1 2.2,2.2 v7.6 a2.2,2.2 0 0 1 -2.2,2.2 h-7.4 l-4.4,3.4 v-3.4 h-2.2 a2.2,2.2 0 0 1 -2.2,-2.2 v-7.6 a2.2,2.2 0 0 1 2.2,-2.2 z"/>
+        <path d="M9.7,9.2 c0,-2.1 4.8,-2.1 4.8,0 c0,1.7 -2.4,1.7 -2.4,3.3 M12,14.6 l0,0.6"/>
+      </g>
+    </symbol>
+    <!-- Kleine Krone fuers 24er Raster (der naechste Zeichner). -->
+    <symbol id="kk-krone-klein" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4,17.5 L2.8,7 L9,11.5 L12,5 L15,11.5 L21.2,7 L20,17.5 Z M4.5,20 h15"/>
+      </g>
+    </symbol>
+    <!-- Siegerkrone: bewusst mit unruhiger Linie, wie mit dem Stift gezogen. -->
+    <symbol id="kk-krone" viewBox="0 0 64 44">
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 34 5.5 12.5l12 8.5L32 6.5l14.5 14.5 12-8.5L56 34z"/>
+        <path d="M9.5 38.5h45"/>
+        <path d="M20 27.5l1.5 3M32 25l1 3.4M44 27.5l-1.4 3"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
 
 <audio id="bgm" loop preload="auto">
   <source src="sounds/music.mp3" type="audio/mpeg">
@@ -307,8 +512,17 @@
 
 <!-- STARTBILDSCHIRM: Format & Sprache -->
 <div class="screen active center" id="startup">
-  <img class="logo" src="img/logo.png" alt="Kritzelkönig" onerror="this.style.display='none'">
-  <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten</div>
+  <svg class="logo" viewBox="0 0 512 130" role="img" aria-label="Kritzelkönig"><use href="#kk-wortmarke"/></svg>
+  <div class="pitch" data-i18n="pitch">Zeichnen. Raten. Der nächste Künstler werden!</div>
+  <div class="ablauf">
+    <div class="schritt"><svg aria-hidden="true"><use href="#kk-waehlen"/></svg><span data-i18n="stChoose">Wählen</span></div>
+    <div class="pfeil" aria-hidden="true">→</div>
+    <div class="schritt"><svg aria-hidden="true"><use href="#kk-stift"/></svg><span data-i18n="stDraw">Zeichnen</span></div>
+    <div class="pfeil" aria-hidden="true">→</div>
+    <div class="schritt"><svg aria-hidden="true"><use href="#kk-raten"/></svg><span data-i18n="stGuess">Raten</span></div>
+    <div class="pfeil" aria-hidden="true">→</div>
+    <div class="schritt"><svg aria-hidden="true"><use href="#kk-krone-klein"/></svg><span data-i18n="stNext">Nächster Künstler</span></div>
+  </div>
   <div class="card" style="max-width:min(700px,94vw)">
     <label data-i18n="chooseFormat">Ansicht wählen</label>
     <div class="fmtcards" id="fmtCards">
@@ -339,9 +553,7 @@
 
 <!-- MENÜ -->
 <div class="screen center" id="menu">
-  <img id="logoImg" class="logo" src="img/logo.png" alt="Kritzelkönig"
-       onerror="this.style.display='none';document.getElementById('logoText').style.display='block'">
-  <h1 id="logoText" style="display:none">KRITZEL<span class="crown">♔</span>KÖNIG</h1>
+  <svg id="logoImg" class="logo" viewBox="0 0 512 130" role="img" aria-label="Kritzelkönig"><use href="#kk-wortmarke"/></svg>
   <div class="sub" data-i18n="tagline">Zeichnen &amp; Raten – überall</div>
   <div class="card">
     <div class="langrow" id="menuLang">
@@ -425,6 +637,10 @@
     </div>
     <div id="qrBox" style="display:none;text-align:center;margin-top:10px"></div>
     <div id="shareMsg" class="hint" style="text-align:center;min-height:0"></div>
+    <!-- Sagt geradeheraus, worum es geht: hier wird mit echten Leuten gespielt.
+         Wer allein ankommt, weiss sofort, was zu tun ist - Link teilen. -->
+    <div class="lobbyhinweis" data-i18n="realPlayers">Kritzelkönig wird mit echten Leuten gespielt.
+      Teile den Link – sobald jemand beitritt, kann es losgehen.</div>
 
     <label data-i18n="difficulty">Schwierigkeit</label>
     <div class="diffsel" id="diffSel">
@@ -488,16 +704,16 @@
   <div class="scorebar" id="scores"></div>
 
   <div class="toolbar hidden" id="toolbar">
-    <button id="tBrush" class="on" title="Pinsel"><img class="ic-img" src="img/brush.png" onerror="ico(this,'✏️')"></button>
-    <button id="tEraser" title="Radierer"><img class="ic-img" src="img/eraser.png" onerror="ico(this,'🧽')"></button>
+    <button id="tBrush" class="on" title="Stift"><svg class="ic-svg" aria-hidden="true"><use href="#kk-stift"/></svg></button>
+    <button id="tEraser" title="Radierer"><svg class="ic-svg" aria-hidden="true"><use href="#kk-radierer"/></svg></button>
     <div class="sizes" id="sizes">
       <button class="sz" data-s="0.004"><span class="dotsz" style="width:6px;height:6px"></span></button>
       <button class="sz on" data-s="0.009"><span class="dotsz" style="width:11px;height:11px"></span></button>
       <button class="sz" data-s="0.018"><span class="dotsz" style="width:18px;height:18px"></span></button>
     </div>
     <div class="sep"></div>
-    <button id="tUndo" title="Rückgängig"><img class="ic-img" src="img/undo.png" onerror="ico(this,'↩️')"></button>
-    <button id="tClear" title="Leeren"><img class="ic-img" src="img/trash.png" onerror="ico(this,'🗑️')"></button>
+    <button id="tUndo" title="Rückgängig"><svg class="ic-svg" aria-hidden="true"><use href="#kk-zurueck"/></svg></button>
+    <button id="tClear" title="Leeren"><svg class="ic-svg" aria-hidden="true"><use href="#kk-leeren"/></svg></button>
   </div>
 
   <div class="palette hidden" id="palette"></div>
@@ -532,11 +748,12 @@
 
   <div class="overlay" id="overlay">
     <div class="box">
-      <img class="winimg" id="winImg" src="img/win.png" alt="" onerror="this.dataset.missing='1'">
+      <svg class="winimg" id="winImg" viewBox="0 0 64 44" aria-hidden="true"><use href="#kk-krone"/></svg>
       <div class="big2" id="ovTitle">—</div>
       <div class="reveal" id="ovReveal"></div>
       <div id="ovExtra" style="margin-top:10px;color:var(--muted)"></div>
       <div class="word-options" id="wordOptions" style="display:none"></div>
+      <div id="galerie" style="display:none"></div>
       <div id="ovButtons" style="margin-top:20px;display:none">
         <div class="row"><button class="green" id="btnNewGame" data-i18n="newGame">Neues Spiel</button>
         <button class="secondary" id="btnToMenu" data-i18n="toMenu">Zum Menü</button></div>
@@ -545,6 +762,20 @@
   </div>
 </div>
 
+
+<!-- Galeriebild gross. Liegt bewusst ausserhalb von #game: das Endstand-Fenster
+     hat einen eigenen Stapel, und die Lupe muss darueber liegen. -->
+<div class="overlay lupe" id="lupe" style="z-index:60">
+  <button type="button" class="lupe-zu" id="lupeZu" aria-label="Schließen">×</button>
+  <button type="button" class="lupe-pfeil links" id="lupeZurueck" aria-label="Vorheriges Bild">‹</button>
+  <div class="lupe-box">
+    <img id="lupeBild" src="" alt="">
+    <div class="lupe-wort" id="lupeWort"></div>
+    <div class="lupe-wer" id="lupeWer"></div>
+    <div class="lupe-zaehler" id="lupeZaehler"></div>
+  </div>
+  <button type="button" class="lupe-pfeil rechts" id="lupeVor" aria-label="Nächstes Bild">›</button>
+</div>
 <!-- FAIRPLAY-HINWEIS (einmal pro Mehrspieler-Partie, vor der ersten Zeichenrunde) -->
 <div class="overlay" id="fairplay" style="z-index:40">
   <div class="box" style="text-align:left;max-width:min(460px,92vw)">
@@ -634,8 +865,9 @@
 const S={ playerId:null,roomCode:null,name:'',isHost:false,amDrawer:false,state:'menu',
   tool:'brush',brushSize:0.009,color:'#111111',strokes:[],drawing:false,cur:null,pending:[],firstSent:false,
   es:null,difficulty:'mixed',maxRounds:10,teamMode:false,muted:false,lang:'de',
-  invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0,
-  mode:'classic',tMyTurn:false,tIsTraitor:false,tWord:'',tCategory:'' };
+  spielerzahl:0,invite:null,pendingRoom:null,pendingInvite:null,lanBase:null,solo:false,fairShown:false,sessionToken:null,_sseTries:0,
+  mode:'classic',tMyTurn:false,tIsTraitor:false,tWord:'',tCategory:'',
+  galerie:[] };
 const ERASER_W=0.05;
 function L(de,en){return S.lang==='en'?en:de;} // kleiner Sprachhelfer für Verräter-Texte
 const $=id=>document.getElementById(id);
@@ -885,6 +1117,13 @@ function inviteUrl(){
   // Auf localhost die LAN-IP des Servers verwenden, damit der Link auf anderen
   // Geräten im selben WLAN öffnet (localhost zeigt sonst auf das jeweilige Gerät).
   const local=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname);
+  // Die LAN-Adresse des Servers taugt nur, wenn der Server auch wirklich im
+  // selben Netz steht. Laeuft die Seite auf localhost, spricht aber mit einem
+  // entfernten Backend (Portal-Paket gegen Render), dann meldet dieses Backend
+  // seine rechenzentrumsinterne Adresse - z. B. 10.195.x.x:10000. Die kann
+  // niemand oeffnen. Frueher landete genau die im Einladungslink.
+  const backendLokal = !window.API_BASE ||
+    /^(https?:\/\/)?(localhost|127\.0\.0\.1|0\.0\.0\.0)(:|\/|$)/i.test(String(window.API_BASE));
   // Im Portal-Build laeuft das Spiel in einem fremden Rahmen unter einer internen
   // Auslieferungsadresse (z. B. …games.playgama.net/<Kennung>/index.html). Die kann
   // von aussen niemand sinnvoll oeffnen - ein Einladungslink daraus ist wertlos.
@@ -895,7 +1134,7 @@ function inviteUrl(){
   // traegt der Build dort die oeffentliche Portalseite ein, damit Eingeladene
   // beim Portal landen statt auf der eigenen Webseite.
   let base;
-  if(local && S.lanBase) base=S.lanBase+'/';
+  if(local && backendLokal && S.lanBase) base=S.lanBase+'/';
   else if(window.KK_INVITE_BASE) base=String(window.KK_INVITE_BASE).replace(/\/+$/,'')+'/';
   else if(window.API_BASE) base=String(window.API_BASE).replace(/\/+$/,'')+'/';
   else base=location.origin+location.pathname;
@@ -944,6 +1183,9 @@ function enterJoinMode(code){
   $('joinArea').style.display='block';
   $('code').value=code; $('code').readOnly=true; $('code').style.opacity='.7';
   $('btnCreate').style.display='none';
+  // Das Beitrittsfeld ist offen - der Knopf, der es oeffnet, waere jetzt nur ein
+  // zweiter Knopf mit derselben Aufschrift daneben.
+  $('btnJoinShow').style.display='none';
   const b=$('inviteBanner'); b.style.display='block'; b.textContent=t('joiningRoom')+' '+code;
   setTimeout(()=>$('name').focus(),50);
 }
@@ -1018,7 +1260,7 @@ window.KK_setPortalLanguage=function(code){
 
 // ---------- Sprachen (i18n) ----------
 const T={
- de:{tagline:'Zeichnen & Raten – überall',yourName:'Dein Spielername',namePh:'z. B. Anna',
+ de:{realPlayers:'Kritzelkönig wird mit echten Leuten gespielt. Teile den Link – sobald jemand beitritt, kann es losgehen.',tenSeconds:'Nur noch 10 Sekunden!',yourTurn:'Du bist dran – zeichne los!',nGuessing:'{n} raten mit',theWordWas:'Das Wort war',artistWas:'Gezeichnet von',firstCorrect:'Zuerst richtig',guessedIn:'Erraten nach',isNextArtist:'zeichnet als Nächstes!',lightningGuess:'⚡ Blitzschnell erkannt!',lastSecond:'⏱ In letzter Sekunde!',nobodyGuessed:'Das war ein schweres!',galleryTitle:'Eure Galerie dieser Partie',galleryNote:'Alle Bilder wurden gerade von euch gezeichnet.',pitch:'Zeichnen. Raten. Der nächste Künstler werden!',stChoose:'Wählen',stDraw:'Zeichnen',stGuess:'Raten',stNext:'Nächster Künstler',tagline:'Zeichnen & Raten – überall',yourName:'Dein Spielername',namePh:'z. B. Anna',
    createGame:'Spiel erstellen',joinGame:'Spiel beitreten',roomCode4:'Raum-Code (4 Ziffern)',join:'Beitreten',
    roomCode:'Raum-Code',difficulty:'Schwierigkeit',rounds:'Runden',teamMode:'Teammodus',teamOn:'An',teamOff:'Aus',players:'Spieler',leave:'Verlassen',startGame:'Spiel starten',
    easy:'🟢 Leicht',medium:'🙂 Mittel',hard:'🔥 Schwer',mixed:'🎲 Gemischt',
@@ -1048,7 +1290,7 @@ const T={
    inputBlocked:'Dieser Ausdruck kann im Spiel nicht verwendet werden. Bitte wähle eine andere Eingabe.',
    netBusy:'Zu viele Anfragen – bitte kurz warten.',netDown:'Server nicht erreichbar.',netLost:'Verbindung verloren.',
    howStep1:'Ein Spieler bekommt einen Begriff und zeichnet ihn.',howStep2:'Alle anderen tippen ihren Tipp ins Feld.',howStep3:'Wer zuerst richtig rät, bekommt die meisten Punkte – der Zeichner auch.',howStep4:'Danach ist der Nächste mit Zeichnen dran.',howStep5:'Nur zeichnen: keine Buchstaben, keine Zahlen.'},
- en:{tagline:'Draw & Guess – anywhere',yourName:'Your name',namePh:'e.g. Anna',
+ en:{realPlayers:'Kritzelkönig is played with real people. Share the link – as soon as someone joins, you can start.',tenSeconds:'Only 10 seconds left!',yourTurn:'Your turn to draw!',nGuessing:'{n} players are guessing',theWordWas:'The word was',artistWas:'Artist',firstCorrect:'First correct guess',guessedIn:'Guessed in',isNextArtist:'is the next artist!',lightningGuess:'⚡ Lightning guess!',lastSecond:'⏱ Last second guess!',nobodyGuessed:'That one was tricky!',galleryTitle:'Your Match Gallery',galleryNote:'Every picture here was just drawn by the players.',pitch:'Draw. Guess. Become the next artist!',stChoose:'Choose',stDraw:'Draw',stGuess:'Guess',stNext:'Next artist',tagline:'Draw & Guess – anywhere',yourName:'Your name',namePh:'e.g. Anna',
    createGame:'Create game',joinGame:'Join game',roomCode4:'Room code (4 digits)',join:'Join',
    roomCode:'Room code',difficulty:'Difficulty',rounds:'Rounds',teamMode:'Team mode',teamOn:'On',teamOff:'Off',players:'Players',leave:'Leave',startGame:'Start game',
    easy:'🟢 Easy',medium:'🙂 Medium',hard:'🔥 Hard',mixed:'🎲 Mixed',
@@ -1078,7 +1320,7 @@ const T={
    inputBlocked:'This expression cannot be used in the game. Please choose another input.',
    netBusy:'Too many requests – please slow down.',netDown:'Server not reachable.',netLost:'Connection lost.',
    howStep1:'One player gets a word and draws it.',howStep2:'Everyone else types their guess.',howStep3:'The first correct guess scores the most – the drawer scores too.',howStep4:'Then it is the next player’s turn to draw.',howStep5:'Drawing only: no letters, no numbers.'},
- id:{tagline:'Gambar & Tebak – di mana saja',yourName:'Nama kamu',namePh:'mis. Anna',
+ id:{realPlayers:'Kritzelkönig dimainkan bersama orang sungguhan. Bagikan tautannya – begitu ada yang bergabung, kalian bisa mulai.',tenSeconds:'Tinggal 10 detik!',yourTurn:'Giliranmu menggambar!',nGuessing:'{n} pemain sedang menebak',theWordWas:'Katanya adalah',artistWas:'Digambar oleh',firstCorrect:'Tebakan benar pertama',guessedIn:'Ditebak dalam',isNextArtist:'jadi seniman berikutnya!',lightningGuess:'⚡ Tebakan kilat!',lastSecond:'⏱ Detik terakhir!',nobodyGuessed:'Yang itu sulit!',galleryTitle:'Galeri Pertandinganmu',galleryNote:'Semua gambar ini baru saja dibuat oleh para pemain.',pitch:'Gambar. Tebak. Jadilah seniman berikutnya!',stChoose:'Pilih',stDraw:'Gambar',stGuess:'Tebak',stNext:'Seniman berikutnya',tagline:'Gambar & Tebak – di mana saja',yourName:'Nama kamu',namePh:'mis. Anna',
    createGame:'Buat permainan',joinGame:'Gabung permainan',roomCode4:'Kode ruang (4 angka)',join:'Gabung',
    roomCode:'Kode ruang',difficulty:'Tingkat kesulitan',rounds:'Ronde',teamMode:'Mode tim',teamOn:'Aktif',teamOff:'Mati',players:'Pemain',leave:'Keluar',startGame:'Mulai permainan',
    easy:'🟢 Mudah',medium:'🙂 Sedang',hard:'🔥 Sulit',mixed:'🎲 Campur',
@@ -1108,7 +1350,7 @@ const T={
    inputBlocked:'Ungkapan ini tidak bisa dipakai dalam permainan. Silakan pilih yang lain.',
    netBusy:'Terlalu banyak permintaan – mohon tunggu sebentar.',netDown:'Server tidak dapat dihubungi.',netLost:'Koneksi terputus.',
    howStep1:'Satu pemain mendapat sebuah kata dan menggambarnya.',howStep2:'Pemain lain mengetik tebakan mereka.',howStep3:'Yang menebak benar lebih dulu mendapat poin terbanyak – penggambar juga dapat poin.',howStep4:'Setelah itu giliran pemain berikutnya menggambar.',howStep5:'Hanya menggambar: tanpa huruf, tanpa angka.'},
- th:{tagline:'วาดและทาย – ได้ทุกที่',yourName:'ชื่อผู้เล่นของคุณ',namePh:'เช่น อันนา',
+ th:{realPlayers:'Kritzelkönig เล่นกับคนจริง ๆ แชร์ลิงก์ไว้ พอมีคนเข้ามาก็เริ่มได้เลย',tenSeconds:'เหลืออีก 10 วินาที!',yourTurn:'ตาคุณวาดแล้ว!',nGuessing:'มีผู้เล่น {n} คนกำลังทาย',theWordWas:'คำคือ',artistWas:'วาดโดย',firstCorrect:'ทายถูกคนแรก',guessedIn:'ทายได้ใน',isNextArtist:'เป็นศิลปินคนต่อไป!',lightningGuess:'⚡ ทายเร็วมาก!',lastSecond:'⏱ วินาทีสุดท้าย!',nobodyGuessed:'คำนี้ยากจริง ๆ!',galleryTitle:'แกลเลอรีของแมตช์นี้',galleryNote:'ภาพทั้งหมดนี้ผู้เล่นเพิ่งวาดกันเอง',pitch:'วาด ทาย แล้วเป็นศิลปินคนต่อไป!',stChoose:'เลือก',stDraw:'วาด',stGuess:'ทาย',stNext:'ศิลปินคนต่อไป',tagline:'วาดและทาย – ได้ทุกที่',yourName:'ชื่อผู้เล่นของคุณ',namePh:'เช่น อันนา',
    createGame:'สร้างห้องเล่น',joinGame:'เข้าร่วมเกม',roomCode4:'รหัสห้อง (4 หลัก)',join:'เข้าร่วม',
    roomCode:'รหัสห้อง',difficulty:'ระดับความยาก',rounds:'จำนวนรอบ',teamMode:'โหมดทีม',teamOn:'เปิด',teamOff:'ปิด',players:'ผู้เล่น',leave:'ออกจากห้อง',startGame:'เริ่มเกม',
    easy:'🟢 ง่าย',medium:'🙂 ปานกลาง',hard:'🔥 ยาก',mixed:'🎲 คละ',
@@ -1138,7 +1380,7 @@ const T={
    inputBlocked:'ข้อความนี้ใช้ในเกมไม่ได้ กรุณาเลือกคำอื่น',
    netBusy:'มีคำขอมากเกินไป – กรุณารอสักครู่',netDown:'ติดต่อเซิร์ฟเวอร์ไม่ได้',netLost:'การเชื่อมต่อหลุด',
    howStep1:'ผู้เล่นคนหนึ่งจะได้รับคำและวาดคำนั้น',howStep2:'ผู้เล่นคนอื่นพิมพ์คำตอบของตัวเอง',howStep3:'ใครทายถูกก่อนได้คะแนนมากที่สุด คนวาดก็ได้คะแนนด้วย',howStep4:'จากนั้นเปลี่ยนให้คนถัดไปเป็นคนวาด',howStep5:'วาดอย่างเดียว ห้ามเขียนตัวอักษรหรือตัวเลข'},
- vi:{tagline:'Vẽ & Đoán – ở mọi nơi',yourName:'Tên của bạn',namePh:'ví dụ Anna',
+ vi:{realPlayers:'Kritzelkönig chơi cùng người thật. Hãy chia sẻ liên kết – có người vào là bắt đầu được ngay.',tenSeconds:'Chỉ còn 10 giây!',yourTurn:'Đến lượt bạn vẽ!',nGuessing:'{n} người chơi đang đoán',theWordWas:'Từ khóa là',artistWas:'Người vẽ',firstCorrect:'Đoán đúng đầu tiên',guessedIn:'Đoán ra sau',isNextArtist:'là họa sĩ tiếp theo!',lightningGuess:'⚡ Đoán nhanh như chớp!',lastSecond:'⏱ Giây cuối cùng!',nobodyGuessed:'Từ này khó thật!',galleryTitle:'Bộ sưu tập ván này',galleryNote:'Mọi bức tranh ở đây đều do người chơi vừa vẽ.',pitch:'Vẽ. Đoán. Trở thành họa sĩ tiếp theo!',stChoose:'Chọn',stDraw:'Vẽ',stGuess:'Đoán',stNext:'Họa sĩ tiếp theo',tagline:'Vẽ & Đoán – ở mọi nơi',yourName:'Tên của bạn',namePh:'ví dụ Anna',
    createGame:'Tạo phòng chơi',joinGame:'Vào phòng',roomCode4:'Mã phòng (4 chữ số)',join:'Tham gia',
    roomCode:'Mã phòng',difficulty:'Độ khó',rounds:'Số vòng',teamMode:'Chế độ đội',teamOn:'Bật',teamOff:'Tắt',players:'Người chơi',leave:'Rời phòng',startGame:'Bắt đầu',
    easy:'🟢 Dễ',medium:'🙂 Trung bình',hard:'🔥 Khó',mixed:'🎲 Trộn lẫn',
@@ -1203,12 +1445,34 @@ function beep(name){
     o.start(t);o.stop(t+0.12*seq.length+0.1);
   }catch(e){}
 }
+// Lautstaerken sind nicht einheitlich, sondern nach Aufgabe gestaffelt. Vorher lag
+// alles bei 0.55 - dadurch war die Tickuhr, die fuenfmal hintereinander laeuft,
+// genauso laut wie der Siegerklang, der einmal pro Partie kommt.
+//   correct     Der wichtigste Moment einer Runde. Darf sich durchsetzen.
+//   win         Einmal pro Partie. Etwas lauter, sonst geht der Abschluss unter.
+//   round_start Uebergang zum naechsten Zeichner. Merkbar, aber kein Schreck.
+//   tick        Warnung in den letzten Sekunden. Leise: sie wiederholt sich.
+//   click       Knopfquittung. Fast nur zu erahnen - nicht jeder Klick braucht Ton.
+const TON_LAUTSTAERKE = { correct:0.60, win:0.65, round_start:0.42, tick:0.30, click:0.22 };
 function sound(name){
   if(S.muted || audioBlocked()) return;
   // versucht eine echte Audiodatei (sounds/<name>.mp3); fällt sonst auf einen Ton zurück
-  try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=0.55;
+  try{ const a=new Audio('sounds/'+name+'.mp3');a.volume=TON_LAUTSTAERKE[name]!=null?TON_LAUTSTAERKE[name]:0.5;
     const p=a.play(); if(p&&p.then)p.then(()=>{}).catch(()=>beep(name)); }catch(e){ beep(name); }
 }
+// Knopfquittung - aber nur fuer die Knoepfe, mit denen man das Spiel wirklich
+// weiterschiebt: starten, weiter, Tipp abschicken, Wort waehlen. Einstellungen,
+// Farbtupfer und Werkzeuge bleiben stumm. Ein Spiel, in dem jeder Klick klickt,
+// klingt nach Fahrstuhl, nicht nach Partyspiel. (sounds/click.mp3 lag bisher
+// ungenutzt im Paket.)
+document.addEventListener('click', function(e){
+  var k = e.target && e.target.closest && e.target.closest('button');
+  if(!k) return;
+  var zaehlt = k.classList.contains('big') || k.id === 'btnContinue' ||
+               k.id === 'btnGuess' || k.closest('#wordOptions');
+  if(zaehlt) sound('click');
+}, true);
+
 function updateMute(){ const blocked=audioBlocked(); if($('btnMute')){ $('btnMute').textContent=(S.muted||blocked)?'🔇':'🔊'; $('btnMute').style.opacity=blocked?'.5':''; } updateBgm(); }
 $('btnMute').onclick=()=>{S.muted=!S.muted;updateMute();try{localStorage.setItem('kk_mute',S.muted?'1':'0')}catch(e){}};
 
@@ -1239,7 +1503,6 @@ function tonAufschliessen(){
 });
 
 // Werkzeug-Icon-Fallback (ersetzt fehlendes Bild durch Emoji)
-function ico(img,emoji){ const s=document.createElement('span'); s.className='ic'; s.textContent=emoji; img.replaceWith(s); }
 
 // ---------- Vollbild ----------
 function toggleFs(){ const el=document.documentElement;
@@ -1428,12 +1691,23 @@ document.addEventListener('visibilitychange',()=>{ if(!document.hidden && S.room
 // ---------- Menü ----------
 $('btnCreate').onclick=async()=>{const name=getName();if(!name)return;
   const r=await post({type:'create',name});if(!r.ok){handleNameError(r);return;}enter(r,name,true);};
+// Der Solo-Test gegen den Computer bleibt auf der eigenen Seite: dort ist er zum
+// Ausprobieren nuetzlich, wenn gerade niemand online ist. Auf den Portalen wird er
+// ausgeblendet. Wer das Spiel dort zum ersten Mal oeffnet - auch ein Pruefer -
+// soll nicht als Erstes eine Partie gegen einen Computergegner sehen: Kritzelkoenig
+// lebt davon, dass Menschen fuereinander zeichnen, und genau das muss der erste
+// Eindruck sein.
+if(window.KK_PORTAL){
+  var soloKnopf=$('btnSolo'); if(soloKnopf) soloKnopf.style.display='none';
+}
 $('btnSolo').onclick=async()=>{
   let name=$('name').value.trim(); if(!name){ name=(S.lang==='en'?'You':'Du'); $('name').value=name; }
   try{localStorage.setItem('kk_name',name)}catch(e){} $('menuErr').textContent='';
   const r=await post({type:'create',name,solo:true});if(!r.ok){handleNameError(r);return;}enter(r,name,true);};
 $('name').addEventListener('input',()=>$('name').classList.remove('bad'));
-$('btnJoinShow').onclick=()=>{$('joinArea').style.display='block';$('code').focus();};
+$('btnJoinShow').onclick=()=>{$('joinArea').style.display='block';
+  $('btnJoinShow').style.display='none';   // aufgeklappt: der Oeffner wird zum Doppel
+  $('code').focus();};
 $('btnJoin').onclick=doJoin; $('code').addEventListener('keydown',e=>{if(e.key==='Enter')doJoin();});
 async function doJoin(){const name=getName();if(!name)return;const code=$('code').value.trim();
   if(!/^\d{4}$/.test(code)){$('menuErr').textContent=t('enterCode');return;}
@@ -1629,10 +1903,10 @@ function setGuessLock(locked){
   $('guess').placeholder = locked ? t('teamLocked') : t('guessPh');
 }
 
-function overlay(t,r,e,btn,win){$('ovTitle').textContent=t;$('ovReveal').textContent=r||'';$('ovExtra').textContent=e||'';
+function overlay(t,r,e,btn,win){galerieVerbergen();$('ovTitle').textContent=t;$('ovReveal').textContent=r||'';$('ovExtra').textContent=e||'';
   $('ovButtons').style.display=btn?'block':'none';
   $('wordOptions').style.display='none';$('wordOptions').innerHTML='';
-  const wi=$('winImg'); if(wi)wi.style.display=(win&&!wi.dataset.missing)?'block':'none';
+  const wi=$('winImg'); if(wi)wi.style.display=win?'block':'none';
   $('overlay').classList.add('show');}
 function hideOverlay(){$('overlay').classList.remove('show');$('wordOptions').style.display='none';$('wordOptions').innerHTML='';}
 
@@ -1678,23 +1952,58 @@ function showWordOptions(options){
   $('overlay').classList.add('show');
 }
 
+
+// Kleine Auszeichnungen am Rundenende. Sie erscheinen nicht bei jeder Runde,
+// sondern nur, wenn wirklich etwas Bemerkenswertes passiert ist - sonst wuerden
+// sie sich abnutzen und waeren nur noch Deko.
+function abzeichenFuer(d){
+  var sek = Number(d.solvedAfter) || 0;
+  var rest = Number(d.remaining);
+  if(sek > 0 && sek <= 10) return t('lightningGuess');             // in unter 10 Sekunden erkannt
+  if(!isNaN(rest) && rest > 0 && rest <= 5) return t('lastSecond'); // knapp vor Ablauf
+  return '';
+}
+
 // Auflösung UNTEN anzeigen – die Zeichnung bleibt für alle sichtbar (zum Lachen/Diskutieren)
-function showResult(titleHtml,reveal,nextId,nextName,last){
+// Aufloesung UNTEN anzeigen - die Zeichnung bleibt fuer alle sichtbar (zum Lachen/Diskutieren).
+// Frueher stand hier eine Zeile aus Haken, Stiften und Zahlen. Jetzt steht benannt da,
+// was passiert ist: welches Wort, wer gezeichnet hat, wer zuerst richtig lag und wie
+// schnell. Das ist der Moment, in dem man sieht, dass echte Leute gegeneinander spielen.
+function showResult(a){
   $('bottombar').style.display='none';
   $('resultBar').classList.add('show');
-  $('resultInfo').innerHTML=`${titleHtml}<span class="rev">${esc(reveal)}</span>`;
-  const mine=nextId===S.playerId;
-  $('btnContinue').textContent = last ? t('showResult') : t('continueDraw');
-  $('btnContinue').style.display=mine?'block':'none';
-  $('waitText').style.display=mine?'none':'block';
-  $('waitText').textContent= last ? `${t('waitFor')} ${esc(nextName)} ${t('endstand')}` : `${t('waitFor')} ${esc(nextName)} …`;
+
+  var zeilen = '';
+  zeilen += '<div class="rz-wort"><span class="rz-marke">' + esc(t('theWordWas')) + '</span>' +
+            '<b>' + esc(String(a.wort||'').toUpperCase()) + '</b></div>';
+
+  var leute = [];
+  if(a.zeichner) leute.push('<span class="rz-paar"><span class="rz-marke">' + esc(t('artistWas')) +
+    '</span>' + esc(a.zeichner) + (a.zeichnerPunkte ? ' <i>+' + a.zeichnerPunkte + '</i>' : '') + '</span>');
+  if(a.loeser) leute.push('<span class="rz-paar"><span class="rz-marke">' + esc(t('firstCorrect')) +
+    '</span>' + esc(a.loeser) + (a.punkte ? ' <i>+' + a.punkte + '</i>' : '') + '</span>');
+  if(a.sekunden) leute.push('<span class="rz-paar"><span class="rz-marke">' + esc(t('guessedIn')) +
+    '</span>' + a.sekunden.toFixed(1) + ' s</span>');
+  if(leute.length) zeilen += '<div class="rz-zeile">' + leute.join('') + '</div>';
+
+  if(a.abzeichen) zeilen += '<div class="rz-abzeichen">' + esc(a.abzeichen) + '</div>';
+
+  $('resultInfo').innerHTML = zeilen;
+
+  var mine = a.naechsterId===S.playerId;
+  $('btnContinue').textContent = a.letzte ? t('showResult') : t('continueDraw');
+  $('btnContinue').style.display = mine?'block':'none';
+  $('waitText').style.display = mine?'none':'block';
+  $('waitText').innerHTML = a.letzte
+    ? esc(t('waitFor')) + ' ' + esc(a.naechsterName) + ' ' + esc(t('endstand'))
+    : '<b>' + esc(a.naechsterName) + '</b> ' + esc(t('isNextArtist'));
 }
 function hideResult(){ $('resultBar').classList.remove('show'); $('bottombar').style.display='flex'; }
 
 $('btnContinue').onclick=()=>{$('btnContinue').style.display='none';$('waitText').style.display='block';$('waitText').textContent=t('loading');post({type:'continue'});};
 // Werbepausen an natuerlichen Bruchstellen: nach der Partie und beim Zurueck ins Menue.
 // Ohne Portal-SDK loest showPortalAd() sofort auf -> unveraendertes Verhalten.
-$('btnNewGame').onclick=()=>{ showPortalAd('next','game-over').then(()=>post({type:'newgame'})); };
+$('btnNewGame').onclick=()=>{ galerieLeeren(); showPortalAd('next','game-over').then(()=>post({type:'newgame'})); };
 $('btnToMenu').onclick=()=>{ sitzungVergessen(); showPortalAd('browse','back-to-menu').then(()=>location.reload()); };
 
 let lastTick=99;
@@ -1710,6 +2019,7 @@ function handle(event,d){
     if(d.difficulty)S.difficulty=d.difficulty;
     if(d.maxRounds)S.maxRounds=d.maxRounds;
     S.teamMode=!!d.teamMode;
+    if(Array.isArray(d.players)) S.spielerzahl=d.players.length;  // fuer "x raten mit"
     {const me=d.players&&d.players.find(p=>p.id===S.playerId);S.myTeam=me?me.team:null;}
     if(d.lang && d.lang!==S.lang){S.lang=d.lang;try{localStorage.setItem('kk_lang',d.lang)}catch(e){}applyI18n();}
     if($('settings').classList.contains('show'))updateSetDiff();
@@ -1737,10 +2047,21 @@ function handle(event,d){
     if(!S.amDrawer)$('wordPill').style.display='none';
     setGuessLock(false);
     try{Platform.gameplayStart();}catch(e){} // aktives Gameplay (CrazyGames-Hook)
-    hideOverlay();hideIntermission();sound('round_start');setTimeout(fitCanvas,30);break;
+    hideOverlay();hideIntermission();sound('round_start');setTimeout(fitCanvas,30);
+    // Sichtbar machen, dass hier Menschen aufeinander warten: der Zeichner erfaehrt,
+    // dass er dran ist, die Ratenden, wie viele mitraten.
+    if(S.amDrawer) showToast(t('yourTurn'));
+    // Erst ab zwei Ratenden. Bei zwei Spielern waere "1 raten mit" nur eine
+    // umstaendliche Art, dem Einzigen zu sagen, dass er es selbst ist.
+    else if(S.spielerzahl>=3) showToast(t('nGuessing').replace('{n}', S.spielerzahl-1));
+    break;
   case 'word_assignment': $('wordPill').style.display='';$('wordPill').textContent='➜ '+d.text.toUpperCase();break;
   case 'timer':
     $('timer').textContent=fmt(d.remaining);$('timer').classList.toggle('low',d.remaining<=10);
+    // Einmal bei genau zehn Sekunden deutlich hinweisen, danach nur noch die letzten
+    // fuenf Sekunden ticken lassen. Wer raet, soll den Schlussspurt mitbekommen,
+    // ohne dass zehn Sekunden lang etwas piept.
+    if(d.remaining===10&&lastTick>10){ showToast(t('tenSeconds')); sound('tick'); }
     if(d.remaining<=5&&d.remaining>0&&d.remaining<lastTick)sound('tick');lastTick=d.remaining;break;
   case 'hint_update': $('mask').textContent=d.mask;break;
   case 'stroke': onRemoteStroke(d);break;
@@ -1753,15 +2074,22 @@ function handle(event,d){
     else { addFeed('', (d.playerName+' '+(S.lang==='en'?'is guessing …':'rät …')), false, true); } // andere: neutral, kein Text
     break;
   case 'round_solved': { S.rundeLaeuft=false; aktualisiereBannerZone();try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
-    const bonus=(d.speedMultiplier>1||d.difficultyMultiplier>1)?` <small style="color:var(--muted)">x${d.speedMultiplier} Tempo · x${d.difficultyMultiplier} Wort</small>`:'';
-    let title=`✅ ${esc(d.winnerName)} <b style="color:var(--accent2)">+${d.points}</b>`+(d.drawerPoints?` &nbsp;·&nbsp; ✏ ${esc(d.drawerName)} +${d.drawerPoints}`:'');
-    title=title.replace('</b>','</b>'+bonus);
-    showResult(title,d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;}
-  case 'round_timeout': S.rundeLaeuft=false; aktualisiereBannerZone(); try{Platform.gameplayStop();}catch(e){}renderScores(d.players);showResult(t('timeUp'),d.word.toUpperCase(),d.nextDrawerId,d.nextDrawerName,d.lastRound);break;
+    galerieMerken(d.word,d.drawerName);
+    showResult({wort:d.word, zeichner:d.drawerName, zeichnerPunkte:d.drawerPoints,
+      loeser:d.winnerName, punkte:d.points, sekunden:d.solvedAfter,
+      abzeichen:abzeichenFuer(d), naechsterId:d.nextDrawerId, naechsterName:d.nextDrawerName,
+      letzte:d.lastRound});
+    break;}
+  case 'round_timeout': S.rundeLaeuft=false; aktualisiereBannerZone(); try{Platform.gameplayStop();}catch(e){}renderScores(d.players);
+    galerieMerken(d.word,d.drawerName||'');
+    showResult({wort:d.word, zeichner:d.drawerName, abzeichen:t('nobodyGuessed'),
+      naechsterId:d.nextDrawerId, naechsterName:d.nextDrawerName, letzte:d.lastRound});
+    break;
   case 'game_over': S.rundeLaeuft=false; aktualisiereBannerZone(); $('tOverlay').classList.remove('show');try{Platform.gameplayStop();}catch(e){}renderScores(d.players);sound('win');
     const standings=d.teamMode&&d.teamScores&&d.teamScores.length?d.teamScores:d.players.slice().sort((a,b)=>b.score-a.score);
     if(d.teamMode&&d.teamScores&&d.teamScores.length)d.players.slice=()=>standings;
-    overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);break;
+    overlay(`🏆 ${d.winnerName} ${t('wins')}`,'',d.players.slice().sort((a,b)=>b.score-a.score).map(p=>`${p.name} ${p.score}`).join('  ·  '),true,true);
+    galerieZeigen(); break;
   case 'round_intermission':
     S.rundeLaeuft=false; aktualisiereBannerZone();
     try{Platform.gameplayStop();}catch(e){}
@@ -1857,6 +2185,174 @@ function onRemoteStroke(d){let s=S.strokes.find(x=>x.id===d.strokeId);
   if(!s){s={id:d.strokeId,tool:d.tool,color:d.color,lineWidth:d.lineWidth,points:[],playerId:'remote'};S.strokes.push(s);}
   drawSegment(s,prev,d.points);for(const p of d.points)s.points.push(p);}
 function enterGame(){if(S.state!=='game'){show('game');setTimeout(fitCanvas,30);try{cgUpdateRoom();}catch(e){}}}
+
+
+// ================= Kritzelgrund =================
+// Der Hintergrund wird gezeichnet, nicht geladen. Zwoelf Motive, alle von Hand als
+// Striche angelegt, werden auf ein leicht verwuerfeltes Raster gesetzt. Der
+// Zufallsgenerator hat einen festen Startwert: die Flaeche sieht bei jedem Besuch
+// gleich aus, sonst waere es kein Design, sondern Rauschen.
+var KRITZEL = {
+  katze:'M18,22 C10,26 10,40 18,44 C24,47 36,47 42,44 C50,40 50,26 42,22 C36,19 24,19 18,22 Z M18,23 L15,10 L27,18 M42,23 L45,10 L33,18 M24,30 l0,3 M36,30 l0,3 M30,36 l0,2 M26,40 c2,2 6,2 8,0 M12,32 l-6,-2 M12,37 l-6,2 M48,32 l6,-2 M48,37 l6,2',
+  stern:'M30,8 L36,26 L55,26 L40,37 L46,54 L30,44 L14,54 L20,37 L5,26 L24,26 Z',
+  herz:'M30,52 C10,38 8,24 15,18 C22,12 29,17 30,23 C31,17 38,12 45,18 C52,24 50,38 30,52 Z',
+  haus:'M11,52 L11,27 L30,11 L49,27 L49,52 Z M11,52 L49,52 M25,52 L25,38 L36,38 L36,52',
+  ballon:'M30,8 C40,8 46,17 46,25 C46,34 38,42 30,42 C22,42 14,34 14,25 C14,17 20,8 30,8 Z M30,42 L27,47 L33,47 L30,42 M30,47 C34,51 26,54 30,58',
+  sonne:'M30,17 C23,17 17,23 17,30 C17,37 23,43 30,43 C37,43 43,37 43,30 C43,23 37,17 30,17 Z M30,4 L30,10 M30,50 L30,56 M4,30 L10,30 M50,30 L56,30 M11,11 L15,15 M45,45 L49,49 M49,11 L45,15 M15,45 L11,49',
+  krone:'M11,44 L8,17 L20,27 L30,11 L40,27 L52,17 L49,44 Z M12,49 L48,49',
+  baum:'M30,40 L30,56 M30,8 C20,8 14,16 16,23 C9,26 10,36 18,38 C22,42 38,42 42,38 C50,36 51,26 44,23 C46,16 40,8 30,8 Z',
+  fisch:'M8,30 C16,18 38,18 46,30 C38,42 16,42 8,30 Z M46,30 L56,21 L54,39 L46,30 M17,27 l0,2 M24,24 c4,8 4,4 0,12 M32,23 c4,9 4,5 0,14',
+  eis:'M18,26 C18,17 25,11 30,11 C36,11 42,17 42,26 Z M18,26 L30,54 L42,26 M23,36 l6,0 M27,44 l5,0',
+  blume:'M30,20 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0 M41.4,28.3 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0 M37.1,41.7 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0 M22.9,41.7 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0 M18.6,28.3 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0 M30,32 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0 M30,49 L30,58 M30,52 C36,48 40,52 36,55',
+  wolke:'M16,42 C8,42 6,32 14,30 C13,20 26,16 30,24 C36,17 47,22 45,30 C52,32 51,42 44,42 Z'
+};
+var KRITZEL_NAMEN = Object.keys(KRITZEL);
+
+// Kleiner Generator mit festem Startwert (mulberry32).
+function kritzelZufall(saat){
+  return function(){
+    saat |= 0; saat = (saat + 0x6D2B79F5) | 0;
+    var t = Math.imul(saat ^ (saat >>> 15), 1 | saat);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+var kritzelMasse = '';
+function kritzelgrundZeichnen(){
+  var flaeche = document.getElementById('kritzelgrund');
+  if(!flaeche) return;
+  var b = Math.max(320, window.innerWidth), h = Math.max(320, window.innerHeight);
+  // Nur neu setzen, wenn sich die Groesse spuerbar geaendert hat. Sonst wuerde die
+  // Handy-Adressleiste beim Scrollen den ganzen Hintergrund neu wuerfeln.
+  var schluessel = Math.round(b / 40) + 'x' + Math.round(h / 40);
+  if(schluessel === kritzelMasse) return;
+  kritzelMasse = schluessel;
+
+  var zelle = b < 560 ? 104 : 132;          // auf dem Handy enger, sonst wirkt es leer
+  var spalten = Math.ceil(b / zelle) + 1, zeilen = Math.ceil(h / zelle) + 1;
+  var zufall = kritzelZufall(20260824);      // fester Startwert = immer dasselbe Bild
+  var teile = [], anzahl = 0, hoechstens = 140;
+  for(var y = 0; y < zeilen && anzahl < hoechstens; y++){
+    for(var x = 0; x < spalten && anzahl < hoechstens; x++){
+      if(zufall() < 0.10) continue;          // ein paar Luecken, damit kein Raster entsteht
+      var motiv = KRITZEL_NAMEN[(zufall() * KRITZEL_NAMEN.length) | 0];
+      // Kraeftig verschieben: sonst stehen die Motive in sichtbaren Reihen.
+      var px = Math.round(x * zelle + (zufall() - 0.5) * zelle * 0.8);
+      var py = Math.round(y * zelle + (zufall() - 0.5) * zelle * 0.8);
+      var dreh = Math.round((zufall() - 0.5) * 46);
+      var gross = (0.62 + zufall() * 0.55).toFixed(2);
+      var deck = (0.055 + zufall() * 0.075).toFixed(3);
+      teile.push('<g transform="translate(' + px + ',' + py + ') rotate(' + dreh +
+        ' 30 30) scale(' + gross + ')" opacity="' + deck + '"><path d="' + KRITZEL[motiv] + '"/></g>');
+      anzahl++;
+    }
+  }
+  flaeche.innerHTML = '<svg viewBox="0 0 ' + b + ' ' + h + '" preserveAspectRatio="xMidYMid slice">' +
+    '<g fill="none" stroke="#dfe5f5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+    teile.join('') + '</g></svg>';
+}
+kritzelgrundZeichnen();
+var kritzelWartet = 0;
+window.addEventListener('resize', function(){
+  clearTimeout(kritzelWartet);
+  kritzelWartet = setTimeout(kritzelgrundZeichnen, 250);
+});
+
+
+// ================= Match Gallery =================
+// Am Ende jeder Runde wird die Leinwand als kleines Vorschaubild festgehalten.
+// Es passiert alles im Browser: die Striche liegen ohnehin schon vor, weil jeder
+// Mitspieler sie waehrend der Runde gezeichnet bekommt. Kein Server, kein
+// Speicher, keine Uebertragung - die Bilder leben nur bis zum Ende der Partie.
+// Der Sinn: am Schluss sieht man schwarz auf weiss, dass der Inhalt dieser Partie
+// von den Spielern selbst stammt.
+var GALERIE_KANTE = 190;   // Vorschaugroesse in Bildpunkten
+var GALERIE_MAX = 16;      // mehr Runden koennen gespielt werden, mehr zeigen wir nicht
+
+function galerieMerken(wort, zeichner){
+  try{
+    if(!wort || !canvas || !canvas.width) return;
+    if(!S.strokes || !S.strokes.length) return;      // leere Leinwand nicht aufheben
+    var k = document.createElement('canvas');
+    k.width = GALERIE_KANTE; k.height = GALERIE_KANTE;
+    var g = k.getContext('2d');
+    g.fillStyle = '#fff'; g.fillRect(0, 0, GALERIE_KANTE, GALERIE_KANTE);
+    g.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, GALERIE_KANTE, GALERIE_KANTE);
+    var bild = k.toDataURL('image/webp', 0.72);
+    if(bild.indexOf('data:image/webp') !== 0) bild = k.toDataURL('image/jpeg', 0.72); // aeltere Browser
+    S.galerie.push({ bild: bild, wort: String(wort), zeichner: String(zeichner || ''),
+                     runde: S.roundNumber || (S.galerie.length + 1) });
+    while(S.galerie.length > GALERIE_MAX) S.galerie.shift();
+  }catch(e){}
+}
+function galerieLeeren(){ S.galerie = []; }
+
+function galerieZeigen(){
+  var ziel = document.getElementById('galerie');
+  if(!ziel) return;
+  if(!S.galerie.length){ ziel.style.display = 'none'; ziel.innerHTML = ''; return; }
+  // Knopf statt <figure>: so laesst sich die Kachel auch mit der Tastatur oeffnen
+  // und bekommt von selbst einen Fokusrahmen.
+  var stuecke = S.galerie.map(function(e, i){
+    return '<button type="button" class="gbild" data-nr="' + i + '">' +
+      '<img src="' + e.bild + '" alt="' + esc(e.wort) + '" loading="lazy">' +
+      '<span class="gtext"><b>' + esc(e.wort.toUpperCase()) + '</b>' +
+      (e.zeichner ? '<span>' + esc(e.zeichner) + '</span>' : '') + '</span></button>';
+  }).join('');
+  ziel.innerHTML = '<div class="gtitel">' + esc(t('galleryTitle')) + '</div>' +
+                   '<div class="gband">' + stuecke + '</div>' +
+                   '<div class="ghinweis">' + esc(t('galleryNote')) + '</div>';
+  ziel.style.display = 'block';
+}
+function galerieVerbergen(){
+  var ziel = document.getElementById('galerie');
+  if(ziel){ ziel.style.display = 'none'; ziel.innerHTML = ''; }
+}
+
+
+// ---------- Galeriebild gross ansehen ----------
+// Die Vorschaubilder sind auf dem Handy keine drei Zentimeter breit. Wer sehen
+// will, was der andere da gekritzelt hat, muss es gross sehen koennen - das ist
+// der Moment, in dem gelacht wird. Deshalb: antippen, gross anschauen, mit den
+// Pfeilen durchblaettern.
+var lupeNr = -1;
+function lupeZeigen(nr){
+  var e = S.galerie[nr];
+  if(!e) return;
+  lupeNr = nr;
+  document.getElementById('lupeBild').src = e.bild;
+  document.getElementById('lupeBild').alt = e.wort;
+  document.getElementById('lupeWort').textContent = e.wort.toUpperCase();
+  document.getElementById('lupeWer').textContent = e.zeichner
+    ? t('artistWas') + ' ' + e.zeichner : '';
+  document.getElementById('lupeZaehler').textContent = (nr + 1) + ' / ' + S.galerie.length;
+  var mehr = S.galerie.length > 1;
+  document.getElementById('lupeZurueck').style.visibility = mehr ? 'visible' : 'hidden';
+  document.getElementById('lupeVor').style.visibility = mehr ? 'visible' : 'hidden';
+  document.getElementById('lupe').classList.add('show');
+}
+function lupeSchliessen(){ document.getElementById('lupe').classList.remove('show'); lupeNr = -1; }
+function lupeBlaettern(schritt){
+  if(lupeNr < 0 || !S.galerie.length) return;
+  lupeZeigen((lupeNr + schritt + S.galerie.length) % S.galerie.length);   // laeuft rundherum
+}
+document.getElementById('galerie').addEventListener('click', function(ev){
+  var k = ev.target.closest && ev.target.closest('.gbild');
+  if(k) lupeZeigen(Number(k.dataset.nr));
+});
+document.getElementById('lupe').addEventListener('click', function(ev){
+  // Klick auf den Hintergrund schliesst; Klick auf Bild oder Pfeile nicht.
+  if(ev.target.id === 'lupe' || ev.target.id === 'lupeZu') lupeSchliessen();
+});
+document.getElementById('lupeZurueck').onclick = function(){ lupeBlaettern(-1); };
+document.getElementById('lupeVor').onclick = function(){ lupeBlaettern(1); };
+document.addEventListener('keydown', function(ev){
+  if(!document.getElementById('lupe').classList.contains('show')) return;
+  if(ev.key === 'Escape') lupeSchliessen();
+  else if(ev.key === 'ArrowLeft') lupeBlaettern(-1);
+  else if(ev.key === 'ArrowRight') lupeBlaettern(1);
+});
 
 function rid(){return Math.random().toString(36).slice(2,9);}
 function fmt(sec){sec=Math.max(0,sec|0);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');}

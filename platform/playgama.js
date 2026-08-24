@@ -330,17 +330,43 @@
   // Plattform ihn erwartet, ohne den synchronen Start des Spiels umzubauen.
   var GESICHERT = ['kk_name', 'kk_lang', 'kk_mute', 'kritzelkoenig_format_v1', 'kritzelkoenig_tutorial_hidden_v1'];
 
+  // ACHTUNG, hier lag ein Aufhaenger: bridge.storage.set() schreibt bei Playgama
+  // seinerseits ueber window.localStorage.setItem - also in genau die Funktion,
+  // die wir unten abfangen. Ohne Sperre ruft sich beides gegenseitig auf und der
+  // Hauptfaden steht. Zu sehen war das als "Seite reagiert nicht", sobald ein
+  // gespiegelter Schluessel geschrieben wurde - zum Beispiel beim Klick auf
+  // "Los geht's", der das gewaehlte Format sichert.
+  // Zwei Riegel, weil einer nicht reicht:
+  //   imSpiegel     - faengt den unmittelbaren Rueckruf ab (synchrones set()).
+  //   letzteWerte   - faengt ihn auch dann ab, wenn die Bridge erst spaeter
+  //                   zurueckschreibt: derselbe Wert wird kein zweites Mal
+  //                   gespiegelt, damit kein Hin und Her entstehen kann.
+  var imSpiegel = false;
+  var letzteWerte = {};
+
   function spiegelSchreiben(schluessel, wert) {
+    if (imSpiegel) return;
     if (!PG.bereit || GESICHERT.indexOf(schluessel) < 0) return;
-    versuche(function () {
-      var s = PG.bridge.storage;
-      if (s && typeof s.set === 'function') s.set(schluessel, String(wert));
-    });
+    var text = String(wert);
+    if (letzteWerte[schluessel] === text) return;
+    letzteWerte[schluessel] = text;
+    imSpiegel = true;
+    try {
+      versuche(function () {
+        var s = PG.bridge.storage;
+        if (s && typeof s.set === 'function') s.set(schluessel, text);
+      });
+    } finally {
+      imSpiegel = false;
+    }
   }
 
+  var abgefangen = false;
   function schreibenAbfangen() {
     // Nur die eigenen kk-Schluessel werden gespiegelt, alles andere bleibt
     // unberuehrt. Der urspruengliche Aufruf laeuft immer zuerst.
+    if (abgefangen) return;   // zweimal abfangen wuerde die Kette verdoppeln
+    abgefangen = true;
     versuche(function () {
       var original = window.localStorage.setItem.bind(window.localStorage);
       window.localStorage.setItem = function (k, v) {
@@ -366,6 +392,7 @@
           // springt eine gerade getroffene Wahl beim naechsten Start zurueck.
           var da = versuche(function () { return window.localStorage.getItem(k); });
           if (da !== null && da !== undefined) return;
+          letzteWerte[k] = String(v);   // kommt von dort - nicht dorthin zurueckspiegeln
           versuche(function () { window.localStorage.setItem(k, String(v)); });
           uebernommen.push(k);
         });
